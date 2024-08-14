@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env TARGET=local next -p 3000",
-    "build-production": "cross-env TARGET=production next build",
-    "build-staging": "cross-env TARGET=staging next build",
-    "build-local": "cross-env TARGET=local next build",
+    "dev": "cross-env APP_TARGET=local next -p 3000",
+    "build-production": "cross-env APP_TARGET=production next build",
+    "build-staging": "cross-env APP_TARGET=staging next build",
+    "build-local": "cross-env APP_TARGET=local next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky"
