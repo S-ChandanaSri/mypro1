@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { COLORS } from "./src/constants";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -9,7 +10,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors: {},
+      colors: {
+        ...COLORS,
+      },
       fontFamily: {
         sans: ["var(--font-inter)"],
         serif: ["var(--font-poppins)"],
