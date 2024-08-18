@@ -5,6 +5,13 @@ export const strings = {
     subHeading:
       "Clarity gives you the blocks and components you need to create a truly professional website.",
     emailPlaceholder: "Email Address",
+    passwordPlaceholder: "Password",
+    rememberMe: "Remember me",
+    forgotPassword: "Forgot Password?",
+    signUpFirst: "Don't have an account?",
+    register: "Sign Up",
+    login: "Sign In",
+    loginWithGoogle: "Sign In with Google",
     errors: {
       invalidEmail: "Email must be valid.",
       invalidPassword: {

@@ -1,3 +1,4 @@
+import { cn } from "@/utils/cn";
 import React, { HTMLAttributes, forwardRef } from "react";
 
 export interface InputProps extends HTMLAttributes<HTMLInputElement> {
@@ -20,7 +21,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         type={type}
         onChange={onChange}
         placeholder={placeholder}
-        className={className}
+        className={cn(
+          className,
+          "bg-transparent outline outline-neutral-300 outline-1 px-8 py-8 rounded-lg",
+        )}
         {...props}
       >
         {children}

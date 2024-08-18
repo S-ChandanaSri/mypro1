@@ -2,13 +2,17 @@
 
 import { post_login } from "@/api";
 import BackgroundImageContainer from "@/components/common/BackgroundImageContainer";
+import Button from "@/components/common/Button";
+import Checkbox from "@/components/common/Checkbox";
 import FormContainer from "@/components/common/FormContainer";
 import Input from "@/components/common/Input";
 import Typography from "@/components/common/Typography";
+import { paths } from "@/constants";
 import { BACKGROUNDS } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import { InputValue } from "@/constants/types";
 import { UserLoginSchema } from "@/schema/UserSchema";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 
@@ -17,7 +21,8 @@ type Props = {};
 const Login = (props: Props) => {
   const [formEmail, setFormEmail] = useState<InputValue>();
   const [formPassword, setFormPassword] = useState<InputValue>();
-  const [disabled, setDisabled] = useState<boolean>();
+  const [rememberMe, setRememberMe] = useState<boolean>(false);
+  const [disabled, setDisabled] = useState<boolean>(false);
 
   useEffect(() => {
     if (formEmail?.error || formPassword?.error) {
@@ -60,6 +65,7 @@ const Login = (props: Props) => {
         const payload = {
           email: formEmail?.value,
           password: formPassword?.value,
+          rememberMe,
         };
         const res = await post_login(payload);
         console.log(res);
@@ -71,16 +77,16 @@ const Login = (props: Props) => {
 
   return (
     <BackgroundImageContainer
-      className="bg-gradient-to-b from-black/50 to-transparent"
+      className="bg-gradient-to-b from-black/50 to-transparent flex flex-col justify-center items-center space-y-5"
       backgroundImage={BACKGROUNDS.AUTH_IMAGE}
     >
       <Typography className="font-serif text-3xl font-semibold text-white text-center">
         {strings.signup.signIntoAccount}
       </Typography>
-      <Typography className="font-serif text-[#D9D9D9] text-lg font-normal text-center">
+      <Typography className="font-serif text-[#D9D9D9] max-w-[480px] text-lg font-normal text-center pb-10">
         {strings.signup.subHeading}
       </Typography>
-      <FormContainer onSubmit={onLoginAsync}>
+      <FormContainer variant="login" onSubmit={onLoginAsync}>
         <Input
           name="email"
           type="email"
@@ -90,10 +96,36 @@ const Login = (props: Props) => {
         <Input
           name="password"
           type="password"
-          placeholder={strings.signup.emailPlaceholder}
+          placeholder={strings.signup.passwordPlaceholder}
           onChange={handlePasswordChange}
         />
-        <button type="submit">Save</button>
+        <div className="font-serif text-sm text-neutral-900 flex justify-between">
+          <Checkbox
+            label={strings.signup.rememberMe}
+            value={rememberMe}
+            setValue={setRememberMe}
+          />
+          <Link
+            className="hover:text-blue-600 hover:underline"
+            href={paths.forgotPassword}
+          >
+            {strings.signup.forgotPassword}
+          </Link>
+        </div>
+        <div className="space-y-6 pt-8">
+          <Button variant="auth" disabled={disabled} type="submit">
+            {strings.signup.login}
+          </Button>
+          <Button variant="light" disabled={disabled} type="submit">
+            {strings.signup.loginWithGoogle}
+          </Button>
+          <span className="flex justify-center text-sm text-neutral-500 pt-4">
+            {strings.signup.signUpFirst}&nbsp;
+            <Link className="text-blue-600 font-semibold" href={paths.signUp}>
+              {strings.signup.register}
+            </Link>
+          </span>
+        </div>
       </FormContainer>
     </BackgroundImageContainer>
   );

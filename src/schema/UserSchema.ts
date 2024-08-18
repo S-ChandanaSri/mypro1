@@ -9,6 +9,7 @@ export const UserLoginSchema = z.object({
     .regex(/[a-z]/, strings.signup.errors.invalidPassword.lowerCaseCharacter)
     .regex(/[A-Z]/, strings.signup.errors.invalidPassword.upperCaseCharacter)
     .regex(/\d/, strings.signup.errors.invalidPassword.number),
+  rememberMe: z.boolean(),
 });
 
 export type UserLoginSchemaType = z.infer<typeof UserLoginSchema>;

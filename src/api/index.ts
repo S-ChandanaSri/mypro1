@@ -1,9 +1,10 @@
-import { Duration } from "@/constants";
+import { BACKEND_URLS, Duration } from "@/constants";
 import { UserLoginSchemaType } from "@/schema/UserSchema";
+import { isLocal } from "@/utils/auth";
 import axios from "axios";
 
 const getAPIBaseUrl = (): string => {
-  return "";
+  return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
 };
 
 const client = axios.create({
@@ -14,5 +15,5 @@ const client = axios.create({
   validateStatus: () => true,
 });
 export async function post_login<T>(payload: UserLoginSchemaType) {
-  const reponse = await client.post("/auth/login", payload);
+  return await client.post("/auth/login", payload);
 }
