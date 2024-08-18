@@ -1,15 +1,17 @@
 import { cn } from "@/utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 import React, { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
-  `font-serif text-md text-center shadow-sm transition-all duration-200`,
+  `font-serif flex items-center justify-center text-md text-center shadow-sm transition-all duration-200`,
   {
     variants: {
       variant: {
-        light:
-          "bg-primaryWashed-50 text-neutral-900 hover:opacity-[0.9] hover:shadow-md",
-        auth: "bg-blue-600 text-neutral-100 hover:opacity-[0.9] hover:shadow-lg",
+        google:
+          "bg-[#F1F3F4] text-neutral-900 hover:opacity-[0.8] hover:shadow-md",
+        auth: "bg-blue-600 text-neutral-100 hover:opacity-[0.8] hover:shadow-md",
       },
       size: {
         full: "w-full py-6 rounded-xl",
@@ -28,11 +30,15 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   ref?: React.Ref<HTMLButtonElement>;
-  disabled: boolean;
+  iconNode?: StaticImport;
+  disabled?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ size, type, disabled, variant, className, children, ...props }, ref) => {
+  (
+    { size, type, iconNode, disabled, variant, className, children, ...props },
+    ref,
+  ) => {
     return (
       <button
         type={type}
@@ -48,6 +54,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
+        {iconNode ? <Image className="h-6 w-6" src={iconNode} alt="" /> : null}
+        &nbsp;
         {children}
       </button>
     );

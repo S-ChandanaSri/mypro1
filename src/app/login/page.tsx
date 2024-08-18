@@ -8,7 +8,7 @@ import FormContainer from "@/components/common/FormContainer";
 import Input from "@/components/common/Input";
 import Typography from "@/components/common/Typography";
 import { paths } from "@/constants";
-import { BACKGROUNDS } from "@/constants/images";
+import { BACKGROUNDS, svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import { InputValue } from "@/constants/types";
 import { UserLoginSchema } from "@/schema/UserSchema";
@@ -26,7 +26,6 @@ const Login = (props: Props) => {
 
   useEffect(() => {
     if (formEmail?.error || formPassword?.error) {
-      console.log(formEmail?.error, formPassword?.error);
       setDisabled(true);
       return;
     }
@@ -34,9 +33,9 @@ const Login = (props: Props) => {
   }, [formEmail, formPassword]);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let newEmail = e.target.value;
+    let newEmail = e.target.value.length > 0 ? e.target.value : undefined;
     try {
-      UserLoginSchema.shape.email.parse(newEmail);
+      UserLoginSchema.shape.email.parse(newEmail ?? "");
       setFormEmail({ value: newEmail, error: undefined });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -46,10 +45,9 @@ const Login = (props: Props) => {
   };
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let newPassword = e.target.value;
-
+    let newPassword = e.target.value.length > 0 ? e.target.value : undefined;
     try {
-      UserLoginSchema.shape.password.parse(newPassword);
+      UserLoginSchema.shape.password.parse(newPassword ?? "");
       setFormPassword({ value: newPassword, error: undefined });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -60,6 +58,17 @@ const Login = (props: Props) => {
 
   const onLoginAsync = async (e: any) => {
     e.preventDefault();
+
+    if (!formEmail?.value) {
+      setFormEmail({ ...formEmail, error: strings.signup.errors.invalidEmail });
+    }
+    if (!formPassword?.value) {
+      setFormPassword({
+        ...formPassword,
+        error: strings.signup.errors.invalidPassword.minLength,
+      });
+    }
+
     try {
       if (formEmail?.value && formPassword?.value) {
         const payload = {
@@ -93,12 +102,22 @@ const Login = (props: Props) => {
           placeholder={strings.signup.emailPlaceholder}
           onChange={handleEmailChange}
         />
+        {formEmail?.error && (
+          <span className="text-red-500 text-xs px-3 -translate-y-3 h-4">
+            * {formEmail?.error}
+          </span>
+        )}
         <Input
           name="password"
           type="password"
           placeholder={strings.signup.passwordPlaceholder}
           onChange={handlePasswordChange}
         />
+        {formPassword?.error && (
+          <span className="text-red-500 text-xs px-3 -translate-y-3 h-4">
+            * {formPassword?.error}
+          </span>
+        )}
         <div className="font-serif text-sm text-neutral-900 flex justify-between">
           <Checkbox
             label={strings.signup.rememberMe}
@@ -116,7 +135,7 @@ const Login = (props: Props) => {
           <Button variant="auth" disabled={disabled} type="submit">
             {strings.signup.login}
           </Button>
-          <Button variant="light" disabled={disabled} type="submit">
+          <Button variant="google" iconNode={svgs.google}>
             {strings.signup.loginWithGoogle}
           </Button>
           <span className="flex justify-center text-sm text-neutral-500 pt-4">
