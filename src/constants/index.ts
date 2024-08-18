@@ -62,3 +62,18 @@ export const COLORS = {
     dark: "#171427",
   },
 };
+
+export const FONT_SIZES = {
+  xs: "12px",
+  sm: "14px",
+  md: "16px",
+  lg: "18px",
+  xl: "24px",
+  "2xl": "36px",
+  "3xl": "52px",
+  "4xl": "56px",
+};
+
+export const Duration = {
+  apiTimeout: 60000,
+};

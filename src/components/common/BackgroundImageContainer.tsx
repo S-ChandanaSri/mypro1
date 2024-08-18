@@ -1,24 +1,9 @@
-import { VariantProps, cva } from "class-variance-authority";
 import React, { HTMLAttributes, forwardRef } from "react";
 import { cn } from "@/utils/cn";
-
-const backgroundContainerVariants = cva("min-h-screen bg-cover bg-center", {
-  variants: {
-    padding: {
-      none: "",
-      sm: "p-4",
-      md: "p-8",
-      lg: "p-16",
-    },
-  },
-  defaultVariants: {
-    padding: "md",
-  },
-});
+import Image from "next/image";
 
 export interface BackgroundContainerProps
-  extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof backgroundContainerVariants> {
+  extends HTMLAttributes<HTMLDivElement> {
   ref?: React.Ref<HTMLDivElement>;
   backgroundImage: string;
   overlay?: string;
@@ -27,16 +12,15 @@ export interface BackgroundContainerProps
 const BackgroundImageContainer = forwardRef<
   HTMLDivElement,
   BackgroundContainerProps
->(({ backgroundImage, padding, className, children, ...props }, ref) => {
-  const bgImageStyle = { backgroundImage: `url('${backgroundImage}')` };
-
+>(({ backgroundImage, className, children, ...props }, ref) => {
   return (
-    <div
-      ref={ref}
-      className={backgroundContainerVariants({ padding })}
-      style={bgImageStyle}
-      {...props}
-    >
+    <div ref={ref} className="min-h-screen bg-cover bg-center" {...props}>
+      <Image
+        alt="authImage"
+        objectFit="cover"
+        layout="fill"
+        src={backgroundImage}
+      />
       <div className={cn("absolute inset-0", className)}>{children}</div>
     </div>
   );
