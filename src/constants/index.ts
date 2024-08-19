@@ -81,7 +81,7 @@ export const paths = {
   landing: "/",
   aboutUs: "/about-us",
   login: "/login",
-  signUp: "/register",
+  signUp: "/signup",
   forgotPassword: "/forgot-password",
 };
 

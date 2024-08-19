@@ -1,4 +1,3 @@
-import { Dimens } from "@/constants";
 import { cn } from "@/utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import React, { HTMLAttributes, forwardRef } from "react";
@@ -8,7 +7,7 @@ const formVariants = cva(
   {
     variants: {
       variant: {
-        login: `sm:min-w-[480px] min-w-[95vw] bg-white text-neutral-950 space-y-6 px-7 pt-8 pb-12`,
+        auth: `sm:w-[480px] w-[95vw] bg-white text-neutral-950 space-y-6 px-7 pt-8 pb-12`,
       },
     },
   },

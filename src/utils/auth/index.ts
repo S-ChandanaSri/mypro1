@@ -1,3 +1,6 @@
+import { InputValue } from "@/constants/types";
+import { z } from "zod";
+
 export function isLocal(): boolean {
   return (
     process.env.NEXT_PUBLIC_ENVIRONMENT === "development" ||
@@ -12,3 +15,19 @@ export function isStaging(): boolean {
 export function isProduction(): boolean {
   return process.env.NEXT_PUBLIC_ENVIRONMENT === "production";
 }
+
+export const setErrorsFromZodError = (
+  err: z.ZodError,
+  setFormState: React.Dispatch<
+    React.SetStateAction<{ [key: string]: InputValue }>
+  >,
+) => {
+  err.errors.forEach((issue) => {
+    const field = issue.path[0];
+    const message = issue.message;
+    setFormState((prev) => ({
+      ...prev,
+      [field]: { ...prev[field], error: message },
+    }));
+  });
+};

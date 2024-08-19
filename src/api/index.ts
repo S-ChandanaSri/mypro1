@@ -1,5 +1,8 @@
 import { BACKEND_URLS, Duration } from "@/constants";
-import { UserLoginSchemaType } from "@/schema/UserSchema";
+import {
+  UserLoginSchemaType,
+  UserRegisterSchemaType,
+} from "@/schema/UserSchema";
 import { isLocal } from "@/utils/auth";
 import axios from "axios";
 
@@ -14,6 +17,11 @@ const client = axios.create({
   timeout: Duration.apiTimeout,
   validateStatus: () => true,
 });
+
 export async function post_login<T>(payload: UserLoginSchemaType) {
   return await client.post("/auth/login", payload);
+}
+
+export async function post_register<T>(payload: UserRegisterSchemaType) {
+  return await client.post("/auth/register", payload);
 }

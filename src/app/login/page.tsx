@@ -5,82 +5,47 @@ import BackgroundImageContainer from "@/components/common/BackgroundImageContain
 import Button from "@/components/common/Button";
 import Checkbox from "@/components/common/Checkbox";
 import FormContainer from "@/components/common/FormContainer";
-import Input from "@/components/common/Input";
+import Input from "@/components/auth/Input";
 import Typography from "@/components/common/Typography";
 import { paths } from "@/constants";
 import { BACKGROUNDS, svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
-import { InputValue } from "@/constants/types";
 import { UserLoginSchema } from "@/schema/UserSchema";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { z } from "zod";
+import { useForm } from "@/hooks";
+import { setErrorsFromZodError } from "@/utils/auth";
 
 type Props = {};
 
 const Login = (props: Props) => {
-  const [formEmail, setFormEmail] = useState<InputValue>();
-  const [formPassword, setFormPassword] = useState<InputValue>();
+  const { formState, setFormState, handleInputChange } = useForm();
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
 
   useEffect(() => {
-    if (formEmail?.error || formPassword?.error) {
-      setDisabled(true);
-      return;
-    }
-    setDisabled(false);
-  }, [formEmail, formPassword]);
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let newEmail = e.target.value.length > 0 ? e.target.value : undefined;
-    try {
-      UserLoginSchema.shape.email.parse(newEmail ?? "");
-      setFormEmail({ value: newEmail, error: undefined });
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        setFormEmail({ value: newEmail, error: error.errors[0].message });
-      }
-    }
-  };
-
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let newPassword = e.target.value.length > 0 ? e.target.value : undefined;
-    try {
-      UserLoginSchema.shape.password.parse(newPassword ?? "");
-      setFormPassword({ value: newPassword, error: undefined });
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        setFormPassword({ value: newPassword, error: error.errors[0].message });
-      }
-    }
-  };
+    const hasError = Object.values(formState).some((input) => input?.error);
+    setDisabled(hasError);
+  }, [formState]);
 
   const onLoginAsync = async (e: any) => {
     e.preventDefault();
 
-    if (!formEmail?.value) {
-      setFormEmail({ ...formEmail, error: strings.signup.errors.invalidEmail });
-    }
-    if (!formPassword?.value) {
-      setFormPassword({
-        ...formPassword,
-        error: strings.signup.errors.invalidPassword.minLength,
-      });
-    }
+    const payload = {
+      email: formState.email?.value,
+      password: formState.password?.value,
+      rememberMe,
+    };
 
     try {
-      if (formEmail?.value && formPassword?.value) {
-        const payload = {
-          email: formEmail?.value,
-          password: formPassword?.value,
-          rememberMe,
-        };
-        const res = await post_login(payload);
-        console.log(res);
-      }
+      const data = UserLoginSchema.parse(payload);
+      const res = await post_login(data);
+      console.log(res);
     } catch (err) {
-      console.error(`Error connecting to path: ${err}`);
+      if (err instanceof z.ZodError) {
+        setErrorsFromZodError(err, setFormState);
+      }
     }
   };
 
@@ -95,29 +60,27 @@ const Login = (props: Props) => {
       <Typography className="font-serif text-[#D9D9D9] max-w-[480px] text-lg font-normal text-center pb-10">
         {strings.signup.subHeading}
       </Typography>
-      <FormContainer variant="login" onSubmit={onLoginAsync}>
+      <FormContainer variant="auth" onSubmit={onLoginAsync}>
         <Input
           name="email"
           type="email"
+          error={formState.email?.error}
+          variant={formState.email?.error ? "error" : null}
           placeholder={strings.signup.emailPlaceholder}
-          onChange={handleEmailChange}
+          onChange={handleInputChange("email", UserLoginSchema.shape.email)}
         />
-        {formEmail?.error && (
-          <span className="text-red-500 text-xs px-3 -translate-y-3 h-4">
-            * {formEmail?.error}
-          </span>
-        )}
         <Input
           name="password"
           type="password"
+          error={formState.password?.error}
+          variant={formState.password?.error ? "error" : null}
           placeholder={strings.signup.passwordPlaceholder}
-          onChange={handlePasswordChange}
+          className="tracking-widest"
+          onChange={handleInputChange(
+            "password",
+            UserLoginSchema.shape.password,
+          )}
         />
-        {formPassword?.error && (
-          <span className="text-red-500 text-xs px-3 -translate-y-3 h-4">
-            * {formPassword?.error}
-          </span>
-        )}
         <div className="font-serif text-sm text-neutral-900 flex justify-between">
           <Checkbox
             label={strings.signup.rememberMe}
