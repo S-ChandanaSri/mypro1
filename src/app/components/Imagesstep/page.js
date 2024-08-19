@@ -1,18 +1,20 @@
 'use client'
 import React,{useState,useEffect, useRef} from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/page.js';
 import Image from 'next/image';
 import jhome from '../../_assets/images/jhome.png';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
+//import { useLocation, useNavigate } from 'react-router-dom';
 
-import Footerimages from './Footerimages';
-import Amenities from './Amenities';
+import Footerimages from '../Footerimages/page.js';
+import Amenities from '../Amenities/page.js';
 import { ImageList } from '@mui/material';
-import Title from './Title';
-import Description from './Description';
-import Describe from './Describe';
-import Imageslist from './Imageslist';
-import Display from './Display';
+import Title from '../Title/page.js';
+import Description from '../Description/page.js';
+import Describe from '../Describe/page.js';
+import Imageslist from '../Imageslist/page.js';
+import Display from '../Display/page.js';
+import { useListing } from '@/app/context/ListingContext.js';
 
 
 
@@ -21,10 +23,10 @@ import Display from './Display';
 
 export default function Imagesstep() {
 
-  const navigate=useNavigate();
+  const router = useRouter();
+  //const navigate=useNavigate();
   const [currentstep,setCurrentstep]=useState(0);
-  
-
+  const { listingid } = useListing();
  
 
   const handleBack = () => {
@@ -36,9 +38,9 @@ export default function Imagesstep() {
 
   
   const [dragId, setDragId] = useState();
-    const location = useLocation();
-    console.log("llllllllllll",location.state)
-    const { listingid } = location.state || {}; 
+    //const location = useLocation();
+    //console.log("llllllllllll",listingid)
+    //const { listingid } = location.state || {}; 
     const [step, setStep] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [click,setClick]=useState("");
@@ -87,7 +89,7 @@ export default function Imagesstep() {
         setIsLoading(true);
         setTimeout(() => {
           setIsLoading(false);
-          navigate('/payment',{ state: { listingid : listingid } })
+          router.push("/components/Payment" )
         }, 3000);
       }
   }

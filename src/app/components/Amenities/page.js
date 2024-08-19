@@ -106,9 +106,9 @@ export default function Amenities({ listingid }) {
 
   return (
     <>
-      <div className=' h-[1770px]'>
-        <div className='flex flex-col relative left-[412px] top-[140px] rounded-[15px]'>
-          <div className='w-[688px] relative top-[-70px]'>
+      <div className=' h-[1770px]  '>
+        <div className='flex flex-col relative  top-[140px] rounded-[15px]'>
+          <div className='w-[688px] relative left-[412px] top-[-70px]'>
             <p className='w-[896px] text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]'>
               Tell the guest what your place has to offer
             </p>
@@ -117,7 +117,7 @@ export default function Amenities({ listingid }) {
             </p>
           </div>
 
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid grid-cols-3 gap-5 mx-auto relative left-[421px] '>
             {options.map((option, index) => (
               <button
                 key={index}
@@ -135,14 +135,14 @@ export default function Amenities({ listingid }) {
           </div>
         </div>
 
-        <div className='flex flex-col relative left-[412px] top-[140px] rounded-[15px]'>
-          <div className='w-[688px] relative top-[70px]'>
+        <div className='flex flex-col relative  top-[140px] rounded-[15px]'>
+          <div className='w-[688px] relative left-[412px]  top-[70px]'>
             <p className='w-[417px] h-[30px] text-[20px] font-[400] leading-[30px] tracking-[0.46px] text-[#000000]'>
               Do you have any standout amenities?
             </p>
           </div>
 
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid grid-cols-3 gap-5 mx-auto relative left-[421px]'>
             {options1.map((option1, index) => (
               <button key={index} onClick={() => handleClick1(option1)} className={`h-[133px] w-[226px] relative top-[140px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center ${selectedoption.includes(option1.label) ? 'border-blue-500 border-[7px]' : 'border-[#8E98A8]'}`}>
                 <div className=' w-[90px] h-[88px] flex flex-col items-center '>
@@ -156,14 +156,14 @@ export default function Amenities({ listingid }) {
           </div>
         </div>
 
-        <div className='flex flex-col relative left-[412px] top-[140px] rounded-[15px]'>
-          <div className='w-[688px] relative top-[220px]'>
+        <div className='flex flex-col relative  top-[140px] rounded-[15px]'>
+          <div className='w-[688px] relative left-[412px] top-[220px]'>
             <p className='w-[417px] h-[30px] text-[20px] font-[400] leading-[30px] tracking-[0.46px] text-[#000000]'>
               Do you have any safety amenities?
             </p>
           </div>
 
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid grid-cols-3 gap-5 mx-auto relative left-[421px]'>
             {options3.map((option3, index) => (
               <button key={index} onClick={() => handleClick3(option3)} className={`h-[133px] w-[226px] relative top-[270px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center ${selectedoption.includes(option3.label) ? 'border-blue-500 border-[7px]' : 'border-[#8E98A8]'}`}>
                 <div className=' w-[90px] h-[88px] flex flex-col items-center '>

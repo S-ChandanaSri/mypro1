@@ -1,29 +1,31 @@
 'use client'
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import Navbar from './Navbar';
-import { useNavigate } from 'react-router-dom';
+
+//import { useNavigate } from 'react-router-dom';
 import Image from 'next/image';
 import mattress2 from '../../_assets/images/mattress2.png';
 import mattress1 from '../../_assets/images/mattress1.png';
 import mattress3 from '../../_assets/images/mattress3.png';
-import Footer from './Footer';
+import Footer from '../Footer/page.js';
 import d from '../../_assets/images/d.png';
-import Select from 'react-select';
+//import Select from 'react-select';
 import countryList from 'react-select-country-list';
-import Amenities1 from './Amenities1';
-import Amenities2 from './Amenities2';
-import Place from './Place';
-import Placetype from './Placetype';
-import Location from './Location';
-import Address from './Address';
-import Peopletype from './Peopletype';
-import Display from './Display';
-
-
+import Amenities1 from '../Amenities1/page.js'
+import Amenities2 from '../Amenities2/page.js';
+import Place from '../Place/page.js';
+import Placetype from '../Placetype/page.js';
+import Location from '../Location/page.js';
+import Address from '../Address/page.js';
+import Peopletype from '../Peopletype/page.js';
+import Display from '../Display/page.js';
+import Navbar from '../Navbar/page.js';
+import { useRouter } from 'next/navigation';
+import { useListing } from '@/app/context/ListingContext';
 export default function Steps() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [step, setStep] = useState(0);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const iframeRef = useRef(null);
 
   const [countguests,setCountguests]=useState(0);
@@ -34,7 +36,7 @@ export default function Steps() {
   const [privateroom2,setPrivate2]=useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  const[listingid,setListingid]=useState(null);
+  const { listingid, setListingid } = useListing();
   const [address, setAddress] = useState({
     road: '',
     city: '',
@@ -267,7 +269,7 @@ const[peopletype,setPeopletype]=useState(null);
         setIsLoading(true);
         setTimeout(() => {
           setIsLoading(false);
-          navigate("/images", { state: { listingid : listingid } })
+          router.push("/components/Imagesstep" )
         }, 3000);
       }
   };
@@ -280,7 +282,7 @@ const[peopletype,setPeopletype]=useState(null);
 
   return (
     <div className='flex flex-col min-h-screen bg-[#FFFFFF]'>
-      <Navbar />
+      <Navbar/>
       <div className='flex-grow'>
         <div className='flex items-center min-h-screen'>
           {step === 0 && (
@@ -319,7 +321,7 @@ const[peopletype,setPeopletype]=useState(null);
 
           {
             step===4 && (
-            <Location/>
+            <Location listingid={listingid} />  
           )}
 
           {

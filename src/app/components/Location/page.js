@@ -1,12 +1,12 @@
 'use client'
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+//import { useLocation, useNavigate } from 'react-router-dom';
 
 
-export default function Location() {
-    const location = useLocation();
-    console.log("llllllllllll",location.state)
-    const { listingid } = location.state || {}; 
+export default function Location({listingid}) {
+    //const location = useLocation();
+    //console.log("llllllllllll",location.state)
+    //const { listingid } = location.state || {}; 
   return (
     <>
             <div className='flex flex-col items-center h-[670px] relative left-[350px]'>

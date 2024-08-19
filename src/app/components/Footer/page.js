@@ -1,11 +1,11 @@
 'use client'
 import React,{useState} from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 export default function Footer({ isLoading, buttonText, onClick, onBack, currentstep }) {
   const [step, setStep] = useState(0);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const handleBackButton = () => {
     if (onBack) {
       onBack();

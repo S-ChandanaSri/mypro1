@@ -4,7 +4,7 @@ import Image from 'next/image';
 import house from '../../_assets/images/house.png';
 import room from '../../_assets/images/room.png';
 import cilroom from '../../_assets/images/cilroom.png';
-import { useLocation, useNavigate } from 'react-router-dom';
+//import { useLocation, useNavigate } from 'react-router-dom';
 
 
 export default function Placetype({ listingid }) { 

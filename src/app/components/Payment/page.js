@@ -1,24 +1,28 @@
 'use client'
 import React,{useState,useEffect} from 'react';
-import Navbar from './Navbar';
-import Footerpayment from './Footerpayment';
+import Navbar from '../Navbar/page.js';
+import Footerpayment from '../Footerpayment/page.js';
 import Image from 'next/image';
-import { useLocation, useNavigate } from 'react-router-dom';
-import Display from './Display';
-import Amount from './Amount';
-import Pay from './Pay';
+//import { useLocation, useNavigate } from 'react-router-dom';
+import Display from '../Display/page.js';
+import Amount from '../Amount/page.js';
+import Pay from '../Pay/page.js';
+import { useRouter } from 'next/navigation';
+import { useListing } from '@/app/context/ListingContext.js';
 
 
 export default function Payment() {
 
+    const router = useRouter();
+    const { listingid } = useListing();
     const [currentstep,setCurrentstep]=useState(0)
     const [step, setStep] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [num, setNum] = useState('');
-    const navigate=useNavigate();
-    const location = useLocation();
-    console.log("location",location.state)
-    const { listingid } = location.state || {}; 
+    ////const navigate=useNavigate();
+    //const location = useLocation();
+    //console.log("location",location.state)
+    //const { listingid } = location.state || {}; 
    
 
 
@@ -50,7 +54,7 @@ export default function Payment() {
         setTimeout(() => {
           setIsLoading(false);
           setCurrentstep((prevStep) => prevStep + 1);
-          navigate("/propertylisting")
+          router.push("/components/Propertylisting" );
           
         }, 3000);
           }

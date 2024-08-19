@@ -2,11 +2,11 @@
 import React,{useState,useEffect,useRef} from 'react';
 import {useDropzone} from 'react-dropzone';
 import Image from 'next/image';
-import photos from '../../_assets/images/photos.png';
-import Resizer from 'react-image-file-resizer';
+//import photos from '../../_assets/images/photos.png';
+//import Resizer from 'react-image-file-resizer';
 import pica from 'pica';
 import frame from '../../_assets/images/frame.png';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 export default function Imageslist({listingid}) {
 
@@ -16,7 +16,7 @@ export default function Imageslist({listingid}) {
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const optionss = ["Edit", "Cover photo", "Delete"];
-  const navigate=useNavigate();
+  //const navigate=useNavigate();
   
   const handleDropdownClick = (index) => {
     console.log(`Dropdown clicked: ${index}, current isopenn: ${isopenn}`);
@@ -191,25 +191,24 @@ export default function Imageslist({listingid}) {
         
           const resizeImage = (file, size) => {
             return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = URL.createObjectURL(file);
-                console.log('Creating Blob URL:', img.src); 
-                img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = size.width;
-                    canvas.height = size.height;
-                    picaInstance
-                        .resize(img, canvas)
-                        .then((result) => picaInstance.toBlob(result, 'image/jpeg'))
-                        .then((blob) => {
-                            const blobUrl = URL.createObjectURL(blob);
-                            console.log('Created Blob URL:', blobUrl); 
-                            resolve(blobUrl);
-                        })
-                        .catch((error) => reject(error));
-                };
+              const img = new window.Image(); // Use standard HTML Image constructor
+              img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = size.width;
+                canvas.height = size.height;
+                picaInstance.resize(img, canvas)
+                  .then((result) => picaInstance.toBlob(result, 'image/jpeg'))
+                  .then((blob) => {
+                    const blobUrl = URL.createObjectURL(blob);
+                    resolve(blobUrl);
+                  })
+                  .catch((error) => reject(error));
+              };
+              img.onerror = (error) => reject(error);
+              img.src = URL.createObjectURL(file);
             });
-        };
+          };
+          
         
         
         

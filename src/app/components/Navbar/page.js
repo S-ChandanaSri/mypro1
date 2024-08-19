@@ -6,7 +6,7 @@ import materialblack from '../../_assets/images/materialblack.png';
 import userblack from '../../_assets/images/userblack.png';
 import quillblack from '../../_assets/images/quillblack.png';
 
-export default function Navbar() {
+const Navbar=()=> {
   return (
     <div className='flex justify-between items-center  h-[72px]  pt-[15px] pr-[45px] pb-[15px] pl-[55px] shadow-[0px_-1px_1px_0px_#0000001A_inset] bg-[#3D52A0]'>
         <div className='w-[134px] h-[34px] flex'>
@@ -40,3 +40,4 @@ export default function Navbar() {
     </div>
   )
 }
+export default Navbar;

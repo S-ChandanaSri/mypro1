@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { ListingProvider } from './context/ListingContext';
 import "./globals.css";
 
 const inter = Inter({
@@ -30,12 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
       <body
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable}`}
       >
+        <ListingProvider>
         {children}
+        </ListingProvider>
       </body>
     </html>
+
   );
 }

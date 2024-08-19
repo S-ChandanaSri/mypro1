@@ -49,7 +49,7 @@ export default function Amenities1({listingid}) {
   return (
     <>
 
-<div className='flex flex-col items-center h-[670px] relative left-[350px]'>
+<div className='flex flex-col items-center h-[670px] relative left-[350px]  '>
         <div className='border-[black] w-[1166px] h-[914px] rounded-[15px]'>
           <p className='w-[392px] h-[53px] relative top-[30px] custo-font text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]'> Let’s start with basics </p> 
           <p className='w-[322px] h-[27px] relative top-[70px] custo-font text-[18px] font-[500] leading-[27px] tracking-[0.46px] text-[#000000]'> How many people can stay here? </p>            
