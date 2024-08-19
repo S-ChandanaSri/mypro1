@@ -81,7 +81,7 @@ const Login = (props: Props) => {
             UserLoginSchema.shape.password,
           )}
         />
-        <div className="font-serif text-sm text-neutral-900 flex justify-between">
+        <div className="font-serif text-sm text-neutral-500 flex justify-between">
           <Checkbox
             label={strings.signup.rememberMe}
             value={rememberMe}
