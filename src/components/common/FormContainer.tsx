@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { HTMLAttributes, forwardRef } from "react";
 
 const formVariants = cva(
-  `px-8 py-12 rounded-2xl flex flex-col space-y-4 font-serif text-md font-normal placeholder:font-normal`,
+  `px-8 py-12 rounded-2xl flex flex-col space-y-4 font-serif text-md font-normal placeholder:font-normal shadow-xl`,
   {
     variants: {
       variant: {

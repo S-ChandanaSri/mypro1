@@ -5,11 +5,11 @@ export const UserLoginSchema = z.object({
   email: z.string().email(strings.signup.errors.invalidEmail),
   password: z
     .string()
-    .min(8, strings.signup.errors.invalidPassword.minLength)
-    .max(16, strings.signup.errors.invalidPassword.maxLength)
     .regex(/[a-z]/, strings.signup.errors.invalidPassword.lowerCaseCharacter)
     .regex(/[A-Z]/, strings.signup.errors.invalidPassword.upperCaseCharacter)
-    .regex(/\d/, strings.signup.errors.invalidPassword.number),
+    .regex(/\d/, strings.signup.errors.invalidPassword.number)
+    .max(16, strings.signup.errors.invalidPassword.maxLength)
+    .min(8, strings.signup.errors.invalidPassword.minLength),
   rememberMe: z.boolean(),
 });
 

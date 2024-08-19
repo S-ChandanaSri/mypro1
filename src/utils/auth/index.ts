@@ -22,9 +22,9 @@ export const setErrorsFromZodError = (
     React.SetStateAction<{ [key: string]: InputValue }>
   >,
 ) => {
-  err.errors.forEach((issue) => {
-    const field = issue.path[0];
-    const message = issue.message;
+  err.errors.forEach((error) => {
+    const field = error.path[0];
+    const message = error.message;
     setFormState((prev) => ({
       ...prev,
       [field]: { ...prev[field], error: message },

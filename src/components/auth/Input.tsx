@@ -49,7 +49,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         >
           {children}
         </input>
-        {error && <span className="text-red-500 text-xs px-3">* {error}</span>}
+        {error && (
+          <span className="text-red-500 text-xs px-3">&#9734; {error}</span>
+        )}
       </div>
     );
   },

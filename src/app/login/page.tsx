@@ -33,8 +33,8 @@ const Login = (props: Props) => {
     e.preventDefault();
 
     const payload = {
-      email: formState.email?.value,
-      password: formState.password?.value,
+      email: formState.email?.value ?? "",
+      password: formState.password?.value ?? "",
       rememberMe,
     };
 

@@ -28,11 +28,11 @@ const SignUp = (props: Props) => {
     e.preventDefault();
 
     const payload = {
-      firstName: formState.firstName?.value,
-      lastName: formState.lastName?.value,
-      email: formState.email?.value,
-      password: formState.password?.value,
-      confirmPassword: formState.confirmPassword?.value,
+      firstName: formState.firstName?.value ?? "",
+      lastName: formState.lastName?.value ?? "",
+      email: formState.email?.value ?? "",
+      password: formState.password?.value ?? "",
+      confirmPassword: formState.confirmPassword?.value ?? "",
     };
 
     try {
