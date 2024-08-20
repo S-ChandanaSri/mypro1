@@ -57,7 +57,7 @@ export default function Placetype({ listingid }) {
                                 <p className='text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]'>
                                     An entire place
                                 </p>
-                                <p className='w-[401px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000] text-center'>
+                                <p className='w-[401px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000] text-left'>
                                     Guest will have whole place to live or enjoy
                                 </p>
                             </div>
@@ -73,7 +73,7 @@ export default function Placetype({ listingid }) {
                                 <p className='text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]'>
                                     A room
                                 </p>
-                                <p className='w-[401px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-left'>
+                                <p className='w-[481px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-left'>
                                     Guest will have only a small part of the house to live or enjoy
                                 </p>
                             </div>
@@ -84,7 +84,7 @@ export default function Placetype({ listingid }) {
                         onClick={handletype('a shared room')}
                         className={`w-[666px] h-[135px] py-[20px] px-[22px] gap-[10px] border-[2px] border-[#000000] rounded-[15px] relative top-[90px] left-[7px] ${placetype === "a shared room" ? 'border-blue-500 border-4' : 'border-[#8E98A8]'}`}
                     >
-                        <div className='flex items-center pt-5 w-[620px] h-[74px] gap-[161px]'>
+                        <div className='flex items-center pt-4 w-[620px] h-[74px] gap-[161px]'>
                             <div className='w-[401px] h-[74px] gap-[9px]'>
                                 <p className='text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]'>
                                     A shared room

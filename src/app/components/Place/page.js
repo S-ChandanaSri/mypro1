@@ -59,8 +59,8 @@ export default function Place({ selectedOption, setSelectedOption, setIsLoading,
                                 onClick={() => handleColor(option)}
                                 className={`h-[133px] w-[186px] rounded-[7px] border-[1px] py-[29px] px-[15px] gap-[10px] ${color === option ? 'border-blue-700 border-[5px]' : 'border-[#8E98A8]'}`}
                             >
-                                <div className='w-[90px] h-[96px] gap-[10px]'>
-                                    <Image width={48} height={48} src={option === 'House' ? phhouse : phbuild} className='w-[48px] h-[48px]' />
+                                <div className='w-[90px] h-[96px] flex flex-col items-center relative left-[10px] gap-[10px]'>
+                                    <Image width={48} height={48} src={option === 'House' ? phhouse : phbuild} className='w-[48px] h-[48px] ' />
                                     <p className='w-[80px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]'>{option}</p>
                                 </div>
                             </button>

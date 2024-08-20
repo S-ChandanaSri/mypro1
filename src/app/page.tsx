@@ -2,7 +2,7 @@
 import React,{useRef,useState} from 'react';
 import Image from 'next/image';
 import img1  from '../app/_assets/images/Logo1.png';
-import backgroundImg from '../app/_assets/images/background.jpg'
+import backgroundImg from '../../public/background.jpg';
 import material from '../app/_assets/images/material.png';
 import user from '../app/_assets/images/mdi_user.png';
 import quill from '../app/_assets/images/quill.png';
@@ -102,12 +102,14 @@ function Home() {
   },
 ];
 
+const backgroundImgUrl = backgroundImg.src; 
+
 
   return (
     <div className=' h-[800px] '>
         <div 
       className='w-full h-full bg-cover bg-no-repeat'
-      style={{ backgroundImage: `url(${backgroundImg})` }}
+      style={{ backgroundImage: `url(${backgroundImgUrl})` }}
       >
          
 
@@ -147,27 +149,27 @@ function Home() {
 
       <div className=' h-[730px] py-[156px] px-[418px]  gap-[40px] bg-[linear-gradient(180deg,_rgba(248,_247,_255,_0.02)_0%,_rgba(5,_7,_13,_0.48)_57.76%,_rgba(0,_0,_0,_0.82)_92.61%)]'>
         <div className='w-[638px] w-fill h-[281x] h-fixed gap-[19px]'>
-            <p className='text-[#E3F2FD]  foundation-blue-light] w-[638px] h-[141px] custo-font font-[400] text-[56px] leading-[61.6px] items-center shadow-[5px_5px_10px_0px_#0000004D] '>Reserve <span className='custo-font font-[400] text-[56px] leading-[61.6px] items-center'>your Ideal Holiday</span> </p>
-            <p className=' w-[638px] mt-4 h-[61.4px] custo-font font-[400] text-[22px] leading-[27px] text-[#FFFFFF] items-center shadow-[5px_5px_10px_0px_#0000004D] '>We're thrilled to have you! Let's find you the ideal place to stay.</p>
+            <p className='text-[#E3F2FD]  foundation-blue-light] w-[638px] h-[141px] custo-font font-[400] text-[56px] leading-[61.6px] items-center shadow-[5px_5px_10px_0px_#0000004D] text-center '>Reserve <span className='custo-font font-[400] text-[56px] leading-[61.6px] items-center'>your Ideal Holiday</span> </p>
+            <p className=' w-[638px] mt-4 h-[61.4px] custo-font font-[400] text-[22px] leading-[27px] text-[#FFFFFF] items-center shadow-[5px_5px_10px_0px_#0000004D] pt-3 pl-3 '>We're thrilled to have you! Let's find you the ideal place to stay.</p>
             <div className='flex mt-9 w-Fill [638px] h-[41px] h-fixed gap-[53px]'>
                 <div className='bg-black w-[208.21px] h-[40.94px] rounded-[31px] '>
-                    <div className='flex items-center justify-evenly w-full h-full'>
+                    <div className='flex items-center justify-evenly w-full h-full pl-5'>
                     <Image src={homeverify}  alt="home" className='w-[18.93px] h-[19.33px]   ' />
                     <p className='w-[161.45px]  top-[12.54px] left-[36.08px] custo-font font-[400] text-[16px] leading-[61.6px] items-center text-white bg--10-90'>verified properties</p>
 
                     </div>
                     
                 </div>
-                <div className='bg-black rounded-[31px] w-[171.47px] h-[40.94px] '>
+                <div className='bg-black rounded-[31px] w-[171.47px] h-[40.94px] pl-5 '>
                    <div className='flex items-center justify-evenly w-full h-full'>
                     <Image src={bxsupport}  alt='' className='w-[22.27px] h-[22.74px] top-[9.13px] left-[275.02px] ' />
                     <p className='w-[114.68px]  top-[13.68px] left-[308.42px] custo-font font-[400] text-[16px] leading-[61.6px] text-white bg-opacity-90'>24/7 support</p>
                     </div>
                 </div>
-                <div className='bg-black rounded-[31px] w-[151.43px] h-[40.94px] '>
+                <div className='bg-black rounded-[31px] w-[151.43px] h-[40.94px] pl-5 '>
                 <div className='flex items-center justify-evenly w-full h-full'>
                     <Image src={akar}  alt='' className='w-[18.93px] h-[19.33px] top-[10.27px] left-[498.38px] ' />
-                    <p className='w-[108px] top-[12.54px] left-[521.76px] custo-font font-[400] text-[16px] leading-[61.6px]  text-white bg-opacity-90'>Price match</p>
+                    <p className='w-[108px] top-[12.54px] left-[525.76px] pl-2 custo-font font-[400] text-[16px] leading-[61.6px]  text-white bg-opacity-90'>Price match</p>
                     </div>
 
                 </div>
@@ -179,7 +181,7 @@ function Home() {
         <div className='flex mt-10 ml-14 items-center w-[501px] w-fixed h-[66px] h-fixed gap-[7px] p-[18px] rounded-[61.05px] bg-[#FFFFFF]'> 
             <Image src={searchline} alt='' className='w-[24px] h-[24px] ' />
             
-            <div className='flex w-[313px] h-[30px] '>
+            <div className='flex w-[313px] h-[30px] items-center pt-2 '>
             <div className="relative  bottom-[4px] w-[101px] h-[30px] font-poppins font-normal text-[20px] leading-[30px] text-black">
                 Search by
             </div>

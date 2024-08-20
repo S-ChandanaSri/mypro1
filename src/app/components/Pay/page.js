@@ -4,10 +4,10 @@ import Image from 'next/image';
 import imageimage from '../../_assets/images/imageimage.png';
 
 
-export default function Pay({listingid}) {
+export default function Pay({listingid,salary}) {
 
-    const [num, setNum] = useState('');
-    const [salary,setSalary]=useState(1000);
+    const [num, setNum] = useState(0);
+    //const [salary,setSalary]=useState(1000);
     const [addition, setAddition] = useState(0);
     useEffect(() => {
       const calculatedAddition = parseInt(salary, 10) + parseInt(num, 10);
