@@ -1,17 +1,28 @@
 'use client'
-import React, { useState, useMemo } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; 
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Image from 'next/image';
+import React, { useState, useEffect,useMemo } from 'react';
+import Navbar from '../Navbar/page.js';
+import Footer from '../Footer/page.js';
 import mdi from '../../_assets/images/mdi.png';
-import Slider from './Slider';
+import Slider from '../Slider/page.js';
+import { useSearchParams } from 'next/navigation'; // Import useSearchParams
+
 
 export default function Edit() {
-    const location = useLocation();
-    const navigate = useNavigate(); 
-    const { image, index } = location.state || {};
+    const searchParams = useSearchParams();
+    const [image, setImage] = useState('default-image-url');
+    const [index, setIndex] = useState('0');
 
+    useEffect(() => {
+        const imageParam = searchParams.get('image'); // Extract 'image' parameter
+        const indexParam = searchParams.get('index'); // Extract 'index' parameter
+        
+        if (imageParam) {
+            setImage(decodeURIComponent(imageParam)); // Decode the image URL
+        }
+        if (indexParam) {
+            setIndex(decodeURIComponent(indexParam));
+        }
+    }, [searchParams]);
     const [brightness, setBrightness] = useState(100);
     const [contrast, setContrast] = useState(100);
     const [hueRotate, setHueRotate] = useState(0);
@@ -27,7 +38,8 @@ export default function Edit() {
                 contrast(${contrast}%)
                 hue-rotate(${hueRotate}deg)
                 blur(${blur}px)
-            `
+                `
+            
         };
     }, [brightness, contrast, hueRotate, blur]);
 
@@ -52,20 +64,19 @@ export default function Edit() {
 
     return (
         <>
-            <div className='flex flex-col h-[555px]'>
+            <div className='flex flex-col h-[855px]'>
                 <Navbar />
-                <div className='h-[555px]'>
+                <div className='h-[855px] relative'>
                     
-                        <div className='w-[744px] h-[49.5px] relative top-[29px] flex justify-between'>
-                            <Image width={45} height={35}  src={mdi} className='w-[45px] h-[35px] pl-3' />
+                        <div className='w-[744px] h-[29.5px] relative top-[29px] left-[750px]'>
                             <p className='w-[136px] h-[36px] custo-font text-[24px] font-[500] leading-[36px] tracking-[0.46px] text-[#000000]'>
                                 Edit photo
                             </p>
                         </div>
-                        <div className='w-[1359px] relative top-[50px] border-[1px] border-[#8E98A8]'></div>
+                        <div className='w-[1519px] relative top-[50px] border-[1px] border-[#8E98A8]'></div>
                         <div>
                             {image && (
-                                <Image width={682} height={549} 
+                                <img
                                     src={image}
                                     alt={`Image ${index}`}
                                     className='relative top-[160px] left-[130px] w-[682px] h-[549px] rounded-[10px]'
@@ -105,7 +116,7 @@ export default function Edit() {
                             )}
                             {edit && (
                                 <>
-                                    <div className='w-[500px] h-[300px] relative left-[980px] bottom-[290px] '>
+                                    <div className='w-[500px] h-[300px] relative left-[980px] bottom-[300px] '>
                                         <div className='flex flex-col justify-evenly w-[332px] h-[63.43px]  mb-6 '>
                                             <p className='w-[332px] h-[27px] custo-font text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]' >Brightness</p>
                                             <Slider className='w-[332px] relative bottom-8'

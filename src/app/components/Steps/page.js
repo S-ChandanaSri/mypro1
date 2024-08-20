@@ -19,6 +19,7 @@ import Address from '../Address/page.js';
 import Peopletype from '../Peopletype/page.js';
 import Display from '../Display/page.js';
 import Navbar from '../Navbar/page.js';
+import Options from '..//Options/page.js';
 import { useRouter } from 'next/navigation';
 import { useListing } from '@/app/context/ListingContext';
 export default function Steps() {
@@ -286,7 +287,7 @@ const[peopletype,setPeopletype]=useState(null);
       <div className='flex-grow'>
         <div className='flex items-center min-h-screen'>
           {step === 0 && (
-            <Display/>
+            <Options/>
           )}
           {step === 1 && (
             <>

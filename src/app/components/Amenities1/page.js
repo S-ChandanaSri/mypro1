@@ -114,7 +114,7 @@ export default function Amenities1({listingid}) {
           onClick={() => handleClick(0)}
           className={`w-[25px] h-[25px] border-[2px] border-[#002855] rounded-[50%] ${isClicked === 0 ? 'bg-blue-800' : ''}`} ></button>            </div>
             <div className='w-[432px] h-[27px] flex justify-between pt-8'>
-              <p className='w-[147px] h-[27px] custo-font text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]'>  Connected to eachother </p> 
+              <p className='w-[197px] h-[27px] custo-font text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]'>  Connected to eachother </p> 
               <button
           onClick={() => handleClick(1)}
           className={`w-[25px] h-[25px] border-[2px] border-[#002855] rounded-[50%] ${isClicked === 1 ? 'bg-blue-800' : ''}`}></button>            </div>

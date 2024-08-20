@@ -1,22 +1,23 @@
 'use client'
 import React,{useState} from 'react';
-import Image from 'next/image';
 import rectangle from '../../_assets/images/rectangle.png';
-import { Link,useNavigate } from 'react-router-dom';
-import Navbar from './Navbar';
+//import { Link,useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar/page.js';
 import { ThreeDots } from 'react-loader-spinner'; 
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
 
 
 export default function Listings() {
     const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate();
-
+    const router = useRouter();
     const handlebutton=()=>{
         setIsLoading(true);
         setTimeout(()=>{
             setIsLoading(false);
-            navigate('/steps');
-        },3000)
+            router.push("/components/Steps" )      
+          },3000)
     }
 
   return (
@@ -50,7 +51,7 @@ export default function Listings() {
             
         </div>
         <div className='w-[804px] h-[827px] relative top-[149px] left-[45px] rounded-[15px] border-[#D9D9D9] '>
-            <Image width={16} height={16} src={rectangle}  />
+            <Image src={rectangle} alt=''  />
         </div>
     </div>
 

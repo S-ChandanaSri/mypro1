@@ -98,7 +98,7 @@ export default function Payment() {
          )}
 
         {step === 2 && (
-        <Pay listingid={listingid}/>
+        <Pay listingid={listingid} salary={salary}/>
            )}
 
       </div>

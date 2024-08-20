@@ -45,7 +45,7 @@ export default function Title({listingid}) {
                 <div className='w-[672px] h-[306px]  '>
                 <div className='w-[637px] h-[67px]  '>
                 <p className='w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]'>Now,let’s give your property a title</p>
-                <p className='w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000]'>Short title works best Don’t woory you can cahnge it later</p>
+                <p className='w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000]'>Short title works best Don’t woory you can change it later</p>
 
                 </div>
                 <textarea className='w-[672px] h-[209px] rounded-[5px] border-[1px] border-[#000000] 'onChange={handleTextChangee} value={textt}></textarea>

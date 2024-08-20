@@ -51,7 +51,7 @@ export default function Description({listingid}) {
                 <p className="w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]">
                   Next, Let’s describe your property
                 </p>
-                <p className="w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000]">
+                <p className="w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000] pt-1">
                   Choose up to 2 highlights. We’ll use this to get your description ready.
                 </p>
               </div>

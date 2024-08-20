@@ -1,14 +1,16 @@
 'use client'
 import React,{useState,useEffect,useRef} from 'react';
 import {useDropzone} from 'react-dropzone';
-import Image from 'next/image';
-//import photos from '../../_assets/images/photos.png';
+//import photos from '../images/landingpage/photos.png';
 //import Resizer from 'react-image-file-resizer';
 import pica from 'pica';
 import frame from '../../_assets/images/frame.png';
 //import { useNavigate } from 'react-router-dom';
+import { useListing } from '../../context/ListingContext';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Imageslist({listingid}) {
+  const router = useRouter();
 
   const [isopenn, setIsopenn] = useState(null); 
   const dropdownref = useRef(null);
@@ -25,11 +27,20 @@ export default function Imageslist({listingid}) {
 
   const handleOptionClick = (option, imageIndex) => {
     console.log(`Option clicked: ${option}, Image index: ${imageIndex}`);
-    
+    console.log(typeof files[imageIndex]?.preview); // Should log 'string'
+
     if (option === 'Edit') {
-      console.log(`Navigating to /edit with image: ${files[imageIndex]?.preview}, index: ${imageIndex}`);
-      navigate('/edit', { state: { image: files[imageIndex]?.preview, index: imageIndex } });
-    }
+      // Extract the image URL and index from your files array
+      const encodedImage = encodeURIComponent(files[imageIndex]?.preview || ''); // Ensure it's a string and encode it
+      const imageIndexStr = encodeURIComponent(imageIndex); // Ensure index is a string and encode it
+  
+      console.log('Navigating to /edit with parameters:');
+      console.log('Encoded Image:', encodedImage);
+      console.log('Image Index:', imageIndexStr);
+  
+      // Push to the router with key-value parameters
+      router.push(`/components/Edit?image=${encodedImage}&index=${imageIndexStr}`);
+  }
     
     if (option === 'Cover photo') {
       const updatedFiles = [...files];
@@ -191,24 +202,25 @@ export default function Imageslist({listingid}) {
         
           const resizeImage = (file, size) => {
             return new Promise((resolve, reject) => {
-              const img = new window.Image(); // Use standard HTML Image constructor
-              img.onload = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = size.width;
-                canvas.height = size.height;
-                picaInstance.resize(img, canvas)
-                  .then((result) => picaInstance.toBlob(result, 'image/jpeg'))
-                  .then((blob) => {
-                    const blobUrl = URL.createObjectURL(blob);
-                    resolve(blobUrl);
-                  })
-                  .catch((error) => reject(error));
-              };
-              img.onerror = (error) => reject(error);
-              img.src = URL.createObjectURL(file);
+                const img = new Image();
+                img.src = URL.createObjectURL(file);
+                console.log('Creating Blob URL:', img.src); 
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = size.width;
+                    canvas.height = size.height;
+                    picaInstance
+                        .resize(img, canvas)
+                        .then((result) => picaInstance.toBlob(result, 'image/jpeg'))
+                        .then((blob) => {
+                            const blobUrl = URL.createObjectURL(blob);
+                            console.log('Created Blob URL:', blobUrl); 
+                            resolve(blobUrl);
+                        })
+                        .catch((error) => reject(error));
+                };
             });
-          };
-          
+        };
         
         
         
