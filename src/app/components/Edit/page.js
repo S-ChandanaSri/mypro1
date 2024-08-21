@@ -4,7 +4,7 @@ import Navbar from '../Navbar/page.js';
 import Footer from '../Footer/page.js';
 import mdi from '../../_assets/images/mdi.png';
 import Slider from '../Slider/page.js';
-import { useSearchParams } from 'next/navigation'; // Import useSearchParams
+import { useSearchParams } from 'next/navigation'; 
 
 
 export default function Edit() {
@@ -13,11 +13,11 @@ export default function Edit() {
     const [index, setIndex] = useState('0');
 
     useEffect(() => {
-        const imageParam = searchParams.get('image'); // Extract 'image' parameter
-        const indexParam = searchParams.get('index'); // Extract 'index' parameter
+        const imageParam = searchParams.get('image'); 
+        const indexParam = searchParams.get('index'); 
         
         if (imageParam) {
-            setImage(decodeURIComponent(imageParam)); // Decode the image URL
+            setImage(decodeURIComponent(imageParam)); 
         }
         if (indexParam) {
             setIndex(decodeURIComponent(indexParam));

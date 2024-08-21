@@ -4,7 +4,6 @@ import Navbar from '../Navbar/page.js';
 import Image from 'next/image';
 import jhome from '../../_assets/images/jhome.png';
 import { useRouter } from 'next/navigation';
-//import { useLocation, useNavigate } from 'react-router-dom';
 
 import Footerimages from '../Footerimages/page.js';
 import Amenities from '../Amenities/page.js';
