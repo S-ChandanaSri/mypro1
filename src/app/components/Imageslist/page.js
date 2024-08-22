@@ -1,11 +1,13 @@
 'use client'
-import React,{useState,useEffect,useRef,useMemo} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import {useDropzone} from 'react-dropzone';
-
+//import photos from '../images/landingpage/photos.png';
+//import Resizer from 'react-image-file-resizer';
 import pica from 'pica';
 import frame from '../../_assets/images/frame.png';
+//import { useNavigate } from 'react-router-dom';
 import { useListing } from '../../context/ListingContext';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Imageslist({listingid}) {
   const router = useRouter();
@@ -15,15 +17,8 @@ export default function Imageslist({listingid}) {
   const [files, setFiles] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [showEditPopup, setShowEditPopup] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  const [brightness, setBrightness] = useState(100);
-  const [contrast, setContrast] = useState(100);
-  const [hueRotate, setHueRotate] = useState(0);
-  const [blur, setBlur] = useState(0);
   const optionss = ["Edit", "Cover photo", "Delete"];
-
+  //const navigate=useNavigate();
   
   const handleDropdownClick = (index) => {
     console.log(`Dropdown clicked: ${index}, current isopenn: ${isopenn}`);
@@ -32,13 +27,20 @@ export default function Imageslist({listingid}) {
 
   const handleOptionClick = (option, imageIndex) => {
     console.log(`Option clicked: ${option}, Image index: ${imageIndex}`);
-    console.log(typeof files[imageIndex]?.preview); 
+    console.log(typeof files[imageIndex]?.preview); // Should log 'string'
 
     if (option === 'Edit') {
-      setSelectedImage(files[imageIndex]?.preview || '');
-      setSelectedImageIndex(imageIndex);
-      setShowEditPopup(true); 
-    }
+      // Extract the image URL and index from your files array
+      const encodedImage = encodeURIComponent(files[imageIndex]?.preview || ''); // Ensure it's a string and encode it
+      const imageIndexStr = encodeURIComponent(imageIndex); // Ensure index is a string and encode it
+  
+      console.log('Navigating to /edit with parameters:');
+      console.log('Encoded Image:', encodedImage);
+      console.log('Image Index:', imageIndexStr);
+  
+      // Push to the router with key-value parameters
+      router.push(`/components/Edit?image=${encodedImage}&index=${imageIndexStr}`);
+  }
     
     if (option === 'Cover photo') {
       const updatedFiles = [...files];
@@ -74,28 +76,6 @@ export default function Imageslist({listingid}) {
   };
   
   
-
-
-  const getImageStyle = useMemo(() => {
-    return {
-      filter: `
-        brightness(${brightness}%)
-        contrast(${contrast}%)
-        hue-rotate(${hueRotate}deg)
-        blur(${blur}px)
-      `,
-    };
-  }, [brightness, contrast, hueRotate, blur]);
-
-  const closePopup = () => {
-    setShowEditPopup(false);
-    setBrightness(100);
-    setContrast(100);
-    setHueRotate(0);
-    setBlur(0);
-  };
-
-
 
   const handleClickOutside = (event) => {
     if (dropdownref.current && !dropdownref.current.contains(event.target)) {
@@ -137,8 +117,6 @@ export default function Imageslist({listingid}) {
           })
           .catch((err) => console.error("Error:", err));
 
-
-          
 
           const handleDragStart = (ev) => {
             const id = ev.currentTarget.id;
@@ -253,31 +231,33 @@ export default function Imageslist({listingid}) {
         };
 
         const onDrop = async (acceptedFiles) => {
-          let newHeight = totalHeight;
-      
-          const newFiles = acceptedFiles.slice(0, 10 - files.length);
-          const rowHeight = 325;
-          const totalImages = files.length + newFiles.length;
-          const imagesPerRow = 3;
-          const numRows = Math.ceil(totalImages / imagesPerRow);
-      
-          newHeight = numRows * rowHeight;
-          const currentIndex = files.length;
-      
-          for (let i = 0; i < newFiles.length; i++) {
-            const size = imageSizes[(files.length + i) % imageSizes.length];
-            const preview = await resizeImage(newFiles[i], size);
-            const updatedFile = {
-              ...newFiles[i],
-              preview,
-              height: size.height,
-              index: currentIndex + i,
-            };
-      
-            setFiles((prevFiles) => [...prevFiles, updatedFile]);
-          }
-      
-          setTotalHeight(newHeight);
+            let newHeight = totalHeight;
+        
+            const newFiles = acceptedFiles.slice(0, 10 - files.length);
+            const rowHeight = 325;
+            const totalImages = files.length + newFiles.length;
+            const imagesPerRow = 3; 
+            const numRows = Math.ceil(totalImages / imagesPerRow);
+        
+           
+            newHeight = numRows * rowHeight;
+            const currentIndex = files.length;
+        
+            for (let i = 0; i < newFiles.length; i++) {
+                const size = imageSizes[(files.length + i) % imageSizes.length];
+                const preview = await resizeImage(newFiles[i], size);
+                const updatedFile = { 
+                    ...newFiles[i], 
+                    preview, 
+                    height: size.height, 
+                    index: currentIndex + i 
+                };
+        
+                console.log(`File ${i}:`, updatedFile);
+                setFiles((prevFiles) => [...prevFiles, updatedFile]);
+            }
+        
+            setTotalHeight(newHeight);
         };
         
         
@@ -297,29 +277,28 @@ export default function Imageslist({listingid}) {
           const containerHeight = Math.max(totalHeightt, 0);
         
           const thumbs = files.map((file, index) => (
-            <div
-              key={file.index}
-              id={file.index}
-              draggable
-              onDragStart={handleDragStart}
-              onDragOver={handleDragOver}
-              onDrop={handleDrop}
-              className={`border border-gray-300 rounded-sm mb-2`}
-              style={{
-                width: index === 0 ? '100%' : `${imageSizes[index % imageSizes.length].width}px`,
-                height: "325px",
-                flexBasis: index === 0 ? '100%' : '33.33%',
-                boxSizing: 'border-box',
-              }}
-            >
-              <img
-                src={file.preview}
-                className="block object-cover w-full h-full"
-                alt={`Preview ${index}`}
-              />
-            </div>
-          ));
-          
+          <div
+            key={file.index} 
+            id={file.index} 
+            draggable
+            onDragStart={handleDragStart}
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+            className={`border border-gray-300 rounded-sm mb-2`}
+            style={{
+              width: index === 0 ? '100%' : `${imageSizes[index % imageSizes.length].width}px`,
+              height: "325px",
+              flexBasis: index === 0 ? '100%' : '33.33%',
+              boxSizing: 'border-box',
+            }}
+          >
+            <img
+              src={file.preview}
+              className="block object-cover w-full h-full"
+              alt={`Preview ${index}`}
+            />
+          </div>
+        ));
           
           
         
@@ -431,76 +410,6 @@ export default function Imageslist({listingid}) {
 
           </div>
           </div>
-
-          {showEditPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-[400px]">
-            <h2 className="text-xl mb-4">Edit Image</h2>
-            <div className="mb-4">
-              <img src={selectedImage} alt="Selected for Editing" style={getImageStyle} className="w-full" />
-            </div>
-            <div className="mb-4">
-              <label className="block">Brightness: {brightness}%</label>
-              <input type="range" min="0" max="200" value={brightness} onChange={(e) => setBrightness(e.target.value)} />
-            </div>
-            <div className="mb-4">
-              <label className="block">Contrast: {contrast}%</label>
-              <input type="range" min="0" max="200" value={contrast} onChange={(e) => setContrast(e.target.value)} />
-            </div>
-            <div className="mb-4">
-              <label className="block">Hue Rotate: {hueRotate}°</label>
-              <input type="range" min="0" max="360" value={hueRotate} onChange={(e) => setHueRotate(e.target.value)} />
-            </div>
-            <div className="mb-4">
-              <label className="block">Blur: {blur}px</label>
-              <input type="range" min="0" max="10" value={blur} onChange={(e) => setBlur(e.target.value)} />
-            </div>
-            <div className="flex justify-end">
-              <button
-                onClick={closePopup}
-                className="mr-4 px-4 py-2 bg-gray-300 text-black rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-  onClick={() => {
-    const img = new Image();
-    img.src = selectedImage; 
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.filter = `
-        brightness(${brightness}%)
-        contrast(${contrast}%)
-        hue-rotate(${hueRotate}deg)
-        blur(${blur}px)
-      `;
-      ctx.drawImage(img, 0, 0);
-      
-      canvas.toBlob(blob => {
-        const updatedImagePreview = URL.createObjectURL(blob);
-        
-        const updatedFiles = [...files];
-        updatedFiles[selectedImageIndex] = {
-          ...updatedFiles[selectedImageIndex],
-          preview: updatedImagePreview
-        };
-        setFiles(updatedFiles);
-        
-        closePopup();
-      }, 'image/jpeg');
-    };
-  }}
-  className="px-4 py-2 bg-blue-500 text-white rounded-lg"
->
-  Save
-</button>
-            </div>
-          </div>
-        </div>
-      )}
       
     </div>
   )

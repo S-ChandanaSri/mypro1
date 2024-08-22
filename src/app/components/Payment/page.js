@@ -4,7 +4,7 @@ import Navbar from '../Navbar/page.js';
 import Footerpayment from '../Footerpayment/page.js';
 import Image from 'next/image';
 //import { useLocation, useNavigate } from 'react-router-dom';
-import Display from '../Display/page.js';
+import Introduction3 from '../Introduction3/page.js';
 import Amount from '../Amount/page.js';
 import Pay from '../Pay/page.js';
 import { useRouter } from 'next/navigation';
@@ -19,14 +19,7 @@ export default function Payment() {
     const [step, setStep] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [num, setNum] = useState('');
-    ////const navigate=useNavigate();
-    //const location = useLocation();
-    //console.log("location",location.state)
-    //const { listingid } = location.state || {}; 
-   
 
-
-    
 
         
     const handleBack = () => {
@@ -90,7 +83,7 @@ export default function Payment() {
       <div className='flex items-center '>
         {step === 0 && (
 
-          <Display listingid={listingid}/>
+          <Introduction3 listingid={listingid}/>
           
         )}
       {step === 1 && (
