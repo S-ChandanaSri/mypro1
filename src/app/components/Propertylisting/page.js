@@ -173,7 +173,7 @@ export default function Propertylisting() {
           key={dat.image}
             width={100}
             height={75}
-            src={`${baseURL}/${dat.image}`} 
+            src={dat.image} 
             alt={dat.listing || "Image"}
             className="w-[100px] h-auto"
             onError={() => console.error("Failed to load image:", dat.image)} // Log an error if image fails to load
