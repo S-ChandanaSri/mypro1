@@ -1,0 +1,7 @@
+.checkbox {
+  margin: 0;
+  width: 23.3px;
+  height: 23.3px;
+  position: relative;
+  flex-shrink: 0;
+}
