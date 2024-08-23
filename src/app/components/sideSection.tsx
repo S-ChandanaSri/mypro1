@@ -1,6 +1,5 @@
-import CardContainer from "./card-container";
 import PropTypes from "prop-types";
-import styles from "./side-section.module.css";
+
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { CgToggleOn } from "react-icons/cg";
 import { IoLocationSharp } from "react-icons/io5";

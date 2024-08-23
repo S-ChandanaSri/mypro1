@@ -1,14 +1,14 @@
-import ScaleOption from "./scale-option";
-import PropTypes from "prop-types";
 import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 
-import styles from "./checkbox.module.css";
-
 export function Checkbox() {
-  return <input className={styles.checkbox} type="checkbox" />;
+  return <input className="w-[23.3px] h-[23.3px] relative " type="checkbox" />;
+}
+
+export function ScaleOption() {
+  return <input type="radio" className="w-5 h-5" />;
 }
 
 const FilterSection = ({ className = "" }) => {
@@ -117,7 +117,7 @@ const FilterSection = ({ className = "" }) => {
             </div>
           </div>
           {rating?.map((rating, index) => (
-            <div className="flex gap-x-[17.44px]" key={index}>
+            <div className="flex gap-x-[17.44px] items-center" key={index}>
               <ScaleOption /> {rating}
             </div>
           ))}
@@ -131,10 +131,6 @@ const FilterSection = ({ className = "" }) => {
       </div>
     </div>
   );
-};
-
-FilterSection.propTypes = {
-  className: PropTypes.string,
 };
 
 export default FilterSection;
