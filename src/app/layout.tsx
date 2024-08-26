@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import { ListingProvider } from './context/ListingContext';
+import { ListingProvider } from "./context/ListingContext";
 import "./globals.css";
+import { Providers } from "@/redux/provider";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -31,16 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
     <html lang="en">
       <body
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable}`}
       >
         <ListingProvider>
-        {children}
+          <Providers>{children}</Providers>
         </ListingProvider>
       </body>
     </html>
-
   );
 }
