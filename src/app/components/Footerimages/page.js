@@ -16,7 +16,7 @@ export default function Footerimages({ isLoading, buttonText, onClick, onBack, c
   };
   
 
-  const totalSteps = 5;
+  const totalSteps = 7;
  
 
   const progressPercentage = (currentstep / totalSteps) * 100;

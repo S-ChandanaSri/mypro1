@@ -38,6 +38,7 @@ export default function RootLayout({
       >
         <ListingProvider>
         {children}
+        
         </ListingProvider>
       </body>
     </html>

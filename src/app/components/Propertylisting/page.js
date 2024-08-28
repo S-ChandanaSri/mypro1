@@ -14,7 +14,7 @@ export default function Propertylisting() {
     const options = ["Beds", "Baths", "Bedrooms", "Amenities"];
     const [dropdownId, setDropdownId] = useState(null);
     const [checkedItems, setCheckedItems] = useState({});
-    const baseURL = 'http://localhost:3001/uploads';
+    //const baseURL = 'http://localhost:3001/uploads';
   
     const handleDropdownToggle = (id) => {
       setDropdownId((prevId) => (prevId === id ? null : id));

@@ -31,7 +31,8 @@
     "react-select": "^5.8.0",
     "react-select-country-list": "^2.2.3",
     "redux": "^5.0.1",
-    "redux-thunk": "^3.1.0"
+    "redux-thunk": "^3.1.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
