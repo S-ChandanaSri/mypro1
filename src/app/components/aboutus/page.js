@@ -39,8 +39,8 @@ export default function Aboutus() {
   return (
     <div className='bg-[#FFFFFF]  overflow-x-hidden overflow-y-auto  '>
     <div className='flex justify-between items-center  h-[72px]  pt-[15px] pr-[45px] pb-[15px] pl-[55px] shadow-[0px_-1px_1px_0px_#0000001A_inset]  bg-[#3D52A0] lg:w-100% '>
-        <div className='w-[134px] h-[34px] flex '>
-          <Image alt='' width={44} height={44} src={img1} className='w-[44px] h-[44px] relative bottom-2.5 ' />
+        <div className='w-[134px] h-[34px] flex relative right-[2.5rem] '>
+          <Image alt='' width={44} height={44} src={img1} className='w-[44px] h-[44px] relative bottom-2.5  ' />
           <p className=' text-white w-[99px] h-[29px] top-[2px] left-[39px] custom-font text-[24px] font-normal leading-[34.34px] text-left '  >ZENDEN</p>
         </div>
         <div className='hidden md:flex w-[239px] h-[18px] gap-[30px] flex'>
@@ -70,7 +70,7 @@ export default function Aboutus() {
 
 
         <button 
-        className="md:hidden absolute top-0 right-0 p-4 z-50"
+        className="md:hidden md:fixed md:relative top-0 right-0 p-4 z-50"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <Image alt="Menu" width={24} height={24} src={quillblack} className='pt-2' />
@@ -201,20 +201,30 @@ export default function Aboutus() {
             </div>
         </div>
         <div className='h-[754px] pb-[96px] gap-[64px]  '>
-        <div className='w-[1280px] w-fixed h-[488px] px-[32px] sm:w-[100%] sm:h-auto  sm:flex sm:items-center lg:w-auto  '>
-            <div className='flex flex-col items-center w-[1216px] h-[488px] gap-[32px] sm:w-auto  '>
-                <VectorMap map={worldMill}  backgroundColor='gray'
-                
-                markers={missingCountries}
-                markerStyle={{
-                    initial: {
-                      fill: "red",
-                    },
-                  }}
-                
-                />
-            </div>
-        </div>
+        <div className='flex items-center justify-center w-full min-h-screen px-4'>
+  <div className='flex flex-col items-center w-full max-w-[450px] h-[488px]'>
+    <VectorMap
+      map={worldMill}
+      backgroundColor='gray'
+      markers={missingCountries}
+      markerStyle={{
+        initial: {
+          fill: "red",
+        },
+      }}
+      // Ensure the VectorMap component itself is styled to fit within its container
+      containerStyle={{
+        width: '100%',
+        height: '100%',
+      }}
+    />
+  </div>
+</div>
+
+
+
+
+
         <div className='h-[1280px] pb-[106px] relative top-[2rem] pt-[50px] sm:pt-[7rem] sm:w-auto sm:items-center lg:h-[1280px] lg:relative lg:top-[-1rem] lg:w-auto'>
     <div className='flex flex-col items-center sm:flex sm:flex-row sm:px-[32px] sm:justify-evenly'>
         <div className='flex flex-col items-center mb-[20px] w-[384px] w-fill h-[106px] gap-[20px] sm:w-[170px] sm:relative sm:left-0 lg:pr-[15rem] lg:w-[270px] xl:w-[384px]'>
@@ -515,7 +525,7 @@ export default function Aboutus() {
   <p className='flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] '>FAQ</p>
   <div className=' sm:w-[137.33px]   h-[200px] flex flex-col gap-[20px] '>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Account</p>
-  <p className='sm:relative sm:right-[35px] relative right-[11px] sm:w-[137.33px] w-[80px]  h-[42px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Manage Deliveries</p>
+  <p className='sm:relative sm:right-[35px] relative  sm:w-[137.33px] w-[80px]  h-[42px] text-[#4B5768] custo-font font-[500] text-[15px] leading-[24px]  '>Manage Deliveries</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Orders</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Orders</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Returns</p>
@@ -554,18 +564,17 @@ export default function Aboutus() {
   </div>
   </div>
 </div>
-<div className='flex justify-between sm:w-[1184px] h-[72px] sm:relative sm:top-[2rem] py-[24px] border-[1px] relative top-[25rem] border-[#D0D5DD]  '>
-  <div className='flex w-[928px] h-[24px] gap-[40px] '>
-    <p className='flex w-[73px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>About us</p>
-    <p className='flex w-[71px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Contact</p>
-    <p className='flex h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Privacy policy</p>
-    <p className='flex w-[71px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Sitemap</p>
-    <p className='flex  h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Terms of Use</p>
-    </div>
-    <p className='flex w-[266px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>© 2000-2021, All Rights Reserved</p>
-
-
-  
+<div className='flex flex-col sm:flex-row justify-between items-center py-[24px] lg:w-[1000px] border-t border-[#D0D5DD] bg-white relative top-[22rem] sm:relative sm:top-[0rem] '>
+  <div className='flex flex-wrap gap-[20px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px]'>
+    <p className='w-auto'>About us</p>
+    <p className='w-auto'>Contact</p>
+    <p className='w-auto'>Privacy policy</p>
+    <p className='w-auto'>Sitemap</p>
+    <p className='w-auto'>Terms of Use</p>
+  </div>
+  <p className='text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] mt-[16px] sm:mt-0'>
+    © 2000-2021, All Rights Reserved
+  </p>
 </div>
 </div>
 

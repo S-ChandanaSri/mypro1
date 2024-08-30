@@ -117,7 +117,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
       <div className='flex justify-between items-center  h-[72px]  pt-[15px] pr-[45px] pb-[15px] pl-[55px] shadow-[0px_-1px_1px_0px_#0000001A_inset]  md:h-[92px]  '>
-        <div className='w-[134px] h-[34px] flex'>
+        <div className='w-[134px] h-[34px] flex relative right-[3rem] '>
           <Image src={img1} alt="Description of image" width={44} height={44} className='w-[44px] h-[44px] relative bottom-2.5 ' />
           <p className=' text-white w-[99px] h-[29px] top-[2px] left-[39px] custom-font text-[24px] font-normal leading-[34.34px] text-left '  >ZENDEN</p>
         </div>
@@ -765,7 +765,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-      <button className='h-[32px] rounded-[50px] relative top-[84rem] left-[1rem] xxs:relative xxs:top-[84rem] xxs:left-[5.5rem] xs:relative xs:top-[84rem] xs:left-[9.5rem] gap-[10px] cursor-pointer sm:flex sm:justify-center sm:top-[72rem] sm:relative sm:mr-[14rem]  sm:items-center sm:w-full lg:relative lg:top-[-4rem] '>
+      <button className='h-[32px] rounded-[50px] relative top-[84rem] left-[1rem] xxs:relative xxs:top-[84rem] xxs:left-[5.5rem] xs:relative xs:top-[84rem] xs:left-[9.5rem] gap-[10px] cursor-pointer sm:flex sm:justify-center sm:top-[74rem] sm:relative sm:mr-[14rem]  sm:items-center sm:w-full lg:relative lg:top-[-4rem] '>
         <div className='flex h-[28px] gap-[9px] relative top-[120px]  pt-5 '>
           <p className='text-blue-600 w-[267px] h-[28px] custo-font font-[600] text-[16px] leading-[22px]  '>See all reviews by our customers</p>
           <Image width={18} height={18} src={icon} alt='' className='w-[18px] h-[18px] gap-[10px] pt-0.5 '  />
@@ -815,7 +815,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
         </div>
       </div>
-      <div className='h-[294px]  gap-[32px] xxs:relative xxs:right-[4rem] xs:relative xs:right-[8rem] sm:flex sm:items-center lg:flex lg:items-center lg:relative lg:top-[380rem] lg:right-[1rem] xl:relative xl:right-[1rem] md:ml-[9rem]  sm:relative sm:top-[455rem] '>
+      <div className='h-[294px]  gap-[32px] relative top-[460rem] xxs:relative xxs:right-[0rem] xs:relative xs:right-[0rem] sm:flex sm:items-center lg:flex lg:items-center lg:relative lg:top-[380rem] lg:right-[1rem] xl:relative xl:right-[1rem] md:ml-[9rem]  sm:relative sm:top-[455rem] '>
       <div className='flex flex-col items-center  h-[294px] rounded-[16px] p-[32px] gap-[32px] bg-[#F9FAFB]  sm:flex sm:items-center sm:mx-auto '>
         <div className='flex w-[120px] h-[56px] '>
           <Image width={48} height={48} src={Avatar} alt='' className='w-[48px] h-[48px] w-fixed rounded-[200px] border-[1.5px] border-[#ABB677] h-fixed'   />
@@ -841,7 +841,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-    <div className='bg-[#F6F9FF] h-[977px] flex flex-col items-center rounded-[4px] relative top-[445rem] gap-[56px] sm:relative sm:top-[390rem] '>
+    <div className='bg-[#F6F9FF] h-[977px] flex flex-col items-center rounded-[4px] relative top-[465rem] gap-[56px] sm:relative sm:top-[460rem] lg:relative lg:top-[385rem] '>
     <div className='flex flex-col lg:flex-row h-auto rounded-[12px] px-4 py-[28px] w-auto gap-[20px] lg:gap-[100px] bg-[#3D52A0] sm:w-auto  '>
   <div className='w-full lg:w-[645px] h-auto gap-[4px]'>
     <p className='w-auto h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-[#FFFFFF]'>Newsletter</p>
@@ -862,7 +862,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-<div className='w-[1184px] h-[173px] gap-[24px] sm:w-[100%] sm:h-[250px] '>
+<div className='w-[1184px] gap-[24px] sm:w-[100%] sm:h-[250px] '>
         <div className='lg:w-[1184px] h-[98px] gap-[16px] sm:w-[100%] sm:flex flex-col sm:items-center lg:flex lg:items-start  '>
           <Image alt='' width={134} height={34} src={Logoz} className='w-[134px] h-[34px] pb-2  sm:h-[100%] xl:relative left-[13.5rem]  '   />
           <p className='text-center h-[48px] custo-font font-[400] w-[750px] pl-[27rem] text-[9px] sm:w-[1100px] sm:relative sm:right-[13rem] sm:text-[16px] leading-[24px] sm:text-center lg:text-left lg:relative lg:w-[1450px] lg:right-[26rem] xl:relative xl:right-[13rem] '>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <span className='text-[#4A61B5]'>Read More</span></p>
@@ -900,7 +900,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       </div>
 
 
-      <div className='flex w-[300px] xl:w-[1100px] lg:w-[984px] h-[272px] relative top-[22rem] justify-between sm:flex sm:justify-evenly sm:w-[900px] sm:relative sm:top-[0rem] sm:right-[2rem] md:w-[1100px] lg:flex lg:justify-between lg:pt-4  '>
+      <div className='flex w-[300px] xl:w-[1100px] lg:w-[984px] h-[272px] relative top-[24rem] justify-between sm:flex sm:justify-evenly sm:w-[900px] sm:relative sm:top-[0rem] sm:right-[2rem] md:w-[1100px] lg:flex lg:justify-between lg:pt-4  '>
 
 <div className='sm:w-[137.33px]  h-[248px] flex flex-col gap-[24px] sm:relative sm:left-[9rem] lg:relative lg:left-[3rem]'>
 <p className='flex text-[#191D23] w-[80px] sm:w-[137.33px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] '>About</p>
@@ -926,7 +926,7 @@ const [menuOpen, setMenuOpen] = useState(false);
   <p className='flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] '>FAQ</p>
   <div className=' sm:w-[137.33px]   h-[200px] flex flex-col gap-[20px] '>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Account</p>
-  <p className='sm:relative sm:right-[35px] relative right-[11px] sm:w-[137.33px] w-[80px]  h-[42px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Manage Deliveries</p>
+  <p className='sm:relative sm:right-[35px] relative sm:w-[137.33px] w-[80px]  h-[42px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Manage Deliveries</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Orders</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Orders</p>
   <p className='flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  '>Returns</p>
@@ -965,21 +965,19 @@ const [menuOpen, setMenuOpen] = useState(false);
   </div>
   </div>
 </div>
-<div className='flex justify-between sm:w-[1184px] h-[72px] sm:relative sm:top-[2rem] py-[24px] border-[1px] relative top-[25rem] border-[#D0D5DD]  '>
-  <div className='flex w-[928px] h-[24px] gap-[40px] '>
-    <p className='flex w-[73px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>About us</p>
-    <p className='flex w-[71px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Contact</p>
-    <p className='flex h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Privacy policy</p>
-    <p className='flex w-[71px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Sitemap</p>
-    <p className='flex  h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>Terms of Use</p>
-    </div>
-    <p className='flex w-[266px] h-[24px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] '>© 2000-2021, All Rights Reserved</p>
+<div className='flex flex-col sm:flex-row justify-between items-center py-[24px] lg:w-[1000px] border-t border-[#D0D5DD] bg-white relative top-[22rem] sm:relative sm:top-[0rem] '>
+  <div className='flex flex-wrap gap-[20px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px]'>
+    <p className='w-auto'>About us</p>
+    <p className='w-auto'>Contact</p>
+    <p className='w-auto'>Privacy policy</p>
+    <p className='w-auto'>Sitemap</p>
+    <p className='w-auto'>Terms of Use</p>
+  </div>
+  <p className='text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] mt-[16px] sm:mt-0'>
+    © 2000-2021, All Rights Reserved
+  </p>
+</div>
 
-
-  
-
-        
-      </div>
     </div>
 
 
