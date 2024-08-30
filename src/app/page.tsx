@@ -778,7 +778,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
     <div className=' bg-white    ' >
-      <div className='w-[1280px] relative top-[461rem] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem]   xl:relative xl:left-[22rem] flex flex-col items-center h-[94x] px-[32px] gap-[32px] sm:relative sm:top-[455rem] lg:relative lg:top-[83rem] lg:left-[15rem] '>
+      <div className='w-[1280px] relative top-[461rem] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem]   xl:relative xl:left-[22rem] flex flex-col items-center h-[94x] px-[32px] gap-[32px] sm:relative sm:top-[455rem] lg:relative lg:top-[378rem] lg:left-[15rem] '>
         <div className='w-[1216px] h-[94px] gap-[48px] '>
           <div className='w-[768px] h-[94px] gap-[20px] relative pl-[50px] '>
             <p className=' h-[44px] relative right-[4rem] custo-font font-[400] text-[13px] leading-[44px] tracking-[-2%] xs:text-[25px] xs:relative xs:right-[8rem] sm:text-left sm:mx-auto sm:text-[26px] lg:text-left lg:mx-auto lg:text-[30px] xl:text-left xl:mx-auto xl:text-[36px] transition-all duration-300'>Frequently asked questions</p>
@@ -786,7 +786,7 @@ const [menuOpen, setMenuOpen] = useState(false);
           </div>
         </div>
       </div>
-      <div className='w-[1280px] relative top-[461rem] h-[513px] px-[32px] gap-[64px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem]   xl:relative xl:left-[22rem] sm:relative sm:top-[455rem] lg:relative lg:top-[-83rem] '>
+      <div className='w-[1280px] relative top-[461rem] h-[513px] px-[32px] gap-[64px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem]   xl:relative xl:left-[22rem] sm:relative sm:top-[455rem] lg:relative lg:left-[16rem] lg:top-[378rem] '>
         <div className='w-[768px] h-[513px] gap-[32px] pl-[40px] pt-[50px] '>
           
           {data.map((item, index) => (
@@ -815,7 +815,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
         </div>
       </div>
-      <div className='h-[294px]  gap-[32px] xxs:relative xxs:right-[4rem] xs:relative xs:right-[8rem] sm:flex sm:items-center lg:flex lg:items-center lg:relative lg:top-[-83rem] lg:right-[13rem] xl:relative xl:right-[18rem] md:ml-[9rem]  sm:relative sm:top-[455rem] '>
+      <div className='h-[294px]  gap-[32px] xxs:relative xxs:right-[4rem] xs:relative xs:right-[8rem] sm:flex sm:items-center lg:flex lg:items-center lg:relative lg:top-[380rem] lg:right-[1rem] xl:relative xl:right-[1rem] md:ml-[9rem]  sm:relative sm:top-[455rem] '>
       <div className='flex flex-col items-center  h-[294px] rounded-[16px] p-[32px] gap-[32px] bg-[#F9FAFB]  sm:flex sm:items-center sm:mx-auto '>
         <div className='flex w-[120px] h-[56px] '>
           <Image width={48} height={48} src={Avatar} alt='' className='w-[48px] h-[48px] w-fixed rounded-[200px] border-[1.5px] border-[#ABB677] h-fixed'   />
@@ -841,7 +841,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-    <div className='bg-[#F6F9FF] h-[977px] flex flex-col items-center rounded-[4px] relative top-[445rem] gap-[56px] sm:relative sm:top-[457rem] '>
+    <div className='bg-[#F6F9FF] h-[977px] flex flex-col items-center rounded-[4px] relative top-[445rem] gap-[56px] sm:relative sm:top-[390rem] '>
     <div className='flex flex-col lg:flex-row h-auto rounded-[12px] px-4 py-[28px] w-auto gap-[20px] lg:gap-[100px] bg-[#3D52A0] sm:w-auto  '>
   <div className='w-full lg:w-[645px] h-auto gap-[4px]'>
     <p className='w-auto h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-[#FFFFFF]'>Newsletter</p>
