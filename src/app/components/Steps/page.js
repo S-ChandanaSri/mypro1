@@ -22,6 +22,7 @@ import Navbar from '../Navbar/page.js';
 import Options from '..//Options/page.js';
 import { useRouter } from 'next/navigation';
 import { useListing } from '@/app/context/ListingContext';
+import { v4 as uuidv4 } from 'uuid'; 
 export default function Steps() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +65,10 @@ const[peopletype,setPeopletype]=useState(null);
   const [isClicked, setIsClicked] = useState(null);
   const [currentstep,setCurrentstep]=useState(0)
  
-
+  useEffect(() => {
+    const id = uuidv4(); // Generate UUID
+    setListingid(id); // Update context
+  }, [setListingid]);
 
   
   const handleClick = (button) => {

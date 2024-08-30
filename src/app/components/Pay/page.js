@@ -7,6 +7,7 @@ import imageimage from '../../_assets/images/imageimage.png';
 export default function Pay({listingid,salary}) {
 
     const [num, setNum] = useState(0);
+    console.log("///",listingid)
     //const [salary,setSalary]=useState(1000);
     const [addition, setAddition] = useState(0);
     useEffect(() => {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import phhouse from '../../_assets/images/phhouse.png';
 import phbuild from '../../_assets/images/phbuild.png';
+import {v4 as uuidv4} from "uuid";
 
 export default function Place({ selectedOption, setSelectedOption, setIsLoading, setListingid }) {
     const [color, setColor] = useState("blue");
@@ -17,12 +18,16 @@ export default function Place({ selectedOption, setSelectedOption, setIsLoading,
         if (selectedOption) {
             setIsLoading(true);
 
+            const id = uuidv4();
+
+            console.log("kk",id)
+
             fetch('http://localhost:3001/sendplace', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ selectedOption }),
+                body: JSON.stringify({ selectedOption,id }),
             })
                 .then((response) => {
                     if (response.ok) {
@@ -34,7 +39,7 @@ export default function Place({ selectedOption, setSelectedOption, setIsLoading,
                 })
                 .then((data) => {
                     console.log("Response data:", data);
-                    setListingid(data.id);
+                    setListingid(data.id || id);
                     setIsLoading(false);
                 })
                 .catch((err) => {

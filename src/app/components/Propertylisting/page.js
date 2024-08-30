@@ -14,6 +14,7 @@ export default function Propertylisting() {
     const options = ["Beds", "Baths", "Bedrooms", "Amenities"];
     const [dropdownId, setDropdownId] = useState(null);
     const [checkedItems, setCheckedItems] = useState({});
+    //const baseURL = 'http://localhost:3001/uploads';
   
     const handleDropdownToggle = (id) => {
       setDropdownId((prevId) => (prevId === id ? null : id));
@@ -69,6 +70,7 @@ export default function Propertylisting() {
         .then(response=>response.json())
         .then(data=>{
           console.log("l",data);
+          
           setListt(data);
           
       })
@@ -76,7 +78,7 @@ export default function Propertylisting() {
       },[])
   
       let lastId = null;
-  
+      console.log("p",listt)
       if (listt && listt.length > 0) {
         for (const item of listt) {
           if (lastId === null || item.id > lastId) {
@@ -167,10 +169,11 @@ export default function Propertylisting() {
         }
 
         return (
-          <Image
+          <img
+          key={dat.image}
             width={100}
             height={75}
-            src={dat.image}
+            src={dat.image} 
             alt={dat.listing || "Image"}
             className="w-[100px] h-auto"
             onError={() => console.error("Failed to load image:", dat.image)} // Log an error if image fails to load
@@ -195,7 +198,7 @@ export default function Propertylisting() {
     <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">{dat.district}</td>
     <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE] relative left-[55px]">
       <Image
-        alt=''
+       
         src={Vector}
         alt="edit icon"
         onClick={() => handleDropdownToggle(dat.id)}

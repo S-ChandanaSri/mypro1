@@ -4,7 +4,6 @@ import Navbar from '../Navbar/page.js';
 import Image from 'next/image';
 import jhome from '../../_assets/images/jhome.png';
 import { useRouter } from 'next/navigation';
-//import { useLocation, useNavigate } from 'react-router-dom';
 
 import Footerimages from '../Footerimages/page.js';
 import Amenities from '../Amenities/page.js';
@@ -15,6 +14,9 @@ import Describe from '../Describe/page.js';
 import Imageslist from '../Imageslist/page.js';
 import Display from '../Display/page.js';
 import { useListing } from '@/app/context/ListingContext.js';
+import Introduction3 from '../Introduction3/page.js';
+import Amount from '../Amount/page.js';
+import Pay from '../Pay/page.js';
 
 
 
@@ -35,7 +37,9 @@ export default function Imagesstep() {
       setCurrentstep(prevStep => prevStep - 1);
     }
   };
-
+  useEffect(() => {
+    console.log('Current listingid:', listingid);
+  }, [listingid]); // this will log whenever listingid changes
   
   const [dragId, setDragId] = useState();
     //const location = useLocation();
@@ -45,6 +49,31 @@ export default function Imagesstep() {
     const [isLoading, setIsLoading] = useState(false);
     const [click,setClick]=useState("");
     
+
+  
+    const [num, setNum] = useState('');
+    const [salary,setSalary]=useState(1000);
+    const [addition, setAddition] = useState(0);
+      useEffect(() => {
+        const calculatedAddition = parseInt(salary, 10) + parseInt(num, 10);
+        setAddition(calculatedAddition);
+      }, [salary, num]);
+    
+  
+      const handleSalaryChange = (e) => {
+        setSalary(e.target.value);
+      };
+    
+    
+      const [edit,setEdit] = useState(false);
+  
+      
+  
+      const decimalDigits=0;
+  
+      
+
+
       
   const handleNext = () => {
     if (step === 0) {
@@ -89,8 +118,35 @@ export default function Imagesstep() {
         setIsLoading(true);
         setTimeout(() => {
           setIsLoading(false);
-          router.push("/components/Payment" )
-        }, 3000);
+          setStep((prevStep) => prevStep + 1);
+          setCurrentstep((prevStep) => prevStep + 1);
+                }, 3000);
+      }
+      else if (step === 6) {
+        setIsLoading(true);
+        setTimeout(() => {
+          setIsLoading(false);
+          setStep((prevStep) => prevStep + 1);
+          setCurrentstep((prevStep) => prevStep + 1);
+          }, 3000);
+      }
+      else if(step===7){
+        setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setStep((prevStep) => prevStep + 1);
+      setCurrentstep((prevStep) => prevStep + 1);
+    }, 3000);
+
+      }else if(step===8){
+
+        setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setCurrentstep((prevStep) => prevStep + 1);
+      router.push("/components/Propertylisting" );
+      
+    }, 3000);
       }
   }
 
@@ -125,7 +181,17 @@ export default function Imagesstep() {
       { step===5 && (
         <Describe listingid={listingid} />
       )}
-      
+      {step === 6 && (
+
+<Introduction3 listingid={listingid}/>
+
+)}
+{step === 7 && (
+           <Amount listingid={listingid} salary={salary} setSalary={setSalary} />
+         )}
+      {step === 8 && (
+        <Pay listingid={listingid} salary={salary}/>
+           )}
       </div>
 
       </div>
