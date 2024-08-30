@@ -212,7 +212,6 @@ export default function Aboutus() {
           fill: "red",
         },
       }}
-      // Ensure the VectorMap component itself is styled to fit within its container
       containerStyle={{
         width: '100%',
         height: '100%',
