@@ -108,9 +108,10 @@ const backgroundImgUrl = backgroundImg.src;
 const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className='bg-[#FFFFFF]  overflow-x-hidden overflow-y-auto  '>
+    <div>
+    <div className='bg-[#FFFFFF] h-screen overflow-x-hidden  '>
         <div 
-      className='w-full h-full bg-cover bg-no-repeat '
+      className='w-full  bg-cover bg-no-repeat '
       style={{ backgroundImage: `url(${backgroundImgUrl})` }}
       >
          
@@ -989,6 +990,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
+  </div>
   </div>
   )
 }
