@@ -18,6 +18,13 @@ export default function Imageslist({ listingid }) {
   const [files, setFiles] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [showEditPopup, setShowEditPopup] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [brightness, setBrightness] = useState(100);
+  const [contrast, setContrast] = useState(100);
+  const [hueRotate, setHueRotate] = useState(0);
+  const [blur, setBlur] = useState(0);
   const optionss = ["Edit", "Cover photo", "Delete"];
   //const navigate=useNavigate();
 
@@ -28,7 +35,7 @@ export default function Imageslist({ listingid }) {
 
   const handleOptionClick = (option, imageIndex) => {
     console.log(`Option clicked: ${option}, Image index: ${imageIndex}`);
-    console.log(typeof files[imageIndex]?.preview); // Should log 'string'
+    console.log(typeof files[imageIndex]?.preview);
 
     if (option === "Edit") {
       // Extract the image URL and index from your files array

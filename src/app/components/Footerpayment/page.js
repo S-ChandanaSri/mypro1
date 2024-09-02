@@ -17,11 +17,16 @@ export default function Footerpayment({
     } else {
       navigate(-1);
     }
+    // If navigate is not used, you can remove this
+    // else {
+    //   navigate(-1);
+    // }
   };
 
   const totalSteps = 3;
 
   const progressPercentage = (currentstep / totalSteps) * 100;
+
   return (
     <>
       <div className="w-full h-[5px] bg-[#E0E0E0] relative">
