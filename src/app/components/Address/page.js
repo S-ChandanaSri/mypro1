@@ -139,21 +139,21 @@ export default function Address({ listingid }) {
 
   return (
     <>
-      <div className="flex flex-col items-center h-[670px] relative top-[10px] left-[350px]">
-        <p className=" w-[597px] h-[68px]  custo-font text-[45px] font-[400] leading-[67.5px] tracking-[0.46px] text-[#000000]">
+      <div className="relative left-[350px] top-[10px] flex h-[670px] flex-col items-center">
+        <p className="custo-font h-[68px] w-[597px] text-[45px] font-[400] leading-[67.5px] tracking-[0.46px] text-[#000000]">
           {" "}
           Confirm your address{" "}
         </p>
-        <p className=" w-[852px] h-[54px]  custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
+        <p className="custo-font h-[54px] w-[852px] text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
           {" "}
           Your address will only be shared with your guest only after they have
           made rservations{" "}
         </p>
-        <div className="w-[709px] h-[76px] border-[1px] border-[#000000] py-[12px] px-[10px]  top-[364px] left-[251px] rounded-[5px]  ">
+        <div className="left-[251px] top-[364px] h-[76px] w-[709px] rounded-[5px] border-[1px] border-[#000000] px-[10px] py-[12px]">
           <Select
             options={options}
             value={valuee}
-            className="w-full h-full border-none outline-none"
+            className="h-full w-full border-none outline-none"
             onChange={changeHandler}
             styles={{
               control: (base) => ({
@@ -171,59 +171,59 @@ export default function Address({ listingid }) {
             )}
           </Select>
         </div>
-        <div className="w-[709px] h-[402px] border-[1px] border-[#000000] py-[12px] px-[10px] relative top-[2px] rounded-[5px]  ">
-          <div className="pt-3 ">
-            <div className="w-[210px] h-[57x] gap-[3px]">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+        <div className="relative top-[2px] h-[402px] w-[709px] rounded-[5px] border-[1px] border-[#000000] px-[10px] py-[12px]">
+          <div className="pt-3">
+            <div className="h-[57x] w-[210px] gap-[3px]">
+              <p className="custo-font h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 Street address
               </p>
-              <p className=" w-[210px] h-[24px]   relative bottom-1.5  custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-1.5 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.street}
                 {address.village}
               </p>
             </div>
-            <div className="w-[710px] border-[1px] border-[#8E98A8] top-[533px] left-[250px] "></div>
-            <div className="w-[210px] gap-[3px]  ">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] relative top-1 leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+            <div className="left-[250px] top-[533px] w-[710px] border-[1px] border-[#8E98A8]"></div>
+            <div className="w-[210px] gap-[3px]">
+              <p className="custo-font relative top-1 h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 Mandal
               </p>
-              <p className=" w-[210px] h-[24px]  custo-font relative bottom-1.5 text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-1.5 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.mandal}
               </p>
             </div>
-            <div className="w-[710px] border-[1px] border-[#8E98A8] top-[533px] left-[250px] "></div>
-            <div className="w-[210px] h-[57x] gap-[3px]  ">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] relative top-1 leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+            <div className="left-[250px] top-[533px] w-[710px] border-[1px] border-[#8E98A8]"></div>
+            <div className="h-[57x] w-[210px] gap-[3px]">
+              <p className="custo-font relative top-1 h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 City
               </p>
-              <p className=" w-[210px] h-[24px] relative bottom-1.5 custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-1.5 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.city}
               </p>
             </div>
-            <div className="w-[710px] border-[1px] border-[#8E98A8] top-[533px] left-[250px] "></div>
-            <div className="w-[210px] h-[57x] gap-[3px]">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] relative top-1 leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+            <div className="left-[250px] top-[533px] w-[710px] border-[1px] border-[#8E98A8]"></div>
+            <div className="h-[57x] w-[210px] gap-[3px]">
+              <p className="custo-font relative top-1 h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 City
               </p>
-              <p className=" w-[210px] h-[24px]  relative bottom-1.5  custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-1.5 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.district}
               </p>
             </div>
-            <div className="w-[710px] border-[1px] border-[#8E98A8] top-[533px] left-[250px] "></div>
-            <div className="w-[210px] h-[57x] gap-[3px]  ">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] leading-[24px] relative top-1 tracking-[0.46px] text-[#8E98A8]">
+            <div className="left-[250px] top-[533px] w-[710px] border-[1px] border-[#8E98A8]"></div>
+            <div className="h-[57x] w-[210px] gap-[3px]">
+              <p className="custo-font relative top-1 h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 State
               </p>
-              <p className=" w-[210px] h-[24px] relative bottom-1.5 custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-1.5 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.state}
               </p>
             </div>
-            <div className="w-[710px] border-[1px] border-[#8E98A8] top-[533px] left-[250px] "></div>
-            <div className="w-[210px] h-[57x] gap-[3px]  ">
-              <p className=" w-[210px] h-[34px]  custo-font text-[16px] font-[300] leading-[24px] relative top-1 tracking-[0.46px] text-[#8E98A8]">
+            <div className="left-[250px] top-[533px] w-[710px] border-[1px] border-[#8E98A8]"></div>
+            <div className="h-[57x] w-[210px] gap-[3px]">
+              <p className="custo-font relative top-1 h-[34px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 zipcode
               </p>
-              <p className=" w-[210px] h-[24px] relative bottom-2 custo-font text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
+              <p className="custo-font relative bottom-2 h-[24px] w-[210px] text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#8E98A8]">
                 {address.zipcode}
               </p>
             </div>

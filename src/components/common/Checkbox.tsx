@@ -12,7 +12,7 @@ const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
   ({ label, value, setValue, className, ...props }, ref) => {
     return (
       <label className={cn("flex items-center space-x-2", className)} ref={ref}>
-        <input type="checkbox" className="w-5 h-5" />
+        <input type="checkbox" className="h-5 w-5" />
         <span>{label}</span>
       </label>
     );

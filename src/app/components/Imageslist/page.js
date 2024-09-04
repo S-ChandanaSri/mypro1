@@ -283,7 +283,7 @@ export default function Imageslist({ listingid }) {
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
       onDrop={handleDrop}
-      className={`border border-gray-300 rounded-sm mb-2`}
+      className={`mb-2 rounded-sm border border-gray-300`}
       style={{
         width:
           index === 0
@@ -296,7 +296,7 @@ export default function Imageslist({ listingid }) {
     >
       <Image
         src={file.preview}
-        className="block object-cover w-full h-full"
+        className="block h-full w-full object-cover"
         alt=""
       />
     </div>
@@ -321,28 +321,28 @@ export default function Imageslist({ listingid }) {
 
   return (
     <div>
-      <div className="flex pb-[200px] h-[1155px] ">
-        <div className="flex flex-col relative left-[412px] top-[140px] rounded-[15px]">
-          <div className="w-[688px] relative top-[-80px]">
-            <p className="w-[640px]  h-[53px] text-[35px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
+      <div className="flex h-[1155px] pb-[200px]">
+        <div className="relative left-[412px] top-[140px] flex flex-col rounded-[15px]">
+          <div className="relative top-[-80px] w-[688px]">
+            <p className="h-[53px] w-[640px] text-[35px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
               Add some of the photos of property
             </p>
-            <p className="w-[461px] text-[18px]  font-[300] leading-[27px] tracking-[0.46px] text-[#000000] ">
+            <p className="w-[461px] text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
               You need to add at least 5 images to get started{" "}
             </p>
           </div>
           <section
-            className="w-[1066px] relative top-[-71px] right-[150px] rounded-[15px]  border-[2px] border-[#8E98A8]"
+            className="relative right-[150px] top-[-71px] w-[1066px] rounded-[15px] border-[2px] border-[#8E98A8]"
             style={{ height: `${totalHeight}px` }}
           >
             <div
-              className="col-span-2 sm:col-span-3 flex items-center justify-center p-4 border border-dashed cursor-pointer "
+              className="col-span-2 flex cursor-pointer items-center justify-center border border-dashed p-4 sm:col-span-3"
               {...getRootProps({ className: "dropzone" })}
             >
               <input {...getInputProps()} />
               {files.length === 0 && (
-                <div className="w-full h-full flex items-center justify-center cursor-pointer">
-                  <div className="text-center relative top-[150px] ">
+                <div className="flex h-full w-full cursor-pointer items-center justify-center">
+                  <div className="relative top-[150px] text-center">
                     <p className="text-lg font-medium leading-6 tracking-wider text-black">
                       Drag your images here
                     </p>
@@ -358,7 +358,7 @@ export default function Imageslist({ listingid }) {
             </div>
             {files.length > 0 && (
               <>
-                <aside className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <aside className="grid grid-cols-1 gap-2 md:grid-cols-3">
                   {thumbs.map((thumb, index) => (
                     <div
                       key={index}
@@ -370,21 +370,21 @@ export default function Imageslist({ listingid }) {
                       onDrop={handleDrop}
                     >
                       {thumb}
-                      <div className="absolute top-[15px] right-[10px] w-[54px] h-[38px] border-[1px] border-[black] rounded-[15px]">
+                      <div className="absolute right-[10px] top-[15px] h-[38px] w-[54px] rounded-[15px] border-[1px] border-[black]">
                         <button
                           onClick={() => handleDropdownClick(index)}
-                          className="w-[54px] h-[38px]"
+                          className="h-[38px] w-[54px]"
                         >
-                          <div className="w-[54px] h-[38px] rounded-[30px] py-[10px] px-[18px] bg-[white]">
+                          <div className="h-[38px] w-[54px] rounded-[30px] bg-[white] px-[18px] py-[10px]">
                             <Image
                               src={frame}
-                              className="w-[22px] h-[5.59px] relative top-[5px]"
+                              className="relative top-[5px] h-[5.59px] w-[22px]"
                               alt="frame icon"
                             />
                           </div>
                         </button>
                         {isopenn === index && (
-                          <div className="cursor-pointer absolute right-[0px] top-[40px] flex flex-col border-x border-t mt-5 bg-white w-[160px]">
+                          <div className="absolute right-[0px] top-[40px] mt-5 flex w-[160px] cursor-pointer flex-col border-x border-t bg-white">
                             {optionss.map((option, optionIndex) => (
                               <div
                                 key={optionIndex}
@@ -407,7 +407,7 @@ export default function Imageslist({ listingid }) {
                       onClick={() =>
                         document.querySelector('input[type="file"]').click()
                       }
-                      className="px-4 py-2 border border-gray-300 rounded bg-blue-500 text-white"
+                      className="rounded border border-gray-300 bg-blue-500 px-4 py-2 text-white"
                     >
                       Upload More Images
                     </button>

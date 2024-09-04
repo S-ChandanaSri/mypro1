@@ -37,68 +37,68 @@ import { colorScale, countries, missingCountries } from "../Countries/page.js";
 export default function Aboutus() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="bg-[#FFFFFF]  overflow-x-hidden overflow-y-auto  ">
-      <div className="flex justify-between items-center  h-[72px]  pt-[15px] pr-[45px] pb-[15px] pl-[55px] shadow-[0px_-1px_1px_0px_#0000001A_inset]  bg-[#3D52A0] lg:w-100% ">
-        <div className="w-[134px] h-[34px] flex relative right-[2.5rem] ">
+    <div className="overflow-y-auto overflow-x-hidden bg-[#FFFFFF]">
+      <div className="lg:w-100% flex h-[72px] items-center justify-between bg-[#3D52A0] pb-[15px] pl-[55px] pr-[45px] pt-[15px] shadow-[0px_-1px_1px_0px_#0000001A_inset]">
+        <div className="relative right-[2.5rem] flex h-[34px] w-[134px]">
           <Image
             alt=""
             width={44}
             height={44}
             src={img1}
-            className="w-[44px] h-[44px] relative bottom-2.5  "
+            className="relative bottom-2.5 h-[44px] w-[44px]"
           />
-          <p className=" text-white w-[99px] h-[29px] top-[2px] left-[39px] custom-font text-[24px] font-normal leading-[34.34px] text-left ">
+          <p className="custom-font left-[39px] top-[2px] h-[29px] w-[99px] text-left text-[24px] font-normal leading-[34.34px] text-white">
             ZENDEN
           </p>
         </div>
-        <div className="hidden md:flex w-[239px] h-[18px] gap-[30px] flex">
-          <div className="w-[58px] h-[18px] ">
-            <p className="text-[#FFFFFF] w-[60.15px] h-[21px] top-[-1px] custo-font text-[14px] font-medium leading-[21px] tracking-[0.2px] text-left ">
+        <div className="flex hidden h-[18px] w-[239px] gap-[30px] md:flex">
+          <div className="h-[18px] w-[58px]">
+            <p className="custo-font top-[-1px] h-[21px] w-[60.15px] text-left text-[14px] font-medium leading-[21px] tracking-[0.2px] text-[#FFFFFF]">
               Services
             </p>
           </div>
-          <div className="w-[63px] h-[18px]">
-            <p className="text-[#FFFFFF] w-[91.26px] h-[21px] top-[-2px] custo-font text-[14px] font-medium leading-[21px] tracking-[0.2px] text-left">
+          <div className="h-[18px] w-[63px]">
+            <p className="custo-font top-[-2px] h-[21px] w-[91.26px] text-left text-[14px] font-medium leading-[21px] tracking-[0.2px] text-[#FFFFFF]">
               Features
             </p>
           </div>
-          <div className="w-[58px] h-[18px]">
-            <p className="text-[#FFFFFF] w-[65px] h-[21px] top-[-1px] custo-font text-[14px] font-medium leading-[21px] tracking-[0.2px] text-left">
+          <div className="h-[18px] w-[58px]">
+            <p className="custo-font top-[-1px] h-[21px] w-[65px] text-left text-[14px] font-medium leading-[21px] tracking-[0.2px] text-[#FFFFFF]">
               About Us
             </p>
           </div>
         </div>
-        <div className="hidden md:flex flex w-[215px] h-[42px] gap-[20px]">
-          <button className="flex bg-[#FFFFFF] w-[123px]  h-[40px] gap-[10px] pt-[7px] pr-[22px] pb-[8px] pl-[14px] border-[1px] rounded-[5px] border-[#FFFFFF] ">
+        <div className="flex hidden h-[42px] w-[215px] gap-[20px] md:flex">
+          <button className="flex h-[40px] w-[123px] gap-[10px] rounded-[5px] border-[1px] border-[#FFFFFF] bg-[#FFFFFF] pb-[8px] pl-[14px] pr-[22px] pt-[7px]">
             <Image
               alt=""
               width={24}
               height={24}
               src={materialblack}
-              className="w-[24px] h-[24px] "
+              className="h-[24px] w-[24px]"
             />
-            <p className="text-black ">Login</p>
+            <p className="text-black">Login</p>
           </button>
-          <button className="flex bg-[#FFFFFF] w-[106px]  h-[42px] gap-[10px] pt-[8px] pr-[22px] pb-[8px] pl-[16px] border-[1px] rounded-[5px] border-[#FFFFFF] ">
+          <button className="flex h-[42px] w-[106px] gap-[10px] rounded-[5px] border-[1px] border-[#FFFFFF] bg-[#FFFFFF] pb-[8px] pl-[16px] pr-[22px] pt-[8px]">
             <Image
               alt=""
               width={28}
               height={26}
               src={userblack}
-              className="w-[28px] h-[26px]"
+              className="h-[26px] w-[28px]"
             />
             <Image
               alt=""
               width={24}
               height={24}
               src={quillblack}
-              className="w-[24px] h-[24px]"
+              className="h-[24px] w-[24px]"
             />
           </button>
         </div>
 
         <button
-          className="md:hidden md:fixed md:relative top-0 right-0 p-4 z-50"
+          className="right-0 top-0 z-50 p-4 md:fixed md:relative md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <Image
@@ -110,25 +110,25 @@ export default function Aboutus() {
           />
         </button>
         {menuOpen && (
-          <div className="md:hidden fixed top-[72px] right-0 bg-[#3D52A0] w-[168px] p-[15px] shadow-[0px_-1px_1px_0px_#0000001A_inset] z-40 ">
+          <div className="fixed right-0 top-[72px] z-40 w-[168px] bg-[#3D52A0] p-[15px] shadow-[0px_-1px_1px_0px_#0000001A_inset] md:hidden">
             <div className="flex flex-col gap-4">
-              <button className="flex bg-[#FFFFFF] w-[123px] h-[40px] gap-[10px] pt-[7px] pr-[22px] pb-[8px] pl-[14px] border-[1px] rounded-[5px] border-[#FFFFFF]">
+              <button className="flex h-[40px] w-[123px] gap-[10px] rounded-[5px] border-[1px] border-[#FFFFFF] bg-[#FFFFFF] pb-[8px] pl-[14px] pr-[22px] pt-[7px]">
                 <Image
                   alt="Login Icon"
                   width={24}
                   height={24}
                   src={materialblack}
-                  className="w-[24px] h-[24px]"
+                  className="h-[24px] w-[24px]"
                 />
                 <p className="text-black">Login</p>
               </button>
-              <p className="text-[#FFFFFF] text-[14px] font-medium pl-2">
+              <p className="pl-2 text-[14px] font-medium text-[#FFFFFF]">
                 Services
               </p>
-              <p className="text-[#FFFFFF] text-[14px] font-medium pl-2">
+              <p className="pl-2 text-[14px] font-medium text-[#FFFFFF]">
                 Features
               </p>
-              <p className="text-[#FFFFFF] text-[14px] font-medium pl-2">
+              <p className="pl-2 text-[14px] font-medium text-[#FFFFFF]">
                 About Us
               </p>
             </div>
@@ -136,186 +136,186 @@ export default function Aboutus() {
         )}
       </div>
 
-      <div className="flex flex-col items-center h-[1024px] sm:w-auto sm:h-[934px] ">
-        <div className="w-[1066px] h-[449px] top-[140px]  ">
-          <div className="flex flex-col items-center w-[1066px] h-[449px] relative top-[140px] gap-[11px] ">
-            <div className="flex flex-col items-center w-[773px] h-[361px] w-fixed sm:w-auto  ">
-              <p className="w-[204px] h-[68px] custo-font font-[500] text-[45px] leading-[67.5px] text-[#002855] ">
+      <div className="flex h-[1024px] flex-col items-center sm:h-[934px] sm:w-auto">
+        <div className="top-[140px] h-[449px] w-[1066px]">
+          <div className="relative top-[140px] flex h-[449px] w-[1066px] flex-col items-center gap-[11px]">
+            <div className="w-fixed flex h-[361px] w-[773px] flex-col items-center sm:w-auto">
+              <p className="custo-font h-[68px] w-[204px] text-[45px] font-[500] leading-[67.5px] text-[#002855]">
                 About Us
               </p>
-              <p className="w-[670px] h-[233px] relative left-[12rem] custom-font font-[400] text-[73px] xs:relative xs:mr-[6rem] xs:text-[97px] xl:text-[163px] leading-[233.2px] text-[#002855] sm:w-[150px] sm:text-[140px] sm:relative sm:mr-[50rem] md:text-[150px] md:w-auto md:relative md:mr-[22rem] md:mx-auto lg:text-[140px] lg:relative lg:left-[13rem]  lg:w-[670px] xl:relative xl:mr-[25rem] ">
+              <p className="custom-font relative left-[12rem] h-[233px] w-[670px] text-[73px] font-[400] leading-[233.2px] text-[#002855] xs:relative xs:mr-[6rem] xs:text-[97px] sm:relative sm:mr-[50rem] sm:w-[150px] sm:text-[140px] md:relative md:mx-auto md:mr-[22rem] md:w-auto md:text-[150px] lg:relative lg:left-[13rem] lg:w-[670px] lg:text-[140px] xl:relative xl:mr-[25rem] xl:text-[163px]">
                 ZENDEN
               </p>
-              <div className="flex justify-between w-[439px] h-[60px] text-[#3D52A0] sm:w-auto lg:w-auto xs:w-auto xs:relative xs:left-[3rem] ">
-                <p className="w-[180px] h-[60px] top[301px] relative left-[5rem] custo-font font-[500] text-[25px] xs:w-[420px] xs:pl-[9rem] xs:text-[40px] xs:relative xs:right-[1rem] sm:text-[40px] leading-[60px] text-[#3D52A0] ">
+              <div className="flex h-[60px] w-[439px] justify-between text-[#3D52A0] xs:relative xs:left-[3rem] xs:w-auto sm:w-auto lg:w-auto">
+                <p className="top[301px] custo-font relative left-[5rem] h-[60px] w-[180px] text-[25px] font-[500] leading-[60px] text-[#3D52A0] xs:relative xs:right-[1rem] xs:w-[420px] xs:pl-[9rem] xs:text-[40px] sm:text-[40px]">
                   Live Easy
                 </p>
                 <Image
                   alt=""
                   src={Line4}
-                  className=" top-[315px] left-[368px] "
+                  className="left-[368px] top-[315px]"
                 />
-                <p className="w-[211px] h-[60px] relative right-[0.5rem]  custo-font font-[500] text-[25px] xs:text-[40px] xs:relative xs:left-[1rem] xs:w-[500px]  sm:text-[40px] leading-[60px] text-[#3D52A0] sm:relative sm:left-[1rem]  lg:relative lg:left-[10px]  ">
+                <p className="custo-font relative right-[0.5rem] h-[60px] w-[211px] text-[25px] font-[500] leading-[60px] text-[#3D52A0] xs:relative xs:left-[1rem] xs:w-[500px] xs:text-[40px] sm:relative sm:left-[1rem] sm:text-[40px] lg:relative lg:left-[10px]">
                   Feel Home
                 </p>
               </div>
             </div>
-            <p className="lg:w-[1066px] h-[77px] custo-font font-[300] w-[350px] text-[12px] xl:text-[26px] leading-[39px] text-[#000000] pt-[4px] relative text-center xs:w-[450px] xs:text-[19px] sm:px-[48px] sm:w-[800px] sm:text-[20px] lg:text-[26px] ">
+            <p className="custo-font relative h-[77px] w-[350px] pt-[4px] text-center text-[12px] font-[300] leading-[39px] text-[#000000] xs:w-[450px] xs:text-[19px] sm:w-[800px] sm:px-[48px] sm:text-[20px] lg:w-[1066px] lg:text-[26px] xl:text-[26px]">
               {" "}
               ZenDen is reshaping student accommodation by offering affordable,
               comfortable and luxurious living spaces.
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center lg:w-[842px] h-[144x] relative top-[180px]  gap-[46px]  sm:w-auto sm:h-[150px] ">
-          <p className="lg:w-[852px] h-[39x] custo-font font-[400] text-[26px] leading-[39px] text-[#3D52A0] relative text-center sm:w-auto  sm:px-[15px] ">
+        <div className="relative top-[180px] flex h-[144x] flex-col items-center gap-[46px] sm:h-[150px] sm:w-auto lg:w-[842px]">
+          <p className="custo-font relative h-[39x] text-center text-[26px] font-[400] leading-[39px] text-[#3D52A0] sm:w-auto sm:px-[15px] lg:w-[852px]">
             Join us in creating a home away from home for you across India.
           </p>
-          <button className="w-[268px] h-[59x] rounded-[6px] ">
-            <div className="bg-[#002855] w-[268px] h-[59x] top-[85px] left-[297px] rounded-[6px] ">
-              <p className="w-[268px] h-[48px] custo-font font-[400] text-[26px] leading-[39px] px-[2px] py-1  text-[#FFFFFF] ">
+          <button className="h-[59x] w-[268px] rounded-[6px]">
+            <div className="left-[297px] top-[85px] h-[59x] w-[268px] rounded-[6px] bg-[#002855]">
+              <p className="custo-font h-[48px] w-[268px] px-[2px] py-1 text-[26px] font-[400] leading-[39px] text-[#FFFFFF]">
                 Join Now
               </p>
             </div>
           </button>
         </div>
-        <div className="flex items-center justify-center flex-wrap gap-8 relative top-[16rem]  sm:gap-[50px]  sm:w-auto  sm:h-auto p-4 sm:relative sm:top-[230px] sm:left-[3rem]   ">
-          <div className="flex flex-col items-center w-[181px] h-[118px] sm:w-[150px] sm:h-[100px] lg:w-[160px] lg:relative lg:right-[3rem] ">
-            <p className="w-[181px] h-[113px] custo-font font-[400] text-[75px] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
+        <div className="relative top-[16rem] flex flex-wrap items-center justify-center gap-8 p-4 sm:relative sm:left-[3rem] sm:top-[230px] sm:h-auto sm:w-auto sm:gap-[50px]">
+          <div className="flex h-[118px] w-[181px] flex-col items-center sm:h-[100px] sm:w-[150px] lg:relative lg:right-[3rem] lg:w-[160px]">
+            <p className="custo-font h-[113px] w-[181px] text-[75px] font-[400] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
               2024
             </p>
-            <p className="w-[119px] h-[26px] custo-font font-[500] text-[17px] leading-[25.5px] text-[#000000] sm:text-[15px] sm:leading-[22.5px] sm:relative right-[1rem]">
+            <p className="custo-font right-[1rem] h-[26px] w-[119px] text-[17px] font-[500] leading-[25.5px] text-[#000000] sm:relative sm:text-[15px] sm:leading-[22.5px]">
               Join Now
             </p>
           </div>
-          <div className="flex flex-col items-center w-[193px] h-[113px] sm:w-[160px] sm:h-[100px] lg:w-[160px] lg:right-[18rem]">
-            <p className="w-[193px] h-[113px] custo-font font-[400] text-[75px] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
+          <div className="flex h-[113px] w-[193px] flex-col items-center sm:h-[100px] sm:w-[160px] lg:right-[18rem] lg:w-[160px]">
+            <p className="custo-font h-[113px] w-[193px] text-[75px] font-[400] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
               500+
             </p>
-            <p className="w-[84px] h-[23px] custo-font font-[500] text-[15px] leading-[22.5px] text-[#000000] sm:text-[13px] sm:leading-[20px] sm:relative right-[2rem] ">
+            <p className="custo-font right-[2rem] h-[23px] w-[84px] text-[15px] font-[500] leading-[22.5px] text-[#000000] sm:relative sm:text-[13px] sm:leading-[20px]">
               Customers
             </p>
           </div>
-          <div className="flex flex-col items-center w-[140px] h-[113px] sm:w-[120px] sm:h-[100px] lg:w-[160px] lg:right-[20rem]">
-            <p className="w-[140px] h-[113px] custo-font font-[400] text-[75px] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
+          <div className="flex h-[113px] w-[140px] flex-col items-center sm:h-[100px] sm:w-[120px] lg:right-[20rem] lg:w-[160px]">
+            <p className="custo-font h-[113px] w-[140px] text-[75px] font-[400] leading-[112.5px] text-[#3D52A0] sm:text-[50px] sm:leading-[75px]">
               70+
             </p>
-            <p className="w-[119px] h-[23px] custo-font font-[500] text-[15px] leading-[22.5px] text-[#000000] sm:text-[13px] sm:leading-[20px] sm:relative right-[1rem]">
+            <p className="custo-font right-[1rem] h-[23px] w-[119px] text-[15px] font-[500] leading-[22.5px] text-[#000000] sm:relative sm:text-[13px] sm:leading-[20px]">
               House rented
             </p>
           </div>
         </div>
       </div>
 
-      <div className="relative top-[23rem] xs:relative xs:top-[9rem] sm:relative sm:top-[2rem] ">
-        <div className="h-[996px] flex flex-col items-center ">
-          <div className="w-[554.4px] h-[103px] relative top-[55px]  gap-[27px] text-center sm:w-auto   ">
-            <p className="w-[554.4px] h-[48px] custo-font font-[400] text-[42px] leading-[48px] text-[#002855] ">
+      <div className="relative top-[23rem] xs:relative xs:top-[9rem] sm:relative sm:top-[2rem]">
+        <div className="flex h-[996px] flex-col items-center">
+          <div className="relative top-[55px] h-[103px] w-[554.4px] gap-[27px] text-center sm:w-auto">
+            <p className="custo-font h-[48px] w-[554.4px] text-[42px] font-[400] leading-[48px] text-[#002855]">
               Why Us
             </p>
-            <p className="w-[454.4px] h-[28px] jakarta-font font-[400] pt-5 relative left-[3rem] text-[14px] xs:text-[18px] leading-[28px] text-[#002855] lg:text-[19px] ">
+            <p className="jakarta-font relative left-[3rem] h-[28px] w-[454.4px] pt-5 text-[14px] font-[400] leading-[28px] text-[#002855] xs:text-[18px] lg:text-[19px]">
               Lorem ipsum dolor sit amet, consectetur adipis elit
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-4 relative right-[3rem] h-[550px] top-[70px] py-[4px] sm:grid sm:grid-cols-1 sm:w-auto sm:h-[100%] sm:place-items-center  lg:grid lg:grid-cols-3    ">
-            <div className="flex flex-col items-center w-[330px] h-[385px] sm:w-[330px] ">
+          <div className="relative right-[3rem] top-[70px] grid h-[550px] grid-cols-1 gap-4 py-[4px] sm:grid sm:h-[100%] sm:w-auto sm:grid-cols-1 sm:place-items-center lg:grid lg:grid-cols-3">
+            <div className="flex h-[385px] w-[330px] flex-col items-center sm:w-[330px]">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={octicon}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center ">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Our Mission
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:text-[15px] lg:w-[280px] xl:w-[330px] xl:text-[16px]">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
             </div>
-            <div className="flex flex-col items-center w-[330px] h-[385px] ">
+            <div className="flex h-[385px] w-[330px] flex-col items-center">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={chartbar}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center ">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Our Vision
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px] ">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
             </div>
-            <div className="flex flex-col items-center w-[330px] h-[385px] ">
+            <div className="flex h-[385px] w-[330px] flex-col items-center">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={Money}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center ">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Our Values
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
             </div>
-            <div className="flex flex-col items-center w-[330px] h-[385px] ">
+            <div className="flex h-[385px] w-[330px] flex-col items-center">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={Product}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Product
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
             </div>
-            <div className="flex flex-col items-center w-[330px] h-[385px] ">
+            <div className="flex h-[385px] w-[330px] flex-col items-center">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={Quality}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Quality
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
             </div>
-            <div className="flex flex-col items-center w-[330px] h-[385px] ">
+            <div className="flex h-[385px] w-[330px] flex-col items-center">
               <Image
                 alt=""
                 width={59}
                 height={59}
                 src={Candidate}
-                className="w-[59px] h-[59px] relative  left-[52px] top-[58px] "
+                className="relative left-[52px] top-[58px] h-[59px] w-[59px]"
               />
 
-              <p className="w-[315px] h-[28px] relative top-[91px] left-[51px] custo-font font-[400] text-[21px] leading-[28px] text-[#002855] text-center">
+              <p className="custo-font relative left-[51px] top-[91px] h-[28px] w-[315px] text-center text-[21px] font-[400] leading-[28px] text-[#002855]">
                 Result
               </p>
-              <p className="w-[300px] h-[78px] relative top-[125px] left-[43px] jakarta-font font-[400] text-[16px] leading-[26px] text-[#52525B] text-center xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px] ">
+              <p className="jakarta-font relative left-[43px] top-[125px] h-[78px] w-[300px] text-center text-[16px] font-[400] leading-[26px] text-[#52525B] xs:w-auto lg:w-[280px] lg:text-[15px] xl:w-[330px] xl:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                 nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
               </p>
@@ -324,29 +324,29 @@ export default function Aboutus() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center h-[1096px] relative top-[115rem] xs:relative xs:top-[100rem] sm:w-auto sm:flex sm:items-center sm:relative sm:top-[90rem] lg:w-auto lg:flex lg:items-center lg:relative lg:top-[-1rem] ">
-        <div className="h-[342px] py-[96px] gap-[64px]  ">
-          <div className="flex flex-col items-center w-[1280px] h-[150px] px-[32px] gap-[32px]  ">
-            <div className="flex flex-col items-center w-[1216px] h-[150px] gap-[48px]  ">
-              <div className="flex flex-col items-center w-[960px] h-[150px] gap-[24px]  ">
-                <div className="flex flex-col items-center w-[960px] h-[96px] gap-[19px]  ">
-                  <p className="w-[960px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  text-[#002855] text-center">
+      <div className="relative top-[115rem] flex h-[1096px] flex-col items-center xs:relative xs:top-[100rem] sm:relative sm:top-[90rem] sm:flex sm:w-auto sm:items-center lg:relative lg:top-[-1rem] lg:flex lg:w-auto lg:items-center">
+        <div className="h-[342px] gap-[64px] py-[96px]">
+          <div className="flex h-[150px] w-[1280px] flex-col items-center gap-[32px] px-[32px]">
+            <div className="flex h-[150px] w-[1216px] flex-col items-center gap-[48px]">
+              <div className="flex h-[150px] w-[960px] flex-col items-center gap-[24px]">
+                <div className="flex h-[96px] w-[960px] flex-col items-center gap-[19px]">
+                  <p className="custo-font h-[24px] w-[960px] text-center text-[16px] font-[400] leading-[24px] text-[#002855]">
                     About Us
                   </p>
-                  <p className="w-[960px] h-[60px] custo-font font-[400] text-[24px] xs:text-[48px] leading-[60px]  text-[#002855] tracking-[-2%] text-center ">
+                  <p className="custo-font h-[60px] w-[960px] text-center text-[24px] font-[400] leading-[60px] tracking-[-2%] text-[#002855] xs:text-[48px]">
                     We’re a distributed team
                   </p>
                 </div>
-                <p className="w-[608px] h-[30px] custo-font font-[400] text-[14px] xs:text-[20px] leading-[30px]  text-[#3D52A0] text-center ">
+                <p className="custo-font h-[30px] w-[608px] text-center text-[14px] font-[400] leading-[30px] text-[#3D52A0] xs:text-[20px]">
                   We have offices and teams all around the world.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-[754px] pb-[96px] gap-[64px]  ">
-          <div className="flex items-center justify-center w-full min-h-screen px-4">
-            <div className="flex flex-col items-center w-full max-w-[450px] h-[488px]">
+        <div className="h-[754px] gap-[64px] pb-[96px]">
+          <div className="flex min-h-screen w-full items-center justify-center px-4">
+            <div className="flex h-[488px] w-full max-w-[450px] flex-col items-center">
               <VectorMap
                 map={worldMill}
                 backgroundColor="gray"
@@ -364,54 +364,54 @@ export default function Aboutus() {
             </div>
           </div>
 
-          <div className="h-[1280px] pb-[106px] relative top-[2rem] pt-[50px] sm:pt-[7rem] sm:w-auto sm:items-center lg:h-[1280px] lg:relative lg:top-[-1rem] lg:w-auto">
-            <div className="flex flex-col items-center sm:flex sm:flex-row sm:px-[32px] sm:justify-evenly">
-              <div className="flex flex-col items-center mb-[20px] w-[384px] w-fill h-[106px] gap-[20px] sm:w-[170px] sm:relative sm:left-0 lg:pr-[15rem] lg:w-[270px] xl:w-[384px]">
-                <div className="flex flex-col items-center w-[384px] w-fill h-[62px] gap-[4px]  ">
-                  <p className="w-[384px] h-[30px] custo-font font-[300] text-[20px] leading-[30px]  text-[#101828] text-center">
+          <div className="relative top-[2rem] h-[1280px] pb-[106px] pt-[50px] sm:w-auto sm:items-center sm:pt-[7rem] lg:relative lg:top-[-1rem] lg:h-[1280px] lg:w-auto">
+            <div className="flex flex-col items-center sm:flex sm:flex-row sm:justify-evenly sm:px-[32px]">
+              <div className="w-fill mb-[20px] flex h-[106px] w-[384px] flex-col items-center gap-[20px] sm:relative sm:left-0 sm:w-[170px] lg:w-[270px] lg:pr-[15rem] xl:w-[384px]">
+                <div className="w-fill flex h-[62px] w-[384px] flex-col items-center gap-[4px]">
+                  <p className="custo-font h-[30px] w-[384px] text-center text-[20px] font-[300] leading-[30px] text-[#101828]">
                     Support
                   </p>
-                  <p className="w-[384px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  text-[#667085] text-center pt-1 sm:text-[13px] lg:text-[16px] ">
+                  <p className="custo-font h-[24px] w-[384px] pt-1 text-center text-[16px] font-[400] leading-[24px] text-[#667085] sm:text-[13px] lg:text-[16px]">
                     Our friendly team is here to help.
                   </p>
                 </div>
-                <button className="w-[197px] h-[24px] ">
-                  <div className="w-[197px] h-[24x] gap-[8px] ">
-                    <p className="w-[197px] h-[24px] custo-font font-[500] text-[16px] leading-[24px]  text-[#002855] text-center ">
+                <button className="h-[24px] w-[197px]">
+                  <div className="h-[24x] w-[197px] gap-[8px]">
+                    <p className="custo-font h-[24px] w-[197px] text-center text-[16px] font-[500] leading-[24px] text-[#002855]">
                       support@untitledui.com
                     </p>
                   </div>
                 </button>
               </div>
-              <div className="flex flex-col items-center mb-[20px] w-[384px] w-fill h-[106px] gap-[20px]  lg:pr-[7rem] sm:w-[170px] sm:relative sm:left-[3rem] lg:w-[270px] xl:w-[384px]">
-                <div className="flex flex-col items-center  w-[384px] w-fill h-[62px] gap-[4px]  ">
-                  <p className="w-[384px] h-[30px] custo-font font-[400] text-[20px] leading-[30px]  text-[#101828] text-center ">
+              <div className="w-fill mb-[20px] flex h-[106px] w-[384px] flex-col items-center gap-[20px] sm:relative sm:left-[3rem] sm:w-[170px] lg:w-[270px] lg:pr-[7rem] xl:w-[384px]">
+                <div className="w-fill flex h-[62px] w-[384px] flex-col items-center gap-[4px]">
+                  <p className="custo-font h-[30px] w-[384px] text-center text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Sales
                   </p>
-                  <p className="w-[384px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  text-[#667085] text-center sm:text-[13px] lg:text-[16px] ">
+                  <p className="custo-font h-[24px] w-[384px] text-center text-[16px] font-[400] leading-[24px] text-[#667085] sm:text-[13px] lg:text-[16px]">
                     Questions or queries? Get in touch!
                   </p>
                 </div>
-                <button className="w-[176px] h-[24px] ">
-                  <div className="w-[176px] h-[24x] gap-[8px] ">
-                    <p className="w-[176px] h-[24px] custo-font font-[500] text-[16px] leading-[24px]  text-[#002855] text-center">
+                <button className="h-[24px] w-[176px]">
+                  <div className="h-[24x] w-[176px] gap-[8px]">
+                    <p className="custo-font h-[24px] w-[176px] text-center text-[16px] font-[500] leading-[24px] text-[#002855]">
                       sales@untitledui.com
                     </p>
                   </div>
                 </button>
               </div>
-              <div className="flex flex-col items-center mb-[20px] w-[384px] w-fill h-[106px] gap-[20px] sm:pr-[14rem] lg:pr-[8rem] sm:w-[170px] sm:relative sm:left-[10rem] lg:w-[270px] xl:w-[384px]">
-                <div className="flex flex-col items-center w-[384px] w-fill h-[62px] gap-[4px]  ">
-                  <p className="w-[384px] h-[30px] custo-font font-[400] text-[20px] leading-[30px]  text-[#101828] text-center">
+              <div className="w-fill mb-[20px] flex h-[106px] w-[384px] flex-col items-center gap-[20px] sm:relative sm:left-[10rem] sm:w-[170px] sm:pr-[14rem] lg:w-[270px] lg:pr-[8rem] xl:w-[384px]">
+                <div className="w-fill flex h-[62px] w-[384px] flex-col items-center gap-[4px]">
+                  <p className="custo-font h-[30px] w-[384px] text-center text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Phone
                   </p>
-                  <p className="w-[384px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  text-[#667085] text-center sm:text-[13px] lg:text-[16px] ">
+                  <p className="custo-font h-[24px] w-[384px] text-center text-[16px] font-[400] leading-[24px] text-[#667085] sm:text-[13px] lg:text-[16px]">
                     Mon-Fri from 8am to 5pm.
                   </p>
                 </div>
-                <button className="w-[153px] h-[24px] ">
-                  <div className="w-[153px] h-[24x] gap-[8px] ">
-                    <p className="w-[153px] h-[24px] custo-font font-[500] text-[16px] leading-[24px]  text-[#002855] text-center">
+                <button className="h-[24px] w-[153px]">
+                  <div className="h-[24x] w-[153px] gap-[8px]">
+                    <p className="custo-font h-[24px] w-[153px] text-center text-[16px] font-[500] leading-[24px] text-[#002855]">
                       +1 (555) 000-0000
                     </p>
                   </div>
@@ -422,37 +422,37 @@ export default function Aboutus() {
         </div>
       </div>
 
-      <p className="xs:w-[391px] h-[64px] relative top-[128rem]  custo-font font-[400] text-[40px] leading-[64px] text-[#002855] text-center xs:relative xs:top-[113rem] xs:left-[4.5rem]  sm:relative sm:left-[20px] sm:w-auto sm:top-[91rem] lg:w-[391px] lg:h-[64px] lg:relative lg:top-[-1rem] lg:left-[4rem] lg:mx-auto ">
+      <p className="custo-font relative top-[128rem] h-[64px] text-center text-[40px] font-[400] leading-[64px] text-[#002855] xs:relative xs:left-[4.5rem] xs:top-[113rem] xs:w-[391px] sm:relative sm:left-[20px] sm:top-[91rem] sm:w-auto lg:relative lg:left-[4rem] lg:top-[-1rem] lg:mx-auto lg:h-[64px] lg:w-[391px]">
         Our creative minds
       </p>
 
-      <div className=" relative top-[135rem] right-[1.2rem] pb-[96px] xs:relative xs:top-[116rem] xs:left-[5.5rem] lg:h-[80rem]  lg:relative lg:top-[23rem] ">
-        <div className=" grid grid-cols-1 gap-4 h-[1052px] sm:grid sm:grid-cols-1 sm:items-center sm:h-auto sm:relative sm:top-[-20rem] sm:right-[5.5rem] lg:grid lg:grid-cols-4 lg:my-auto  ">
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px]  gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Imageg} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+      <div className="relative right-[1.2rem] top-[135rem] pb-[96px] xs:relative xs:left-[5.5rem] xs:top-[116rem] lg:relative lg:top-[23rem] lg:h-[80rem]">
+        <div className="grid h-[1052px] grid-cols-1 gap-4 sm:relative sm:right-[5.5rem] sm:top-[-20rem] sm:grid sm:h-auto sm:grid-cols-1 sm:items-center lg:my-auto lg:grid lg:grid-cols-4">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Imageg} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Olivia Rhye
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Founder & CEO
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Former co-founder of Opendoor. Early staff at Spotify and
                   Clearbit.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -462,7 +462,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full"
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -472,37 +472,37 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image11} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image11} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     {" "}
                     Phoenix Baker
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Engineering Manager
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Lead engineering teams at Figma, Pitch, and Protocol Labs.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -512,7 +512,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -522,36 +522,36 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image12} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image12} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Lana Steiner
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Product Manager
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Former PM for Linear, Lambda School, and On Deck.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -561,7 +561,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -571,36 +571,36 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image13} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image13} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Demi Wilkinson
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Frontend Developer
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px]">
                   Former frontend dev for Linear, Coinbase, and Postscript.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -610,7 +610,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -620,36 +620,36 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image14} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image14} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Candice Wu
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Backend Developer
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Lead backend dev at Clearbit. Former Clearbit and Loom.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -659,7 +659,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -669,36 +669,36 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image15} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image15} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Natali Craig
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Product Designer
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Founding design team at Figma. Former Pleo, Stripe, and Tile.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -708,7 +708,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -718,37 +718,37 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image16} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image16} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Drew Cano
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     UX Researcher
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 custom-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px]">
+                <p className="custom-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Lead user research for Slack. Contractor for Netflix and
                   Udacity.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -758,7 +758,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full  "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -768,36 +768,36 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-[340px] w-fill  h-[494px] pl-[40px] gap-[24x] sm:flex flex-col sm:items-center sm:w-[100%] ">
-            <Image alt="" height={296} src={Image17} className="h-[296px] " />
-            <div className="w-[280px] h-[174px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
-              <div className="w-[280px] h-[24px] gap-[20px]">
-                <div className=" w-[280px] w-fill h-[62px] gap-[4px] ">
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[20px] leading-[30px] text-[#101828] ">
+          <div className="w-fill h-[494px] w-[340px] flex-col gap-[24x] pl-[40px] sm:flex sm:w-[100%] sm:items-center">
+            <Image alt="" height={296} src={Image17} className="h-[296px]" />
+            <div className="h-[174px] w-[280px] gap-[24px] lg:relative lg:left-[2.4rem] xl:mr-[4.1rem]">
+              <div className="h-[24px] w-[280px] gap-[20px]">
+                <div className="w-fill h-[62px] w-[280px] gap-[4px]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[20px] font-[400] leading-[30px] text-[#101828]">
                     Orlando Diggs
                   </p>
-                  <p className="text-left w-[280px] h-[48px]  custom-font font-[400] text-[18px] leading-[28px] text-[#002855]">
+                  <p className="custom-font h-[48px] w-[280px] text-left text-[18px] font-[400] leading-[28px] text-[#002855]">
                     Customer Success
                   </p>
                 </div>
-                <p className="text-left w-[280px] h-[48px] pt-5 inter-font font-[400] text-[16px] leading-[24px] text-[#667085] lg:text-[12px] lg:w-[230px] xl:text-[16px] xl:w-[280px] ">
+                <p className="inter-font h-[48px] w-[280px] pt-5 text-left text-[16px] font-[400] leading-[24px] text-[#667085] lg:w-[230px] lg:text-[12px] xl:w-[280px] xl:text-[16px]">
                   Lead CX at Wealthsimple. Former PagerDuty and Sqreen.
                 </p>
               </div>
-              <div className="flex pt-[130px] w-[280px] h-[24px] gap-[20px] ">
+              <div className="flex h-[24px] w-[280px] gap-[20px] pt-[130px]">
                 <button>
                   <Image
                     alt=""
                     width={24}
                     height={24}
                     src={social}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -807,7 +807,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social1}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />
                 </button>
                 <button>
@@ -817,7 +817,7 @@ export default function Aboutus() {
                     width={24}
                     height={24}
                     src={social2}
-                    className="w-[24px] h-[24px] hover:bg-blue-500 rounded-full "
+                    className="h-[24px] w-[24px] rounded-full hover:bg-blue-500"
                   />{" "}
                 </button>
               </div>
@@ -826,120 +826,120 @@ export default function Aboutus() {
         </div>
       </div>
 
-      <div className="bg-[#F6F9FF] h-[977px] flex flex-col items-center relative top-[320rem] rounded-[4px] gap-[56px] xs:relative xs:top-[300rem] sm:relative sm:top-[92rem] md:relative md:bottom-[1rem] lg:relative lg:top-[-4rem] ">
-        <div className="flex flex-col lg:flex-row h-auto rounded-[12px] py-[28px] px-4 gap-[20px] lg:gap-[100px] bg-[#3D52A0] sm:w-auto  ">
-          <div className="w-full lg:w-[440px] xl:w-[645px] h-auto gap-[4px]">
-            <p className="w-auto h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-[#FFFFFF]">
+      <div className="relative top-[320rem] flex h-[977px] flex-col items-center gap-[56px] rounded-[4px] bg-[#F6F9FF] xs:relative xs:top-[300rem] sm:relative sm:top-[92rem] md:relative md:bottom-[1rem] lg:relative lg:top-[-4rem]">
+        <div className="flex h-auto flex-col gap-[20px] rounded-[12px] bg-[#3D52A0] px-4 py-[28px] sm:w-auto lg:flex-row lg:gap-[100px]">
+          <div className="h-auto w-full gap-[4px] lg:w-[440px] xl:w-[645px]">
+            <p className="custo-font h-[24px] w-auto text-[16px] font-[500] leading-[24px] text-[#FFFFFF]">
               Newsletter
             </p>
-            <p className="w-auto h-[24px] custo-font font-[400] text-[16px] leading-[24px] text-[#FFFFFF]">
+            <p className="custo-font h-[24px] w-auto text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">
               Be the first one to know about discounts, offers and events
             </p>
           </div>
-          <div className="flex items-center w-full lg:w-[457px] rounded-[12px] pr-[6px] pl-[24px] h-[48px] bg-[#4A61B5]">
+          <div className="flex h-[48px] w-full items-center rounded-[12px] bg-[#4A61B5] pl-[24px] pr-[6px] lg:w-[457px]">
             <div className="flex items-center">
               <Image
                 width={16}
                 height={16}
                 alt=""
                 src={sms}
-                className="w-[16px] h-[16px]"
+                className="h-[16px] w-[16px]"
               />
               <input
                 placeholder="Enter your email"
-                className="focus:border-0 w-full lg:w-[160px] h-[24px] custo-font font-[400] text-[16px] leading-[24px] focus:outline-none pl-2 cursor-pointer bg-[#4A61B5]"
+                className="custo-font h-[24px] w-full cursor-pointer bg-[#4A61B5] pl-2 text-[16px] font-[400] leading-[24px] focus:border-0 focus:outline-none lg:w-[160px]"
               />
             </div>
-            <button className="w-full lg:w-[265px] h-[36px] gap-[10px] flex justify-end">
-              <div className="w-[94px] h-[36px] rounded-[10px] bg-[#FFFFFFDB]">
-                <p className="relative top-[6px] left-[17px] w-[58px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-[#002855]">
+            <button className="flex h-[36px] w-full justify-end gap-[10px] lg:w-[265px]">
+              <div className="h-[36px] w-[94px] rounded-[10px] bg-[#FFFFFFDB]">
+                <p className="custo-font relative left-[17px] top-[6px] h-[24px] w-[58px] text-[16px] font-[500] leading-[24px] text-[#002855]">
                   Submit
                 </p>
               </div>
             </button>
           </div>
         </div>
-        <div className="w-[1184px] h-[173px] gap-[24px] sm:w-[100%] sm:h-[250px] ">
-          <div className="lg:w-[1184px] h-[98px] gap-[16px] sm:w-[100%] sm:flex flex-col sm:items-center lg:flex lg:items-start  ">
+        <div className="h-[173px] w-[1184px] gap-[24px] sm:h-[250px] sm:w-[100%]">
+          <div className="h-[98px] flex-col gap-[16px] sm:flex sm:w-[100%] sm:items-center lg:flex lg:w-[1184px] lg:items-start">
             <Image
               alt=""
               width={134}
               height={34}
               src={Logoz}
-              className="w-[134px] h-[34px] pb-2  sm:h-[100%] xl:relative left-[13.5rem]  "
+              className="left-[13.5rem] h-[34px] w-[134px] pb-2 sm:h-[100%] xl:relative"
             />
-            <p className="text-center h-[48px] custo-font font-[400] w-[750px] pl-[27rem] text-[9px] sm:w-[1100px] sm:relative sm:right-[13rem] sm:text-[16px] leading-[24px] sm:text-center lg:text-left lg:relative lg:w-[1450px] lg:right-[26rem] xl:relative xl:right-[13rem] ">
+            <p className="custo-font h-[48px] w-[750px] pl-[27rem] text-center text-[9px] font-[400] leading-[24px] sm:relative sm:right-[13rem] sm:w-[1100px] sm:text-center sm:text-[16px] lg:relative lg:right-[26rem] lg:w-[1450px] lg:text-left xl:relative xl:right-[13rem]">
               We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat...{" "}
               <span className="text-[#4A61B5]">Read More</span>
             </p>
           </div>
-          <div className="flex flex-col items-center w-[1184px] h-[51px] gap-[80px] pt-[30px] sm:pt-[110px] sm:flex sm:flex-row sm:items-center sm:w-[700px] md:w-[900px] md:relative md:right-[2rem] sm:relative sm:left-[2rem] xl:flex xl:relative xl:left-[11rem]">
-            <div className="flex w-[236px] w-fill h-fill h-[51px] gap-[12px] sm:flex sm:items-center sm:pr-[130px]  sm:w-[180px] md:w-[200px] md:pl-[30px] ">
+          <div className="flex h-[51px] w-[1184px] flex-col items-center gap-[80px] pt-[30px] sm:relative sm:left-[2rem] sm:flex sm:w-[700px] sm:flex-row sm:items-center sm:pt-[110px] md:relative md:right-[2rem] md:w-[900px] xl:relative xl:left-[11rem] xl:flex">
+            <div className="w-fill h-fill flex h-[51px] w-[236px] gap-[12px] sm:flex sm:w-[180px] sm:items-center sm:pr-[130px] md:w-[200px] md:pl-[30px]">
               <Image
                 alt=""
                 width={32}
                 height={32}
                 src={icons}
-                className="w-[32px] h-[32px]  "
+                className="h-[32px] w-[32px]"
               />
-              <div className="w-[192px] h-[48px] gap-[2px] ">
-                <p className="flex text-[#4B5768] w-[192px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  ">
+              <div className="h-[48px] w-[192px] gap-[2px]">
+                <p className="custo-font flex h-[24px] w-[192px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
                   Tel
                 </p>
-                <p className="flex text-[#3D52A0] w-[192px] h-[22px] custo-font font-[500] text-[16px] leading-[20.83px]  ">
+                <p className="custo-font flex h-[22px] w-[192px] text-[16px] font-[500] leading-[20.83px] text-[#3D52A0]">
                   310-437-2766
                 </p>
               </div>
             </div>
-            <div className="flex w-[236px] w-fill h-fill h-[51px] gap-[12px] sm:flex sm:items-center sm:relative sm:right-[100px] sm:w-[180px] lg:relative lg:right-[6rem] md:w-[200px] md:pl-[60px] ">
+            <div className="w-fill h-fill flex h-[51px] w-[236px] gap-[12px] sm:relative sm:right-[100px] sm:flex sm:w-[180px] sm:items-center md:w-[200px] md:pl-[60px] lg:relative lg:right-[6rem]">
               <Image
                 alt=""
                 width={32}
                 height={32}
                 src={mail}
-                className="w-[32px] h-[32px] "
+                className="h-[32px] w-[32px]"
               />
-              <div className="w-[192px] h-[48px] gap-[2px] ">
-                <p className="flex text-[#4B5768] w-[192px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  ">
+              <div className="h-[48px] w-[192px] gap-[2px]">
+                <p className="custo-font flex h-[24px] w-[192px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
                   Mail
                 </p>
-                <button className="flex text-[#3D52A0] w-[192px] h-[22px] custo-font font-[500] text-[16px] leading-[20.83px]">
+                <button className="custo-font flex h-[22px] w-[192px] text-[16px] font-[500] leading-[20.83px] text-[#3D52A0]">
                   unreal@outlook.com
                 </button>
               </div>
             </div>
-            <div className="flex w-[236px] w-fill h-fill h-[51px] gap-[12px] sm:flex sm:items-center sm:relative sm:right-[170px] sm:w-[180px] lg:relative lg:right-[8rem] md:w-[200px] md:pl-[60px]  xl:mr-[2rem]  ">
+            <div className="w-fill h-fill flex h-[51px] w-[236px] gap-[12px] sm:relative sm:right-[170px] sm:flex sm:w-[180px] sm:items-center md:w-[200px] md:pl-[60px] lg:relative lg:right-[8rem] xl:mr-[2rem]">
               <Image
                 alt=""
                 width={32}
                 height={32}
                 src={address}
-                className="w-[32px] h-[32px] "
+                className="h-[32px] w-[32px]"
               />
-              <div className="w-[192px] h-[48px] gap-[2px] ">
-                <p className="flex text-[#4B5768] w-[192px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  ">
+              <div className="h-[48px] w-[192px] gap-[2px]">
+                <p className="custo-font flex h-[24px] w-[192px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
                   Address
                 </p>
-                <p className="flex text-[#3D52A0] w-[262px] h-[22px] custo-font font-[500] text-[16px] leading-[20.83px]  ">
+                <p className="custo-font flex h-[22px] w-[262px] text-[16px] font-[500] leading-[20.83px] text-[#3D52A0]">
                   706 Campfire Ave. Meriden, CT 06450
                 </p>
               </div>
             </div>
-            <div className="flex justify-evenly w-[236px] w-fill h-fill h-[51px] gap-[18px] pl-8 sm:hidden lg:block  lg:flex  lg:relative lg:right-[5rem] ">
+            <div className="w-fill h-fill flex h-[51px] w-[236px] justify-evenly gap-[18px] pl-8 sm:hidden lg:relative lg:right-[5rem] lg:block lg:flex">
               <Image
                 alt=""
                 width={32}
                 height={32}
                 src={fax}
-                className="w-[32px] h-[32px] "
+                className="h-[32px] w-[32px]"
               />
-              <div className="w-[192px] h-[48px] gap-[2px]  ">
-                <p className="flex text-[#4B5768] w-[192px] h-[24px] custo-font font-[400] text-[16px] leading-[24px]  ">
+              <div className="h-[48px] w-[192px] gap-[2px]">
+                <p className="custo-font flex h-[24px] w-[192px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
                   Fax
                 </p>
-                <p className="flex text-[#3D52A0] w-[192px] h-[22px] custo-font font-[500] text-[16px] leading-[20.83px]  ">
+                <p className="custo-font flex h-[22px] w-[192px] text-[16px] font-[500] leading-[20.83px] text-[#3D52A0]">
                   +1-000-0000
                 </p>
               </div>
@@ -947,150 +947,150 @@ export default function Aboutus() {
           </div>
         </div>
 
-        <div className="flex w-[300px] xl:w-[1100px] lg:w-[984px] h-[272px] relative top-[22rem] justify-between sm:flex sm:justify-evenly sm:w-[900px] sm:relative sm:top-[0rem] sm:right-[2rem] md:w-[1100px] lg:flex lg:justify-between lg:pt-4  ">
-          <div className="sm:w-[137.33px]  h-[248px] flex flex-col gap-[24px] sm:relative sm:left-[9rem] lg:relative lg:left-[3rem]">
-            <p className="flex text-[#191D23] w-[80px] sm:w-[137.33px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+        <div className="relative top-[22rem] flex h-[272px] w-[300px] justify-between sm:relative sm:right-[2rem] sm:top-[0rem] sm:flex sm:w-[900px] sm:justify-evenly md:w-[1100px] lg:flex lg:w-[984px] lg:justify-between lg:pt-4 xl:w-[1100px]">
+          <div className="flex h-[248px] flex-col gap-[24px] sm:relative sm:left-[9rem] sm:w-[137.33px] lg:relative lg:left-[3rem]">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               About
             </p>
-            <div className=" sm:w-[137.33px] w-[80px] h-[200px] flex flex-col gap-[20px] ">
-              <p className="flex sm:w-[137.33px] w-[80px] h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] w-[80px] flex-col gap-[20px] sm:w-[137.33px]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 About us
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px] h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Blog
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px] h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Careers
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px] h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Jobs
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px] h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 In Press
               </p>
             </div>
           </div>
-          <div className="sm:w-[137.33px] h-[248px] flex flex-col gap-[24px] sm:relative sm:left-[5.3rem] lg:relative lg:left-[3rem] ">
-            <p className="flex text-[#191D23] w-[80px]  sm:w-[137.33px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+          <div className="flex h-[248px] flex-col gap-[24px] sm:relative sm:left-[5.3rem] sm:w-[137.33px] lg:relative lg:left-[3rem]">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               Support
             </p>
-            <div className=" sm:w-[137.33px] h-[200px] flex flex-col gap-[20px] ">
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] flex-col gap-[20px] sm:w-[137.33px]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Contact us
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Contact us
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Whatsapp
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Telegram
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Ticketing
               </p>
             </div>
           </div>
-          <div className="sm:w-[137.33px]  h-[272px] flex flex-col  gap-[24px] sm:relative sm:left-[3.8rem] lg:relative lg:left-[3rem]">
-            <p className="flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+          <div className="flex h-[272px] flex-col gap-[24px] sm:relative sm:left-[3.8rem] sm:w-[137.33px] lg:relative lg:left-[3rem]">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               FAQ
             </p>
-            <div className=" sm:w-[137.33px]   h-[200px] flex flex-col gap-[20px] ">
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] flex-col gap-[20px] sm:w-[137.33px]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Account
               </p>
-              <p className="sm:relative sm:right-[35px] relative  sm:w-[137.33px] w-[80px]  h-[42px] text-[#4B5768] custo-font font-[500] text-[15px] leading-[24px]  ">
+              <p className="custo-font relative h-[42px] w-[80px] text-[15px] font-[500] leading-[24px] text-[#4B5768] sm:relative sm:right-[35px] sm:w-[137.33px]">
                 Manage Deliveries
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Orders
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Orders
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Returns
               </p>
             </div>
           </div>
-          <div className="sm:w-[137.33px] h-[248px] flex flex-col  gap-[24px] sm:relative sm:left-[1rem] lg:relative lg:left-[2rem]">
-            <p className="flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+          <div className="flex h-[248px] flex-col gap-[24px] sm:relative sm:left-[1rem] sm:w-[137.33px] lg:relative lg:left-[2rem]">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               About
             </p>
-            <div className=" sm:w-[137.33px] h-[200px] flex flex-col gap-[20px] ">
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] flex-col gap-[20px] sm:w-[137.33px]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 About us
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Blog
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Careers
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Jobs
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 In Press
               </p>
             </div>
           </div>
-          <div className="hidden lg:block sm:w-[137.33px] h-[248px] flex flex-col gap-[24px] sm:relative sm:right-[3.2rem] lg:relative lg:right-[2rem]">
-            <p className="flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+          <div className="flex hidden h-[248px] flex-col gap-[24px] sm:relative sm:right-[3.2rem] sm:w-[137.33px] lg:relative lg:right-[2rem] lg:block">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               Support
             </p>
-            <div className=" sm:w-[137.33px] h-[200px] flex flex-col gap-[20px] lg:mt-[1.5rem] ">
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] flex-col gap-[20px] sm:w-[137.33px] lg:mt-[1.5rem]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Contact us
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Online Chat
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Whatsapp
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Telegram
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Ticketing
               </p>
             </div>
           </div>
-          <div className="hidden lg:block sm:w-[137.33px] h-[272px] flex flex-col gap-[24px] sm:relative sm:right-[5rem] lg:relative lg:left-[1rem]">
-            <p className="flex text-[#191D23]  sm:w-[137.33px] w-[80px]  h-[24px] custo-font font-[500] text-[16px] leading-[24px] ">
+          <div className="flex hidden h-[272px] flex-col gap-[24px] sm:relative sm:right-[5rem] sm:w-[137.33px] lg:relative lg:left-[1rem] lg:block">
+            <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               FAQ
             </p>
-            <div className=" sm:w-[137.33px] h-[200px] flex flex-col gap-[20px] lg:mt-[1.5rem]">
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+            <div className="flex h-[200px] flex-col gap-[20px] sm:w-[137.33px] lg:mt-[1.5rem]">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Account
               </p>
-              <p className="relative right-[35px] sm:w-[137.33px] w-[80px]  h-[40px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font relative right-[35px] h-[40px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Manage Deliveries
               </p>
 
-              <p className="relative right-[35px] sm:w-[137.33px] w-[80px]  h-[40px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font relative right-[35px] h-[40px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Manage Deliveries
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Payments
               </p>
-              <p className="flex sm:w-[137.33px] w-[80px]  h-[24px] text-[#4B5768] custo-font font-[500] text-[16px] leading-[24px]  ">
+              <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#4B5768] sm:w-[137.33px]">
                 Returns
               </p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between items-center py-[24px] lg:w-[1000px] border-t border-[#D0D5DD] bg-white relative top-[22rem] sm:relative sm:top-[0rem] ">
-          <div className="flex flex-wrap gap-[20px] text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px]">
+        <div className="relative top-[22rem] flex flex-col items-center justify-between border-t border-[#D0D5DD] bg-white py-[24px] sm:relative sm:top-[0rem] sm:flex-row lg:w-[1000px]">
+          <div className="custo-font flex flex-wrap gap-[20px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
             <p className="w-auto">About us</p>
             <p className="w-auto">Contact</p>
             <p className="w-auto">Privacy policy</p>
             <p className="w-auto">Sitemap</p>
             <p className="w-auto">Terms of Use</p>
           </div>
-          <p className="text-[#4B5768] custo-font font-[400] text-[16px] leading-[24px] mt-[16px] sm:mt-0">
+          <p className="custo-font mt-[16px] text-[16px] font-[400] leading-[24px] text-[#4B5768] sm:mt-0">
             © 2000-2021, All Rights Reserved
           </p>
         </div>

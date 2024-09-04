@@ -48,25 +48,25 @@ export default function Description({ listingid }) {
   return (
     <div>
       <div className="w-[1166px]">
-        <div className="w-[672px] h-[336px] relative top-[150px] left-[470px]">
-          <div className="w-[672px] h-[306px]">
-            <div className="w-[637px] h-[67px]">
-              <p className="w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]">
+        <div className="relative left-[470px] top-[150px] h-[336px] w-[672px]">
+          <div className="h-[306px] w-[672px]">
+            <div className="h-[67px] w-[637px]">
+              <p className="custo-font h-[34px] w-[637px] text-[35px] font-[500] leading-[24px] text-[#000000]">
                 Next, Let’s describe your property
               </p>
-              <p className="w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000] pt-1">
+              <p className="custo-font h-[23px] w-[637px] pt-1 text-[16px] font-[300] leading-[24px] text-[#000000]">
                 Choose up to 2 highlights. We’ll use this to get your
                 description ready.
               </p>
             </div>
-            <div className="grid grid-cols-4 gap-5 w-[449px] h-[81px] relative top-[30px] left-[0px]">
+            <div className="relative left-[0px] top-[30px] grid h-[81px] w-[449px] grid-cols-4 gap-5">
               {optons.map((option, index) => (
-                <div key={index} className="w-[104px] h-[36px]">
+                <div key={index} className="h-[36px] w-[104px]">
                   <button
                     onClick={() => handlecolor(option)}
-                    className={`w-[105px] h-[36px] py-[6.12px] px-[12.24px] rounded-[26.31px] border-[0.61px] ${
+                    className={`h-[36px] w-[105px] rounded-[26.31px] border-[0.61px] px-[12.24px] py-[6.12px] ${
                       selectedopt.includes(option)
-                        ? "border-pink-700 border-4"
+                        ? "border-4 border-pink-700"
                         : "border-[#8E98A8]"
                     }`}
                   >
@@ -75,10 +75,10 @@ export default function Description({ listingid }) {
                         width={22.02}
                         height={22.02}
                         src={peace}
-                        className="w-[22.02px] h-[22.02px]"
+                        className="h-[22.02px] w-[22.02px]"
                         alt="peace icon"
                       />
-                      <p className="w-[123px] h-[15px] custo-font pt-1 text-[9.79px] font-[400] leading-[14.68px] text-[#000000]">
+                      <p className="custo-font h-[15px] w-[123px] pt-1 text-[9.79px] font-[400] leading-[14.68px] text-[#000000]">
                         {option}
                       </p>
                     </div>

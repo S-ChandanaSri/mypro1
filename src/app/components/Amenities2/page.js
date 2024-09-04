@@ -13,19 +13,19 @@ export default function Amenities2({
 }) {
   return (
     <div>
-      <div className="flex justify-between w-[667px] h-[38px] relative top-[106px]">
+      <div className="relative top-[106px] flex h-[38px] w-[667px] justify-between">
         <div>
-          <p className="w-[210px] h-[27px] custo-font text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
+          <p className="custo-font h-[27px] w-[210px] text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
             {" "}
             {label1}{" "}
           </p>
-          <p className="w-[329px] h-[38px] custo-font text-[12px] font-[300] leading-[18px] tracking-[0.46px] pt-1 text-[#000000]">
+          <p className="custo-font h-[38px] w-[329px] pt-1 text-[12px] font-[300] leading-[18px] tracking-[0.46px] text-[#000000]">
             {label2}
           </p>
         </div>
-        <div className="flex w-[94px] h-[30px] gap-[12px]">
+        <div className="flex h-[30px] w-[94px] gap-[12px]">
           <button
-            className="w-[30px] h-[30px] border-[0.51px] border-[#000000] rounded-[50%]"
+            className="h-[30px] w-[30px] rounded-[50%] border-[0.51px] border-[#000000]"
             onClick={handleminus}
           >
             <Image
@@ -33,15 +33,15 @@ export default function Amenities2({
               src={subt1}
               width={14.24}
               height={14.24}
-              className="w-[14.24px] h-[14.24px] relative left-[7px] top-[1.63px]"
+              className="relative left-[7px] top-[1.63px] h-[14.24px] w-[14.24px]"
             />
           </button>
-          <p className="w-[11px] h-[27px] custo-font text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
+          <p className="custo-font h-[27px] w-[11px] text-[18px] font-[400] leading-[27px] tracking-[0.46px] text-[#000000]">
             {" "}
             {count}{" "}
           </p>
           <button
-            className="w-[30px] h-[30px] border-[0.51px] border-[#000000] rounded-[50%]"
+            className="h-[30px] w-[30px] rounded-[50%] border-[0.51px] border-[#000000]"
             onClick={handleplus}
           >
             <Image
@@ -49,7 +49,7 @@ export default function Amenities2({
               src={plus1}
               width={14.24}
               height={14.24}
-              className="w-[14.24px] h-[14.24px] relative left-[7px] top-[1.63px]"
+              className="relative left-[7px] top-[1.63px] h-[14.24px] w-[14.24px]"
             />
           </button>
         </div>

@@ -41,65 +41,65 @@ export default function Pay({ listingid, salary }) {
     .catch((err) => console.error("Error:", err));
   return (
     <>
-      <div className="w-[1166px] ">
-        <div className="w-[672px] h-[508px] relative top-[80px] left-[470px]  ">
-          <div className="w-[637px] h-[67px]  ">
-            <p className="w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]">
+      <div className="w-[1166px]">
+        <div className="relative left-[470px] top-[80px] h-[508px] w-[672px]">
+          <div className="h-[67px] w-[637px]">
+            <p className="custo-font h-[34px] w-[637px] text-[35px] font-[500] leading-[24px] text-[#000000]">
               Now set your price
             </p>
-            <p className="w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000]">
+            <p className="custo-font h-[23px] w-[637px] text-[16px] font-[300] leading-[24px] text-[#000000]">
               Don’t worry you can change this later
             </p>
           </div>
-          <div className="w-[672px] h-[481px] flex flex-col items-center  ">
-            <div className="relative top-[50px] flex items-center w-[185px] h-[49px]">
+          <div className="flex h-[481px] w-[672px] flex-col items-center">
+            <div className="relative top-[50px] flex h-[49px] w-[185px] items-center">
               <Image
                 alt=""
                 width={40}
                 src={imageimage}
-                className="w-[40px] pb-6 pr-1  "
+                className="w-[40px] pb-6 pr-1"
               />
-              <p className="w-[145px] h-[49px] custo-font text-[56px] font-[600] leading-[24px] text-[#000000]">
+              <p className="custo-font h-[49px] w-[145px] text-[56px] font-[600] leading-[24px] text-[#000000]">
                 {salary}
               </p>
             </div>
-            <div className="w-[672px] h-[191px] border-[2px] border-[#000000B2] relative top-[80px] ">
-              <div className="w-[647px] h-[61px] flex justify-between items-center  pl-3 ">
-                <p className="w-[84px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+            <div className="relative top-[80px] h-[191px] w-[672px] border-[2px] border-[#000000B2]">
+              <div className="flex h-[61px] w-[647px] items-center justify-between pl-3">
+                <p className="custo-font h-[24px] w-[84px] text-[16px] font-[400] leading-[24px] text-[#000000]">
                   Base price
                 </p>
-                <p className="w-[85px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+                <p className="custo-font h-[24px] w-[85px] text-[16px] font-[400] leading-[24px] text-[#000000]">
                   {salary}
                 </p>
               </div>
-              <div className="w-[671px] border-[1px] border-[#8E98A8] "></div>
-              <div className="w-[647px] h-[61px] flex justify-between items-center  pr-3  ">
-                <p className="w-[89px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] pl-2 text-[#000000]">
+              <div className="w-[671px] border-[1px] border-[#8E98A8]"></div>
+              <div className="flex h-[61px] w-[647px] items-center justify-between pr-3">
+                <p className="custo-font h-[24px] w-[89px] pl-2 text-[16px] font-[400] leading-[24px] text-[#000000]">
                   Guest fee
                 </p>
                 <input
                   value={num}
                   onChange={handleNumChange}
-                  className="w-[85px] pl-3 focus:outline-none h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]"
+                  className="custo-font h-[24px] w-[85px] pl-3 text-[16px] font-[400] leading-[24px] text-[#000000] focus:outline-none"
                 />
               </div>
-              <div className="w-[671px] border-[1px] border-[#8E98A8] "></div>
-              <div className="w-[647px] h-[24px] flex justify-between pt-5 pl-3  ">
-                <p className="w-[145px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+              <div className="w-[671px] border-[1px] border-[#8E98A8]"></div>
+              <div className="flex h-[24px] w-[647px] justify-between pl-3 pt-5">
+                <p className="custo-font h-[24px] w-[145px] text-[16px] font-[400] leading-[24px] text-[#000000]">
                   Total before taxes
                 </p>
-                <p className="w-[85px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+                <p className="custo-font h-[24px] w-[85px] text-[16px] font-[400] leading-[24px] text-[#000000]">
                   {addition}
                 </p>
               </div>
             </div>
-            <div className="w-[672px] h-[64px] border-[2px] border-[black] relative top-[90px] ">
-              <div className="w-[672px] h-[64px]">
-                <div className="w-[647px] h-[24px] flex justify-between pt-5 pl-3 ">
-                  <p className="w-[145px] pl-3 h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+            <div className="relative top-[90px] h-[64px] w-[672px] border-[2px] border-[black]">
+              <div className="h-[64px] w-[672px]">
+                <div className="flex h-[24px] w-[647px] justify-between pl-3 pt-5">
+                  <p className="custo-font h-[24px] w-[145px] pl-3 text-[16px] font-[400] leading-[24px] text-[#000000]">
                     You Earn
                   </p>
-                  <p className="w-[85px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] text-[#000000]">
+                  <p className="custo-font h-[24px] w-[85px] text-[16px] font-[400] leading-[24px] text-[#000000]">
                     {addition}
                   </p>
                 </div>

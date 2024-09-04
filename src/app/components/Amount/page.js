@@ -28,13 +28,13 @@ export default function Amount({ listingid, salary, setSalary }) {
 
   return (
     <div className="w-[1166px]">
-      <div className="w-[672px] h-[257px] relative top-[140px] left-[470px]">
-        <div className="w-[672px] h-[306px]">
-          <div className="w-[637px] h-[67px]">
-            <p className="w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]">
+      <div className="relative left-[470px] top-[140px] h-[257px] w-[672px]">
+        <div className="h-[306px] w-[672px]">
+          <div className="h-[67px] w-[637px]">
+            <p className="custo-font h-[34px] w-[637px] text-[35px] font-[500] leading-[24px] text-[#000000]">
               Now set your price
             </p>
-            <p className="w-[637px] h-[23px] pt-4 custo-font text-[16px] font-[300] leading-[24px] text-[#000000]">
+            <p className="custo-font h-[23px] w-[637px] pt-4 text-[16px] font-[300] leading-[24px] text-[#000000]">
               Don’t worry you can change this later
             </p>
           </div>
@@ -55,25 +55,25 @@ export default function Amount({ listingid, salary, setSalary }) {
               onBlur={onBluehandler}
             />
           ) : (
-            <div className="relative top-[55px] flex items-center w-[672px] h-[160px] border-[2px] border-[black]">
+            <div className="relative top-[55px] flex h-[160px] w-[672px] items-center border-[2px] border-[black]">
               <Image
                 width={40}
                 src={imageimage}
-                className="w-[40px] pb-6 pr-1 relative left-[220px] top-[10px]"
+                className="relative left-[220px] top-[10px] w-[40px] pb-6 pr-1"
                 alt="Currency Symbol"
               />
-              <p className="w-[145px] h-[49px] custo-font text-[56px] font-[600] leading-[24px] text-[#000000] relative left-[220px] top-[10px]">
+              <p className="custo-font relative left-[220px] top-[10px] h-[49px] w-[145px] text-[56px] font-[600] leading-[24px] text-[#000000]">
                 {salary}
               </p>
               <button
                 onClick={handleedit}
-                className="absolute right-[20px] top-[50%] transform -translate-y-1/2"
+                className="absolute right-[20px] top-[50%] -translate-y-1/2 transform"
               >
                 <Image
                   width={17}
                   height={17}
                   src={Group}
-                  className="w-[17px] h-[17px]"
+                  className="h-[17px] w-[17px]"
                   alt="Edit Icon"
                 />
               </button>

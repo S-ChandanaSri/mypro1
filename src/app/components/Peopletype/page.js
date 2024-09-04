@@ -35,32 +35,32 @@ export default function Peopletype({ listingid }) {
 
   return (
     <>
-      <div className="flex flex-col relative left-[252px] rounded-[15px] ">
-        <div className="w-[668px] h-[80px] relative top-[-80px] left-[0px] ">
-          <p className="w-[523px] h-[53px] relative custo-font text-[35px] font-[400]  leading-[52.5px] tracking-[0.46px] text-[#000000]">
+      <div className="relative left-[252px] flex flex-col rounded-[15px]">
+        <div className="relative left-[0px] top-[-80px] h-[80px] w-[668px]">
+          <p className="custo-font relative h-[53px] w-[523px] text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             {" "}
             Who else might be there ?{" "}
           </p>
-          <p className="w-[548px] h-[27px] relative custo-font text-[18px] font-[300] pt-2 leading-[27px] tracking-[0.46px] text-[#000000]">
+          <p className="custo-font relative h-[27px] w-[548px] pt-2 text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
             {" "}
             Guest need to know whether they will encounter with other people
             there{" "}
           </p>
         </div>
-        <div className=" grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <button
             onClick={handlepeople("me")}
-            className={`h-[133px] w-[186px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center ${peopletype === "me" ? "border-blue-500 border-4" : "border-[#8E98A8]"} `}
+            className={`flex h-[133px] w-[186px] flex-col items-center rounded-[7px] border-[1px] border-[#8E98A8] px-[15px] py-[29px] ${peopletype === "me" ? "border-4 border-blue-500" : "border-[#8E98A8]"} `}
           >
-            <div className="w-[90px] h-[94px] ga-[10px] relative left-6 ">
+            <div className="ga-[10px] relative left-6 h-[94px] w-[90px]">
               <Image
                 alt=""
                 width={48}
                 height={48}
                 src={people}
-                className="w-[48px] h-[48px] "
+                className="h-[48px] w-[48px]"
               />
-              <p className="w-[80px] h-[36px] relative custo-font text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000] pr-10">
+              <p className="custo-font relative h-[36px] w-[80px] pr-10 text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000]">
                 {" "}
                 Me{" "}
               </p>
@@ -68,17 +68,17 @@ export default function Peopletype({ listingid }) {
           </button>
           <button
             onClick={handlepeople("family")}
-            className={`h-[133px] w-[206px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center  ${peopletype === "family" ? "border-blue-700 border-[5px]" : "border-[#8E98A8]"} `}
+            className={`flex h-[133px] w-[206px] flex-col items-center rounded-[7px] border-[1px] border-[#8E98A8] px-[15px] py-[29px] ${peopletype === "family" ? "border-[5px] border-blue-700" : "border-[#8E98A8]"} `}
           >
-            <div className="w-[90px] h-[94px] ga-[10px] ">
+            <div className="ga-[10px] h-[94px] w-[90px]">
               <Image
                 alt=""
                 width={48}
                 height={48}
                 src={peopleline}
-                className="w-[48px] h-[48px] relative left-[10px]"
+                className="relative left-[10px] h-[48px] w-[48px]"
               />
-              <p className="w-[160px] h-[36px] relative right-[25px]  custo-font text-[24px] font-[400] leading-[36px] tracking-[0.46px] pr-10 text-[#000000]">
+              <p className="custo-font relative right-[25px] h-[36px] w-[160px] pr-10 text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000]">
                 {" "}
                 My family{" "}
               </p>
@@ -86,17 +86,17 @@ export default function Peopletype({ listingid }) {
           </button>
           <button
             onClick={handlepeople("other")}
-            className={`h-[133px] w-[210px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center ${peopletype === "other" ? "border-blue-700 border-[5px]" : "border-[#8E98A8]"} `}
+            className={`flex h-[133px] w-[210px] flex-col items-center rounded-[7px] border-[1px] border-[#8E98A8] px-[15px] py-[29px] ${peopletype === "other" ? "border-[5px] border-blue-700" : "border-[#8E98A8]"} `}
           >
-            <div className="w-[80px] h-[94px] ga-[10px] ">
+            <div className="ga-[10px] h-[94px] w-[80px]">
               <Image
                 alt=""
                 width={48}
                 height={48}
                 src={peoplesharp}
-                className="w-[48px] h-[48px] relative left-[10px] "
+                className="relative left-[10px] h-[48px] w-[48px]"
               />
-              <p className="w-[200px] h-[36px] relative right-[45px]  custo-font text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000] pr-5 ">
+              <p className="custo-font relative right-[45px] h-[36px] w-[200px] pr-5 text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000]">
                 {" "}
                 Other guests{" "}
               </p>
@@ -104,17 +104,17 @@ export default function Peopletype({ listingid }) {
           </button>
           <button
             onClick={handlepeople("roomates")}
-            className={`h-[133px] w-[186px] rounded-[7px] border-[1px] border-[#8E98A8] py-[29px] px-[15px] flex flex-col items-center ${peopletype === "roomates" ? "border-blue-700 border-[5px]" : "border-[#8E98A8]"} `}
+            className={`flex h-[133px] w-[186px] flex-col items-center rounded-[7px] border-[1px] border-[#8E98A8] px-[15px] py-[29px] ${peopletype === "roomates" ? "border-[5px] border-blue-700" : "border-[#8E98A8]"} `}
           >
-            <div className="w-[80px] h-[94px] ga-[10px] ">
+            <div className="ga-[10px] h-[94px] w-[80px]">
               <Image
                 alt=""
                 width={39}
                 height={39}
                 src={peoplesharp}
-                className="w-[39px] h-[39px] relative left-[10px] "
+                className="relative left-[10px] h-[39px] w-[39px]"
               />
-              <p className="w-[80px] h-[36px] relative right-[20px] custo-font text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000]">
+              <p className="custo-font relative right-[20px] h-[36px] w-[80px] text-[24px] font-[400] leading-[36px] tracking-[0.46px] text-[#000000]">
                 {" "}
                 Roomates{" "}
               </p>

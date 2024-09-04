@@ -40,23 +40,23 @@ export default function Placetype({ listingid }) {
 
   return (
     <>
-      <div className="flex flex-col items-center h-[670px] relative left-[450px]">
-        <div className="w-[640px] h-[106px] relative top-[55px] gap-[46px] ">
-          <p className="w-[640px] h-[53px] custo-font text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000] text-center">
+      <div className="relative left-[450px] flex h-[670px] flex-col items-center">
+        <div className="relative top-[55px] h-[106px] w-[640px] gap-[46px]">
+          <p className="custo-font h-[53px] w-[640px] text-center text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             What type of place will guest have?
           </p>
         </div>
         <div className="flex flex-col items-center">
           <button
             onClick={handletype("an entire place")}
-            className={`w-[666px] h-[135px] py-[20px] px-[22px] gap-[10px] border-[2px] border-[#000000] rounded-[15px] relative top-[44px] left-[7px] ${placetype === "an entire place" ? "border-blue-500 border-4" : "border-[#8E98A8]"}`}
+            className={`relative left-[7px] top-[44px] h-[135px] w-[666px] gap-[10px] rounded-[15px] border-[2px] border-[#000000] px-[22px] py-[20px] ${placetype === "an entire place" ? "border-4 border-blue-500" : "border-[#8E98A8]"}`}
           >
-            <div className="flex items-center pt-5 w-[620px] h-[74px] gap-[161px]">
-              <div className="w-[401px] h-[74px] gap-[9px]">
-                <p className="text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
+            <div className="flex h-[74px] w-[620px] items-center gap-[161px] pt-5">
+              <div className="h-[74px] w-[401px] gap-[9px]">
+                <p className="custo-font h-[38px] w-[401px] text-left text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
                   An entire place
                 </p>
-                <p className="w-[401px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000] text-left">
+                <p className="custo-font h-[27px] w-[401px] text-left text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
                   Guest will have whole place to live or enjoy
                 </p>
               </div>
@@ -65,20 +65,20 @@ export default function Placetype({ listingid }) {
                 width={58}
                 height={58}
                 src={house}
-                className="w-[58px] h-[58px]"
+                className="h-[58px] w-[58px]"
               />
             </div>
           </button>
           <button
             onClick={handletype("a room")}
-            className={`w-[666px] h-[135px] py-[20px] px-[22px] gap-[10px] border-[2px] border-[#000000] rounded-[15px] relative top-[68px] left-[7px] ${placetype === "a room" ? "border-blue-500 border-4" : "border-[#8E98A8]"}`}
+            className={`relative left-[7px] top-[68px] h-[135px] w-[666px] gap-[10px] rounded-[15px] border-[2px] border-[#000000] px-[22px] py-[20px] ${placetype === "a room" ? "border-4 border-blue-500" : "border-[#8E98A8]"}`}
           >
-            <div className="flex items-center pt-2 w-[620px] h-[74px] gap-[161px]">
-              <div className="w-[401px] h-[74px] gap-[9px]">
-                <p className="text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
+            <div className="flex h-[74px] w-[620px] items-center gap-[161px] pt-2">
+              <div className="h-[74px] w-[401px] gap-[9px]">
+                <p className="custo-font h-[38px] w-[401px] text-left text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
                   A room
                 </p>
-                <p className="w-[481px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-left">
+                <p className="custo-font h-[27px] w-[481px] text-left text-[18px] font-[300] leading-[27px] tracking-[0.46px]">
                   Guest will have only a small part of the house to live or
                   enjoy
                 </p>
@@ -88,20 +88,20 @@ export default function Placetype({ listingid }) {
                 width={58}
                 height={58}
                 src={cilroom}
-                className="w-[58px] h-[58px]"
+                className="h-[58px] w-[58px]"
               />
             </div>
           </button>
           <button
             onClick={handletype("a shared room")}
-            className={`w-[666px] h-[135px] py-[20px] px-[22px] gap-[10px] border-[2px] border-[#000000] rounded-[15px] relative top-[90px] left-[7px] ${placetype === "a shared room" ? "border-blue-500 border-4" : "border-[#8E98A8]"}`}
+            className={`relative left-[7px] top-[90px] h-[135px] w-[666px] gap-[10px] rounded-[15px] border-[2px] border-[#000000] px-[22px] py-[20px] ${placetype === "a shared room" ? "border-4 border-blue-500" : "border-[#8E98A8]"}`}
           >
-            <div className="flex items-center pt-4 w-[620px] h-[74px] gap-[161px]">
-              <div className="w-[401px] h-[74px] gap-[9px]">
-                <p className="text-left w-[401px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
+            <div className="flex h-[74px] w-[620px] items-center gap-[161px] pt-4">
+              <div className="h-[74px] w-[401px] gap-[9px]">
+                <p className="custo-font h-[38px] w-[401px] text-left text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
                   A shared room
                 </p>
-                <p className="text-left w-[601px] h-[27px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
+                <p className="custo-font h-[27px] w-[601px] text-left text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
                   Guest will have a shared place to live or enjoy
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function Placetype({ listingid }) {
                 width={58}
                 height={58}
                 src={room}
-                className="w-[58px] h-[58px]"
+                className="h-[58px] w-[58px]"
               />
             </div>
           </button>

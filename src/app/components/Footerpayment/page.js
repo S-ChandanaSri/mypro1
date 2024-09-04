@@ -29,7 +29,7 @@ export default function Footerpayment({
 
   return (
     <>
-      <div className="w-full h-[5px] bg-[#E0E0E0] relative">
+      <div className="relative h-[5px] w-full bg-[#E0E0E0]">
         <div
           style={{
             width: `${progressPercentage}%`,
@@ -37,22 +37,22 @@ export default function Footerpayment({
             backgroundColor: "",
             borderTop: "2px solid #8E98A8",
           }}
-          className="absolute top-0 left-0 h-full bg-[#002855] border-t-2 border-[#8E98A8]"
+          className="absolute left-0 top-0 h-full border-t-2 border-[#8E98A8] bg-[#002855]"
         ></div>
       </div>
       <div className="w-full bg-[#FFFFFF]">
-        <div className="flex justify-between items-center px-4 py-2">
+        <div className="flex items-center justify-between px-4 py-2">
           <button
             onClick={handleBackButton}
-            className="w-[153px] h-[60px] bg-[#CCCCCC] py-[16px] px-[28px] rounded-[8px]"
+            className="h-[60px] w-[153px] rounded-[8px] bg-[#CCCCCC] px-[28px] py-[16px]"
           >
-            <p className="text-[#000000] text-[18px] font-[400] leading-[27px]">
+            <p className="text-[18px] font-[400] leading-[27px] text-[#000000]">
               Back
             </p>
           </button>
           <button
             onClick={onClick}
-            className="w-[153px] h-[60px] bg-[#002855] py-[16px] px-[28px] rounded-[8px] flex items-center justify-center"
+            className="flex h-[60px] w-[153px] items-center justify-center rounded-[8px] bg-[#002855] px-[28px] py-[16px]"
           >
             {isLoading ? (
               <ThreeDots
@@ -64,7 +64,7 @@ export default function Footerpayment({
                 visible={true}
               />
             ) : (
-              <p className="text-[#FFFFFF] text-[18px] font-[400] leading-[27px]">
+              <p className="text-[18px] font-[400] leading-[27px] text-[#FFFFFF]">
                 {buttonText}
               </p>
             )}

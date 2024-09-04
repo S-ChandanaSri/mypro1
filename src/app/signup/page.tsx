@@ -9,13 +9,12 @@ import { strings } from "@/constants/strings";
 import { UserRegisterSchema } from "@/schema/UserSchema";
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import { useForm } from "@/hooks";
+import { useForm } from "@/hooks/useForm";
 import { post_register } from "@/api";
 import { setErrorsFromZodError } from "@/utils/auth";
+import { NextPage } from "next";
 
-type Props = {};
-
-const SignUp = (props: Props) => {
+const SignUp: NextPage = () => {
   const { formState, setFormState, handleInputChange } = useForm();
   const [disabled, setDisabled] = useState<boolean>(false);
 
@@ -47,11 +46,11 @@ const SignUp = (props: Props) => {
   };
   return (
     <BackgroundImageContainer
-      className="bg-gradient-to-b from-black/50 to-transparent flex justify-center items-center"
+      className="flex items-center justify-center bg-gradient-to-b from-black/50 to-transparent"
       backgroundImage={BACKGROUNDS.AUTH_IMAGE}
     >
       <FormContainer variant="auth" onSubmit={onSignUpAsync}>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Input
             name="first-name"
             type="text"
@@ -114,7 +113,7 @@ const SignUp = (props: Props) => {
           <Button variant="auth" disabled={disabled} type="submit">
             {strings.signup.register}
           </Button>
-          <Button variant="google" iconNode={svgs.google}>
+          <Button variant="google" iconNode={svgs.google} iconSize={20}>
             {strings.signup.loginWithGoogle}
           </Button>
         </div>

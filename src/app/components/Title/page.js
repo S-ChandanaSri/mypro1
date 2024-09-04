@@ -36,25 +36,25 @@ export default function Title({ listingid }) {
     .catch((err) => console.error("Error:", err));
   return (
     <>
-      <div className="w-[1166px] ">
-        <div className="w-[672px] h-[336px] relative top-[150px] left-[470px]  ">
-          <div className="w-[672px] h-[306px]  ">
-            <div className="w-[637px] h-[67px]  ">
-              <p className="w-[637px] h-[34px] custo-font text-[35px] font-[500] leading-[24px] text-[#000000]">
+      <div className="w-[1166px]">
+        <div className="relative left-[470px] top-[150px] h-[336px] w-[672px]">
+          <div className="h-[306px] w-[672px]">
+            <div className="h-[67px] w-[637px]">
+              <p className="custo-font h-[34px] w-[637px] text-[35px] font-[500] leading-[24px] text-[#000000]">
                 Now,let’s give your property a title
               </p>
-              <p className="w-[637px] h-[23px] custo-font text-[16px] font-[300] leading-[24px] text-[#000000]">
+              <p className="custo-font h-[23px] w-[637px] text-[16px] font-[300] leading-[24px] text-[#000000]">
                 Short title works best Don’t woory you can change it later
               </p>
             </div>
             <textarea
-              className="w-[672px] h-[209px] rounded-[5px] border-[1px] border-[#000000] "
+              className="h-[209px] w-[672px] rounded-[5px] border-[1px] border-[#000000]"
               onChange={handleTextChangee}
               value={textt}
             ></textarea>
           </div>
         </div>
-        <p className="relative  top-[90px] left-[470px] w-[672px] h-[24px] custo-font text-[16px] font-[400] leading-[24px] tracking-[0.46px] text-[#000000]">
+        <p className="custo-font relative left-[470px] top-[90px] h-[24px] w-[672px] text-[16px] font-[400] leading-[24px] tracking-[0.46px] text-[#000000]">
           {textt.length}/26
         </p>
       </div>

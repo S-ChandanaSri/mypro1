@@ -18,28 +18,28 @@ function VideoPlayer({ src, title, subtitle }) {
   };
 
   return (
-    <div className="w-[338px] h-[568px] border-white mb-4">
+    <div className="mb-4 h-[568px] w-[338px] border-white">
       <div className="grid-btn">
-        <div className="relative pt-24 w-[338px] h-[568px]">
-          <video className="rounded-[20px] w-[316px] h-[568px]" ref={videoRef}>
+        <div className="relative h-[568px] w-[338px] pt-24">
+          <video className="h-[568px] w-[316px] rounded-[20px]" ref={videoRef}>
             <source src={src} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <button
-            className="transform -translate-x-1/2 -translate-y-1/2 btn"
+            className="btn -translate-x-1/2 -translate-y-1/2 transform"
             onClick={handlePlay}
           >
-            <p className="h-[24px] relative bottom-[15px] text-white custo-font font-[600] text-[18px] leading-[24px] tracking-[-0.5px]">
+            <p className="custo-font relative bottom-[15px] h-[24px] text-[18px] font-[600] leading-[24px] tracking-[-0.5px] text-white">
               {title}
             </p>
-            <p className="h-[22px] relative bottom-[14px] text-white custo-font font-[400] text-[14px] leading-[22px]">
+            <p className="custo-font relative bottom-[14px] h-[22px] text-[14px] font-[400] leading-[22px] text-white">
               {subtitle}
             </p>
-            <div className="w-[58px] h-[58px] rounded-[19px] relative left-[190px] bottom-[66px] bg-[#FFFFFF17] border-[2px] border-[white]">
+            <div className="relative bottom-[66px] left-[190px] h-[58px] w-[58px] rounded-[19px] border-[2px] border-[white] bg-[#FFFFFF17]">
               <Image
                 alt=""
                 src={isPlaying ? icon2 : buttonplay1}
-                className="rounded-[19px] relative left-[20px] top-[20px] bg-[#FFFFFF17]"
+                className="relative left-[20px] top-[20px] rounded-[19px] bg-[#FFFFFF17]"
               />
             </div>
           </button>

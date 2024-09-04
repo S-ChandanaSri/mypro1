@@ -84,33 +84,33 @@ export default function Listing() {
   const remainingRows = 5 - filteredList.length;
 
   return (
-    <div className="h-[1124px] top-[1162px] left-[230px] bg-[#FFFFFF] ">
+    <div className="left-[230px] top-[1162px] h-[1124px] bg-[#FFFFFF]">
       <Navbar />
 
-      <p className="w-[122px] h-[38px] relative top-[30px] left-[83px] custo-font font-[400] text-[25px] leading-[37.5px] tracking-[0.46px] text-[#000000]">
+      <p className="custo-font relative left-[83px] top-[30px] h-[38px] w-[122px] text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
         {lastId}listings
       </p>
       <div className="flex">
-        <div className="w-[356px] h-[30px] relative top-[35px] left-[73px] rounded-[14px] border-[1px] px-[10px] py-[4px] gap-[10px] border-[#8E98A8]  ">
-          <div className="flex w-[139px] h-[18px] gap-[3px] ">
+        <div className="relative left-[73px] top-[35px] h-[30px] w-[356px] gap-[10px] rounded-[14px] border-[1px] border-[#8E98A8] px-[10px] py-[4px]">
+          <div className="flex h-[18px] w-[139px] gap-[3px]">
             <Image
               alt=""
               width={13}
               height={16}
               src={outline}
-              className="w-[13px] h-[16px] pt-[2px] "
+              className="h-[16px] w-[13px] pt-[2px]"
             />
             <input
               placeholder="search listings"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="custo-font font-[300] text-[16px] leading-[24px] tracking-[0.46px] w-[123px] h-[18px] text-[#002855] border-0 focus:border-0 focus:outline-none "
+              className="custo-font h-[18px] w-[123px] border-0 text-[16px] font-[300] leading-[24px] tracking-[0.46px] text-[#002855] focus:border-0 focus:outline-none"
             />
           </div>
         </div>
-        <div className="w-[166px] h-[30px] relative top-[35px]  left-[91px] rounded-[14px] border-[1px] px-[8px] gap-[10px] border-[#8E98A8] ">
-          <div className="flex w-[149px] h-[18px] gap-[5px] pt-1 ">
-            <p className="w-[128px] h-[18px] custo-font font-[300] text-[14px] leading-[21px] tracking-[0.46px] text-[#002855CC] ">
+        <div className="relative left-[91px] top-[35px] h-[30px] w-[166px] gap-[10px] rounded-[14px] border-[1px] border-[#8E98A8] px-[8px]">
+          <div className="flex h-[18px] w-[149px] gap-[5px] pt-1">
+            <p className="custo-font h-[18px] w-[128px] text-[14px] font-[300] leading-[21px] tracking-[0.46px] text-[#002855CC]">
               Rooms and beds
             </p>
             <Image
@@ -118,13 +118,13 @@ export default function Listing() {
               width={16}
               height={16}
               src={arrowd}
-              className=" w-[16px] h-[16px]"
+              className="h-[16px] w-[16px]"
             />
           </div>
         </div>
-        <div className="w-[122px] h-[30px]  relative top-[35px] left-[121px] rounded-[14px] border-[1px] px-[8px] gap-[10px] border-[#8E98A8] ">
-          <div className="flex w-[106px] h-[18px] gap-[5px] pt-1 ">
-            <p className="w-[87px] h-[18px] custo-font font-[300] text-[14px] leading-[21px] tracking-[0.46px] text-[#002855CC] ">
+        <div className="relative left-[121px] top-[35px] h-[30px] w-[122px] gap-[10px] rounded-[14px] border-[1px] border-[#8E98A8] px-[8px]">
+          <div className="flex h-[18px] w-[106px] gap-[5px] pt-1">
+            <p className="custo-font h-[18px] w-[87px] text-[14px] font-[300] leading-[21px] tracking-[0.46px] text-[#002855CC]">
               Ammenities
             </p>
             <Image
@@ -132,13 +132,13 @@ export default function Listing() {
               width={18}
               height={20}
               src={arrowd}
-              className=" w-[18px] h-[20px] pr-[7px]  "
+              className="h-[20px] w-[18px] pr-[7px]"
             />
           </div>
         </div>
-        <div className="w-[164px] h-[30px]  relative top-[35px] left-[153px] rounded-[14px] border-[1px] px-[8px] gap-[10px] border-[#8E98A8] ">
-          <div className="flex w-[144px] h-[18px] gap-[5px] pt-1 ">
-            <p className="w-[137px] h-[18px] custo-font font-[300] text-[14px] leading-[21px] tracking-[0.46px] text-[#002855CC] pl-2 ">
+        <div className="relative left-[153px] top-[35px] h-[30px] w-[164px] gap-[10px] rounded-[14px] border-[1px] border-[#8E98A8] px-[8px]">
+          <div className="flex h-[18px] w-[144px] gap-[5px] pt-1">
+            <p className="custo-font h-[18px] w-[137px] pl-2 text-[14px] font-[300] leading-[21px] tracking-[0.46px] text-[#002855CC]">
               Listing status
             </p>
             <Image
@@ -146,52 +146,52 @@ export default function Listing() {
               width={30}
               height={22}
               src={arrowd}
-              className=" w-[30px] h-[22px] pr-4 pt-[0px] "
+              className="h-[22px] w-[30px] pr-4 pt-[0px]"
             />
           </div>
         </div>
 
         <Link to="/listing">
-          <button className="flex w-[149px] h-[38px] relative top-[28px] left-[477px] rounded-[8px] py-[10px] px-[16px] bg-[#002855] ">
+          <button className="relative left-[477px] top-[28px] flex h-[38px] w-[149px] rounded-[8px] bg-[#002855] px-[16px] py-[10px]">
             <Image
               alt=""
               width={24}
               height={24}
               src={plus}
-              className="w-[24px] h-[24px] "
+              className="h-[24px] w-[24px]"
             />
-            <p className="w-[87px] h-[20px] inter-font font-[500] text-[14px] leading-[20px] text-[white]  ">
+            <p className="inter-font h-[20px] w-[87px] text-[14px] font-[500] leading-[20px] text-[white]">
               create listing
             </p>
           </button>
         </Link>
       </div>
 
-      <div className="w-[1355px] h-[942px] bg-[#FFFFFF] relative top-[57px] left-[83px] rounded-[4px] px-[40px] gap-[32px]">
-        <div className="w-[1315px] h-[878px] rounded-[4px]">
-          <div className="w-[244px] h-[878px]">
-            <table className="w-[1315px] h-[878px] border-collapse">
+      <div className="relative left-[83px] top-[57px] h-[942px] w-[1355px] gap-[32px] rounded-[4px] bg-[#FFFFFF] px-[40px]">
+        <div className="h-[878px] w-[1315px] rounded-[4px]">
+          <div className="h-[878px] w-[244px]">
+            <table className="h-[878px] w-[1315px] border-collapse">
               <thead>
                 <tr>
-                  <th className="w-[244px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[244px] border-b border-[#E7EAEE] p-[8px]">
                     Listings
                   </th>
-                  <th className="w-[244px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[244px] border-b border-[#E7EAEE] p-[8px]">
                     Status
                   </th>
-                  <th className="w-[116px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]">
                     Todo
                   </th>
-                  <th className="w-[116px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]">
                     Bedrooms
                   </th>
-                  <th className="w-[116px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]">
                     Beds
                   </th>
-                  <th className="w-[116px] h-[59.33px] p-[8px] border-b border-[#E7EAEE]">
+                  <th className="h-[59.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]">
                     Location
                   </th>
-                  <th className="w-[128px] h-[59.33px] p-[8px] border-b border-[#E7EAEE] ">
+                  <th className="h-[59.33px] w-[128px] border-b border-[#E7EAEE] p-[8px]">
                     Edit
                   </th>
                 </tr>
@@ -199,41 +199,41 @@ export default function Listing() {
               <tbody>
                 {filteredList.map((dat) => (
                   <tr key={dat.id}>
-                    <td className="flex items-center justify-around w-[249px] h-[182.33px] p-[8px] border-b border-[#E7EAEE]">
+                    <td className="flex h-[182.33px] w-[249px] items-center justify-around border-b border-[#E7EAEE] p-[8px]">
                       {dat.image ? (
                         <Image
                           width={17}
                           height={17}
                           src={dat.image}
                           alt=""
-                          className="w-[100px] h-auto"
+                          className="h-auto w-[100px]"
                         />
                       ) : null}
                       <p>{dat.listing}</p>
                     </td>
-                    <td className="w-[244px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">
+                    <td className="h-[136.33px] w-[244px] border-b border-[#E7EAEE] p-[8px] text-center">
                       <select
                         value={dat.status}
                         onChange={(e) => handleStatusChange(e, dat.id)}
-                        className="border p-1 rounded"
+                        className="rounded border p-1"
                       >
                         <option value="in-progress">In Progress</option>
                         <option value="finished">Finished</option>
                       </select>
                     </td>
-                    <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">
+                    <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px] text-center">
                       {dat.status}
                     </td>
-                    <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">
+                    <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px] text-center">
                       {dat.bedrooms}
                     </td>
-                    <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">
+                    <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px] text-center">
                       {dat.beds}
                     </td>
-                    <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE]">
+                    <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px] text-center">
                       {dat.district}
                     </td>
-                    <td className="w-[116px] h-[136.33px] p-[8px] text-center border-b border-[#E7EAEE] relative left-[55px]">
+                    <td className="relative left-[55px] h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px] text-center">
                       <Image
                         width={17}
                         height={17}
@@ -243,11 +243,11 @@ export default function Listing() {
                         className="cursor-pointer"
                       />
                       {dropdownId === dat.id && (
-                        <div className="absolute right-[140px] mt-2 w-48 bg-[#E9EBF8] p-2 rounded">
+                        <div className="absolute right-[140px] mt-2 w-48 rounded bg-[#E9EBF8] p-2">
                           {options.map((option) => (
                             <div
                               key={option}
-                              className="px-4 py-2 cursor-pointer"
+                              className="cursor-pointer px-4 py-2"
                             >
                               <label className="flex items-center">
                                 <input
@@ -271,13 +271,13 @@ export default function Listing() {
                 {remainingRows > 0 &&
                   Array.from({ length: remainingRows }).map((_, idx) => (
                     <tr key={`placeholder-${idx}`}>
-                      <td className="flex items-center justify-around w-[244px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[244px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[116px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[116px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[116px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[116px] h-[136.33px] p-[8px] border-b border-[#E7EAEE]"></td>
-                      <td className="w-[116px] h-[136.33px] p-[8px] border-b border-[#E7EAEE] relative left-[55px]"></td>
+                      <td className="flex h-[136.33px] w-[244px] items-center justify-around border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="h-[136.33px] w-[244px] border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]"></td>
+                      <td className="relative left-[55px] h-[136.33px] w-[116px] border-b border-[#E7EAEE] p-[8px]"></td>
                     </tr>
                   ))}
               </tbody>

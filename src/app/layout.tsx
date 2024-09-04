@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { Inter, Poppins } from "next/font/google";
 import { ListingProvider } from "./context/ListingContext";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable}`}
+        className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
+        <Navbar />
         <ListingProvider>{children}</ListingProvider>
       </body>
     </html>

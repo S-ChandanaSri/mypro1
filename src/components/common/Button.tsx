@@ -12,9 +12,13 @@ const buttonVariants = cva(
         google:
           "bg-[#F1F3F4] text-neutral-900 hover:opacity-[0.8] hover:shadow-md",
         auth: "bg-blue-600 text-neutral-100 hover:opacity-[0.8] hover:shadow-md",
+        base: "bg-transparent text-neutral-50 shadow-none outline outline-1 hover:bg-neutral-50/20",
+        baseDark:
+          "bg-neutral-50 text-neutral-950 shadow-none hover:bg-neutral-50/80",
       },
       size: {
         full: "w-full py-6 rounded-xl",
+        normal: "px-6 py-3 rounded-lg",
       },
       state: {
         disabled: "!opacity-[0.4] !shadow-sm cursor-not-allowed",
@@ -31,12 +35,23 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   ref?: React.Ref<HTMLButtonElement>;
   iconNode?: StaticImport;
+  iconSize?: number;
   disabled?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { size, type, iconNode, disabled, variant, className, children, ...props },
+    {
+      size,
+      type,
+      iconNode,
+      iconSize,
+      disabled,
+      variant,
+      className,
+      children,
+      ...props
+    },
     ref,
   ) => {
     return (
@@ -54,7 +69,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        {iconNode ? <Image className="h-6 w-6" src={iconNode} alt="" /> : null}
+        {iconNode ? (
+          <Image
+            className={`${variant == "baseDark" && "invert"}`}
+            width={iconSize ?? 24}
+            height={iconSize ?? 24}
+            src={iconNode}
+            alt=""
+          />
+        ) : null}
         &nbsp;
         {children}
       </button>

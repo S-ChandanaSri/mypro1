@@ -66,10 +66,10 @@ export default function Payment() {
   const decimalDigits = 0;
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFFFFF]">
+    <div className="flex min-h-screen flex-col bg-[#FFFFFF]">
       <Navbar />
       <div className="flex-grow">
-        <div className="flex items-center ">
+        <div className="flex items-center">
           {step === 0 && <Display listingid={listingid} />}
           {step === 1 && (
             <Amount

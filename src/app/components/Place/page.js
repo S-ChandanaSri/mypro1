@@ -61,28 +61,28 @@ export default function Place({
 
   return (
     <>
-      <div className="flex flex-col items-center h-[670px] relative left-[450px]">
-        <div className="w-[573px] h-[106px] relative top-[28px] gap-[46px]">
-          <p className="w-[573px] h-[106px] custo-font text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000] text-center">
+      <div className="relative left-[450px] flex h-[670px] flex-col items-center">
+        <div className="relative top-[28px] h-[106px] w-[573px] gap-[46px]">
+          <p className="custo-font h-[106px] w-[573px] text-center text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             Which of these best describes your place?
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-8 w-[590px] pt-12">
+        <div className="grid w-[590px] grid-cols-3 gap-8 pt-12">
           {options.map((option, index) => (
             <div key={index} className="h-[133px] gap-[10px]">
               <button
                 onClick={() => handleColor(option)}
-                className={`h-[133px] w-[186px] rounded-[7px] border-[1px] py-[29px] px-[15px] gap-[10px] ${color === option ? "border-blue-700 border-[5px]" : "border-[#8E98A8]"}`}
+                className={`h-[133px] w-[186px] gap-[10px] rounded-[7px] border-[1px] px-[15px] py-[29px] ${color === option ? "border-[5px] border-blue-700" : "border-[#8E98A8]"}`}
               >
-                <div className="w-[90px] h-[96px] flex flex-col items-center relative left-[10px] gap-[10px]">
+                <div className="relative left-[10px] flex h-[96px] w-[90px] flex-col items-center gap-[10px]">
                   <Image
                     alt=""
                     width={48}
                     height={48}
                     src={option === "House" ? phhouse : phbuild}
-                    className="w-[48px] h-[48px] "
+                    className="h-[48px] w-[48px]"
                   />
-                  <p className="w-[80px] h-[38px] custo-font text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
+                  <p className="custo-font h-[38px] w-[80px] text-[25px] font-[400] leading-[37.5px] tracking-[0.46px] text-[#000000]">
                     {option}
                   </p>
                 </div>

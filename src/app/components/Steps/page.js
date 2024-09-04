@@ -276,20 +276,20 @@ export default function Steps() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFFFFF]">
+    <div className="flex min-h-screen flex-col bg-[#FFFFFF]">
       <Navbar />
       <div className="flex-grow">
-        <div className="flex items-center min-h-screen">
+        <div className="flex min-h-screen items-center">
           {step === 0 && <Options />}
           {step === 1 && (
             <>
               <div className="flex h-[555px]">
-                <div className="w-[509px] h-[114px] relative top-[1px] left-[148px] gap-[46px]">
-                  <div className="flex flex-col items-center text-left pl-11 pt-7 w-[448px] h-[114px]">
-                    <p className="w-[573px] h-[60px] relative top-[224px] left-[133px] custo-font text-[40px] font-[400] leading-[60px] tracking-[0.46px] text-[#000000]">
+                <div className="relative left-[148px] top-[1px] h-[114px] w-[509px] gap-[46px]">
+                  <div className="flex h-[114px] w-[448px] flex-col items-center pl-11 pt-7 text-left">
+                    <p className="custo-font relative left-[133px] top-[224px] h-[60px] w-[573px] text-[40px] font-[400] leading-[60px] tracking-[0.46px] text-[#000000]">
                       1. Tell us about your place
                     </p>
-                    <p className="w-[394px] h-[54px] relative top-[224px] left-[83px] custo-font text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
+                    <p className="custo-font relative left-[83px] top-[224px] h-[54px] w-[394px] text-[18px] font-[300] leading-[27px] tracking-[0.46px] text-[#000000]">
                       Share some basic info, like where it is and how many
                       guests can stay
                     </p>
@@ -299,7 +299,7 @@ export default function Steps() {
                     width={571.17}
                     height={700}
                     src={d}
-                    className="h-[571.17px] w-[700px] relative top-[-106px] left-[672px]"
+                    className="relative left-[672px] top-[-106px] h-[571.17px] w-[700px]"
                   />
                 </div>
               </div>
@@ -323,17 +323,17 @@ export default function Steps() {
 
           {step === 7 && (
             <>
-              <div className="flex flex-col items-center h-[670px] relative left-[390px] top-[50px]">
-                <div className="border-[black] w-[1066px] h-[914px] rounded-[15px]">
-                  <p className="w-[392px] h-[53px] relative top-[30px] custo-font text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
+              <div className="relative left-[390px] top-[50px] flex h-[670px] flex-col items-center">
+                <div className="h-[914px] w-[1066px] rounded-[15px] border-[black]">
+                  <p className="custo-font relative top-[30px] h-[53px] w-[392px] text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
                     {" "}
                     Let’s start with basics{" "}
                   </p>
-                  <p className="w-[392px] h-[27px] relative top-[70px] custo-font text-[18px] font-[500] leading-[27px] tracking-[0.46px] text-[#000000]">
+                  <p className="custo-font relative top-[70px] h-[27px] w-[392px] text-[18px] font-[500] leading-[27px] tracking-[0.46px] text-[#000000]">
                     {" "}
                     What kind of bathrooms do guest have ?{" "}
                   </p>
-                  <div className="relative top-[40px] ">
+                  <div className="relative top-[40px]">
                     <Amenities2
                       handleplus={() => setPrivate(privateroom + 1)}
                       handleminus={() => setPrivate(privateroom - 1)}
@@ -341,9 +341,9 @@ export default function Steps() {
                       label2="Its connected to the guest room and just for them"
                       count={privateroom}
                     />
-                    <div className="w-[667px] relative top-[127px] left-[2px] border-[1px] border-[#8E98A8]"></div>
+                    <div className="relative left-[2px] top-[127px] w-[667px] border-[1px] border-[#8E98A8]"></div>
 
-                    <div className="relative top-[45px]  ">
+                    <div className="relative top-[45px]">
                       <Amenities2
                         handleplus={() => setPrivate1(privateroom1 + 1)}
                         handleminus={() => setPrivate1(privateroom1 - 1)}
@@ -353,9 +353,9 @@ export default function Steps() {
                       />
                     </div>
 
-                    <div className="w-[667px] relative top-[173px] left-[2px] border-[1px] border-[#8E98A8]"></div>
+                    <div className="relative left-[2px] top-[173px] w-[667px] border-[1px] border-[#8E98A8]"></div>
 
-                    <div className="relative top-[85px]  ">
+                    <div className="relative top-[85px]">
                       <Amenities2
                         handleplus={() => setPrivate2(privateroom2 + 1)}
                         handleminus={() => setPrivate2(privateroom2 - 1)}
@@ -365,7 +365,7 @@ export default function Steps() {
                       />
                     </div>
 
-                    <div className="w-[667px] relative top-[210px] left-[2px] border-[1px] border-[#8E98A8]"></div>
+                    <div className="relative left-[2px] top-[210px] w-[667px] border-[1px] border-[#8E98A8]"></div>
                   </div>
                 </div>
               </div>

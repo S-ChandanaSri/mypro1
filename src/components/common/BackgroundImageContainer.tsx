@@ -14,7 +14,7 @@ const BackgroundImageContainer = forwardRef<
   BackgroundContainerProps
 >(({ backgroundImage, className, children, ...props }, ref) => {
   return (
-    <div ref={ref} className="min-h-screen bg-cover bg-center" {...props}>
+    <div ref={ref} className="-z-50 min-h-screen bg-cover bg-center" {...props}>
       <Image
         alt="authImage"
         objectFit="cover"

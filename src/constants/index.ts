@@ -77,8 +77,8 @@ export const BACKEND_URLS = {
   PRODUCTION: "",
 };
 
-export const paths = {
-  landing: "/",
+export const PATHS = {
+  root: "/",
   aboutUs: "/about-us",
   login: "/login",
   signUp: "/signup",
