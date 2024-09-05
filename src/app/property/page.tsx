@@ -1,19 +1,15 @@
 "use client";
 
-import ImageCarousel from "@/components/ImageCarousel";
-import { FaCalendar } from "react-icons/fa";
-import { FcLike } from "react-icons/fc";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import PropertiesList from "./PropertiesList";
-import PropertyDetail from "./propertyDetail";
+import ImageCarousel from "@/components/propertyDetails/ImageCarousel";
+import PropertiesList from "../../components/propertyDetails/propertiesList";
+import PropertyDetail from "../../components/propertyDetails/propertyDetail";
+import { propertyDetailsImages } from "@/constants/images";
 export default function PropertyDetails() {
   const images = [
-    { url: "/images/int1.jpeg", alt: "Interior1" },
-    { url: "/images/int2.jpeg", alt: "Interior2" },
-    { url: "/images/int3.jpeg", alt: "Interior3" },
-    { url: "/images/ext.jpeg", alt: "Exterior" },
+    { url: propertyDetailsImages.propertyExterior, alt: "Interior1" },
+    { url: propertyDetailsImages.propertyInterior1, alt: "Interior2" },
+    { url: propertyDetailsImages.propertyInterior2, alt: "Interior3" },
+    { url: propertyDetailsImages.propertyInterior3, alt: "Exterior" },
   ];
 
   const properties = [1, 2, 3];

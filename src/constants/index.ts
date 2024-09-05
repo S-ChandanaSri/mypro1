@@ -48,7 +48,6 @@ export const COLORS = {
     900: "#2C3A6B",
   },
   netrual: {
-    light: "#FCFCFD",
     50: "#F5F5F6",
     100: "#F0F0F1",
     200: "#D9D9DC",
@@ -59,6 +58,37 @@ export const COLORS = {
     700: "#292637",
     800: "#211F30",
     900: "#030014",
-    dark: "#171427",
   },
+};
+
+export const FONT_SIZES = {
+  xs: "12px",
+  sm: "14px",
+  md: "16px",
+  lg: "18px",
+  xl: "24px",
+  "2xl": "36px",
+  "3xl": "52px",
+  "4xl": "56px",
+};
+
+export const BACKEND_URLS = {
+  LOCAL: "http://localhost:5000",
+  PRODUCTION: "",
+};
+
+export const PATHS = {
+  root: "/",
+  aboutUs: "/about-us",
+  login: "/login",
+  signUp: "/signup",
+  forgotPassword: "/forgot-password",
+};
+
+export const Dimens = {
+  loginForm: 480,
+};
+
+export const Duration = {
+  apiTimeout: 60000,
 };
