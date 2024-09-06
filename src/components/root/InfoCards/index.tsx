@@ -9,7 +9,7 @@ interface InfoCardsProps {
 
 const InfoCards: React.FC<InfoCardsProps> = ({ title, subText, cards }) => {
   return (
-    <div className="flex flex-col items-center space-y-8 px-16 text-center">
+    <div className="flex flex-col items-center space-y-8 text-center">
       <h3 className="text-2xl font-medium">
         {title}
         <p className="text-md font-light">{subText}</p>

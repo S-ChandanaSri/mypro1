@@ -1,7 +1,7 @@
-import { PATHS } from ".";
+import { PATHS, VIDEOS } from ".";
 import { InfoImages } from "./images";
 import { strings } from "./strings";
-import { CardInfo, FAQ, LinkOption } from "./types";
+import { CardInfo, FAQ, LinkOption, VideoTestimonial } from "./types";
 
 export const linkOptions: LinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
@@ -104,5 +104,23 @@ export const GetInTouchInfo: CardInfo[] = [
   {
     icon: InfoImages.getInTouch4,
     label: "Chat on Website",
+  },
+];
+
+export const VideoTestimonials: VideoTestimonial[] = [
+  {
+    videoPath: VIDEOS.TestVideo1,
+    label: "Albert Flores",
+    subText: "Founder of GearUp",
+  },
+  {
+    videoPath: VIDEOS.TestVideo2,
+    label: "Jane Doe",
+    subText: "CEO of TechWorld",
+  },
+  {
+    videoPath: VIDEOS.TestVideo3,
+    label: "John Smith",
+    subText: "CTO of Innovate",
   },
 ];

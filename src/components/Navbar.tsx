@@ -11,7 +11,7 @@ import { PATHS } from "@/constants";
 import { linkOptions } from "@/constants/arrays";
 
 export const navbarVariants = cva(
-  `fixed z-20 flex h-[92px] w-full items-center justify-between px-12 font-serif text-neutral-50 md:h-[72px] transition-all duration-300`,
+  `fixed z-20 flex h-[92px] w-full items-center justify-between md:px-12 px-8 font-serif text-neutral-50 md:h-[72px] transition-all duration-300`,
   {
     variants: {
       variant: {
@@ -57,6 +57,20 @@ const Navbar: React.FC = () => {
 
   const buttonVariant = variant === "base" || !variant ? "baseDark" : "base";
 
+  const renderLinks = () => {
+    return linkOptions.map((option) => (
+      <span
+        key={option.label}
+        className="cursor-pointer transition-all duration-200 hover:opacity-80"
+        onClick={() =>
+          router.push(`${option.page}${option.comp ? `#${option.comp}` : ""}`)
+        }
+      >
+        {option.label}
+      </span>
+    ));
+  };
+
   return (
     <div className={navbarVariants({ variant })}>
       <Link href={PATHS.root} className="flex items-center">
@@ -64,24 +78,12 @@ const Navbar: React.FC = () => {
         <span className="font-display text-xl">{strings.appName}</span>
       </Link>
       <ul className="hidden space-x-8 text-sm font-medium md:flex">
-        {linkOptions.map((option) => (
-          <span
-            key={option.label}
-            className="cursor-pointer transition-all duration-200 hover:opacity-80"
-            onClick={() =>
-              router.push(
-                `${option.page}${option.comp ? `#${option.comp}` : ""}`,
-              )
-            }
-          >
-            {option.label}
-          </span>
-        ))}
+        {renderLinks()}
       </ul>
       <Button
         className="hidden md:flex"
-        iconNode={svgs.chevronRightIn}
-        size="normal"
+        preIconNode={svgs.chevronRightIn}
+        size="md"
         variant={buttonVariant}
         onClick={() => router.push(PATHS.login)}
       >
@@ -90,32 +92,18 @@ const Navbar: React.FC = () => {
 
       <Button
         className="outline-none hover:bg-transparent md:hidden"
-        iconNode={svgs.hamburgerMenu}
+        preIconNode={svgs.hamburgerMenu}
         iconSize={36}
-        size="normal"
+        size="md"
         variant="base"
         onClick={() => setMenuOpen(!menuOpen)}
       />
       <div
-        className={`fixed right-0 top-[92px] ${menuOpen ? "h-[275px]" : "h-0"} w-full overflow-hidden rounded-b-xl bg-neutral-50 text-center text-neutral-950 transition-all duration-300 ease-out`}
+        className={`fixed right-0 top-[92px] ${menuOpen ? "h-[300px]" : "h-0"} w-full overflow-hidden rounded-b-xl bg-neutral-50/95 text-center text-neutral-950 transition-all duration-300 ease-out`}
       >
-        <ul className="flex flex-col space-y-4 p-8 text-md">
-          <Link className="py-4" href={PATHS.login}>
-            {strings.paths[PATHS.login]}
-          </Link>
-          {linkOptions.map((option) => (
-            <span
-              key={option.label}
-              className="py-4"
-              onClick={() =>
-                router.push(
-                  `${option.page}${option.comp ? `#${option.comp}` : ""}`,
-                )
-              }
-            >
-              {option.label}
-            </span>
-          ))}
+        <ul className="flex flex-col space-y-16 p-8 pt-10 text-md">
+          <Link href={PATHS.login}>{strings.paths[PATHS.login]}</Link>
+          {renderLinks()}
         </ul>
       </div>
     </div>

@@ -96,7 +96,7 @@ const Login: NextPage = () => {
           <Button variant="auth" disabled={disabled} type="submit">
             {strings.signup.login}
           </Button>
-          <Button variant="google" iconNode={svgs.google} iconSize={20}>
+          <Button variant="google" preIconNode={svgs.google} iconSize={20}>
             {strings.signup.loginWithGoogle}
           </Button>
           <span className="flex justify-center pt-4 text-sm text-neutral-500">

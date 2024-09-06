@@ -1,12 +1,14 @@
 import logoIcon from "../../public/res/icons/logo.svg";
 import googleIcon from "../../public/res/icons/google-icon.svg";
 import chevronRightInIcon from "../../public/res/icons/chevron-right-in.svg";
+import chevronRightUpIcon from "../../public/res/icons/chevron-right-up.svg";
 import userAvatarIcon from "../../public/res/icons/user-avatar.svg";
 import hamburgerMenuIcon from "../../public/res/icons/hamburger.svg";
 import searchIcon from "../../public/res/icons/search.svg";
 import homeVerifyIcon from "../../public/res/icons/house.svg";
 import supportIcon from "../../public/res/icons/support.svg";
 import moneyIcon from "../../public/res/icons/money.svg";
+import playIcon from "../../public/res/icons/play.svg";
 
 import services1 from "../../public/res/images/infoCards/services1.svg";
 import services2 from "../../public/res/images/infoCards/services2.svg";
@@ -47,10 +49,12 @@ export const svgs = {
   logo: logoIcon,
   google: googleIcon,
   chevronRightIn: chevronRightInIcon,
+  chevronRightUp: chevronRightUpIcon,
   userAvatar: userAvatarIcon,
   hamburgerMenu: hamburgerMenuIcon,
   search: searchIcon,
   homeVerify: homeVerifyIcon,
   support: supportIcon,
   money: moneyIcon,
+  play: playIcon,
 };

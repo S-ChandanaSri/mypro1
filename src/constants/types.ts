@@ -22,3 +22,9 @@ export interface CardInfo {
   label: string;
   body?: string;
 }
+
+export interface VideoTestimonial {
+  videoPath: string;
+  label: string;
+  subText: string;
+}

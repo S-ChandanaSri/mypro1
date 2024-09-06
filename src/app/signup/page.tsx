@@ -7,7 +7,7 @@ import Input from "@/components/auth/Input";
 import { BACKGROUNDS, svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import { UserRegisterSchema } from "@/schema/UserSchema";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { z } from "zod";
 import { useForm } from "@/hooks/useForm";
 import { post_register } from "@/api";
@@ -23,27 +23,29 @@ const SignUp: NextPage = () => {
     setDisabled(hasError);
   }, [formState]);
 
-  const onSignUpAsync = async (e: any) => {
-    e.preventDefault();
+  const onSignUpAsync = useCallback(
+    async (e: any) => {
+      e.preventDefault();
 
-    const payload = {
-      firstName: formState.firstName?.value ?? "",
-      lastName: formState.lastName?.value ?? "",
-      email: formState.email?.value ?? "",
-      password: formState.password?.value ?? "",
-      confirmPassword: formState.confirmPassword?.value ?? "",
-    };
+      const payload = {
+        firstName: formState.firstName?.value ?? "",
+        lastName: formState.lastName?.value ?? "",
+        email: formState.email?.value ?? "",
+        password: formState.password?.value ?? "",
+        confirmPassword: formState.confirmPassword?.value ?? "",
+      };
 
-    try {
-      const data = UserRegisterSchema.parse(payload);
-      const res = await post_register(data);
-      console.log(res);
-    } catch (err) {
-      if (err instanceof z.ZodError) {
-        setErrorsFromZodError(err, setFormState);
+      try {
+        const data = UserRegisterSchema.parse(payload);
+        const res = await post_register(data);
+      } catch (err) {
+        if (err instanceof z.ZodError) {
+          setErrorsFromZodError(err, setFormState);
+        }
       }
-    }
-  };
+    },
+    [formState, setFormState],
+  );
   return (
     <BackgroundImageContainer
       className="flex items-center justify-center bg-gradient-to-b from-black/50 to-transparent"
@@ -113,7 +115,7 @@ const SignUp: NextPage = () => {
           <Button variant="auth" disabled={disabled} type="submit">
             {strings.signup.register}
           </Button>
-          <Button variant="google" iconNode={svgs.google} iconSize={20}>
+          <Button variant="google" preIconNode={svgs.google} iconSize={20}>
             {strings.signup.loginWithGoogle}
           </Button>
         </div>

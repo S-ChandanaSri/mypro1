@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import image6 from "../app/_assets/images/image6.png";
 import image7 from "../app/_assets/images/image7.png";
@@ -34,18 +34,27 @@ import mail from "../app/_assets/images/mail.png";
 import address from "../app/_assets/images/address.png";
 import fax from "../app/_assets/images/fax.png";
 import Logoz from "../app/_assets/images/Logoz.png";
-import VideoPlayer from "./Video/page";
+import VideoPlayer from "../components/root/VideoPlayer";
 import {
-  faqs,
   GetInTouchInfo,
   OurServicesInfo,
+  VideoTestimonials,
   WhyChooseUsInfo,
 } from "@/constants/arrays";
 import { strings } from "@/constants/strings";
 import InfoCards from "@/components/root/InfoCards";
 import Hero from "@/components/root/Hero";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Button from "@/components/common/Button";
+import { svgs } from "@/constants/images";
+import { PATHS } from "@/constants";
+import { useRouter } from "next/navigation";
 
 function Home() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean[]>([]);
 
   const handleToggle = (index: number) => {
@@ -56,10 +65,24 @@ function Home() {
     });
   };
 
+  const activeTestimonial = useRef<number>(1);
+  const TestimonialSettings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    beforeChange: (_oldIndex: number, newIndex: number) => {
+      activeTestimonial.current == newIndex;
+    },
+  };
+
   return (
-    <div>
+    <div className="space-y-32 overflow-hidden px-6 sm:px-16">
       <Hero />
-      <div className="top-[730px] flex h-[157px] items-center gap-[105px] border-[1px] border-[#0000004D] bg-[#FFFFFF] px-[47px] py-[15px] sm:gap-2 lg:gap-10">
+      {/* <div className="flex h-[157px] items-center gap-[105px] border-[1px] border-[#0000004D] bg-[#FFFFFF] px-[47px] py-[15px] sm:gap-2 lg:gap-10">
         <div className="w-fill h-fill h-[127px] w-[1066.33px] gap-[82px]">
           <div className="flex h-[126.82px] w-[1066.89px] gap-[77px] sm:mx-auto sm:w-[400px] md:relative md:right-5 md:mx-auto md:flex md:w-[500px] md:justify-between lg:mx-auto lg:w-auto">
             <div className="flex h-[121.78px] w-[86.46px] flex-col items-center sm:w-[70px] md:mx-auto md:flex md:flex-col md:justify-between">
@@ -68,81 +91,81 @@ function Home() {
                 height={113}
                 src={image6}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
                 Bombay
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:w-[70px] md:flex md:flex-col md:justify-between">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:w-[70px] md:flex md:flex-col md:justify-between">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image7}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-6 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-6 text-[20px] font-[500] leading-[30px] text-black">
                 Pune
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:w-[70px]">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:w-[70px]">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image6}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
                 Bombay
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:hidden md:block lg:block">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:hidden md:block lg:block">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image5}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-3 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-3 text-[20px] font-[500] leading-[30px] text-black">
                 Kolkata
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:hidden md:hidden lg:block">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:hidden md:hidden lg:block">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image4}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
                 Bombay
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:hidden lg:block">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:hidden lg:block">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image3}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
                 Bombay
               </p>
             </div>
-            <div className="left-[980.42px] top-[2.52px] h-[121.78px] w-[86.46px] sm:hidden lg:block">
+            <div className="left-[980.42px] -[2.52px] h-[121.78px] w-[86.46px] sm:hidden lg:block">
               <Image
                 width={86.31}
                 height={85.97}
                 src={image2}
                 alt=""
-                className="left-[980.58px] top-[2.52px] h-[85.97px] w-[86.31px]"
+                className="left-[980.58px] -[2.52px] h-[85.97px] w-[86.31px]"
               />
-              <p className="custo-font left-[980.4px] top-[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
+              <p className="custo-font left-[980.4px] -[94.06px] h-[30.24px] w-[86.02px] items-center pl-2 text-[20px] font-[500] leading-[30px] text-black">
                 Bombay
               </p>
             </div>
@@ -158,12 +181,12 @@ function Home() {
             <Image width={80} height={40} src={Frame39908} alt="" />
           </button>
         </div>
-      </div>
+      </div> */}
 
-      <div className="top-[887px] h-[950px] gap-[32px] bg-[#C1C7DC] bg-opacity-10 px-[37px] py-[3px] sm:mx-auto sm:h-auto">
+      {/* <div className="-[887px] h-[950px] gap-[32px] bg-[#C1C7DC] bg-opacity-10 px-[37px] py-[3px] sm:mx-auto sm:h-auto">
         <div className="flex items-center justify-between sm:relative sm:left-3 sm:mx-auto sm:flex sm:items-center sm:justify-around md:flex md:justify-between">
           <div className="h-[100px ] flex-col justify-between sm:mx-auto md:mx-2">
-            <p className="custo-font top-[2px] h-[38px] w-[281px] text-[13px] font-normal leading-[37.8px] text-[#000000] transition-all duration-300 xxs:ml-6 xxs:text-[15px] xs:ml-9 xs:text-[16px] sm:relative sm:text-left sm:text-[16px] lg:text-[28px]">
+            <p className="custo-font -[2px] h-[38px] w-[281px] text-[13px] font-normal leading-[37.8px] text-[#000000] transition-all duration-300 xxs:ml-6 xxs:text-[15px] xs:ml-9 xs:text-[16px] sm:relative sm:text-left sm:text-[16px] lg:text-[28px]">
               Our Popular Homes
             </p>
             <div className="h-[30px] w-[530px]">
@@ -173,7 +196,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="top-[0.5rem] flex items-center sm:relative sm:right-[3rem] sm:mx-auto sm:flex md:mx-2">
+          <div className="-[0.5rem] flex items-center sm:relative sm:right-[3rem] sm:mx-auto sm:flex md:mx-2">
             <p className="custo-font h-[38px] w-[134px] items-center text-[28px] font-[300] leading-[37.8px] text-black transition-all duration-300 sm:relative sm:h-auto sm:text-left sm:text-[16px] lg:text-[22px]">
               Explore All
             </p>
@@ -740,7 +763,7 @@ function Home() {
         </div>
 
         <button className="flex w-full items-center justify-center">
-          <div className="h-[48px] w-[170.43px] rounded-[4.17px] border border-[#4A61B5] text-[#000000] sm:relative sm:right-[10rem] sm:top-[0.6rem]">
+          <div className="h-[48px] w-[170.43px] rounded-[4.17px] border border-[#4A61B5] text-[#000000] sm:relative sm:right-[10rem] sm:-[0.6rem]">
             <div className="flex h-[15px] w-[145.91px] items-center pl-2 pt-[23px]">
               <p className="custo-font h-[15px] w-[149px] text-[11.13px] font-[500] leading-[15.03px] text-black">
                 View All the Cities
@@ -749,7 +772,7 @@ function Home() {
             </div>
           </div>
         </button>
-      </div>
+      </div> */}
 
       <div className="space-y-32">
         <InfoCards
@@ -769,52 +792,50 @@ function Home() {
         />
       </div>
 
-      <div className="relative top-[375rem] h-[1099x] gap-[71px] py-[106px] pt-[125px] sm:relative sm:mt-[-5rem] sm:flex sm:flex-col sm:items-center lg:relative lg:mt-[-7rem]">
-        <div className="flex h-[145px] flex-col items-center gap-[23px] pt-11 sm:mr-[29rem] lg:ml-[5rem]">
-          <p className="custo-font relative right-[0rem] h-[62px] pt-2 text-[28px] font-[400] leading-[62px] tracking-[-2px] text-[#090914] sm:relative sm:left-[14rem] sm:ml-10 sm:w-[600px] sm:text-[52px] xl:relative xl:mr-[5rem]">
-            Over 1000+ people trust us
+      <div className="flex flex-col items-center space-y-16 text-center">
+        <h3 className="text-2xl font-medium">
+          {strings.landing.testimonials.heading}
+          <p className="text-md font-light md:w-[50rem]">
+            {strings.landing.testimonials.subHeading}
           </p>
-          <p className="custo-font relative top-[20px] h-[60px] text-center text-[13px] font-[400] leading-[30px] text-gray-900 sm:relative sm:left-[15rem] sm:w-[600px] sm:text-[18px] lg:right-[10rem] xl:relative xl:mr-[5rem]">
-            Clarity gives you the blocks & components you need to create a truly
-            professional website, landing page or admin panel for your SaaS.
-          </p>
+        </h3>
+        <div className="hidden w-full lg:block">
+          <Slider {...TestimonialSettings}>
+            {VideoTestimonials.map((testimonial, idx) => (
+              <VideoPlayer
+                key={idx}
+                isPlaying={idx === activeTestimonial.current}
+                src={testimonial.videoPath}
+                title={testimonial.label}
+                subtitle={testimonial.subText}
+              />
+            ))}
+          </Slider>
         </div>
-        <div className="flex h-[568px] w-[696px] flex-col gap-[90px] xxs:ml-[5rem] xs:ml-[5rem] sm:flex-col sm:items-center sm:gap-[20px] lg:mr-[25rem] lg:flex-row xl:relative xl:mr-[24rem]">
-          <VideoPlayer
-            src="Videos/video2.mp4"
-            title="Albert Flores"
-            subtitle="Founder of GearUp"
-          />
-          <VideoPlayer
-            src="Videos/video3.mp4"
-            title="Jane Doe"
-            subtitle="CEO of TechWorld"
-          />
-          <VideoPlayer
-            src="Videos/video4.mp4"
-            title="John Smith"
-            subtitle="CTO of Innovate"
-          />
-        </div>
-
-        {/* <button className="relative left-[1rem] top-[84rem] h-[32px] cursor-pointer gap-[10px] rounded-[50px] xxs:relative xxs:left-[5.5rem] xxs:top-[84rem] xs:relative xs:left-[9.5rem] xs:top-[84rem] sm:relative sm:top-[74rem] sm:mr-[14rem] sm:flex sm:w-full sm:items-center sm:justify-center lg:relative lg:top-[-4rem]">
-          <div className="relative top-[120px] flex h-[28px] gap-[9px] pt-5">
-            <p className="custo-font h-[28px] w-[267px] text-[16px] font-[600] leading-[22px] text-blue-600">
-              See all reviews by our customers
-            </p>
-            <Image
-              width={18}
-              height={18}
-              src={icon}
-              alt=""
-              className="h-[18px] w-[18px] gap-[10px] pt-0.5"
+        <ul className="block space-y-12 lg:hidden">
+          {VideoTestimonials.map((testimonial, idx) => (
+            <VideoPlayer
+              key={idx}
+              src={testimonial.videoPath}
+              title={testimonial.label}
+              subtitle={testimonial.subText}
             />
-          </div>
-        </button> */}
+          ))}
+        </ul>
+
+        <Button
+          onClick={() => router.push(PATHS.testimonials)}
+          className="font-semibold"
+          size="md"
+          postIconNode={svgs.chevronRightUp}
+          variant="link"
+        >
+          {strings.landing.testimonials.seeAllReviews}
+        </Button>
       </div>
 
-      <div className="bg-white">
-        <div className="relative top-[461rem] flex h-[94x] w-[1280px] flex-col items-center gap-[32px] px-[32px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem] sm:relative sm:top-[455rem] lg:relative lg:left-[15rem] lg:top-[378rem] xl:relative xl:left-[22rem]">
+      {/* <div className="bg-white">
+        <div className="relative -[461rem] flex h-[94x] w-[1280px] flex-col items-center gap-[32px] px-[32px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem] sm:relative sm:-[455rem] lg:relative lg:left-[15rem] lg:-[378rem] xl:relative xl:left-[22rem]">
           <div className="h-[94px] w-[1216px] gap-[48px]">
             <div className="relative h-[94px] w-[768px] gap-[20px] pl-[50px]">
               <p className="custo-font relative right-[4rem] h-[44px] text-[13px] font-[400] leading-[44px] tracking-[-2%] transition-all duration-300 xs:relative xs:right-[8rem] xs:text-[25px] sm:mx-auto sm:text-left sm:text-[26px] lg:mx-auto lg:text-left lg:text-[30px] xl:mx-auto xl:text-left xl:text-[36px]">
@@ -827,7 +848,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="relative top-[461rem] h-[513px] w-[1280px] gap-[64px] px-[32px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem] sm:relative sm:top-[455rem] lg:relative lg:left-[16rem] lg:top-[378rem] xl:relative xl:left-[22rem]">
+        <div className="relative -[461rem] h-[513px] w-[1280px] gap-[64px] px-[32px] xxs:relative xxs:left-[4rem] xs:relative xs:left-[8rem] sm:relative sm:-[455rem] lg:relative lg:left-[16rem] lg:-[378rem] xl:relative xl:left-[22rem]">
           <div className="h-[513px] w-[768px] gap-[32px] pl-[40px] pt-[50px]">
             {faqs.map((item, index) => (
               <div key={item.id} className="h-[84px] w-[768px] gap-[24px]">
@@ -855,7 +876,7 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className="relative top-[460rem] h-[294px] gap-[32px] xxs:relative xxs:right-[0rem] xs:relative xs:right-[0rem] sm:relative sm:top-[455rem] sm:flex sm:items-center md:ml-[9rem] lg:relative lg:right-[1rem] lg:top-[380rem] lg:flex lg:items-center xl:relative xl:right-[1rem]">
+        <div className="relative -[460rem] h-[294px] gap-[32px] xxs:relative xxs:right-[0rem] xs:relative xs:right-[0rem] sm:relative sm:-[455rem] sm:flex sm:items-center md:ml-[9rem] lg:relative lg:right-[1rem] lg:-[380rem] lg:flex lg:items-center xl:relative xl:right-[1rem]">
           <div className="flex h-[294px] flex-col items-center gap-[32px] rounded-[16px] bg-[#F9FAFB] p-[32px] sm:mx-auto sm:flex sm:items-center">
             <div className="flex h-[56px] w-[120px]">
               <Image
@@ -899,9 +920,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="relative top-[465rem] flex h-[977px] flex-col items-center gap-[56px] rounded-[4px] bg-[#F6F9FF] sm:relative sm:top-[460rem] lg:relative lg:top-[385rem]">
+      <div className="-[465rem] sm:-[460rem] lg:-[385rem] relative flex h-[977px] flex-col items-center gap-[56px] rounded-[4px] bg-[#F6F9FF] sm:relative lg:relative">
         <div className="flex h-auto w-auto flex-col gap-[20px] rounded-[12px] bg-[#3D52A0] px-4 py-[28px] sm:w-auto lg:flex-row lg:gap-[100px]">
           <div className="h-auto w-full gap-[4px] lg:w-[645px]">
             <p className="custo-font h-[24px] w-auto text-[16px] font-[500] leading-[24px] text-[#FFFFFF]">
@@ -927,7 +948,7 @@ function Home() {
             </div>
             <button className="flex h-[36px] w-full justify-end gap-[10px] lg:w-[265px]">
               <div className="h-[36px] w-[94px] rounded-[10px] bg-[#FFFFFFDB]">
-                <p className="custo-font relative left-[17px] top-[6px] h-[24px] w-[58px] text-[16px] font-[500] leading-[24px] text-[#002855]">
+                <p className="custo-font -[6px] relative left-[17px] h-[24px] w-[58px] text-[16px] font-[500] leading-[24px] text-[#002855]">
                   Submit
                 </p>
               </div>
@@ -1023,7 +1044,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="relative top-[24rem] flex h-[272px] w-[300px] justify-between sm:relative sm:right-[2rem] sm:top-[0rem] sm:flex sm:w-[900px] sm:justify-evenly md:w-[1100px] lg:flex lg:w-[984px] lg:justify-between lg:pt-4 xl:w-[1100px]">
+        <div className="-[24rem] sm:-[0rem] relative flex h-[272px] w-[300px] justify-between sm:relative sm:right-[2rem] sm:flex sm:w-[900px] sm:justify-evenly md:w-[1100px] lg:flex lg:w-[984px] lg:justify-between lg:pt-4 xl:w-[1100px]">
           <div className="flex h-[248px] flex-col gap-[24px] sm:relative sm:left-[9rem] sm:w-[137.33px] lg:relative lg:left-[3rem]">
             <p className="custo-font flex h-[24px] w-[80px] text-[16px] font-[500] leading-[24px] text-[#191D23] sm:w-[137.33px]">
               About
@@ -1160,7 +1181,7 @@ function Home() {
         </div>
         <div
           id="services"
-          className="relative top-[22rem] flex flex-col items-center justify-between border-t border-[#D0D5DD] bg-white py-[24px] sm:relative sm:top-[0rem] sm:flex-row lg:w-[1000px]"
+          className="-[22rem] sm:-[0rem] relative flex flex-col items-center justify-between border-t border-[#D0D5DD] bg-white py-[24px] sm:relative sm:flex-row lg:w-[1000px]"
         >
           <div className="custo-font flex flex-wrap gap-[20px] text-[16px] font-[400] leading-[24px] text-[#4B5768]">
             <p className="w-auto">About us</p>

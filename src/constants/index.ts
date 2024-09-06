@@ -61,6 +61,12 @@ export const COLORS = {
   },
 };
 
+export const VIDEOS = {
+  TestVideo1: "/res/videos/video1.mp4",
+  TestVideo2: "/res/videos/video2.mp4",
+  TestVideo3: "/res/videos/video3.mp4",
+};
+
 export const FONT_SIZES = {
   xs: "12px",
   sm: "14px",
@@ -83,6 +89,7 @@ export const PATHS = {
   login: "/login",
   signUp: "/signup",
   forgotPassword: "/forgot-password",
+  testimonials: "/testimonials",
 };
 
 export const Dimens = {

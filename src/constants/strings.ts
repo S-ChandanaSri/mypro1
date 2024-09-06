@@ -8,6 +8,7 @@ export const strings = {
     [PATHS.aboutUs]: "About Us",
     [PATHS.login]: "Login",
     [PATHS.signUp]: "Sign Up",
+    [PATHS.testimonials]: "Testimonials",
   },
   navbar: {
     services: "Services",
@@ -16,6 +17,9 @@ export const strings = {
   },
   //Landing
   landing: {
+    heading: "Reserve Your Ideal Holiday",
+    subHeading:
+      "We're thrilled to have you! Let's find you the ideal place to stay.",
     tags: {
       verified: "Verified Properties",
       support: "24/7 Support",
@@ -34,6 +38,12 @@ export const strings = {
     getInTouch: {
       heading: "Get in touch with us",
       subHeading: "If you have any query feel free to contact us",
+    },
+    testimonials: {
+      heading: "Over 1000+ people trust us",
+      subHeading:
+        "Clarity gives you the blocks & components you need to create a truly professional website, landing page or admin panel for your SaaS.",
+      seeAllReviews: "See all reviews by our customers",
     },
   },
   //SignUp/Login
