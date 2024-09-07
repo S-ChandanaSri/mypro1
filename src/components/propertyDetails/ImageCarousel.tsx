@@ -30,12 +30,12 @@ export default function ImageCarousel({ images }: any) {
   return (
     <div className="flex flex-col  h-[23rem]   px-6 md:w-[45rem] md:h-[35rem]  lg:w-[64rem]    lg:h-[26rem]   lg:flex-row   ">
       {/* Thumbnails */}
-      <div className="hidden lg:flex w-52 h-[26rem] flex-col gap-5 mr-4  overflow-y-auto scrollbar-thin">
+      <div className="hidden lg:flex min-w-52 h-[26rem] flex-col gap-5 mr-2  overflow-y-auto scrollbar-thin">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`border-2 relative   w-52 min-h-32 rounded-lg  ${
+            className={`border-2 relative   min-w-50 min-h-32 rounded-lg  ${
               index === selectedIndex ? "border-blue-500" : "border-transparent"
             }`}
           >
