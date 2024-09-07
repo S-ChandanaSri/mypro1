@@ -28,14 +28,14 @@ export default function ImageCarousel({ images }: any) {
   };
 
   return (
-    <div className="flex flex-col lg:justify-between  h-[363px] lg:ml-[47px] ml-[15px] md:ml-[22px] md:w-[720px] md:h-[556px]  lg:w-[1025px]    lg:h-[421px]   lg:flex-row   ">
+    <div className="flex flex-col  h-[23rem]   px-6 md:w-[45rem] md:h-[35rem]  lg:w-[64rem]    lg:h-[26rem]   lg:flex-row   ">
       {/* Thumbnails */}
-      <div className="hidden lg:flex lg:min-w-[207px] lg:max-h-[416px] flex-col gap-[22px]   overflow-y-auto scrollbar-thin">
+      <div className="hidden lg:flex w-52 h-[26rem] flex-col gap-5 mr-4  overflow-y-auto scrollbar-thin">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`border-2 relative   min-w-[207px] min-h-[124px] rounded-[10px]  ${
+            className={`border-2 relative   w-52 min-h-32 rounded-lg  ${
               index === selectedIndex ? "border-blue-500" : "border-transparent"
             }`}
           >
@@ -43,22 +43,20 @@ export default function ImageCarousel({ images }: any) {
               src={image.url}
               alt={image.alt}
               fill={true}
-              //   sizes="(min-width: 1024px) 207px, 124px"
-              className=" w-full h-full object-cover rounded-md"
-              //   style={{ objectFit: "contain" }}
+              className="object-cover rounded-lg"
             />
           </button>
         ))}
       </div>
 
       {/* Selected Image */}
-      <div className="relative    w-[400px] h-[300px]  rounded-[10px] md:w-[720px] md:h-[256px]   lg:w-[797px] lg:h-[421px] lg:ml-4 flex-1  mt-4 lg:mt-0">
+      <div className="relative    w-[25rem] h-[19rem]   rounded-4 md:w-[45rem] md:h-[27rem] lg:h-[26rem]   lg:w-[50rem] ">
         <Image
           src={images[selectedIndex].url}
           alt={images[selectedIndex].alt}
           fill={true}
           // sizes="(min-width: 1024px) 207px, 124px"
-          className="w-full h-full object-cover rounded-md "
+          className="object-cover rounded-md"
         />
         <button
           onClick={handlePrevImage}
@@ -75,12 +73,12 @@ export default function ImageCarousel({ images }: any) {
       </div>
 
       {/* Mobile & Tablet Thumbnails */}
-      <div className="w-[400px] flex h-[100px] gap-[36px] lg:hidden  md:w-[713px] md:h-[124px] md:gap-[46px]  mt-4  scrollbar-thin ">
+      <div className="w-[25rem] flex  gap-9 lg:hidden  md:w-[45rem]  md:gap-11  mt-4  scrollbar-thin ">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`border-2 relative w-[107px] md:w-[207px] h-[90px]   rounded-[10px] ${
+            className={`border-2 relative w-28 md:w-52 h-24   rounded-lg ${
               index === selectedIndex
                 ? "border-blue-500 "
                 : "border-transparent"
@@ -90,7 +88,7 @@ export default function ImageCarousel({ images }: any) {
               src={image.url}
               alt={image.alt}
               fill={true}
-              className="w-[107px] md:w-[207px] h-[90px] rounded-[10px]  object-cover "
+              className="w-28 md:w-52 h-24 rounded-lg  object-cover "
             />
           </button>
         ))}

@@ -65,12 +65,12 @@ export default function PropertyDetail() {
     },
   ];
   return (
-    <div className="max-w-[481px] max-h-[1317px] md:max-w-[765px] md:h-[873px] lg:max-w-[1072px] lg:h-auto flex flex-col gap-[27px] font-[poppins]">
-      <div className="flex flex-row justify-between w-full lg:p-0 lg:pl-[47px] h-[118px] lg:min-h-[121px] px-[23px] py-[0px]">
-        <div className="lg:w-[1011px] lg:min-h-[121px] md:w-[765px] md:min-h-[118px] flex flex-col justify-between ">
-          <div className="flex text-[#3D52A0] items-center gap-[2px] text-md">
+    <div className="lg:w-[67rem] flex flex-col gap-7 font-serif ">
+      <div className="flex flex-row justify-between  px-6    py-2">
+        <div className="  flex flex-col gap-3">
+          <div className="flex text-[#3D52A0] items-center gap-1 text-md">
             London{" "}
-            <div className="relative w-[9px] h-[11px]  ">
+            <div className="relative w-2 h-3  ">
               <Image
                 src={propertySvgIcons.propertyRightArrow}
                 fill={true}
@@ -79,7 +79,7 @@ export default function PropertyDetail() {
               />
             </div>{" "}
             soho{" "}
-            <div className="relative w-[13.5px] h-[15.12px]  ">
+            <div className="relative w-4 h-4  ">
               <Image
                 src={propertySvgIcons.propertyLocation}
                 fill={true}
@@ -90,9 +90,9 @@ export default function PropertyDetail() {
             view on map
           </div>
           <div className="flex text-xl">21 Poland Street,#2</div>
-          <div className="flex items-center gap-[4px] text-[#3D52A0] ">
+          <div className="flex items-center gap-1 text-[#3D52A0] ">
             <span className="text-xl">4.8</span>
-            <div className="relative w-[17.21px] h-[16.47px] ">
+            <div className="relative w-4 h-4 ">
               <Image
                 src={propertySvgIcons.propertyStar}
                 fill={true}
@@ -103,7 +103,8 @@ export default function PropertyDetail() {
             <span className="text-md">83 Ratings</span>
           </div>
         </div>
-        <div className="relative w-[25px] h-[25px] mx-1 ">
+
+        <div className="relative w-6 h-6">
           <Image
             src={propertySvgIcons.propertyLike}
             fill={true}
@@ -112,17 +113,19 @@ export default function PropertyDetail() {
           />
         </div>
       </div>
-      <hr className="bg-[#000000]" />
-      <div className="px-[25px] md:px-0  flex md:flex-row flex-col justify-between max-w-[481px] max-h-[490px] lg:w-[981px] lg:min-h-[277px] md:w-[697.32px] md:h-[277px] gap-[20px]  md:gap-[55px] md:ml-[32px] lg:ml-[41px] text-[xl]">
-        <div className="flex flex-col  justify-between max-w-[318px] min-h-[277px] lg:min-w-[318px] lg:max-h-[277px] md:min-w-[318px] md:max-h-[277px]">
+
+      <hr className="bg-neutral-950" />
+
+      <div className="px-6   flex md:flex-row flex-col justify-between    gap-5 md:gap-14   text-xl">
+        <div className="flex flex-col  gap-6    w-full ">
           <p className="flex">{strings.propertyDetails.accomodates}</p>
           {accomodates?.map((item, index) => (
             <div
-              className="flex flex-row w-full justify-between text-neutral-600"
+              className="flex flex-row  justify-between text-neutral-600"
               key={index}
             >
-              <div className="flex flex-row gap-[5px]">
-                <div className="relative w-[20px] h-[20px] ">
+              <div className="flex flex-row gap-4">
+                <div className="relative w-5 h-5 ">
                   <Image
                     src={item.icon}
                     fill={true}
@@ -136,7 +139,8 @@ export default function PropertyDetail() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col justify-between max-w-[343px] min-h-[213px]   lg:min-w-[344px] lg:h-[213px] md:min-w-[344px] md:h-[213px]">
+
+        <div className="flex flex-col gap-6   w-full ">
           <p className="flex">{strings.propertyDetails.openingHours}</p>
           {openingHours?.map((item, index) => (
             <div
@@ -149,16 +153,16 @@ export default function PropertyDetail() {
           ))}
         </div>
       </div>
-      <hr className="bg-[#000000]" />
-      <div className=" px-[25px] md:p-0 flex flex-col gap-y-[30px]  max-w-[441px] max-h-[269px] lg:w-[876px]  lg:min-h-[179px]  lg:ml-[41px] md:max-w-[736px] md:h-[179px] md:ml-[30px] text-[xl]">
+      <hr className="bg-neutral-950" />
+      <div className=" px-6  flex flex-col gap-y-8   md:text-xl">
         <div>{strings.propertyDetails.ammenities}</div>
-        <div className="grid grid-cols-3 grid-rows-2 gap-[30px]">
+        <div className="grid grid-cols-3 grid-rows-2 gap-6">
           {ammenities?.map((item, index) => (
             <div
-              className="flex flex-row gap-[3px] text-neutral-700"
+              className="flex flex-row gap-1 text-nowrap text-neutral-700"
               key={index}
             >
-              <div className="relative w-[20px] h-[20px] ">
+              <div className="relative w-5 h-5 ">
                 <Image
                   src={item.icon}
                   fill={true}
@@ -171,8 +175,8 @@ export default function PropertyDetail() {
           ))}
         </div>
       </div>
-      <hr className="bg-[#000000]" />
-      <div className="flex flex-col  max-w-[481px] max-h-[290px]  lg:w-[826px] lg:max-h-[163px] lg:min-gap-[20px] lg:p-0 py-0 px-[25px] gap-[15px]   lg:ml-[41px] md:w-[765px] md:h-[193px] md:px-[25px] md:my-[0px] md:gap-[15px] text-[xl]">
+      <hr className="bg-neutral-950" />
+      <div className="flex flex-col  px-6      gap-4        text-xl">
         <p>{strings.propertyDetails.roomServices}</p>
         <p className="text-neutral-700">
           Lorem ipsum dolor sit amet consectetur. Lacus et integer enim vitae
@@ -180,7 +184,7 @@ export default function PropertyDetail() {
           Condimentum integer sed in scelerisque sit in quis et.
         </p>
       </div>
-      <hr className="bg-[#000000]" />
+      <hr className="bg-neutral-950" />
     </div>
   );
 }

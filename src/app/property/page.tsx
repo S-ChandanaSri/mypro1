@@ -14,8 +14,8 @@ export default function PropertyDetails() {
 
   const properties = [1, 2, 3];
   return (
-    <div className=" flex flex-col font-poppins relative ">
-      <div className="background">
+    <div className=" flex flex-col font-serif relative ">
+      <div className="background ">
         <ImageCarousel images={images} />
       </div>
       <PropertyDetail />
