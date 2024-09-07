@@ -1,12 +1,7 @@
 "use client";
-import styles from "./roomView.module.css";
-
-import SideSection from "../components/sideSection";
-// import SideSection from "@/components/side-section";
-import FilterSection from "../components/filterSection";
-
-import Image from "next/image";
-import Footer from "../components/footer";
+import SideSection from "../../components/roomView/sideSection";
+import FilterSection from "../../components/roomView/filterSection";
+import Footer from "../../components/roomView/footer";
 
 export default function RoomViewPage() {
   return (
@@ -16,7 +11,7 @@ export default function RoomViewPage() {
         <SideSection />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
