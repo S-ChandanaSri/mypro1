@@ -1,4 +1,4 @@
-import { InputValue } from "@/constants/types";
+import { IInputValue } from "@/constants/types";
 import { z } from "zod";
 
 export function isLocal(): boolean {
@@ -19,7 +19,7 @@ export function isProduction(): boolean {
 export const setErrorsFromZodError = (
   err: z.ZodError,
   setFormState: React.Dispatch<
-    React.SetStateAction<{ [key: string]: InputValue }>
+    React.SetStateAction<{ [key: string]: IInputValue }>
   >,
 ) => {
   err.errors.forEach((error) => {

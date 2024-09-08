@@ -9,15 +9,15 @@ import { useRouter, usePathname } from "next/navigation";
 import { cva } from "class-variance-authority";
 import { PATHS } from "@/constants";
 import { linkOptions } from "@/constants/arrays";
+import { ILinkOption } from "@/constants/types";
 
 export const navbarVariants = cva(
   `fixed z-20 flex h-[92px] w-full items-center justify-between md:px-12 px-8 font-serif text-neutral-50 md:h-[72px] transition-all duration-300`,
   {
     variants: {
       variant: {
-        disabled: "hidden",
         root: "bg-transparent",
-        base: "bg-secondaryWashed-700",
+        base: "bg-secondaryWashed-800",
       },
     },
     defaultVariants: {
@@ -28,7 +28,7 @@ export const navbarVariants = cva(
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [variant, setVariant] = useState<"base" | "root" | "disabled">("base");
+  const [variant, setVariant] = useState<"base" | "root">("base");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -41,9 +41,7 @@ const Navbar: React.FC = () => {
       }
     };
 
-    if (pathname === PATHS.login || pathname === PATHS.signUp) {
-      setVariant("disabled");
-    } else if (pathname === PATHS.root) {
+    if (pathname === PATHS.root) {
       window.addEventListener("scroll", handleScroll);
       handleScroll();
     } else {
@@ -58,7 +56,7 @@ const Navbar: React.FC = () => {
   const buttonVariant = variant === "base" || !variant ? "baseDark" : "base";
 
   const renderLinks = () => {
-    return linkOptions.map((option) => (
+    return linkOptions.map((option: ILinkOption) => (
       <span
         key={option.label}
         className="cursor-pointer transition-all duration-200 hover:opacity-80"
@@ -70,6 +68,10 @@ const Navbar: React.FC = () => {
       </span>
     ));
   };
+
+  if (pathname === PATHS.login || pathname === PATHS.signUp) {
+    return;
+  }
 
   return (
     <div className={navbarVariants({ variant })}>
@@ -96,7 +98,7 @@ const Navbar: React.FC = () => {
         iconSize={36}
         size="md"
         variant="base"
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={() => setMenuOpen((prevState) => !prevState)}
       />
       <div
         className={`fixed right-0 top-[92px] ${menuOpen ? "h-[300px]" : "h-0"} w-full overflow-hidden rounded-b-xl bg-neutral-50/95 text-center text-neutral-950 transition-all duration-300 ease-out`}

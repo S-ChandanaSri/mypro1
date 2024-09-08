@@ -1,10 +1,10 @@
 import ServiceCard from "./ServiceCard";
-import { CardInfo } from "@/constants/types";
+import { ICardInfo } from "@/constants/types";
 
 interface InfoCardsProps {
   title: string;
   subText?: string;
-  cards: CardInfo[];
+  cards: ICardInfo[];
 }
 
 const InfoCards: React.FC<InfoCardsProps> = ({ title, subText, cards }) => {
@@ -14,8 +14,8 @@ const InfoCards: React.FC<InfoCardsProps> = ({ title, subText, cards }) => {
         {title}
         <p className="text-md font-light">{subText}</p>
       </h3>
-      <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
-        {cards.map((value: CardInfo, idx: number) => (
+      <ul className="grid w-max grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+        {cards.map((value: ICardInfo, idx: number) => (
           <ServiceCard
             key={idx}
             label={value.label}
@@ -23,7 +23,7 @@ const InfoCards: React.FC<InfoCardsProps> = ({ title, subText, cards }) => {
             iconNode={value.icon}
           />
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

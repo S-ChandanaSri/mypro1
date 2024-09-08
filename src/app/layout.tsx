@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import { ListingProvider } from "./context/ListingContext";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <Navbar />
         <ListingProvider>{children}</ListingProvider>
+        <Footer />
       </body>
     </html>
   );

@@ -1,12 +1,13 @@
 "use client";
-import React, { useRef, useEffect } from "react";
-import Button from "../common/Button";
+import React, { useRef, useEffect, SetStateAction } from "react";
+import Button from "../../common/Button";
 import { svgs } from "@/constants/images";
 
 type VideoPlayerProps = {
   src: string;
   title: string;
   subtitle: string;
+  togglePlaying: () => void;
   isPlaying?: boolean;
 };
 
@@ -14,9 +15,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   src,
   title,
   subtitle,
+  togglePlaying,
   isPlaying,
 }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const handleVideoState = () => {
+    if (videoRef.current?.paused) {
+      videoRef.current?.play();
+    } else {
+      videoRef.current?.pause();
+    }
+    togglePlaying();
+  };
 
   useEffect(() => {
     if (isPlaying) {
@@ -28,7 +39,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <div className="relative mx-2 h-[60rem] overflow-hidden whitespace-nowrap rounded-3xl text-left sm:h-[40rem] xl:mx-6 xl:h-[50rem]">
-      <video loop ref={videoRef} className="h-full w-full object-cover">
+      <video muted loop ref={videoRef} className="h-full w-full object-cover">
         <source src={src} type="video/mp4" />
       </video>
       <div className="absolute bottom-0 grid w-full grid-flow-col grid-cols-2 grid-rows-2 bg-gradient-to-t from-neutral-900 p-8">
@@ -37,10 +48,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         <Button
           className="row-span-2 ml-auto"
           iconSize={18}
-          preIconNode={svgs.play}
+          preIconNode={!isPlaying ? svgs.play : svgs.pause}
           variant="icon"
           size="sm"
-          onClick={() => videoRef.current?.play()}
+          onClick={handleVideoState}
         />
       </div>
     </div>

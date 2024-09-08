@@ -92,10 +92,6 @@ export const PATHS = {
   testimonials: "/testimonials",
 };
 
-export const Dimens = {
-  loginForm: 480,
-};
-
 export const Duration = {
   apiTimeout: 60000,
 };

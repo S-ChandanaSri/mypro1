@@ -9,6 +9,15 @@ import homeVerifyIcon from "../../public/res/icons/house.svg";
 import supportIcon from "../../public/res/icons/support.svg";
 import moneyIcon from "../../public/res/icons/money.svg";
 import playIcon from "../../public/res/icons/play.svg";
+import pauseIcon from "../../public/res/icons/pause.svg";
+import faxIcon from "../../public/res/icons/fax.svg";
+import addressIcon from "../../public/res/icons/address.svg";
+import callIcon from "../../public/res/icons/call.svg";
+import logoFooterIcon from "../../public/res/icons/logo-footer.svg";
+import mailIcon from "../../public/res/icons/mail.svg";
+import smsIcon from "../../public/res/icons/sms.svg";
+import plusCircleIcon from "../../public/res/icons/plus-circle.svg";
+import minusCircleIcon from "../../public/res/icons/minus-circle.svg";
 
 import services1 from "../../public/res/images/infoCards/services1.svg";
 import services2 from "../../public/res/images/infoCards/services2.svg";
@@ -57,4 +66,13 @@ export const svgs = {
   support: supportIcon,
   money: moneyIcon,
   play: playIcon,
+  pause: pauseIcon,
+  fax: faxIcon,
+  address: addressIcon,
+  call: callIcon,
+  logoFooter: logoFooterIcon,
+  mail: mailIcon,
+  sms: smsIcon,
+  plusCircle: plusCircleIcon,
+  minusCircle: minusCircleIcon,
 };

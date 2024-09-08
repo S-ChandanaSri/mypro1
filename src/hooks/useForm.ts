@@ -1,9 +1,11 @@
-import { InputValue } from "@/constants/types";
+import { IInputValue } from "@/constants/types";
 import { useState } from "react";
 import { z, ZodSchema } from "zod";
 
 export const useForm = () => {
-  const [formState, setFormState] = useState<{ [key: string]: InputValue }>({});
+  const [formState, setFormState] = useState<{ [key: string]: IInputValue }>(
+    {},
+  );
 
   const handleInputChange =
     (field: string, schema: ZodSchema) =>

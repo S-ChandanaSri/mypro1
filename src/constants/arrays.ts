@@ -1,15 +1,21 @@
 import { PATHS, VIDEOS } from ".";
-import { InfoImages } from "./images";
+import { InfoImages, svgs } from "./images";
 import { strings } from "./strings";
-import { CardInfo, FAQ, LinkOption, VideoTestimonial } from "./types";
+import {
+  ICardInfo,
+  IFAQ,
+  IFooterConnectOption,
+  ILinkOption,
+  IVideoTestimonial,
+} from "./types";
 
-export const linkOptions: LinkOption[] = [
+export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
   { label: strings.navbar.features, page: PATHS.root, comp: "features" },
   { label: strings.navbar.aboutUs, page: PATHS.aboutUs },
 ];
 
-export const faqs: FAQ[] = [
+export const faqs: IFAQ[] = [
   {
     id: 1,
     question: "What types of student accommodation are available?",
@@ -42,7 +48,7 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export const OurServicesInfo: CardInfo[] = [
+export const OurServicesInfo: ICardInfo[] = [
   {
     icon: InfoImages.services1,
     label: "Discover Verified Properties",
@@ -65,7 +71,7 @@ export const OurServicesInfo: CardInfo[] = [
   },
 ];
 
-export const WhyChooseUsInfo: CardInfo[] = [
+export const WhyChooseUsInfo: ICardInfo[] = [
   {
     icon: InfoImages.features1,
     label: "Convenience and Social Life",
@@ -88,7 +94,7 @@ export const WhyChooseUsInfo: CardInfo[] = [
   },
 ];
 
-export const GetInTouchInfo: CardInfo[] = [
+export const GetInTouchInfo: ICardInfo[] = [
   {
     icon: InfoImages.getInTouch1,
     label: "Call Us",
@@ -107,7 +113,7 @@ export const GetInTouchInfo: CardInfo[] = [
   },
 ];
 
-export const VideoTestimonials: VideoTestimonial[] = [
+export const Testimonials: IVideoTestimonial[] = [
   {
     videoPath: VIDEOS.TestVideo1,
     label: "Albert Flores",
@@ -123,4 +129,118 @@ export const VideoTestimonials: VideoTestimonial[] = [
     label: "John Smith",
     subText: "CTO of Innovate",
   },
+];
+
+export const FooterConnectOptions: IFooterConnectOption[] = [
+  {
+    icon: svgs.call,
+    type: "Tel",
+    value: "310-437-2766",
+  },
+  {
+    icon: svgs.mail,
+    type: "Mail",
+    value: "unreal@outlook.com",
+  },
+  {
+    icon: svgs.address,
+    type: "Address",
+    value: "706 Campfire Ave. Meriden, CT 06450",
+  },
+  {
+    icon: svgs.fax,
+    type: "Fax",
+    value: "+1-000-0000",
+  },
+];
+
+export const FooterLinks: ILinkOption[][] = [
+  [
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+  ],
+  [
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+  ],
+  [
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+  ],
+  [
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+    {
+      label: "About Us",
+      page: PATHS.aboutUs,
+    },
+  ],
 ];

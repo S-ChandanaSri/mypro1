@@ -3,6 +3,8 @@ import { PATHS } from ".";
 export const strings = {
   //Core
   appName: "ZENDEN",
+  readMore: "Read More",
+  submit: "Submit",
   paths: {
     [PATHS.root]: "Landing",
     [PATHS.aboutUs]: "About Us",
@@ -14,6 +16,15 @@ export const strings = {
     services: "Services",
     features: "Features",
     aboutUs: "About Us",
+  },
+  footer: {
+    description:
+      "We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    newsletter: "Newsletter",
+    newsletterPromo:
+      "Be the first one to know about discounts, offers and events",
+    enterMail: "Enter your email",
+    allRightsReserved: "© 2000-2021, All Rights Reserved",
   },
   //Landing
   landing: {
@@ -44,6 +55,15 @@ export const strings = {
       subHeading:
         "Clarity gives you the blocks & components you need to create a truly professional website, landing page or admin panel for your SaaS.",
       seeAllReviews: "See all reviews by our customers",
+    },
+    faqs: {
+      heading: "Frequently Asked Questions",
+      subHeading:
+        "Everything you need to know about the student Accomodation and Housing",
+      stillHaveQuestions: "Still have questions?",
+      cantFindAnswer:
+        "Can't find the answer you're looking for? Please chat to our friendly team.",
+      getInTouch: "Get in touch",
     },
   },
   //SignUp/Login

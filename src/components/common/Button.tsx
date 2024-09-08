@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
-  `font-serif flex items-center justify-center text-md text-center shadow-sm transition-all duration-200`,
+  `font-serif flex items-center justify-center text-md text-center shadow-sm transition-all duration-200 font-medium`,
   {
     variants: {
       variant: {
@@ -88,7 +88,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {getIconNode(preIconNode)}
-        {children && <>&nbsp;{children}</>}
+        {children && <>&nbsp;{children}&nbsp;</>}
         {getIconNode(postIconNode)}
       </button>
     );
