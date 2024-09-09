@@ -18,6 +18,16 @@ import mailIcon from "../../public/res/icons/mail.svg";
 import smsIcon from "../../public/res/icons/sms.svg";
 import plusCircleIcon from "../../public/res/icons/plus-circle.svg";
 import minusCircleIcon from "../../public/res/icons/minus-circle.svg";
+import twitterIcon from "../../public/res/icons/twitter-icon.svg";
+// import facebookIcon from "";
+import linkedInIcon from "../../public/res/icons/linkedin-icon.svg";
+import instagramIcon from "../../public/res/icons/instagram-icon.svg";
+import missionIcon from "../../public/res/icons/mission.svg";
+import visionIcon from "../../public/res/icons/vision.svg";
+import valuesIcon from "../../public/res/icons/values.svg";
+import qualityIcon from "../../public/res/icons/quality.svg";
+import productIcon from "../../public/res/icons/product.svg";
+import resultIcon from "../../public/res/icons/result.svg";
 
 import services1 from "../../public/res/images/infoCards/services1.svg";
 import services2 from "../../public/res/images/infoCards/services2.svg";
@@ -33,13 +43,14 @@ import getInTouch1 from "../../public/res/images/infoCards/getInTouch1.svg";
 import getInTouch2 from "../../public/res/images/infoCards/getInTouch2.svg";
 import getInTouch3 from "../../public/res/images/infoCards/getInTouch3.svg";
 import getInTouch4 from "../../public/res/images/infoCards/getInTouch4.svg";
+import { SocialPlatforms } from "./types";
 
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
 };
 
-export const InfoImages = {
+export const INFO_IMAGES = {
   services1,
   services2,
   services3,
@@ -52,6 +63,24 @@ export const InfoImages = {
   getInTouch2,
   getInTouch3,
   getInTouch4,
+};
+
+export const TEAM_IMAGES = {
+  NAME1: "/res/images/teams/name1.png",
+  NAME2: "/res/images/teams/name2.png",
+  NAME3: "/res/images/teams/name3.png",
+  NAME4: "/res/images/teams/name4.png",
+  NAME5: "/res/images/teams/name5.png",
+  NAME6: "/res/images/teams/name6.png",
+  NAME7: "/res/images/teams/name4.png",
+  NAME8: "/res/images/teams/name8.png",
+};
+
+export const SOCIAL_ICONS = {
+  [SocialPlatforms.TWITTER]: twitterIcon,
+  // [SocialPlatforms.FACEBOOK]: ,
+  [SocialPlatforms.INSTAGRAM]: instagramIcon,
+  [SocialPlatforms.LINKEDIN]: linkedInIcon,
 };
 
 export const svgs = {
@@ -75,4 +104,10 @@ export const svgs = {
   sms: smsIcon,
   plusCircle: plusCircleIcon,
   minusCircle: minusCircleIcon,
+  mission: missionIcon,
+  vision: visionIcon,
+  values: valuesIcon,
+  quality: qualityIcon,
+  product: productIcon,
+  result: resultIcon,
 };

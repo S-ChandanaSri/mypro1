@@ -1,7 +1,9 @@
+"use client";
 import { cn } from "@/utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
@@ -39,6 +41,7 @@ export interface ButtonProps
   ref?: React.Ref<HTMLButtonElement>;
   preIconNode?: StaticImport;
   postIconNode?: StaticImport;
+  link?: string;
   iconSize?: number;
   disabled?: boolean;
 }
@@ -50,6 +53,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type,
       preIconNode,
       postIconNode,
+      link,
       iconSize,
       disabled,
       variant,
@@ -59,6 +63,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
+    const router = useRouter();
     const getIconNode = (iconNode?: StaticImport) => {
       return (
         iconNode && (
@@ -72,10 +77,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )
       );
     };
+
+    const handleClick = () => {
+      if (link) {
+        router.push(link);
+      } else {
+        props.onClick;
+      }
+    };
     return (
       <button
         type={type}
         disabled={disabled}
+        onClick={handleClick}
         ref={ref}
         className={cn(
           buttonVariants({

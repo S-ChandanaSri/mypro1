@@ -724,7 +724,6 @@ function Home() {
           cards={GetInTouchInfo}
         />
       </div>
-
       <VideoTestimonials />
       <FAQs />
     </div>

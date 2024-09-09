@@ -52,9 +52,7 @@ const VideoTestimonials = () => {
               key={idx}
               isPlaying={idx === activeTestimonial}
               togglePlaying={() => handleManualPlaying(idx)}
-              src={testimonial.videoPath}
-              title={testimonial.label}
-              subtitle={testimonial.subText}
+              {...testimonial}
             />
           ))}
         </Slider>
@@ -63,21 +61,19 @@ const VideoTestimonials = () => {
         {Testimonials.map((testimonial, idx) => (
           <VideoPlayer
             key={idx}
-            src={testimonial.videoPath}
             isPlaying={idx === activeTestimonial}
             togglePlaying={() => handleManualPlaying(idx)}
-            title={testimonial.label}
-            subtitle={testimonial.subText}
+            {...testimonial}
           />
         ))}
       </ul>
 
       <Button
-        onClick={() => router.push(PATHS.testimonials)}
         className="font-semibold"
         size="md"
         postIconNode={svgs.chevronRightUp}
         variant="link"
+        link={PATHS.testimonials}
       >
         {strings.landing.testimonials.seeAllReviews}
       </Button>

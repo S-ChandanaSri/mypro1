@@ -15,13 +15,8 @@ const InfoCards: React.FC<InfoCardsProps> = ({ title, subText, cards }) => {
         <p className="text-md font-light">{subText}</p>
       </h3>
       <ul className="grid w-max grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
-        {cards.map((value: ICardInfo, idx: number) => (
-          <ServiceCard
-            key={idx}
-            label={value.label}
-            body={value.body}
-            iconNode={value.icon}
-          />
+        {cards.map((cardInfo: ICardInfo, idx: number) => (
+          <ServiceCard key={idx} {...cardInfo} />
         ))}
       </ul>
     </div>

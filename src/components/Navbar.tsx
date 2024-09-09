@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
         preIconNode={svgs.chevronRightIn}
         size="md"
         variant={buttonVariant}
-        onClick={() => router.push(PATHS.login)}
+        link={PATHS.login}
       >
         {strings.paths[PATHS.login]}
       </Button>

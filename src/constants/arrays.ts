@@ -1,18 +1,65 @@
 import { PATHS, VIDEOS } from ".";
-import { InfoImages, svgs } from "./images";
+import { INFO_IMAGES, svgs, TEAM_IMAGES } from "./images";
 import { strings } from "./strings";
 import {
   ICardInfo,
   IFAQ,
   IFooterConnectOption,
   ILinkOption,
+  IProfileCard,
+  IQuality,
+  IStat,
   IVideoTestimonial,
+  SocialPlatforms,
 } from "./types";
 
 export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
   { label: strings.navbar.features, page: PATHS.root, comp: "features" },
   { label: strings.navbar.aboutUs, page: PATHS.aboutUs },
+];
+
+export const countries = [
+  { name: "Singapore", latLng: [1.3521, 103.8198] },
+  { name: "BouvetIsland", latLng: [54.4208, 3.3464] },
+  { name: "Bermuda", latLng: [32.3078, 64.7505] },
+  { name: "Andorra", latLng: [42.5063, 1.5218] },
+  { name: "AmericanSamoa", latLng: [14.271, 170.1322] },
+  { name: "ÅlandIslands", latLng: [60.1785, 19.9156] },
+  { name: "India", latLng: [20.5937, 78.9629] },
+];
+
+export const QualitiesInfo: IQuality[] = [
+  {
+    icon: svgs.mission,
+    label: "Our Mission",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
+  {
+    icon: svgs.vision,
+    label: "Our Vision",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
+  {
+    icon: svgs.values,
+    label: "Our Values",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
+  {
+    icon: svgs.quality,
+    label: "Quality",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
+  {
+    icon: svgs.product,
+    label: "Product",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
+  {
+    icon: svgs.result,
+    label: "Result",
+    body: "Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.",
+  },
 ];
 
 export const faqs: IFAQ[] = [
@@ -50,22 +97,22 @@ export const faqs: IFAQ[] = [
 
 export const OurServicesInfo: ICardInfo[] = [
   {
-    icon: InfoImages.services1,
+    icon: INFO_IMAGES.services1,
     label: "Discover Verified Properties",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.services2,
+    icon: INFO_IMAGES.services2,
     label: "Complete Short Application",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.services3,
+    icon: INFO_IMAGES.services3,
     label: "Complete Your Payment",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.services4,
+    icon: INFO_IMAGES.services4,
     label: "Congratulations! Your Booking Done",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
@@ -73,22 +120,22 @@ export const OurServicesInfo: ICardInfo[] = [
 
 export const WhyChooseUsInfo: ICardInfo[] = [
   {
-    icon: InfoImages.features1,
+    icon: INFO_IMAGES.features1,
     label: "Convenience and Social Life",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.features2,
+    icon: INFO_IMAGES.features2,
     label: "Hassle-free Living",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.features3,
+    icon: INFO_IMAGES.features3,
     label: "Safety and Security",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
   {
-    icon: InfoImages.features4,
+    icon: INFO_IMAGES.features4,
     label: "Support Services",
     body: "Student accommodation is often located close to campus, saving time on commutes and making it easier to get to classes and activities",
   },
@@ -96,19 +143,19 @@ export const WhyChooseUsInfo: ICardInfo[] = [
 
 export const GetInTouchInfo: ICardInfo[] = [
   {
-    icon: InfoImages.getInTouch1,
+    icon: INFO_IMAGES.getInTouch1,
     label: "Call Us",
   },
   {
-    icon: InfoImages.getInTouch2,
+    icon: INFO_IMAGES.getInTouch2,
     label: "Email Us",
   },
   {
-    icon: InfoImages.getInTouch3,
+    icon: INFO_IMAGES.getInTouch3,
     label: "Chat on Whatsapp",
   },
   {
-    icon: InfoImages.getInTouch4,
+    icon: INFO_IMAGES.getInTouch4,
     label: "Chat on Website",
   },
 ];
@@ -128,6 +175,112 @@ export const Testimonials: IVideoTestimonial[] = [
     videoPath: VIDEOS.TestVideo3,
     label: "John Smith",
     subText: "CTO of Innovate",
+  },
+];
+
+export const Stats: IStat[] = [
+  {
+    value: "2024",
+    label: "Join now",
+  },
+  {
+    value: "500+",
+    label: "Customers",
+  },
+  {
+    value: "70+",
+    label: "Houses rented",
+  },
+];
+
+export const ProfileCards: IProfileCard[] = [
+  {
+    profileImg: TEAM_IMAGES.NAME1,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME2,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME3,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME4,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME5,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME6,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME6,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
+  },
+  {
+    profileImg: TEAM_IMAGES.NAME8,
+    name: "Olivia Rhye",
+    title: "Founder & CEO",
+    body: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    links: {
+      [SocialPlatforms.TWITTER]: "https://x.com/home",
+      [SocialPlatforms.LINKEDIN]: "https://linkedin.com",
+      [SocialPlatforms.INSTAGRAM]: "https://instagram.io",
+    },
   },
 ];
 

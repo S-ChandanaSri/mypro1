@@ -92,6 +92,12 @@ export const PATHS = {
   testimonials: "/testimonials",
 };
 
+export const LINKS = {
+  supportMail: "support@zendenrents.com",
+  salesMail: "sales@zendenrents.com",
+  phone: "+919264901704",
+};
+
 export const Duration = {
   apiTimeout: 60000,
 };

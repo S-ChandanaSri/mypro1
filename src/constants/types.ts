@@ -29,8 +29,38 @@ export interface IVideoTestimonial {
   subText: string;
 }
 
+export interface IStat {
+  value: string;
+  label: string;
+}
+
+export interface IQuality {
+  icon: StaticImport;
+  label: string;
+  body: string;
+}
+
+export interface IProfileCard {
+  profileImg: string;
+  name: string;
+  title: string;
+  body: string;
+  links: {
+    [SocialPlatforms.TWITTER]: string;
+    [SocialPlatforms.LINKEDIN]: string;
+    [SocialPlatforms.INSTAGRAM]: string;
+  };
+}
+
 export interface IFooterConnectOption {
   icon: StaticImport;
   type: string;
   value: string;
+}
+
+export enum SocialPlatforms {
+  TWITTER = "TWITTER",
+  FACEBOOK = "FACEBOOK",
+  INSTAGRAM = "INSTAGRAM",
+  LINKEDIN = "LINKEDIN",
 }
