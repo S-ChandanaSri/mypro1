@@ -1,4 +1,4 @@
-import { ListingProvider } from './context/ListingContext';
+import { ListingProvider } from "./context/ListingContext";
 
 function MyApp({ Component, pageProps }) {
   return (

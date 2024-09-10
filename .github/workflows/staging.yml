@@ -1,11 +1,11 @@
 name: Build & Deploy to Vercel (Staging)
-env: 
+env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
     branches:
-      -  staging
+      - staging
 jobs:
   build:
     name: Build
@@ -31,4 +31,3 @@ jobs:
       - name: preview-url
         run: |
           echo ${{ steps.vercel-deploy.outputs.preview-url }}
-
