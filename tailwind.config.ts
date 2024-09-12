@@ -1,13 +1,13 @@
 import type { Config } from "tailwindcss";
-import { COLORS } from "./src/constants";
+import { COLORS, FONT_SIZES } from "./src/constants";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       screens: {
-        'xs': '520px', 
-        'xxs': '440px',
+        xs: "520px",
+        xxs: "440px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -16,6 +16,9 @@ const config: Config = {
       },
       colors: {
         ...COLORS,
+      },
+      fontSize: {
+        ...FONT_SIZES,
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
