@@ -1,6 +1,7 @@
 import { PATHS, VIDEOS } from ".";
 import { INFO_IMAGES, svgs, TEAM_IMAGES } from "./images";
 import { strings } from "./strings";
+import { cardproperty } from "./images";
 import {
   ICardInfo,
   IFAQ,
@@ -396,4 +397,87 @@ export const FooterLinks: ILinkOption[][] = [
       page: PATHS.aboutUs,
     },
   ],
+];
+
+export const Propertcardinfo: propertyinfo[] = [
+  {
+    icon: cardproperty.view1,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view2,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view3,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view4,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view5,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view6,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view7,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
+  {
+    icon: cardproperty.view8,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1:"Book Now",
+  },
 ];

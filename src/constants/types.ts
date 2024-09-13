@@ -1,5 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
+
 export interface IInputValue {
   value?: string;
   error?: string;
@@ -63,4 +64,15 @@ export enum SocialPlatforms {
   FACEBOOK = "FACEBOOK",
   INSTAGRAM = "INSTAGRAM",
   LINKEDIN = "LINKEDIN",
+}
+
+export interface propertyinfo{
+  icon:StaticImport;
+  icon1:StaticImport;
+  icon2:StaticImport;
+  icon3:StaticImport;
+  icon4:StaticImport;
+  label:string;
+  sublabel:string;
+  sublabel1:string;
 }
