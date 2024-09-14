@@ -19,13 +19,14 @@ import { strings } from "@/constants/strings";
 import { setErrorsFromZodError } from "@/utils/auth";
 import { loginReducers } from "@/redux/features/authSlice";
 import { useAppDispatch } from "@/redux/hooks";
+import { useAuth } from "@/hooks/useAuth";
 
 const Login: NextPage = () => {
   const { formState, setFormState, handleInputChange } = useForm();
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
   const dispatch = useAppDispatch();
-
+  const { isauthenticate, user } = useAuth();
   useEffect(() => {
     const hasError = Object.values(formState).some((input) => input?.error);
     setDisabled(hasError);
@@ -44,9 +45,9 @@ const Login: NextPage = () => {
       const data = UserLoginSchema.parse(payload);
       const res: any = await post_login(data);
       if (res?.status == 200) {
-        dispatch(loginReducers(res?.data?.user));
-        localStorage.setItem("accessToken", res?.data?.accessToken);
-        localStorage.setItem("refreshToken", res?.data?.refreshToken);
+        dispatch(loginReducers(res?.data?.data?.user));
+        localStorage.setItem("accessToken", res?.data?.data?.accessToken);
+        localStorage.setItem("refreshToken", res?.data?.data?.refreshToken);
       }
     } catch (err) {
       if (err instanceof z.ZodError) {

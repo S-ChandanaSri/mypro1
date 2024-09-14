@@ -9,13 +9,13 @@ import axios from "axios";
 const getAPIBaseUrl = (): string => {
   return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
 };
-
+const accessToken = localStorage?.getItem("accessToken");
 const client = axios.create({
   baseURL: getAPIBaseUrl(),
   responseType: "json",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    Authorization: `Bearer ${accessToken}`,
   },
   timeout: Duration.apiTimeout,
   validateStatus: () => true,
@@ -45,7 +45,7 @@ export async function refreshToken<T>() {
   }
 }
 
-// every authorized requests
+//example for  every authorized requests
 export async function authorized(payload: any) {
   try {
     const response = await client.post("/url", payload);
