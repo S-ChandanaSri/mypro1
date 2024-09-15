@@ -28,14 +28,14 @@ export default function ImageCarousel({ images }: any) {
   };
 
   return (
-    <div className="flex flex-col  h-[23rem]   px-6 md:w-[45rem] md:h-[35rem]  lg:w-[64rem]    lg:h-[26rem]   lg:flex-row   ">
+    <div className="flex h-[23rem] flex-col px-6 md:h-[35rem] md:w-[45rem] lg:h-[26rem] lg:w-[64rem] lg:flex-row">
       {/* Thumbnails */}
-      <div className="hidden lg:flex min-w-52 h-[26rem] flex-col gap-5 mr-2  overflow-y-auto scrollbar-thin">
+      <div className="scrollbar-thin mr-2 hidden h-[26rem] min-w-52 flex-col gap-5 overflow-y-auto lg:flex">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`border-2 relative   min-w-50 min-h-32 rounded-lg  ${
+            className={`min-w-50 relative min-h-32 rounded-lg border-2 ${
               index === selectedIndex ? "border-blue-500" : "border-transparent"
             }`}
           >
@@ -43,52 +43,50 @@ export default function ImageCarousel({ images }: any) {
               src={image.url}
               alt={image.alt}
               fill={true}
-              className="object-cover rounded-lg"
+              className="rounded-lg object-cover"
             />
           </button>
         ))}
       </div>
 
       {/* Selected Image */}
-      <div className="relative    w-[25rem] h-[19rem]   rounded-4 md:w-[45rem] md:h-[27rem] lg:h-[26rem]   lg:w-[50rem] ">
+      <div className="rounded-4 relative h-[19rem] w-[25rem] md:h-[27rem] md:w-[45rem] lg:h-[26rem] lg:w-[50rem]">
         <Image
           src={images[selectedIndex].url}
           alt={images[selectedIndex].alt}
           fill={true}
           // sizes="(min-width: 1024px) 207px, 124px"
-          className="object-cover rounded-md"
+          className="rounded-md object-cover"
         />
         <button
           onClick={handlePrevImage}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-r-md"
+          className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-r-md bg-gray-800 px-2 py-1 text-white"
         >
           &#8249;
         </button>
         <button
           onClick={handleNextImage}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-l-md"
+          className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-l-md bg-gray-800 px-2 py-1 text-white"
         >
           &#8250;
         </button>
       </div>
 
       {/* Mobile & Tablet Thumbnails */}
-      <div className="w-[25rem] flex  gap-9 lg:hidden  md:w-[45rem]  md:gap-11  mt-4  scrollbar-thin ">
+      <div className="scrollbar-thin mt-4 flex w-[25rem] gap-9 md:w-[45rem] md:gap-11 lg:hidden">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`border-2 relative w-28 md:w-52 h-24   rounded-lg ${
-              index === selectedIndex
-                ? "border-blue-500 "
-                : "border-transparent"
+            className={`relative h-24 w-28 rounded-lg border-2 md:w-52 ${
+              index === selectedIndex ? "border-blue-500" : "border-transparent"
             }`}
           >
             <Image
               src={image.url}
               alt={image.alt}
               fill={true}
-              className="w-28 md:w-52 h-24 rounded-lg  object-cover "
+              className="h-24 w-28 rounded-lg object-cover md:w-52"
             />
           </button>
         ))}
