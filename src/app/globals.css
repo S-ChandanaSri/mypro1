@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+.slider-container {
+  grid-area: slider;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.image-container {
+  margin: 0;
+  padding: 0;
+}
