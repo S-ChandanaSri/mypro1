@@ -54,7 +54,7 @@ const SignUp: NextPage = () => {
       <FormContainer variant="auth" onSubmit={onSignUpAsync}>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Input
-            name="first-name"
+            name="fname"
             type="text"
             error={formState.firstName?.error}
             variant={formState.firstName?.error ? "error" : null}
@@ -65,7 +65,7 @@ const SignUp: NextPage = () => {
             )}
           />
           <Input
-            name="last-name"
+            name="lname"
             type="text"
             error={formState.lastName?.error}
             variant={formState.lastName?.error ? "error" : null}
