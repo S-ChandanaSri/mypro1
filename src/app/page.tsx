@@ -4,7 +4,6 @@ import Image from 'next/image';
 import List from '@/components/root/Propertycard/List';
 import makiarrow from '../../public/res/icons/downArrow.svg';
 
-
 import {
   GetInTouchInfo,
   OurServicesInfo,
@@ -16,7 +15,6 @@ import InfoCards from "@/components/root/InfoCards";
 import Hero from "@/components/root/Hero";
 import VideoTestimonials from "@/components/root/VideoTestimonials";
 import FAQs from "@/components/root/FAQs";
-import SideSection from "@/components/roomView/sideSection";
 
 function Home() {
   return (

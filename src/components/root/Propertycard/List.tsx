@@ -1,32 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
-import makiarrow from '../../../../public/res/makiarrow.png';
 import { propertyinfo } from '@/constants/types';
 import { roomViewImages, roomViewSvgIcons } from "@/constants/images";
 import Button from '@/components/common/Button';
+import Card from './Card'; 
 
 const list = [1, 2, 3, 4, 5];
 
-
-interface InfoCardsProps{
-
-  title:string,
-  subtitle:string,
-  cards:propertyinfo[];
+interface InfoCardsProps {
+  title: string;
+  subtitle: string;
+  cards: propertyinfo[];
   option: boolean;
 }
 
-
-const List:React.FC<InfoCardsProps>=({cards=[],option})=>{
+const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
   return (
     <>
-    
-    {option ? (
-
-<div className="flex flex-col gap-8 ">
-{list?.map((items, index) => (
-  <div className="   flex lg:flex-row flex-col gap-2 " key={index}>
-    {/* images rectangle*/}
+      {option ? (
+        <div className="flex flex-col gap-8">
+          {list?.map((items, index) => (
+            
+            <div className="   flex lg:flex-row flex-col gap-2 " key={index}>
     <div className=" gap-1 flex lg:flex-row flex-col">
       <div className="relative lg:w-[17.4rem] lg:h-[16.6rem] w-[27.5rem] min-h-[13rem] rounded-sm">
         <Image
@@ -64,7 +59,6 @@ const List:React.FC<InfoCardsProps>=({cards=[],option})=>{
       </div>
     </div>
 
-    {/* details rectangle*/}
     <div className="w-full lg:h-64  justify-between  lg:ml-4 flex flex-col gap-6">
       <div className="  flex flex-col gap-1">
         <p className="text-lg">
@@ -151,90 +145,140 @@ const List:React.FC<InfoCardsProps>=({cards=[],option})=>{
       </div>
     </div>
   </div>
-))}
-</div>
-
-    ):(
-      <>
-      {cards.map((card,index)=>(
-
-        
-        <div key={index} className="h-[341px] w-[270px] rounded-[13px] pl-2 pt-4 xxs:ml-[4rem] xxs:w-[300px] xs:ml-[8rem] xs:w-[306px] sm:relative sm:right-[5rem] lg:w-[250px] xl:w-[306px]">
-              <Image
-                width={306}
-                height={228}
-                alt=""
-                src={card.icon}
-                className="h-[14rem] w-[20rem] rounded-[13px]"
+          ))}
+        </div>
+      ) : (
+        <>
+          {cards.map((card, index) => (
+            <React.Fragment key={index}>
+              <Card
+                
+                image={card.icon}
+                location={card.label}
+                icons={[card.icon2, card.icon3, card.icon4]}
+                sublabels={[card.sublabel, card.sublabel, card.sublabel]}
+                buttonLabel={card.sublabel1}
+                buttonVariant="card"
               />
-              <div className="h-[6rem] w-[18rem] pt-2">
-                <div className="h-[4rem] w-[18rem] rounded-[13px]">
-                  <div className="flex h-[26.37px] w-[18rem] items-center rounded-[13px]">
-                    <Image
-                      width={26.37}
-                      height={26.37}
-                      alt=""
-                      src={card.icon1}
-                      className="h-[26.37px] w-[26.37px] rounded-[13px]"
-                    />
-                    <p className="font-inter h-[18px] w-[256px] text-[13.19px] font-semibold leading-[17.8px] text-[#3D52A0]">
-                      {card.label}
-                    </p>
-                  </div>
-                  <div className="flex h-[20.88px] w-[280.11px] justify-between rounded-[13px] pl-2">
-                    <div className="flex h-[18.68px] w-[71.47px] rounded-[13px]">
-                      <Image
-                        width={18.68}
-                        height={18.68}
-                        alt=""
-                        src={card.icon2}
-                        className=" rounded-[13px]"
-                      />
-                      <p className="font-inter h-[1rem] w-[3rem] text-[12.09px] font-[600] leading-[16.32px]">
-                        {card.sublabel}
-                      </p>
-                    </div>
-                    <div className="flex h-[17.58px] w-[71.37px] rounded-[13px]">
-                      <Image
-                        width={17.58}
-                        height={17.58}
-                        alt=""
-                        src={card.icon3}
-                        className=" rounded-[13px]"
-                      />
-                      <p className="font-inter h-[1rem] w-[3rem] text-[12.09px] font-[600] leading-[16.32px]">
-                      {card.sublabel}
-                      </p>
-                    </div>
-                    <div className="flex h-[16.48px] w-[69.27px] rounded-[13px]">
-                      <Image
-                        width={16.48}
-                        height={16.48}
-                        alt=""
-                        src={card.icon4}
-                        className=" rounded-[13px]"
-                      />
-                      <p className="font-inter h-[1rem] w-[44px] text-[12.09px] font-[600] leading-[16.32px]">
-                      {card.sublabel}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="pr-[170px]">
-                  <Button variant="card">
-                  {card.sublabel1}
-                  </Button>
-                </div>
-              </div>
-              
-            </div>
-            ))}
-            </>
-    )} 
-
+            </React.Fragment>
+          ))}
+        </>
+        
+      )}
     </>
-    
+  );
+};
 
-  )
-}
 export default List;
+
+{/*<React.Fragment key={index}>
+              <Card
+                title="Super Collection Avenue near Gandhi Maidan"
+                content="Gandhi maidan, Patna"
+                image={roomViewImages.roomViewExterior} 
+                location={
+                  <span>
+                    Gandhi maidan, Patna&nbsp;&nbsp;
+                    <div className="relative w-3 h-4 inline-block">
+                      <Image
+                        src={roomViewSvgIcons.roomLocation}
+                        alt="Location icon"
+                        fill={true}
+                        className="object-cover"
+                      />
+                    </div>
+                    3.3 km
+                  </span>
+                }
+                icons={[
+                  roomViewSvgIcons.roomWifi,
+                  roomViewSvgIcons.roomTv,
+                  roomViewSvgIcons.roomCloud,
+                ]}
+                sublabels={["Free Wifi", "TV", "AC"]}
+                buttonLabel="Book Now"
+                buttonVariant="card"
+              />
+            </React.Fragment>
+            
+
+            //card==>
+
+            {cards.map((card,index)=>(
+    
+            
+                <div key={index} className="h-[341px] w-[270px] rounded-[13px] pl-2 pt-4 xxs:ml-[4rem] xxs:w-[300px] xs:ml-[8rem] xs:w-[306px] sm:relative sm:right-[5rem] lg:w-[250px] xl:w-[306px]">
+                      <Image
+                        width={306}
+                        height={228}
+                        alt=""
+                        src={card.icon}
+                        className="h-[14rem] w-[20rem] rounded-[13px]"
+                      />
+                      <div className="h-[6rem] w-[18rem] pt-2">
+                        <div className="h-[4rem] w-[18rem] rounded-[13px]">
+                          <div className="flex h-[26.37px] w-[18rem] items-center rounded-[13px]">
+                            <Image
+                              width={26.37}
+                              height={26.37}
+                              alt=""
+                              src={card.icon1}
+                              className="h-[26.37px] w-[26.37px] rounded-[13px]"
+                            />
+                            <p className="font-inter h-[18px] w-[256px] text-[13.19px] font-semibold leading-[17.8px] text-[#3D52A0]">
+                              {card.label}
+                            </p>
+                          </div>
+                          <div className="flex h-[20.88px] w-[280.11px] justify-between rounded-[13px] pl-2">
+                            <div className="flex h-[18.68px] w-[71.47px] rounded-[13px]">
+                              <Image
+                                width={18.68}
+                                height={18.68}
+                                alt=""
+                                src={card.icon2}
+                                className=" rounded-[13px]"
+                              />
+                              <p className="font-inter h-[1rem] w-[3rem] text-[12.09px] font-[600] leading-[16.32px]">
+                                {card.sublabel}
+                              </p>
+                            </div>
+                            <div className="flex h-[17.58px] w-[71.37px] rounded-[13px]">
+                              <Image
+                                width={17.58}
+                                height={17.58}
+                                alt=""
+                                src={card.icon3}
+                                className=" rounded-[13px]"
+                              />
+                              <p className="font-inter h-[1rem] w-[3rem] text-[12.09px] font-[600] leading-[16.32px]">
+                              {card.sublabel}
+                              </p>
+                            </div>
+                            <div className="flex h-[16.48px] w-[69.27px] rounded-[13px]">
+                              <Image
+                                width={16.48}
+                                height={16.48}
+                                alt=""
+                                src={card.icon4}
+                                className=" rounded-[13px]"
+                              />
+                              <p className="font-inter h-[1rem] w-[44px] text-[12.09px] font-[600] leading-[16.32px]">
+                              {card.sublabel}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="pr-[170px]">
+                          <Button variant="card">
+                          {card.sublabel1}
+                          </Button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    ))}
+            
+            
+            */}
+
+          
