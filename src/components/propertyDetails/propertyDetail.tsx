@@ -1,25 +1,26 @@
-import { propertySvgIcons } from "@/constants/images";
+import { svgs } from "@/constants/images";
 import Image from "next/image";
 import { strings } from "@/constants/strings";
+
 export default function PropertyDetail() {
   const accomodates = [
     {
-      icon: propertySvgIcons.propertyAlltable,
+      icon: svgs.propertyAlltable,
       itemName: "All tables",
       quantity: 12,
     },
     {
-      icon: propertySvgIcons.propertyLounges,
+      icon: svgs.propertyLounges,
       itemName: "In Lounges",
       quantity: 7,
     },
     {
-      icon: propertySvgIcons.propertyTotalCapactiy,
+      icon: svgs.propertyTotalCapactiy,
       itemName: "Maximum Total",
       quantity: 6,
     },
     {
-      icon: propertySvgIcons.propertySqft,
+      icon: svgs.propertySqft,
       itemName: "Sq ft.",
       quantity: 925,
     },
@@ -40,48 +41,48 @@ export default function PropertyDetail() {
   ];
   const ammenities = [
     {
-      icon: propertySvgIcons.propertyAc,
+      icon: svgs.propertyAc,
       itemName: "AC",
     },
     {
-      icon: propertySvgIcons.propertyTv,
+      icon: svgs.propertyTv,
       itemName: "Tv",
     },
     {
-      icon: propertySvgIcons.propertyWideScreenTv,
+      icon: svgs.propertyWideScreenTv,
       itemName: "Widescreen Tv",
     },
     {
-      icon: propertySvgIcons.propertySkyLight,
+      icon: svgs.propertySkyLight,
       itemName: "Skylight",
     },
     {
-      icon: propertySvgIcons.propertyWhiteBoards,
+      icon: svgs.propertyWhiteBoards,
       itemName: "Whiteboards",
     },
     {
-      icon: propertySvgIcons.propertyEnsuiteKitchen,
+      icon: svgs.propertyEnsuiteKitchen,
       itemName: "Ensuite Kitchen",
     },
   ];
   return (
-    <div className="lg:w-[67rem] flex flex-col gap-7 font-serif ">
-      <div className="flex flex-row justify-between  px-6    py-2">
-        <div className="  flex flex-col gap-3">
-          <div className="flex text-[#3D52A0] items-center gap-1 text-md">
+    <div className="flex flex-col gap-7 font-serif lg:w-[67rem]">
+      <div className="flex flex-row justify-between px-6 py-2">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-1 text-md text-[#3D52A0]">
             London{" "}
-            <div className="relative w-2 h-3  ">
+            <div className="relative h-3 w-2">
               <Image
-                src={propertySvgIcons.propertyRightArrow}
+                src={svgs.propertyRightArrow}
                 fill={true}
                 alt="stars"
                 className="object-cover"
               />
             </div>{" "}
             soho{" "}
-            <div className="relative w-4 h-4  ">
+            <div className="relative h-4 w-4">
               <Image
-                src={propertySvgIcons.propertyLocation}
+                src={svgs.propertyLocation}
                 fill={true}
                 alt="stars"
                 className="object-cover"
@@ -90,11 +91,11 @@ export default function PropertyDetail() {
             view on map
           </div>
           <div className="flex text-xl">21 Poland Street,#2</div>
-          <div className="flex items-center gap-1 text-[#3D52A0] ">
+          <div className="flex items-center gap-1 text-[#3D52A0]">
             <span className="text-xl">4.8</span>
-            <div className="relative w-4 h-4 ">
+            <div className="relative h-4 w-4">
               <Image
-                src={propertySvgIcons.propertyStar}
+                src={svgs.propertyStar}
                 fill={true}
                 alt="stars"
                 className="object-cover"
@@ -104,9 +105,9 @@ export default function PropertyDetail() {
           </div>
         </div>
 
-        <div className="relative w-6 h-6">
+        <div className="relative h-6 w-6">
           <Image
-            src={propertySvgIcons.propertyLike}
+            src={svgs.propertyLike}
             fill={true}
             alt="stars"
             className="object-cover"
@@ -116,16 +117,16 @@ export default function PropertyDetail() {
 
       <hr className="bg-neutral-950" />
 
-      <div className="px-6   flex md:flex-row flex-col justify-between    gap-5 md:gap-14   text-xl">
-        <div className="flex flex-col  gap-6    w-full ">
+      <div className="flex flex-col justify-between gap-5 px-6 text-xl md:flex-row md:gap-14">
+        <div className="flex w-full flex-col gap-6">
           <p className="flex">{strings.propertyDetails.accomodates}</p>
           {accomodates?.map((item, index) => (
             <div
-              className="flex flex-row  justify-between text-neutral-600"
+              className="flex flex-row justify-between text-neutral-600"
               key={index}
             >
               <div className="flex flex-row gap-4">
-                <div className="relative w-5 h-5 ">
+                <div className="relative h-5 w-5">
                   <Image
                     src={item.icon}
                     fill={true}
@@ -140,11 +141,11 @@ export default function PropertyDetail() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-6   w-full ">
+        <div className="flex w-full flex-col gap-6">
           <p className="flex">{strings.propertyDetails.openingHours}</p>
           {openingHours?.map((item, index) => (
             <div
-              className="flex  flex-row  justify-between text-neutral-700"
+              className="flex flex-row justify-between text-neutral-700"
               key={index}
             >
               <p>{item?.days}</p>
@@ -154,7 +155,7 @@ export default function PropertyDetail() {
         </div>
       </div>
       <hr className="bg-neutral-950" />
-      <div className=" px-6  flex flex-col gap-y-8   md:text-xl">
+      <div className="flex flex-col gap-y-8 px-6 md:text-xl">
         <div>{strings.propertyDetails.ammenities}</div>
         <div className="grid grid-cols-3 grid-rows-2 gap-6">
           {ammenities?.map((item, index) => (
@@ -162,7 +163,7 @@ export default function PropertyDetail() {
               className="flex flex-row gap-1 text-nowrap text-neutral-700"
               key={index}
             >
-              <div className="relative w-5 h-5 ">
+              <div className="relative h-5 w-5">
                 <Image
                   src={item.icon}
                   fill={true}
@@ -176,7 +177,7 @@ export default function PropertyDetail() {
         </div>
       </div>
       <hr className="bg-neutral-950" />
-      <div className="flex flex-col  px-6      gap-4        text-xl">
+      <div className="flex flex-col gap-4 px-6 text-xl">
         <p>{strings.propertyDetails.roomServices}</p>
         <p className="text-neutral-700">
           Lorem ipsum dolor sit amet consectetur. Lacus et integer enim vitae
