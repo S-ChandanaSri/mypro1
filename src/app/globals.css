@@ -37,15 +37,15 @@
       white 100%
     );
   }
-}
-.background-list {
-  background: linear-gradient(
-    to bottom,
-    #394b8c 0px,
-    #394b8c 100px 300px,
-    white 100px,
-    white 100%
-  );
+  .background-list {
+    background: linear-gradient(
+      to bottom,
+      #394b8c 0px,
+      #394b8c 100px 300px,
+      white 100px,
+      white 100%
+    );
+  }
 }
 
 .scrollbar-thin::-webkit-scrollbar {
