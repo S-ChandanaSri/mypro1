@@ -31,7 +31,7 @@ const AboutUs: NextPage = () => {
         >
           {strings.aboutUs.join}
         </Button>
-        <ul className="flex w-full justify-between py-24">
+        <ul className="flex flex-1 justify-between py-24">
           {Stats.map((stat: IStat, idx: number) => (
             <Stat key={idx} value={stat.value} label={stat.label} />
           ))}

@@ -1,4 +1,7 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props";
 
 export interface IInputValue {
   value?: string;
@@ -63,4 +66,38 @@ export enum SocialPlatforms {
   FACEBOOK = "FACEBOOK",
   INSTAGRAM = "INSTAGRAM",
   LINKEDIN = "LINKEDIN",
+}
+
+export interface ICarouselImages {
+  images: {
+    url: StaticImageData;
+    alt: string;
+  }[];
+}
+
+export interface IAccommodate {
+  icon: string;
+  itemName: string;
+  quantity: number;
+}
+
+export interface IOpeningHours {
+  days: string;
+  hours: string;
+}
+
+export interface IAmenity {
+  icon: string;
+  itemName: string;
+}
+
+export interface IPropertyDetails {
+  location: string[];
+  address: string;
+  overallRating: number;
+  noOfRatings: number;
+  roomServices: string;
+  accomodates: IAccommodate[];
+  openingHours: IOpeningHours[];
+  ammenities: IAmenity[];
 }
