@@ -4,6 +4,7 @@ import ImageCarousel from "@/components/propertyDetails/ImageCarousel";
 import PropertiesList from "../../components/propertyDetails/propertiesList";
 import PropertyDetail from "../../components/propertyDetails/propertyDetail";
 import { propertyDetailsImages } from "@/constants/images";
+import PropertiesListDesktop from "@/components/propertyDetails/propertiesListDesktop";
 
 export default function PropertyDetails() {
   const images = [
@@ -15,11 +16,16 @@ export default function PropertyDetails() {
 
   const properties = [1, 2, 3];
   return (
-    <div className="relative flex flex-col font-serif">
-      <div className="background">
-        <ImageCarousel images={images} />
+    <div className="flex flex-col items-center pt-[92px] font-serif md:items-stretch md:pt-[72px]">
+      <div className="lg:flex lg:flex-row">
+        <div>
+          <div className="background">
+            <ImageCarousel images={images} />
+          </div>
+          <PropertyDetail />
+        </div>
+        <PropertiesListDesktop />
       </div>
-      <PropertyDetail />
       <PropertiesList />
     </div>
   );

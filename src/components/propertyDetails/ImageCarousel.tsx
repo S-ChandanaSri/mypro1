@@ -28,14 +28,14 @@ export default function ImageCarousel({ images }: any) {
   };
 
   return (
-    <div className="flex h-[23rem] flex-col px-6 md:h-[35rem] md:w-[45rem] lg:h-[26rem] lg:w-[64rem] lg:flex-row">
+    <div className="flex h-[23rem] flex-col items-center pt-8 md:h-[35rem] lg:h-[26rem] lg:flex-row lg:px-6 2xl:h-full 2xl:w-full 2xl:px-20">
       {/* Thumbnails */}
-      <div className="scrollbar-thin mr-2 hidden h-[26rem] min-w-52 flex-col gap-5 overflow-y-auto lg:flex">
+      <div className="scrollbar-thin mr-5 hidden h-[26rem] min-w-52 flex-col gap-5 overflow-y-auto lg:flex 2xl:mr-10 2xl:h-[32rem] 2xl:min-w-80">
         {images.map((image: any, index: any) => (
           <button
             key={index}
             onClick={() => handleImageClick(index)}
-            className={`min-w-50 relative min-h-32 rounded-lg border-2 ${
+            className={`min-w-50 relative min-h-32 rounded-lg border-2 2xl:min-h-40 ${
               index === selectedIndex ? "border-blue-500" : "border-transparent"
             }`}
           >
@@ -50,7 +50,7 @@ export default function ImageCarousel({ images }: any) {
       </div>
 
       {/* Selected Image */}
-      <div className="rounded-4 relative h-[19rem] w-[25rem] md:h-[27rem] md:w-[45rem] lg:h-[26rem] lg:w-[50rem]">
+      <div className="rounded-4 relative h-[19rem] w-[25rem] md:h-[27rem] md:w-[45rem] lg:h-[26rem] lg:w-[50rem] 2xl:h-[34rem] 2xl:w-full">
         <Image
           src={images[selectedIndex].url}
           alt={images[selectedIndex].alt}
@@ -60,13 +60,13 @@ export default function ImageCarousel({ images }: any) {
         />
         <button
           onClick={handlePrevImage}
-          className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-r-md bg-gray-800 px-2 py-1 text-white"
+          className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-r-md bg-neutral-800/90 px-2 py-1 text-neutral-50"
         >
           &#8249;
         </button>
         <button
           onClick={handleNextImage}
-          className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-l-md bg-gray-800 px-2 py-1 text-white"
+          className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-l-md bg-neutral-800/90 px-2 py-1 text-neutral-50"
         >
           &#8250;
         </button>

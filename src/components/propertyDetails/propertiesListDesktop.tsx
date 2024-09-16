@@ -2,7 +2,7 @@ import { strings } from "@/constants/strings";
 import Image from "next/image";
 import { svgs } from "@/constants/images";
 import { propertyDetailsImages } from "@/constants/images";
-export default function PropertiesList() {
+export default function PropertiesListDesktop() {
   const images = [
     { url: propertyDetailsImages.propertyInterior1, alt: "Interior1" },
     { url: propertyDetailsImages.propertyInterior2, alt: "Interior2" },
@@ -10,8 +10,8 @@ export default function PropertiesList() {
     { url: propertyDetailsImages.propertyExterior, alt: "Exterior" },
   ];
   return (
-    <div className="m-2 flex w-[19rem] flex-col gap-12 rounded-md border border-gray-500 text-neutral-950 md:ml-11 md:flex-row md:border-none lg:absolute lg:left-[69rem] lg:ml-0 lg:mt-0 lg:hidden lg:flex-col lg:border lg:pt-5">
-      <div className="h-fit min-w-[19rem] rounded-md border-[1px] border-gray-400 bg-white">
+    <div className="background-list hidden flex-col gap-12 pt-5 text-neutral-950 lg:flex lg:px-5 xl:px-10">
+      <div className="h-fit min-w-[19rem] rounded-md border border-gray-400 bg-white">
         <div className="p-5">
           <div className="flex flex-row gap-2">
             <div className="relative h-7 w-7">
@@ -48,7 +48,7 @@ export default function PropertiesList() {
         <hr />
 
         <div className="flex flex-col gap-5 p-5 text-neutral-700">
-          <button className="h-12 rounded-md border-[1px] border-gray-400 bg-[#3D52A0] text-lg text-neutral-50">
+          <button className="h-12 rounded-md border border-gray-400 bg-[#3D52A0] text-lg text-neutral-50">
             {strings.propertyDetails.reservation.reserve}
           </button>
           <p className="text-xs">
@@ -66,7 +66,7 @@ export default function PropertiesList() {
       <div className="flex flex-col gap-5 lg:hidden">
         {images?.map((image: any, index: any) => (
           <>
-            <div className="h-64 border-[1px] border-gray-400">
+            <div className="h-64 border border-gray-400">
               <div className="relative h-40 w-[19rem]">
                 <Image
                   src={image.url}
@@ -127,7 +127,7 @@ export default function PropertiesList() {
       <div className="hidden lg:block">
         {images?.map((image, index) => (
           <>
-            <div className="border-[1px] border-gray-400">
+            <div className="border border-gray-400">
               <div className="relative h-40 w-[19rem]">
                 <Image
                   src={image.url}

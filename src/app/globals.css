@@ -24,12 +24,27 @@
 }
 
 .background {
-  /* Full height of the viewport */
+  background: linear-gradient(to bottom, #3e008c 60%, #fcfcfd 40%);
+}
 
+@media screen and (min-width: 1024px) {
+  .background {
+    background: linear-gradient(
+      to bottom,
+      #3e008c 0px,
+      #3e008c 100px 300px,
+      white 100px,
+      white 100%
+    );
+  }
+}
+.background-list {
   background: linear-gradient(
     to bottom,
-    #3e008c 60%,
-    /* 70% color */ #fcfcfd 40% /* 30% color */
+    #3e008c 0px,
+    #3e008c 100px 300px,
+    white 100px,
+    white 100%
   );
 }
 

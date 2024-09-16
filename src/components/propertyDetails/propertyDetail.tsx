@@ -66,7 +66,7 @@ export default function PropertyDetail() {
     },
   ];
   return (
-    <div className="flex flex-col gap-7 font-serif lg:w-[67rem]">
+    <div className="flex flex-col gap-7 font-serif lg:mt-5 lg:w-[67rem] xl:w-full">
       <div className="flex flex-row justify-between px-6 py-2">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-1 text-md text-[#3D52A0]">
