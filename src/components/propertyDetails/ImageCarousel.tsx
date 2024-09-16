@@ -4,13 +4,12 @@ import Image from "next/image";
 export default function ImageCarousel({ images }: any) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // Slideshow effect
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 9000); // Change the image every 2 seconds
+    }, 9000);
 
-    return () => clearInterval(interval); // Clear interval on component unmount
+    return () => clearInterval(interval);
   }, [images.length]);
 
   const handleImageClick = (index: any) => {
@@ -36,7 +35,9 @@ export default function ImageCarousel({ images }: any) {
             key={index}
             onClick={() => handleImageClick(index)}
             className={`min-w-50 relative min-h-32 rounded-lg border-2 2xl:min-h-40 ${
-              index === selectedIndex ? "border-blue-500" : "border-transparent"
+              index === selectedIndex
+                ? "bg-secondaryWashed-800"
+                : "border-transparent"
             }`}
           >
             <Image
@@ -79,7 +80,9 @@ export default function ImageCarousel({ images }: any) {
             key={index}
             onClick={() => handleImageClick(index)}
             className={`relative h-24 w-28 rounded-lg border-2 md:w-52 ${
-              index === selectedIndex ? "border-blue-500" : "border-transparent"
+              index === selectedIndex
+                ? "bg-secondaryWashed-800"
+                : "border-transparent"
             }`}
           >
             <Image

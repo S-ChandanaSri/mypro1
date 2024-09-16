@@ -24,15 +24,15 @@
 }
 
 .background {
-  background: linear-gradient(to bottom, #3e008c 60%, #fcfcfd 40%);
+  background: linear-gradient(to bottom, #394b8c 60%, #fcfcfd 40%);
 }
 
 @media screen and (min-width: 1024px) {
   .background {
     background: linear-gradient(
       to bottom,
-      #3e008c 0px,
-      #3e008c 100px 300px,
+      #394b8c 0px,
+      #394b8c 100px 300px,
       white 100px,
       white 100%
     );
@@ -41,8 +41,8 @@
 .background-list {
   background: linear-gradient(
     to bottom,
-    #3e008c 0px,
-    #3e008c 100px 300px,
+    #394b8c 0px,
+    #394b8c 100px 300px,
     white 100px,
     white 100%
   );

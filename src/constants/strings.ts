@@ -122,6 +122,8 @@ export const strings = {
       },
     },
   },
+
+  //propertyDetails page
   propertyDetails: {
     reservation: {
       dateTime: "Choose a date and time",
@@ -137,5 +139,7 @@ export const strings = {
     openingHours: "Opening hours",
     ammenities: "Ammenities",
     roomServices: "Additional In-room Services",
+    viewOnMap: "view on map",
+    ratings: "Ratings",
   },
 };
