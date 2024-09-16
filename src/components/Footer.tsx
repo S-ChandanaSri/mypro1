@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           <Image width={20} height={20} alt="" src={svgs.sms} />
           <input
             placeholder={strings.footer.enterMail}
-            className="w-full bg-transparent text-netrual-50"
+            className="flex-1 bg-transparent text-netrual-50"
           />
           <Button variant="baseDark" className="h-14 w-48 rounded-xl text-lg">
             {strings.submit}

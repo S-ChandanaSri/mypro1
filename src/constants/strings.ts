@@ -27,6 +27,7 @@ export const strings = {
     enterMail: "Enter your email",
     allRightsReserved: "© 2000-2021, All Rights Reserved",
   },
+
   //Landing
   landing: {
     heading: "Reserve Your Ideal Holiday",
@@ -67,6 +68,7 @@ export const strings = {
       getInTouch: "Get in touch",
     },
   },
+
   //About Us
   aboutUs: {
     title: "About Us",
@@ -123,10 +125,10 @@ export const strings = {
     },
   },
 
-  //propertyDetails page
+  //Property
   propertyDetails: {
     reservation: {
-      dateTime: "Choose a date and time",
+      dateTime: "Choose a Date and Time",
       reserve: "Reserve now",
       instruction1: "No charges until your reservation begins",
       instruction2: "Cancel for free upto 2 hours before",
@@ -139,7 +141,7 @@ export const strings = {
     openingHours: "Opening hours",
     ammenities: "Ammenities",
     roomServices: "Additional In-room Services",
-    viewOnMap: "view on map",
+    viewOnMap: "View on Map",
     ratings: "Ratings",
   },
 };

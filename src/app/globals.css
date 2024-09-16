@@ -10,6 +10,26 @@
   outline: none;
 }
 
+.top-gradient {
+  background: linear-gradient(
+    to bottom,
+    #394b8c 0%,
+    #394b8c 10%,
+    transparent 10%
+  );
+}
+
+@media (min-width: 1024px) {
+  .top-gradient {
+    background: linear-gradient(
+      to bottom,
+      #394b8c 0%,
+      #394b8c 25%,
+      transparent 25%
+    );
+  }
+}
+
 .slider-container {
   grid-area: slider;
 }
@@ -23,41 +43,11 @@
   padding: 0;
 }
 
-.background {
-  background: linear-gradient(to bottom, #394b8c 60%, #fcfcfd 40%);
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-@media screen and (min-width: 1024px) {
-  .background {
-    background: linear-gradient(
-      to bottom,
-      #394b8c 0px,
-      #394b8c 100px 300px,
-      white 100px,
-      white 100%
-    );
-  }
-  .background-list {
-    background: linear-gradient(
-      to bottom,
-      #394b8c 0px,
-      #394b8c 100px 300px,
-      white 100px,
-      white 100%
-    );
-  }
-}
-
-.scrollbar-thin::-webkit-scrollbar {
-  width: 4px; /* Width of the scrollbar */
-  height: 4px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-track {
-  background: transparent;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

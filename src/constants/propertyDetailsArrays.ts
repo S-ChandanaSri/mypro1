@@ -38,11 +38,10 @@ export const PropertyList = [
 ];
 
 export const PropertyDetailsData = {
-  city: "London",
-  area: "soho",
+  location: ["London", "Soho"],
   address: "21 Poland Street,#2",
-  overallRating: "4.8",
-  noOfRatings: "83",
+  overallRating: 4.8,
+  noOfRatings: 83,
   roomServices:
     "Lorem ipsum dolor sit amet consectetur. Lacus et integer enim vitae odio sed. Aliquam volutpat neque accumsan tincidunt velit quam. Condimentum integer sed in scelerisque sit in quis et.",
   accomodates: [
