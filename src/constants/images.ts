@@ -3,8 +3,6 @@ import filterGuestHouse from "../../public/res/icons/Vectorguesthouse.svg";
 import filterApartment from "../../public/res/icons/Vectorappartment.svg";
 import filterXcross from "../../public/res/icons/Vectorxcross.svg";
 
-import contactUsBg from "../../public/res/images/backgrounds/contactUs.jpg";
-
 export const filterOptionSvgIcons = {
   filterHouse,
   filterApartment,

@@ -3,6 +3,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import FormContainer from "@/components/common/FormContainer";
 import BackgroundImageContainer from "@/components/common/BackgroundImageContainer";
 import { BACKGROUNDS } from "@/constants/images";
+import { strings } from "@/constants/strings";
 import Link from "next/link";
 interface FormData {
   firstName: string;
@@ -125,61 +126,63 @@ export default function ContactUs() {
       backgroundImage={BACKGROUNDS.CONTACTUS_IMAGE}
       className="  flex justify-center items-center"
     >
-      <div className="flex flex-col items-center w-[26.6rem]    md:w-fit bg-neutral-50 rounded-lg p-1 md:p-5">
-        <div className="flex flex-col  md:px-8 md:gap-8 items-center">
-          <div className="  text-[#002855] text-md">Contact us</div>
-          <div className="text-2xl">Get in touch</div>
+      <div className="flex flex-col items-center w-[26.6rem] max-h-screen   md:w-fit bg-neutral-50 rounded-lg p-1 md:p-5 md:py-2">
+        <div className="flex flex-col  md:px-8 md:gap-2 items-center">
+          <div className="  text-secondary-900 text-md">
+            {strings.contactUs.contactUs}
+          </div>
+          <div className="text-2xl">{strings.contactUs.getInTouch}</div>
           <div className=" text-neutral-600 text-lg">
-            We&apos;d love to hear from you. Please fill out this form.
+            {strings.contactUs.weLoveLine}
           </div>
         </div>
 
         <FormContainer onSubmit={handleSubmit} variant="contactUs">
           <div className=" gap-4 flex md:flex-row flex-col ">
-            <div className=" flex flex-col items-start gap-2">
-              <label>First name</label>
+            <div className=" flex flex-col items-start gap-1">
+              <label>{strings.contactUs.labelNames.firstName}</label>
               <input
                 type="text"
                 name="firstName"
                 placeholder="First name"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="border border-neutral-600 w-full  p-3 rounded-2 gap-2"
+                className="border border-neutral-600 w-full  p-3 py-1 rounded-2 "
               />
               {errors.firstName && (
                 <p className="text-red-500">{errors.firstName}</p>
               )}
             </div>
             <div className=" flex flex-col items-start gap-2">
-              <label>Last name</label>
+              <label>{strings.contactUs.labelNames.lastName}</label>
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last name"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="border border-neutral-600 p-3 w-full rounded-2 gap-2"
+                className="border border-neutral-600 w-full p-3 py-1 rounded-2 "
               />
               {errors.lastName && (
                 <p className="text-red-500">{errors.lastName}</p>
               )}
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <label>Email</label>
+          <div className="flex flex-col gap-1">
+            <label>{strings.contactUs.labelNames.email}</label>
             <input
               type="email"
               name="email"
               placeholder="you@company.com"
               value={formData.email}
               onChange={handleChange}
-              className="border border-neutral-600 p-3 rounded-2 gap-2"
+              className="border border-neutral-600 p-3 py-1 rounded-2 "
             />
             {errors.email && <p className="text-red-500">{errors.email}</p>}
           </div>
           <div className=" flex flex-col gap-2">
-            <label>Phone number</label>
-            <div className="flex flex-row border border-neutral-600 p-3  rounded-2 gap-2">
+            <label>{strings.contactUs.labelNames.phoneNumbers}</label>
+            <div className="flex flex-row border border-neutral-600 p-3  rounded-2 py-1">
               <select
                 name="countryCode"
                 onChange={handleChange}
@@ -201,13 +204,13 @@ export default function ContactUs() {
             )}
           </div>
           <div className=" flex flex-col gap-2">
-            <label>Message</label>
+            <label>{strings.contactUs.labelNames.message}</label>
             <textarea
               name="message"
               placeholder="Your message"
               value={formData.message}
               onChange={handleChange}
-              className=" h-32 rounded-lg border p-2  border-neutral-600"
+              className=" h-32 rounded-lg border p-3 py-1  border-neutral-600"
             ></textarea>
             {errors.message && <p className="text-red-500">{errors.message}</p>}
           </div>
@@ -219,18 +222,18 @@ export default function ContactUs() {
               onChange={handleChange}
             />
             <p className="text-md">
-              You agree to our friendly{" "}
+              {strings.contactUs.labelNames.agreement}
               <Link href="#" className="underline text-blue-900 ">
-                privacy policy
+                {strings.contactUs.labelNames.privacyPolicy}
               </Link>
             </p>
             {errors.agree && <p className="text-red-500">{errors.agree}</p>}
           </div>
           <button
             type="submit"
-            className=" text-neutral-50 text-md  hover:bg-[#05458e] bg-[#002855] border-[1px] rounded-lg p-4"
+            className=" text-neutral-50 text-md  hover:bg-secondary-500 bg-secondary-900 border-[1px] rounded-lg p-4"
           >
-            Send message
+            {strings.contactUs.labelNames.sendMessage}
           </button>
         </FormContainer>
       </div>

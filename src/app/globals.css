@@ -36,3 +36,13 @@ img {
   margin: 0;
   padding: 0;
 }
+
+.popup {
+  position: fixed; /* Keep popup above other elements */
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+}

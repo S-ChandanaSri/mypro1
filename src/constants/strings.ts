@@ -96,4 +96,37 @@ export const strings = {
       priceRange: "Price Range",
     },
   },
+
+  filterOptionFlow: {
+    filters: "Filters",
+    priceRange: "Price Range",
+    minimum: "Minimum",
+    maximum: "Maximum",
+    bedsAndBathrooms: "Beds and bathrooms",
+    beds: "Beds",
+    bathrooms: "Bathrooms",
+    any: "Any",
+    propertyTypes: "Property type",
+    amenities: "Amenities",
+    essentials: "Essentials",
+    hostLanguage: "Host Language",
+    showMore: "Show more",
+    clearAll: "Clear all",
+  },
+
+  contactUs: {
+    contactUs: "Contact us",
+    getInTouch: "Get in touch",
+    weLoveLine: "We'd love to hear from you. Please fill out this form.",
+    labelNames: {
+      firstName: "First name",
+      lastName: "Last name",
+      email: "Email",
+      phoneNumbers: "Phone number",
+      message: "Message",
+      agreement: "You agree to our friendly",
+      privacyPolicy: "privacy policy",
+      sendMessage: "Send message",
+    },
+  },
 };

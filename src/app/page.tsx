@@ -1,66 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
-import Image from "next/image";
-import img1 from "../app/_assets/images/Logo1.png";
-import backgroundImg from "../../public/background.jpg";
-import material from "../app/_assets/images/material.png";
-import user from "../app/_assets/images/mdi_user.png";
-import quill from "../app/_assets/images/quill.png";
-import homeverify from "../app/_assets/images/homeverify.png";
-import bxsupport from "../app/_assets/images/bxsupport.png";
-import akar from "../app/_assets/images/akar.png";
-import searchline from "../app/_assets/images/searchline.png";
-import image6 from "../app/_assets/images/image6.png";
-import image7 from "../app/_assets/images/image7.png";
-import image5 from "../app/_assets/images/image5.png";
-import image4 from "../app/_assets/images/image4.png";
-import image3 from "../app/_assets/images/image3.png";
-import image2 from "../app/_assets/images/image2.png";
-import Frame39907 from "../app/_assets/images/Frame39907.png";
-import Frame39908 from "../app/_assets/images/Frame39908.png";
-import makiarrow from "../app/_assets/images/makiarrow.png";
-import view1 from "../app/_assets/images/view1.jpg";
-import mingcute from "../app/_assets/images/mingcute.png";
-import mdibed from "../app/_assets/images/mdibed.png";
-import mdigraphbox from "../app/_assets/images/mdigraphbox.png";
-import mdigraphline from "../app/_assets/images/mdigraphline.png";
-import quillblack from "../app/_assets/images/quillblack.png";
-import view2 from "../app/_assets/images/view2.jpg";
-import view3 from "../app/_assets/images/view3.jpg";
-import view4 from "../app/_assets/images/view4.jpg";
-import view5 from "../app/_assets/images/view5.jpg";
-import view6 from "../app/_assets/images/view6.jpg";
-import view7 from "../app/_assets/images/view7.jpg";
-import view8 from "../app/_assets/images/view8.jpg";
-import Arrow3 from "../app/_assets/images/Arrow3.png";
-import ellipse1 from "../app/_assets/images/ellipse1.png";
-import ellipse2 from "../app/_assets/images/ellipse2.png";
-import ellipse3 from "../app/_assets/images/ellipse3.png";
-import ellipse4 from "../app/_assets/images/ellipse4.png";
-import ellipse11 from "../app/_assets/images/ellipse11.png";
-import ellipse12 from "../app/_assets/images/ellipse12.png";
-import ellipse13 from "../app/_assets/images/ellipse13.png";
-import ellipse14 from "../app/_assets/images/ellipse14.png";
-import ellipse15 from "../app/_assets/images/ellipse15.png";
-import ellipse16 from "../app/_assets/images/ellipse16.png";
-import ellipse17 from "../app/_assets/images/ellipse17.png";
-import ellipse18 from "../app/_assets/images/ellipse18.png";
-import icon from "../app/_assets/images/Icon.png";
-import pluscircle from "../app/_assets/images/pluscircle.png";
-import minuscircle from "../app/_assets/images/minuscircle.png";
-import Avatar from "../app/_assets/images/Avatar.png";
-import Avatar1 from "../app/_assets/images/Avatar1.png";
-import Avatar2 from "../app/_assets/images/Avatar2.png";
-import sms from "../app/_assets/images/sms.png";
-import icons from "../app/_assets/images/Icons.png";
-import mail from "../app/_assets/images/mail.png";
-import address from "../app/_assets/images/address.png";
-import fax from "../app/_assets/images/fax.png";
-import Logoz from "../app/_assets/images/Logoz.png";
-import VideoPlayer from "./Video/page";
-
 import FilterOptionFlow from "./filterOptionFlow/page";
-
+import { useState, useEffect } from "react";
 function Home() {
   const [isOpen, setIsOpen] = useState([]);
 
@@ -106,8 +46,6 @@ function Home() {
         "There are several types of student accommodation, including on-campus dormitories, off-campus apartments, shared houses, and homestays with local families.",
     },
   ];
-
-  const backgroundImgUrl = backgroundImg.src;
 
   const [menuOpen, setMenuOpen] = useState(false);
 
