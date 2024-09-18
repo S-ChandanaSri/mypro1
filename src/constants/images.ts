@@ -12,7 +12,7 @@ import roomMapButton from "../../public/res/icons/Map Button.svg";
 import roomTv from "../../public/res/icons/tv.svg";
 import roomLocation from "../../public/res/icons/Vectorlocation.svg";
 import roomRightArrow from "../../public/res/icons/VectorrightArrow.svg";
-import roomStart from "../../public/res/icons/Vectorstart.svg";
+import roomStar from "../../public/res/icons/Vectorstart.svg";
 import roomWifi from "../../public/res/icons/Vectorwifi.svg";
 import roomHamburger from "../../public/res/icons/Vectorhamburger.svg";
 import roomCloud from "../../public/res/icons/Vectorcloud.svg";
@@ -33,7 +33,7 @@ export const roomViewSvgIcons = {
   roomLocation,
   roomMapButton,
   roomRightArrow,
-  roomStart,
+  roomStar,
   roomTv,
   roomWifi,
   roomHamburger,

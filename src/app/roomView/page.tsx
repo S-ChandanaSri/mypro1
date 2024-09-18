@@ -5,13 +5,9 @@ import Footer from "../../components/roomView/footer";
 
 export default function RoomViewPage() {
   return (
-    <>
-      <div className="flex flex-row">
-        <FilterSection />
-        <SideSection />
-      </div>
-
-      {/* <Footer /> */}
-    </>
+    <div className="flex flex-row mt-[92px] md:mt-[72px]">
+      <FilterSection />
+      <SideSection />
+    </div>
   );
 }

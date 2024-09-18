@@ -95,5 +95,11 @@ export const strings = {
       filters: "Filters",
       priceRange: "Price Range",
     },
+    sideSection: {
+      mapView: "Map View",
+      sortBy: "Sort By",
+      viewDetails: "View Details",
+      bookNow: "Book Now",
+    },
   },
 };

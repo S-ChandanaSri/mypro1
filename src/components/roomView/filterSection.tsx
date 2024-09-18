@@ -1,7 +1,12 @@
 import Image from "next/image";
 
-import { roomViewImages, roomViewSvgIcons } from "@/constants/images";
+import { roomViewSvgIcons } from "@/constants/images";
 import { strings } from "@/constants/strings";
+import {
+  RoomFiltersCategories,
+  RoomFiltersRating,
+  RoomFilterscollections,
+} from "@/constants/roomViewArrays";
 
 export function Checkbox() {
   return <input className="w-[23.3px] h-[23.3px] relative " type="checkbox" />;
@@ -12,16 +17,6 @@ export function ScaleOption() {
 }
 
 const FilterSection = ({ className = "" }) => {
-  const collections = ["Best value from", "Members only d..."];
-
-  const categories = [
-    "Less than $25",
-    "$150-$250",
-    "$250-$350",
-    "Greater than $500",
-  ];
-
-  const rating = ["1 star", "2 star", "3 star", "4 star", "5 star"];
   return (
     <div className="hidden md:block  p-4   border-r-[1px] bg-neutral-50 ">
       {/*top part filter price range */}
@@ -69,7 +64,7 @@ const FilterSection = ({ className = "" }) => {
         </div>
       </div>
 
-      <hr className=" border-[1px] border-gray-500 mt-2 mb-6" />
+      <hr className=" border-[1px] border-neutral-500 mt-2 mb-6" />
 
       <div className="flex flex-col   rounded-md p- gap-8">
         <div className="gap-6  flex flex-col ">
@@ -84,7 +79,7 @@ const FilterSection = ({ className = "" }) => {
               />
             </div>
           </div>
-          {collections?.map((collection, index) => (
+          {RoomFilterscollections?.map((collection, index) => (
             <div className="flex gap-x-[17.44px]" key={index}>
               <Checkbox /> {collection}
             </div>
@@ -114,7 +109,7 @@ const FilterSection = ({ className = "" }) => {
               />
             </div>
           </div>
-          {categories?.map((category, index) => (
+          {RoomFiltersCategories?.map((category, index) => (
             <div className="flex gap-4" key={index}>
               <Checkbox /> {category}
             </div>
@@ -144,7 +139,7 @@ const FilterSection = ({ className = "" }) => {
               />
             </div>
           </div>
-          {rating?.map((rating, index) => (
+          {RoomFiltersRating?.map((rating, index) => (
             <div className="flex gap-4 items-center" key={index}>
               <ScaleOption /> {rating}
             </div>
