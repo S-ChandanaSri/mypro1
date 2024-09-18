@@ -769,18 +769,18 @@ function Home() {
           subText={strings.landing.ourServices.subHeading}
           cards={OurServicesInfo}
         />
-          {/*<InfoCards
+          <InfoCards
           title={strings.landing.whyChooseUs.heading}
           subText={strings.landing.whyChooseUs.subHeading}
           cards={WhyChooseUsInfo}
-        /> */}
-          {/* <InfoCards
+        />
+           <InfoCards
           title={strings.landing.getInTouch.heading}
           subText={strings.landing.getInTouch.subHeading}
           cards={GetInTouchInfo}
-        /> */}
+        />
       </div>
-        {/*<VideoTestimonials />*/}
+        <VideoTestimonials />
       <FAQs />
     </div>
   );
