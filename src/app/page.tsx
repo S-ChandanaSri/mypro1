@@ -4,6 +4,7 @@ import Image from 'next/image';
 import List from '@/components/root/Propertycard/List';
 import makiarrow from '../../public/res/icons/downArrow.svg';
 
+
 import {
   GetInTouchInfo,
   OurServicesInfo,
@@ -15,6 +16,9 @@ import InfoCards from "@/components/root/InfoCards";
 import Hero from "@/components/root/Hero";
 import VideoTestimonials from "@/components/root/VideoTestimonials";
 import FAQs from "@/components/root/FAQs";
+
+
+
 
 function Home() {
   return (
@@ -135,7 +139,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="-[0.5rem] flex items-center sm:relative sm:right-[3rem] sm:mx-auto sm:flex md:mx-2">
+          <div className="-[0.5rem] flex items-center sm:relative sm:right-[3rem] sm:mx-auto sm:flex md:mx-2  ">
             <p className="custo-font h-[38px] w-[134px] items-center text-[28px] font-[300] leading-[37.8px] text-black transition-all duration-300 sm:relative sm:h-auto sm:text-left sm:text-[16px] lg:text-[22px]">
               Explore All
             </p>
@@ -151,15 +155,20 @@ function Home() {
           </div>
         </div>
         <div className="sm:flex sm:flex-col sm:items-center">
-        <div className="grid grid-cols-1 gap-4 xxs:grid xxs:grid-cols-1 xxs:items-center xxs:justify-center sm:mx-auto sm:grid sm:h-auto sm:grid-cols-2 sm:justify-start md:mx-auto md:grid-cols-2 md:justify-between lg:mr-[5rem] lg:grid lg:h-auto lg:grid-cols-4 lg:justify-between">
+        <div className="grid grid-cols-1 gap-4 xxs:grid xxs:grid-cols-1 xxs:items-center xxs:justify-center sm:mx-auto sm:grid sm:h-auto sm:grid-cols-2 sm:justify-start md:mx-auto md:grid-cols-2 md:justify-between lg:mr-[1rem] lg:grid lg:h-auto lg:grid-cols-4 lg:justify-between">
 
         <List
        
         cards={Propertcardinfo}
         />
+
         </div>
         </div>
-        </div> 
+        </div>
+
+
+
+
 
       
 
@@ -760,18 +769,18 @@ function Home() {
           subText={strings.landing.ourServices.subHeading}
           cards={OurServicesInfo}
         />
-        <InfoCards
+          {/*<InfoCards
           title={strings.landing.whyChooseUs.heading}
           subText={strings.landing.whyChooseUs.subHeading}
           cards={WhyChooseUsInfo}
-        />
-        <InfoCards
+        /> */}
+          {/* <InfoCards
           title={strings.landing.getInTouch.heading}
           subText={strings.landing.getInTouch.subHeading}
           cards={GetInTouchInfo}
-        />
+        /> */}
       </div>
-      <VideoTestimonials />
+        {/*<VideoTestimonials />*/}
       <FAQs />
     </div>
   );

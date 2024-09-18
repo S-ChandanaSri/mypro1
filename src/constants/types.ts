@@ -1,6 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 
+
 export interface IInputValue {
   value?: string;
   error?: string;
@@ -75,4 +76,44 @@ export interface propertyinfo{
   label:string;
   sublabel:string;
   sublabel1:string;
+}
+
+export interface propertyinfoimages{
+  image:StaticImport;
+  image1:StaticImport;
+  image2:StaticImport;
+  image3:StaticImport;
+}
+
+export interface CardProps {
+  title?: string;
+  content?: string;
+  leftButtonLabel?: string;
+  image?: { src: string } | null;
+  images?: { src: string }[] | null;
+  locate?: string;
+  km?: string;
+  location?: string;
+  placestyle?: string;
+  icons?: string[];
+  sublabels?: string[];
+  buttonLabel?: string;
+  buttonVariant?: string;
+  imageStyles?: string[];
+  fullStyles?: string;
+  detailsstyle?: string;
+  titlestyle?: string;
+  locationstyle?: string;
+  amenitystyle?: string;
+  buttonstyle?: string;
+  butonstyle?: string;
+  price?: string;
+  pricestyle?: string;
+  star?: string;
+  rating?: string;
+  rate?: string;
+  ratepoint?: string;
+  wrapstyle?: string;
+  ratepointstyle?: string;
+  multiImage?: boolean;
 }

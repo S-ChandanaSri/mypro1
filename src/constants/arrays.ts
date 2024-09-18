@@ -1,5 +1,5 @@
 import { PATHS, VIDEOS } from ".";
-import { INFO_IMAGES, svgs, TEAM_IMAGES } from "./images";
+import {INFO_IMAGES, roomViewImages, svgs, TEAM_IMAGES} from "./images";
 import { strings } from "./strings";
 import { cardproperty } from "./images";
 import {
@@ -13,6 +13,7 @@ import {
   IVideoTestimonial,
   SocialPlatforms,
 } from "./types";
+import roomViewinterior1 from "../../public/res/images/roomViewinterior1.png";
 
 export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
@@ -481,3 +482,13 @@ export const Propertcardinfo: propertyinfo[] = [
     sublabel1:"Book Now",
   },
 ];
+
+{/*export const Propertcardimages: propertyinfo[] = [
+
+  {
+    image1: roomViewImages.roomViewImages,
+    image2: roomViewImages.roomViewinterior1,
+    image3: roomViewImages.roomViewinterior2,
+    image4: roomViewImages.roomViewinterior3,
+  }
+]*/}
