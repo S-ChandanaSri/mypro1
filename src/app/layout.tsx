@@ -5,6 +5,7 @@ import { ListingProvider } from "./context/ListingContext";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Providers } from "@/redux/provider";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -38,7 +39,9 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
         <Navbar />
-        <ListingProvider>{children}</ListingProvider>
+        <ListingProvider>
+          <Providers>{children}</Providers>
+        </ListingProvider>
         <Footer />
       </body>
     </html>

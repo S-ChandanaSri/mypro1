@@ -43,6 +43,8 @@ import propertySkyLight from "../../public/res/icons/propertyDetails/VectorskyLi
 import propertyWhiteBoards from "../../public/res/icons/propertyDetails/VectorwhiteBoardsIcon.svg";
 import propertyEnsuiteKitchen from "../../public/res/icons/propertyDetails/VectorensuiteKitchenIcon.svg";
 import propertyRightArrow from "../../public/res/icons/propertyDetails/VectorRightArrow.svg";
+import propertyFilterXcross from "../../public/res/icons/propertyDetails/VectorxCross.svg";
+import propertyLiked from "../../public/res/icons/propertyDetails/Vectorliked.svg";
 
 import services1 from "../../public/res/images/infoCards/services1.svg";
 import services2 from "../../public/res/images/infoCards/services2.svg";
@@ -153,4 +155,6 @@ export const svgs = {
   propertyTv,
   propertyWideScreenTv,
   propertyRightArrow,
+  propertyFilterXcross,
+  propertyLiked,
 };
