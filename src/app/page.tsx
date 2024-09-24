@@ -707,13 +707,13 @@ function Home() {
         </button>
       </div> */}
 
-      <div className="space-y-32">
-        <InfoCards
+        <div className="space-y-32">
+           <InfoCards
           title={strings.landing.ourServices.heading}
           subText={strings.landing.ourServices.subHeading}
           cards={OurServicesInfo}
         />
-        <InfoCards
+            {/*  <InfoCards
           title={strings.landing.whyChooseUs.heading}
           subText={strings.landing.whyChooseUs.subHeading}
           cards={WhyChooseUsInfo}
@@ -722,9 +722,9 @@ function Home() {
           title={strings.landing.getInTouch.heading}
           subText={strings.landing.getInTouch.subHeading}
           cards={GetInTouchInfo}
-        />
+        />*/}
       </div>
-      <VideoTestimonials />
+      {/* <VideoTestimonials /> */}
       <FAQs />
     </div>
   );

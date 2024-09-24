@@ -1,5 +1,5 @@
 import { PATHS, VIDEOS } from ".";
-import { INFO_IMAGES, svgs, TEAM_IMAGES } from "./images";
+import {INFO_IMAGES, svgs, TEAM_IMAGES, testimonialimages} from "./images";
 import { strings } from "./strings";
 import {
   ICardInfo,
@@ -11,6 +11,8 @@ import {
   IStat,
   IVideoTestimonial,
   SocialPlatforms,
+  Itestimonial,
+
 } from "./types";
 
 export const linkOptions: ILinkOption[] = [
@@ -397,3 +399,104 @@ export const FooterLinks: ILinkOption[][] = [
     },
   ],
 ];
+
+export const testimonial : Itestimonial[] = [
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+  {
+    icon1:testimonialimages.sam,
+    label:"Samantha Payne",
+    sublabel:"@Sam.Payne90",
+    icon2:testimonialimages.star,
+    label1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1:'23 Nov 2021',
+  },
+]
+
+

@@ -144,4 +144,11 @@ export const strings = {
     viewOnMap: "View on Map",
     ratings: "Ratings",
   },
+
+  testimonial:{
+    heading:"Testimonials",
+    subHeading:"Review from our satisfied coustomers",
+  }
 };
+
+

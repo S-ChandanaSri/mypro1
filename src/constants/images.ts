@@ -65,6 +65,11 @@ import propertyInterior2 from "../../public/res/images/propertyDetails/interior2
 import propertyInterior3 from "../../public/res/images/propertyDetails/interior3.png";
 import { SocialPlatforms } from "./types";
 
+import icons from '../../public/res/images/teams/icons.svg';
+import check from '../../public/res/images/teams/check.svg';
+import sam from '../../public/res/images/teams/samantha.svg';
+import star from '../../public/res/images/teams/Vstar.svg';
+
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
@@ -154,3 +159,10 @@ export const svgs = {
   propertyWideScreenTv,
   propertyRightArrow,
 };
+
+export const testimonialimages={
+  icons,
+  check,
+  sam,
+  star
+}

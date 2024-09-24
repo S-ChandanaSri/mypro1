@@ -101,3 +101,13 @@ export interface IPropertyDetails {
   openingHours: IOpeningHours[];
   ammenities: IAmenity[];
 }
+
+export interface Itestimonial {
+  icon1: string;
+  label: string;
+  icon2: string;
+  sublabel: string;
+  label1: string;
+  sublabel1: string;
+}
+
