@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { svgs } from "@/constants/images";
+import { svgs, TEAM_IMAGES } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import Button from "./common/Button";
 import { useRouter, usePathname } from "next/navigation";
 import { cva } from "class-variance-authority";
 import { PATHS } from "@/constants";
-import { linkOptions } from "@/constants/arrays";
+import { linkOptions, menuOptions } from "@/constants/arrays";
 import { ILinkOption } from "@/constants/types";
 
 export const navbarVariants = cva(
@@ -28,9 +28,11 @@ export const navbarVariants = cva(
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [menuLink, setmenuLink] = useState<boolean>(false);
   const [variant, setVariant] = useState<"base" | "root">("base");
   const router = useRouter();
   const pathname = usePathname();
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +70,19 @@ const Navbar: React.FC = () => {
       </span>
     ));
   };
+  const menuLinks = () => {
+    return menuOptions.map((option: ILinkOption) => (
+      <span
+        key={option.label}
+        className="cursor-pointer transition-all duration-200 hover:opacity-80"
+        onClick={() =>
+          router.push(`${option.page}${option.comp ? `#${option.comp}` : ""}`)
+        }
+      >
+        {option.label}
+      </span>
+    ));
+  };
 
   if (pathname === PATHS.login || pathname === PATHS.signUp) {
     return;
@@ -82,15 +97,57 @@ const Navbar: React.FC = () => {
       <ul className="hidden space-x-8 text-sm font-medium md:flex">
         {renderLinks()}
       </ul>
-      <Button
-        className="hidden md:flex"
-        preIconNode={svgs.chevronRightIn}
-        size="md"
-        variant={buttonVariant}
-        link={PATHS.login}
-      >
-        {strings.paths[PATHS.login]}
-      </Button>
+      {isLoggedIn ? (
+        <Button
+          className="hidden md:flex"
+          preIconNode={svgs.downloadIcon}
+          size="md"
+          variant={buttonVariant}
+          link={""} // Show logout button if logged in
+        >
+          Download our app
+        </Button>
+      ) : (
+        <Button
+          className="hidden md:flex"
+          preIconNode={svgs.chevronRightIn}
+          size="md"
+          variant={buttonVariant}
+          link={PATHS.login} // Show login button if not logged in
+        >
+          {strings.paths[PATHS.login]}
+        </Button>
+      )}
+
+      {isLoggedIn && (
+        <>
+          <div className="hidden flex-row items-center rounded-xl border px-4 md:flex">
+            <div className="relative h-5 w-5">
+              <Image
+                src={TEAM_IMAGES.NAME1}
+                alt="icon"
+                fill={true}
+                className="rounded-full"
+              />
+            </div>
+            <Button
+              className="hidden px-2 outline-none md:flex"
+              preIconNode={svgs.hamburgerMenu}
+              size="md"
+              variant="base"
+              onClick={() => setmenuLink((prevState) => !prevState)}
+              link={""} // Show logout button if logged in
+            />
+          </div>
+          <div
+            className={`fixed right-0 top-[72px] ${menuLink ? "h-auto" : "h-0"} overflow-hidden rounded-b-xl bg-neutral-50/95 text-center text-neutral-950 transition-all duration-300 ease-out`}
+          >
+            <ul className="flex flex-col space-y-8 p-8 pt-10 text-md">
+              {menuLinks()}
+            </ul>
+          </div>
+        </>
+      )}
 
       <Button
         className="outline-none hover:bg-transparent md:hidden"
@@ -101,12 +158,19 @@ const Navbar: React.FC = () => {
         onClick={() => setMenuOpen((prevState) => !prevState)}
       />
       <div
-        className={`fixed right-0 top-[92px] ${menuOpen ? "h-[300px]" : "h-0"} w-full overflow-hidden rounded-b-xl bg-neutral-50/95 text-center text-neutral-950 transition-all duration-300 ease-out`}
+        className={`fixed right-0 top-[92px] ${menuOpen ? "h-auto" : "h-0"} w-full overflow-hidden rounded-b-xl bg-neutral-50/95 text-center text-neutral-950 transition-all duration-300 ease-out`}
       >
-        <ul className="flex flex-col space-y-16 p-8 pt-10 text-md">
-          <Link href={PATHS.login}>{strings.paths[PATHS.login]}</Link>
-          {renderLinks()}
-        </ul>
+        {isLoggedIn ? (
+          <ul className="flex flex-col space-y-2 p-8 pt-10 text-md">
+            {renderLinks()}
+            {menuLinks()}
+          </ul>
+        ) : (
+          <ul className="flex flex-col space-y-16 p-8 pt-10 text-md">
+            <Link href={PATHS.login}>{strings.paths[PATHS.login]}</Link>
+            {renderLinks()}
+          </ul>
+        )}
       </div>
     </div>
   );

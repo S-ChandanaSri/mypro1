@@ -19,6 +19,7 @@ import smsIcon from "../../public/res/icons/sms.svg";
 import plusCircleIcon from "../../public/res/icons/plus-circle.svg";
 import minusCircleIcon from "../../public/res/icons/minus-circle.svg";
 import twitterIcon from "../../public/res/icons/twitter-icon.svg";
+import downloadIcon from "../../public/res/icons/Groupdownload.svg";
 // import facebookIcon from "";
 import linkedInIcon from "../../public/res/icons/linkedin-icon.svg";
 import instagramIcon from "../../public/res/icons/instagram-icon.svg";
@@ -153,4 +154,5 @@ export const svgs = {
   propertyTv,
   propertyWideScreenTv,
   propertyRightArrow,
+  downloadIcon,
 };
