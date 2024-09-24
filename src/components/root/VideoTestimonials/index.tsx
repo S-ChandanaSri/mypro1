@@ -39,7 +39,7 @@ const VideoTestimonials = () => {
   };
   return (
     <div className="flex flex-col items-center space-y-16 text-center">
-      <h3 className="text-2xl font-medium">
+      {/* <h3 className="text-2xl font-medium">
         {strings.landing.testimonials.heading}
         <p className="text-md font-light md:w-[50rem]">
           {strings.landing.testimonials.subHeading}
@@ -76,7 +76,7 @@ const VideoTestimonials = () => {
         link={PATHS.testimonials}
       >
         {strings.landing.testimonials.seeAllReviews}
-      </Button>
+      </Button> */}
     </div>
   );
 };

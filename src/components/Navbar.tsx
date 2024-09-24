@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   const [variant, setVariant] = useState<"base" | "root">("base");
   const router = useRouter();
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
           variant={buttonVariant}
           link={""} // Show logout button if logged in
         >
-          Download our app
+          {strings.navbar.download}
         </Button>
       ) : (
         <Button
@@ -162,6 +162,7 @@ const Navbar: React.FC = () => {
       >
         {isLoggedIn ? (
           <ul className="flex flex-col space-y-2 p-8 pt-10 text-md">
+            <Link href="#">{strings.navbar.download}</Link>
             {renderLinks()}
             {menuLinks()}
           </ul>

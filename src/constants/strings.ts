@@ -24,6 +24,7 @@ export const strings = {
     account: "Account",
     help: "Help",
     logout: "Log Out",
+    download: "Download our app",
   },
   footer: {
     description:
