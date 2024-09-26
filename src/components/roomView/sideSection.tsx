@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import Image from "next/image";
-import { roomViewSvgIcons } from "@/constants/images";
+import { svgs } from "@/constants/images";
 import { RoomViewRooms } from "@/constants/roomViewArrays";
 import { strings } from "@/constants/strings";
 
@@ -13,7 +13,7 @@ const SideSection = ({ className = "" }) => {
           <div>India</div>
           <div className="relative w-2 h-3">
             <Image
-              src={roomViewSvgIcons.roomRightArrow}
+              src={svgs.roomRightArrow}
               alt="right arrow"
               fill={true}
               className="object-cover"
@@ -22,7 +22,7 @@ const SideSection = ({ className = "" }) => {
           <div>Bihar</div>
           <div className="relative w-2 h-3">
             <Image
-              src={roomViewSvgIcons.roomRightArrow}
+              src={svgs.roomRightArrow}
               alt="right arrow"
               fill={true}
               className="object-cover"
@@ -36,7 +36,7 @@ const SideSection = ({ className = "" }) => {
             <div>India</div>
             <div className="relative w-2 h-3">
               <Image
-                src={roomViewSvgIcons.roomRightArrow}
+                src={svgs.roomRightArrow}
                 alt="right arrow"
                 fill={true}
                 className="object-cover"
@@ -45,7 +45,7 @@ const SideSection = ({ className = "" }) => {
             <div>Bihar</div>
             <div className="relative w-2 h-3">
               <Image
-                src={roomViewSvgIcons.roomRightArrow}
+                src={svgs.roomRightArrow}
                 alt="right arrow"
                 fill={true}
                 className="object-cover"
@@ -55,7 +55,7 @@ const SideSection = ({ className = "" }) => {
           </div>
           <div className="relative w-6 h-6">
             <Image
-              src={roomViewSvgIcons.roomHamburger}
+              src={svgs.roomHamburger}
               alt="right arrow"
               fill={true}
               className="object-cover"
@@ -68,7 +68,7 @@ const SideSection = ({ className = "" }) => {
             <div>{strings.roomView.sideSection.mapView}</div>
             <div className="relative  w-12 md:w-[4.4rem] h-6 ">
               <Image
-                src={roomViewSvgIcons.roomMapButton}
+                src={svgs.roomMapButton}
                 alt="right arrow"
                 fill={true}
                 className="object-contain w-full h-full p-1"
@@ -138,7 +138,7 @@ const SideSection = ({ className = "" }) => {
                   {room.location}
                   <div className="relative w-3  h-4 mx-1">
                     <Image
-                      src={roomViewSvgIcons.roomLocation}
+                      src={svgs.roomLocation}
                       alt="right arrow"
                       fill={true}
                       className="object-contain"
@@ -151,7 +151,7 @@ const SideSection = ({ className = "" }) => {
                     {room.overAllRating}
                     <div className="relative w-3  h-3 ">
                       <Image
-                        src={roomViewSvgIcons.roomStar}
+                        src={svgs.roomStar}
                         alt="right arrow"
                         fill={true}
                         className="object-cover"
