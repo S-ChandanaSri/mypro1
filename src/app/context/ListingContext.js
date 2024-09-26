@@ -1,7 +1,5 @@
-// src/app/context/ListingContext.js
-
-'use client';
-import { createContext, useContext, useState } from 'react';
+"use client";
+import { createContext, useContext, useState } from "react";
 
 const ListingContext = createContext();
 

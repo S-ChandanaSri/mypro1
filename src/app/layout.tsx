@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import { ListingProvider } from "./context/ListingContext";
-import "./globals.css";
 import { Providers } from "@/redux/provider";
+import { Inter, Poppins } from "next/font/google";
+import { ListingProvider } from "./context/ListingContext";
+import Navbar from "@/components/Navbar";
+import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -34,11 +36,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable}`}
+        className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
+       
+        <Navbar />
         <ListingProvider>
           <Providers>{children}</Providers>
         </ListingProvider>
+        <Footer />
       </body>
     </html>
   );
