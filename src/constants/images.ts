@@ -3,7 +3,7 @@ import filterGuestHouse from "../../public/res/icons/Vectorguesthouse.svg";
 import filterApartment from "../../public/res/icons/Vectorappartment.svg";
 import filterXcross from "../../public/res/icons/Vectorxcross.svg";
 
-export const filterOptionSvgIcons = {
+export const svgs = {
   filterHouse,
   filterApartment,
   filterXcross,

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { filterOptionSvgIcons } from "@/constants/images";
+import { svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import {
   FilterOptionAmenitiesEssentials,
@@ -100,11 +100,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
       <div className=" h-11 flex flex-row justify-start p-2">
         <div className="w-full flex flex-row  items-center ">
           <div className="relative w-9 h-9" onClick={() => setPopup(false)}>
-            <Image
-              src={filterOptionSvgIcons.filterXcross}
-              alt="xcross icon"
-              fill={true}
-            />
+            <Image src={svgs.filterXcross} alt="xcross icon" fill={true} />
           </div>
           <div className="text-lg text-center  w-full">
             {strings.filterOptionFlow.filters}

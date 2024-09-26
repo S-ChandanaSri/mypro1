@@ -1,4 +1,4 @@
-import { filterOptionSvgIcons } from "./images";
+import { svgs } from "./images";
 export const FilterOptionBedsList = ["1", "2", "3", "4", "5", "6", "7", "8+"];
 export const FilterOptionBathroomsList = [
   "1",
@@ -13,15 +13,15 @@ export const FilterOptionBathroomsList = [
 export const FilterOptionPropertyTypes = [
   {
     name: "House",
-    icon: filterOptionSvgIcons.filterHouse,
+    icon: svgs.filterHouse,
   },
   {
     name: "Appartment",
-    icon: filterOptionSvgIcons.filterApartment,
+    icon: svgs.filterApartment,
   },
   {
     name: "Guesthouse",
-    icon: filterOptionSvgIcons.filterGuestHouse,
+    icon: svgs.filterGuestHouse,
   },
 ];
 export const FilterOptionAmenitiesEssentials = [
