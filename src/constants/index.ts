@@ -61,6 +61,13 @@ export const COLORS = {
   },
 };
 
+export const VIDEOS = {
+  TestVideo1: "/res/videos/video1.mp4",
+  TestVideo2: "/res/videos/video2.mp4",
+  TestVideo3: "/res/videos/video3.mp4",
+};
+
+
 export const FONT_SIZES = {
   xs: "12px",
   sm: "14px",
@@ -83,10 +90,18 @@ export const PATHS = {
   login: "/login",
   signUp: "/signup",
   forgotPassword: "/forgot-password",
+
 };
 
 export const Dimens = {
   loginForm: 480,
+  testimonials: "/testimonials",
+};
+
+export const LINKS = {
+  supportMail: "support@zendenrents.com",
+  salesMail: "sales@zendenrents.com",
+  phone: "+919264901704",
 };
 
 export const Duration = {

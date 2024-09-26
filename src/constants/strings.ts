@@ -3,11 +3,15 @@ import { PATHS } from ".";
 export const strings = {
   //Core
   appName: "ZENDEN",
+  readMore: "Read More",
+  submit: "Submit",
+  contactPhone: "+(91) 9264-9017-04",
   paths: {
     [PATHS.root]: "Landing",
     [PATHS.aboutUs]: "About Us",
     [PATHS.login]: "Login",
     [PATHS.signUp]: "Sign Up",
+    [PATHS.testimonials]: "Testimonials",
   },
   navbar: {
     services: "Services",
@@ -16,6 +20,21 @@ export const strings = {
   },
   //Landing
   landing: {
+  footer: {
+    description:
+      "We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    newsletter: "Newsletter",
+    newsletterPromo:
+      "Be the first one to know about discounts, offers and events",
+    enterMail: "Enter your email",
+    allRightsReserved: "© 2000-2021, All Rights Reserved",
+  },
+
+  //Landing
+  landing: {
+    heading: "Reserve Your Ideal Holiday",
+    subHeading:
+      "We're thrilled to have you! Let's find you the ideal place to stay.",
     tags: {
       verified: "Verified Properties",
       support: "24/7 Support",
@@ -35,18 +54,57 @@ export const strings = {
       heading: "Get in touch with us",
       subHeading: "If you have any query feel free to contact us",
     },
+    testimonials: {
+      heading: "Over 1000+ people trust us",
+      subHeading:
+        "Clarity gives you the blocks & components you need to create a truly professional website, landing page or admin panel for your SaaS.",
+      seeAllReviews: "See all reviews by our customers",
+    },
+    faqs: {
+      heading: "Frequently Asked Questions",
+      subHeading:
+        "Everything you need to know about the student Accomodation and Housing",
+      stillHaveQuestions: "Still have questions?",
+      cantFindAnswer:
+        "Can't find the answer you're looking for? Please chat to our friendly team.",
+      getInTouch: "Get in touch",
+    },
+  },
+
+  //About Us
+  aboutUs: {
+    title: "About Us",
+    tag: "Live Easy | Feel Home",
+    subTitle:
+      "ZenDen is reshaping student accommodation by offering affordable, comfortable and luxurious living spaces.",
+    join: "Join Us",
+    joinUs: "Join us in creating a home away from home for you across",
+    whyUs: "Why Us",
+    whyUsSubheading: "Lorem ipsum dolor sit amet, consectetur adipis elit",
+    teamHeading: "Our Creative Minds",
+    distributedTeamHeading: "We're a distributed team",
+    distributedTeamSubheading:
+      "We have offices and teams all around the world.",
+    team: {
+      support: "Support",
+      supportBody: "Our friendly team is here to help.",
+      sales: "Sales",
+      salesBody: "Questions or queries? Get in touch!",
+      phone: "Phone",
+      phoneBody: "Mon-Fri from 8am to 5pm.",
+    },
   },
   //SignUp/Login
   signup: {
     signIntoAccount: "Sign in to your account",
     subHeading:
       "Clarity gives you the blocks and components you need to create a truly professional website.",
-    firstName: "First Name",
-    lastName: "Last Name",
-    emailPlaceholder: "Email Address",
-    passwordPlaceholder: "Password",
-    confirmPasswordPlaceholder: "Confirm Password",
-    rememberMe: "Remember me",
+    firstName: "first name",
+    lastName: "last name",
+    emailPlaceholder: "email address",
+    passwordPlaceholder: "password",
+    confirmPasswordPlaceholder: "confirm password",
+    rememberMe: "remember me",
     forgotPassword: "Forgot Password?",
     signUpFirst: "Don't have an account?",
     register: "Sign Up",
@@ -69,9 +127,11 @@ export const strings = {
     },
   },
 
+
+  //Property
   propertyDetails: {
     reservation: {
-      dateTime: "Choose a date and time",
+      dateTime: "Choose a Date and Time",
       reserve: "Reserve now",
       instruction1: "No charges until your reservation begins",
       instruction2: "Cancel for free upto 2 hours before",
@@ -101,5 +161,6 @@ export const strings = {
       viewDetails: "View Details",
       bookNow: "Book Now",
     },
+    viewOnMap: "View on Map",
   },
 };
