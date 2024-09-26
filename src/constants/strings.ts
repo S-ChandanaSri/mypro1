@@ -145,10 +145,8 @@ export const strings = {
     ratings: "Ratings",
   },
 
-  testimonial:{
-    heading:"Testimonials",
-    subHeading:"Review from our satisfied coustomers",
-  }
+  testimonial: {
+    heading: "Testimonials",
+    subHeading: "Review from our satisfied coustomers",
+  },
 };
-
-
