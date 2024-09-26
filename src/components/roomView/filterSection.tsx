@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { roomViewSvgIcons } from "@/constants/images";
+import { svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import {
   RoomFiltersCategories,
@@ -28,7 +28,7 @@ const FilterSection = ({ className = "" }) => {
           </div>
           <div className="relative w-24 h-6">
             <Image
-              src={roomViewSvgIcons.roomClearAll}
+              src={svgs.roomClearAll}
               alt="clear all"
               fill={true}
               className=" object-cover "
@@ -88,7 +88,7 @@ const FilterSection = ({ className = "" }) => {
             <div>{strings.roomView.filterSection.showMore}</div>
             <div className="relative w-3 h-2">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
@@ -148,7 +148,7 @@ const FilterSection = ({ className = "" }) => {
             <div>{strings.roomView.filterSection.showMore}</div>
             <div className="relative w-3 h-2">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
