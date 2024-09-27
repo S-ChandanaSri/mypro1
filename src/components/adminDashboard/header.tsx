@@ -1,74 +1,70 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { adminImages, adminSvgIcons } from "@/constants/images";
+import { adminImages, svgs } from "@/constants/images";
 
 export default function Header() {
   const [search, setSearch] = useState("");
   return (
-    <div className="bg-[#002855] flex flex-row text-neutral-50 w-full lg:w-[1440px] xl:w-full items-center justify-between p-2 md:p-5">
-      <div className="flex flex-row items-center gap-2 text-2xl">
-        <div className="relative w-8 h-9">
-          <Image
-            alt="profile image"
-            fill={true}
-            src={adminSvgIcons.adminLogo}
-          />
-        </div>
-        ZENDEN
+    <div className="bg-secondaryWashed-800 flex  text-neutral-50 w-full  items-center justify-between p-2 md:p-5 h-[92px] md:h-[72px]">
+      <div className="flex  items-center gap-2 ">
+        <Image
+          alt="profile image"
+          width={36}
+          height={36}
+          src={svgs.adminLogo}
+        />
+        <p className="text-2xl">ZENDEN</p>
       </div>
-      <div className="hidden lg:flex flex-row w-[51rem] h-8 gap-2 bg-neutral-50 items-center rounded px-1 text-xs">
-        <div className="relative w-4 h-4">
-          <Image
-            src={adminSvgIcons.adminSearch}
-            alt="search icon"
-            fill={true}
-            className="object-cover"
-          />
-        </div>
+      <div className="hidden lg:flex   h-8 gap-2 bg-neutral-50 items-center rounded px-1 text-xs">
+        <Image
+          src={svgs.adminSearch}
+          alt="search icon"
+          width={16}
+          height={16}
+          className="object-cover"
+        />
+
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Type to search"
-          className="w-full outline-none  text-neutral-950"
+          className=" outline-none w-[20rem]  text-neutral-950"
         />
       </div>
       <div className="hidden lg:flex felx-row items-center gap-5">
-        <div className="relative w-7 h-6">
-          <Image
-            src={adminSvgIcons.adminEmail}
-            alt="search icon"
-            fill={true}
-            className="object-cover"
-          />
-        </div>
-        <div className="relative w-5 h-6">
-          <Image
-            src={adminSvgIcons.adminNotifications}
-            alt="search icon"
-            fill={true}
-            className="object-cover"
-          />
-        </div>
+        <Image
+          src={svgs.adminEmail}
+          alt="search icon"
+          width={28}
+          height={24}
+          className="object-cover"
+        />
 
-        <div className="relative w-8 h-9 rounded-full">
-          <Image
-            alt="profile image"
-            fill={true}
-            src={adminImages.adminEmployee1}
-            className="object-cover rounded-full"
-          />
-        </div>
+        <Image
+          src={svgs.adminNotifications}
+          alt="search icon"
+          width={20}
+          height={24}
+          className="object-contain"
+        />
+
+        <Image
+          alt="profile image"
+          width={32}
+          height={32}
+          src={adminImages.adminEmployee1}
+          className="object-contain rounded-full"
+        />
       </div>
       <div className="p-2 lg:hidden">
-        <div className="relative w-7 h-6">
-          <Image
-            src={adminSvgIcons.adminHamburger}
-            alt="search icon"
-            fill={true}
-            className="object-cover"
-          />
-        </div>
+        <Image
+          src={svgs.adminHamburger}
+          alt="search icon"
+          width={28}
+          height={28}
+          className="object-contain"
+        />
       </div>
     </div>
   );

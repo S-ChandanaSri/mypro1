@@ -1,13 +1,7 @@
 "use client";
 import Link from "next/link";
-import { BiMenuAltLeft } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
-import { HiOutlineKey } from "react-icons/hi2";
-import { FaRegUser } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
-import { CiSettings } from "react-icons/ci";
-import { IoLogOutOutline } from "react-icons/io5";
-import { adminImages, adminSvgIcons } from "@/constants/images";
+import { svgs } from "@/constants/images";
 import Image from "next/image";
 export default function Sidebar() {
   const pathname = usePathname();
@@ -17,74 +11,70 @@ export default function Sidebar() {
       id: "dashboard",
       name: "Dashboard",
       link: "dashboard",
-      icons: adminSvgIcons.adminHouse,
+      icons: svgs.adminHouse,
     },
     {
       id: "rooms",
       name: "Rooms",
       link: "rooms",
-      icons: adminSvgIcons.adminRooms,
+      icons: svgs.adminRooms,
     },
     {
       id: "bookings",
       name: "Bookings",
       link: "bookings",
-      icons: adminSvgIcons.adminBookings,
+      icons: svgs.adminBookings,
     },
 
     {
       id: "concierge",
       name: "Concierge",
       link: "concierge",
-      icons: adminSvgIcons.adminHouse,
+      icons: svgs.adminHouse,
     },
   ];
   return (
-    <div className="bg-neutral-50  w-full  text-lg  hidden lg:h-[calc(100vh-61px)] lg:flex flex-col p-5 ps-0 border-b justify-between">
+    <div className="bg-neutral-50    text-lg  hidden lg:h-[calc(100vh-72px)] lg:flex flex-col p-5 ps-0 border-b justify-between">
       <div className="flex flex-col gap-10">
         {sidebar?.map((item, index) => (
           <div
-            className={` ${pathname === `/adminDashboard/${item.id}` ? " border-l-4 border-[#002855]" : ""} flex  ps-4    gap-5 items-center`}
+            className={` ${pathname === `/adminDashboard/${item.id}` ? " border-l-4 border-secondaryWashed-800" : ""} flex  ps-4    gap-5 items-center`}
             key={index}
           >
-            <div
-              className={`relative  h-4 ${item.name == "Rooms" ? "w-2" : "w-4"}`}
-            >
-              <Image
-                src={item.icons}
-                alt="icons"
-                fill={true}
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <Link href={item.link}>{item.name}</Link>
-            </div>
+            <Image
+              src={item.icons}
+              alt="icons"
+              width={16}
+              height={16}
+              className="object-contain"
+            />
+
+            <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
       </div>
       <div className="ps-4">
         <div className="flex  gap-5 items-center">
-          <div className="relative w-4 h-4">
-            <Image
-              src={adminSvgIcons.adminSettings}
-              alt="icons"
-              fill={true}
-              className="object-cover"
-            />
-          </div>
-          <div>Settings</div>
+          <Image
+            src={svgs.adminSettings}
+            alt="icons"
+            width={16}
+            height={16}
+            className="object-contain"
+          />
+
+          <p>Settings</p>
         </div>
         <div className="flex  gap-5 items-center ">
-          <div className="relative w-4 h-4">
-            <Image
-              src={adminSvgIcons.adminLogout}
-              alt="icons"
-              fill={true}
-              className="object-cover"
-            />
-          </div>
-          <div>Logout</div>
+          <Image
+            src={svgs.adminLogout}
+            alt="icons"
+            width={16}
+            height={16}
+            className="object-contain"
+          />
+
+          <p>Logout</p>
         </div>
       </div>
     </div>

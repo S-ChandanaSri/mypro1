@@ -1382,7 +1382,7 @@ function Home() {
               </div>
 
               <div className="w-[134px] h-[44px] gap-[8px] ">
-                <div className="w-[134px] h-[44x] rounded-[8px] border-[1px] gap-[8px] py-[10px] px-[18px] bg-[#002855] ">
+                <div className="w-[134px] h-[44x] rounded-[8px] border-[1px] gap-[8px] py-[10px] px-[18px] bg-secondaryWashed-800 ">
                   <button className="w-[98px] h-[24px] cursor-pointer custo-font font-[500] text-[16px] leading-[24px] text-[#FFFFFF] ">
                     Get in touch
                   </button>
@@ -1418,7 +1418,7 @@ function Home() {
               </div>
               <button className="w-full lg:w-[265px] h-[36px] gap-[10px] flex justify-end">
                 <div className="w-[94px] h-[36px] rounded-[10px] bg-[#FFFFFFDB]">
-                  <p className="relative top-[6px] left-[17px] w-[58px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-[#002855]">
+                  <p className="relative top-[6px] left-[17px] w-[58px] h-[24px] custo-font font-[500] text-[16px] leading-[24px] text-secondaryWashed-800">
                     Submit
                   </p>
                 </div>

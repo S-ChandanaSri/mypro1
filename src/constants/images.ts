@@ -17,8 +17,9 @@ import adminHamburger from "../../public/res/icons/adminDashboard/Vectorhamburge
 import adminCustomer1 from "../../public/res/images/adminDashboard/Imagecustomer1.png";
 import adminRoom1 from "../../public/res/images/adminDashboard/Imageroom1.png";
 import adminEmployee1 from "../../public/res/images/adminDashboard/employee1.png";
+import adminInterior from "../../public/res/images/adminDashboard/interior.jpeg";
 
-export const adminSvgIcons = {
+export const svgs = {
   adminBookings,
   adminEmail,
   adminHalfMenu,
@@ -40,4 +41,5 @@ export const adminImages = {
   adminCustomer1,
   adminEmployee1,
   adminRoom1,
+  adminInterior,
 };

@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
-import Interior from "../../_assets/images/int3.jpeg";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-
 import Calendar from "react-calendar";
 import { useState } from "react";
-import { IoIosSearch } from "react-icons/io";
 import "react-calendar/dist/Calendar.css";
-import { adminSvgIcons, adminImages } from "@/constants/images";
+import { svgs, adminImages } from "@/constants/images";
 import {
   BarChart,
   Bar,
@@ -18,306 +14,201 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-
+import {
+  adminCustomers,
+  adminData,
+  adminRooms,
+} from "@/constants/adminDashboardArrays";
+import { strings } from "@/constants/strings";
 export default function Dashboard() {
   const [date, setDate] = useState(new Date());
-  const rooms = [
-    {
-      name: "The Business Project",
-      time: "56 minutes",
-      image: adminImages.adminRoom1,
-    },
-    {
-      name: "Living Color",
-      time: "40 minutes",
-      image: adminImages.adminRoom1,
-    },
-    {
-      name: "The Business Project",
-      time: "1hour 12 minutes",
-      image: adminImages.adminRoom1,
-    },
-  ];
-
-  const customers = [
-    {
-      name: "Jenny Wilson",
-      email: "w.lawson@example.com",
-      image: Interior,
-    },
-    {
-      name: "Jenny Wilson",
-      email: "w.lawson@example.com",
-      image: Interior,
-    },
-    {
-      name: "Jenny Wilson",
-      email: "w.lawson@example.com",
-      image: Interior,
-    },
-    {
-      name: "Jenny Wilson",
-      email: "w.lawson@example.com",
-      image: Interior,
-    },
-  ];
-
-  const data = [
-    { name: "Jan", cash: 4000, checkOut: 200, checkIn: 3000 },
-    { name: "Feb", cash: 3000, checkOut: 1000, checkIn: 1500 },
-    { name: "Mar", cash: 3500, checkOut: 2400, checkIn: 2000 },
-    { name: "Apr", cash: 5000, checkOut: 2200, checkIn: 3200 },
-    { name: "May", cash: 2200, checkOut: 2400, checkIn: 2100 },
-    { name: "Jun", cash: 2000, checkOut: 2000, checkIn: 2300 },
-    { name: "Jul", cash: 2000, checkOut: 2400, checkIn: 3000 },
-  ];
 
   return (
-    <div className=" px-1  lg:w-full  bg-[#F6F8FF]">
-      <div className=" flex flex-row items-center gap-2 px-5 h-10 md:h-16">
-        <div className="relative w-5 h-5 ">
-          <Image
-            src={adminSvgIcons.adminHalfMenu}
-            alt="employee image"
-            fill={true}
-            className="object-cover"
-          />
-        </div>
-        Dashboard
-      </div>
-      <div className="  flex flex-col gap-5 ">
-        <div className="flex flex-col lg:flex lg:flex-row lg:w-[77.5rem] md:grid md:grid-cols-2 gap-5 md:grid-rows-2 mx-5">
-          <div className="w-72 h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
-            <div>CHECK IN</div>
-            <div className="flex flex-row  justify-between">
-              <div>$12,426</div>
-              <div className="flex flex-row items-center gap-x-1">
-                +36%{" "}
-                <div className="relative w-2 h-2 ">
-                  <Image
-                    src={adminSvgIcons.adminUpArrow}
-                    alt="employee image"
-                    fill={true}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-72 h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
-            <div>CHECK OUT</div>
-            <div className="flex flex-row  justify-between">
-              <div>84,382</div>
-              <div className="flex flex-row items-center gap-x-1">
-                +36%{" "}
-                <div className="relative w-2 h-2 ">
-                  <Image
-                    src={adminSvgIcons.adminUpArrow}
-                    alt="employee image"
-                    fill={true}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-72 h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
-            <div>TOTAL CUSTOMERS</div>
-            <div className="flex flex-row   justify-between">
-              <div>33,493</div>
-              <div className="flex flex-row items-center gap-x-1">
-                +36%{" "}
-                <div className="relative w-2 h-2 ">
-                  <Image
-                    src={adminSvgIcons.adminUpArrow}
-                    alt="employee image"
-                    fill={true}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=" w-72 h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
-            <div>CASH</div>
-            <div className="flex flex-row   justify-between">
-              <div>33,493</div>
-              <div className="flex flex-row items-center gap-x-1">
-                +36%{" "}
-                <div className="relative w-2 h-2 ">
-                  <Image
-                    src={adminSvgIcons.adminUpArrow}
-                    alt="employee image"
-                    fill={true}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-[#F6F8FF] px-1 w-full  ">
+      <div className=" flex flex-row items-center gap-2 px-5 h-10 md:h-16 text-xl">
+        <Image
+          src={svgs.adminHalfMenu}
+          alt="employee image"
+          width={20}
+          height={20}
+          className="object-cover"
+        />
 
+        <p>{strings.adminDashboard.dashboard.dashboard}</p>
+      </div>
+      <div className="  flex flex-col gap-5 w-full ">
+        <div className="flex flex-col lg:flex lg:flex-row   md:grid md:grid-cols-2 gap-5 md:grid-rows-2 mx-5">
+          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+            <p className="text-xs">
+              {strings.adminDashboard.dashboard.checkIn}
+            </p>
+            <div className="flex flex-row  justify-between">
+              <p className="text-xl">$12,426</p>
+              <div className="flex flex-row items-center gap-x-1 text-xs">
+                +36%
+                <Image
+                  src={svgs.adminUpArrow}
+                  alt="employee image"
+                  width={8}
+                  height={8}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+            <p className="text-xs">
+              {strings.adminDashboard.dashboard.checkOut}
+            </p>
+            <div className="flex flex-row  justify-between">
+              <p className="text-xl">84,382</p>
+              <div className="flex flex-row items-center gap-x-1">
+                <p className="text-xs">+36%</p>
+                <Image
+                  src={svgs.adminUpArrow}
+                  alt="employee image"
+                  width={8}
+                  height={8}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+            <div className="text-xs">
+              {strings.adminDashboard.dashboard.totalCustomers}
+            </div>
+            <div className="flex flex-row   justify-between">
+              <p className="text-xl">33,493</p>
+              <div className="flex flex-row items-center gap-x-1">
+                <p className="text-xs">+36%</p>
+                <Image
+                  src={svgs.adminUpArrow}
+                  alt="employee image"
+                  width={8}
+                  height={8}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className=" w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+            <p className="text-xs">{strings.adminDashboard.dashboard.cash}</p>
+            <div className="flex flex-row   justify-between">
+              <p className="text-xl">33,493</p>
+              <div className="flex flex-row items-center gap-x-1">
+                <p className="text-xs">+36%</p>
+                <Image
+                  src={svgs.adminUpArrow}
+                  alt="employee image"
+                  width={8}
+                  height={8}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         {/* blocks */}
         <div className="lg:grid lg:grid-rows-2 lg:grid-cols-2 flex flex-col px-5 gap-5">
-          <div className="lg:w-[38rem]   rounded p-4 md:hidden lg:flex lg:flex-col gap-4 bg-neutral-50">
+          {/* Calendar Section */}
+          <div className=" w-full h-auto rounded p-4 bg-neutral-50">
             <Calendar
               onChange={setDate}
               value={date}
               className="w-full h-full"
             />
           </div>
-          <div className="lg:w-[37.65rem]    rounded-1 py-5  lg:px-10 px-9 md:hidden lg:flex lg:flex-col  lg:gap-4 gap-2 bg-neutral-50">
-            <div className="lg:w-[33.3rem]  flex flex-col gap-1">
-              <p className="text-neutral-950 text-sm">Reservation stats</p>
-              <p className="text-neutral-500 text-xs">
-                Your current reservation summary and activity.
-              </p>
-            </div>
-            <div className="  p-1  flex flex-col gap-7 lg:gap-0 lg:flex-row justify-between">
-              <div className=" flex gap-6">
-                <div className="flex flex-col">
-                  <p className="text-xs text-neutral-500">Bitcoin</p>
-                  <p className="text-sm text-neutral-950">
-                    62% <span className="text-xs ms-[7px]">10.78%</span>
-                  </p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-xs text-neutral-500">Credit</p>
-                  <p className="text-sm text-neutral-950">
-                    12% <span className="text-xs ms-2">10.78%</span>
-                  </p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-xs text-neutral-500">Cash</p>
-                  <p className="text-sm text-neutral-950">
-                    30% <span className="text-xs ms-2">10.78%</span>
-                  </p>
-                </div>
-              </div>
-              <div className="lg:w-32 lg:h-14 w-[23rem] h-6  flex flex-row lg:flex-col gap-2 justify-between lg:justify-start">
-                <div className="flex flex-row w-32  text-xs  rounded-sm border border-neutral-400 gap-1 p-1">
-                  <IoIosSearch className="text-black" />{" "}
-                  <input
-                    value=""
-                    placeholder="search"
-                    className="w-full outline-none"
-                  />
-                </div>
-                <div className="flex flex-row gap-2">
-                  <select className="">
-                    <option>Monthly</option>
-                  </select>
-                  <button className="">Filter</button>
-                </div>
-              </div>
-            </div>
-            <ResponsiveContainer width="100%" height={200}>
-              <BarChart
-                data={data}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend
-                  verticalAlign="bottom"
-                  align="center"
-                  layout="horizontal"
-                  iconType="circle" // Rounded indicators
-                  iconSize={10}
-                />
-                <Bar dataKey="checkIn" stackId="a" fill="#002855" />
-                <Bar dataKey="checkOut" stackId="a" fill="#3D52A0" />
-                <Bar dataKey="cash" stackId="a" fill="#B5B2FF" />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-
-          <div className="hidden md:flex lg:hidden md:flex-row  md:gap-2">
-            <div className=" w-72 h-[24.5rem] rounded p-4 flex flex-col gap-4 bg-neutral-50">
-              <Calendar
-                onChange={setDate}
-                value={date}
-                className="w-full h-full"
-              />
-            </div>
-            <div className=" w-[27.6rem] h-96  rounded py-5  md:px-10 flex flex-col  md:gap-5 bg-neutral-50">
-              <div className=" flex flex-col gap-1 ">
-                <p className="text-neutral-950 text-sm">Reservation stats</p>
+          <div className="w-full lg:flex lg:flex-row gap-2">
+            {/* Stats and Chart Section */}
+            <div className=" w-full h-auto rounded py-5 px-5 flex flex-col gap-4 bg-neutral-50">
+              {/* Reservation Stats */}
+              <div className="w-full  flex flex-col gap-1">
+                <p className="text-neutral-950 text-sm">
+                  {
+                    strings.adminDashboard.dashboard.reservation
+                      .reservationStats
+                  }
+                </p>
                 <p className="text-neutral-500 text-xs">
-                  Your current reservation summary and activity.
+                  {
+                    strings.adminDashboard.dashboard.reservation
+                      .reservationDescription
+                  }
                 </p>
               </div>
-              <div className="  p-1  flex flex-col gap-7 lg:gap-0 lg:flex-row justify-between">
-                <div className=" flex gap-6">
+
+              {/* Payment Stats */}
+              <div className="p-1 flex flex-col lg:flex-row justify-between">
+                <div className="flex gap-6">
                   <div className="flex flex-col">
-                    <p className="text-xs text-neutral-500">Bitcoin</p>
+                    <p className="text-xs text-neutral-500">
+                      {strings.adminDashboard.dashboard.reservation.bitcoin}
+                    </p>
                     <p className="text-sm text-neutral-950">
                       62% <span className="text-xs ms-2">10.78%</span>
                     </p>
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-xs text-neutral-500">Credit</p>
+                    <p className="text-xs text-neutral-500">
+                      {strings.adminDashboard.dashboard.reservation.credit}
+                    </p>
                     <p className="text-sm text-neutral-950">
                       12% <span className="text-xs ms-2">10.78%</span>
                     </p>
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-xs text-neutral-500">Cash</p>
+                    <p className="text-xs text-neutral-500">
+                      {strings.adminDashboard.dashboard.reservation.cash}
+                    </p>
                     <p className="text-sm text-neutral-950">
                       30% <span className="text-xs ms-2">10.78%</span>
                     </p>
                   </div>
                 </div>
-                <div className=" w-[22.9rem]   flex flex-row lg:flex-col gap-2 justify-between lg:justify-start">
-                  <div className="flex text-xs flex-row w-32 h-6 rounded-sm border border-neutral-400 gap-1 p-1 items-center">
-                    <div className="relative w-2 h-2 ">
-                      <Image
-                        src={adminSvgIcons.adminSearch}
-                        alt="employee image"
-                        fill={true}
-                        className="object-cover"
-                      />
-                    </div>
+
+                {/* Search and Filter */}
+                <div className="lg:w-32 lg:h-14 w-full h-10 flex flex-row lg:flex-col gap-2 justify-between lg:justify-start">
+                  <div className="flex flex-row text-xs rounded-sm border border-neutral-400 gap-1 p-1 w-full">
+                    <Image
+                      src={svgs.adminSearch}
+                      alt="search icon"
+                      width={8}
+                      height={8}
+                      className="object-contain"
+                    />
                     <input
                       value=""
-                      placeholder="search"
+                      placeholder="Search"
                       className="w-full outline-none"
                     />
                   </div>
-                  <div className="flex flex-row  gap-2">
-                    <select className="">
+                  <div className="flex flex-row gap-2">
+                    <select className="border border-neutral-300 p-1">
                       <option>Monthly</option>
                     </select>
-                    <button className="">Filter</button>
+                    <button className="border border-neutral-300 p-1">
+                      Filter
+                    </button>
                   </div>
                 </div>
               </div>
-              <ResponsiveContainer width="100%" height={152}>
+
+              {/* Bar Chart */}
+              <ResponsiveContainer width="100%" height={200}>
                 <BarChart
-                  data={data}
-                  margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
+                  data={adminData}
+                  margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
                 >
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
-                  <YAxis />
+                  <YAxis fontSize={12} />
                   <Tooltip />
                   <Legend
-                    verticalAlign="bottom"
+                    verticalAlign="top"
                     align="center"
                     layout="horizontal"
-                    iconType="circle" // Rounded indicators
+                    iconType="circle"
                     iconSize={10}
                   />
                   <Bar dataKey="checkIn" stackId="a" fill="#002855" />
@@ -327,20 +218,21 @@ export default function Dashboard() {
               </ResponsiveContainer>
             </div>
           </div>
+
           <div className="lg:w-[37.6rem]     rounded py-8 px-4 flex flex-col lg:gap-4 gap-8 bg-neutral-50">
-            {rooms?.map((room, index) => (
+            {adminRooms?.map((room, index) => (
               <div
                 className="  rounded-lg p-2 gap-2 flex flex-row bg-neutral-50 "
                 key={index}
               >
-                <div className="relative w-28 h-16 ">
-                  <Image
-                    src={adminImages.adminRoom1}
-                    fill={true}
-                    alt="image"
-                    className="rounded"
-                  />
-                </div>
+                <Image
+                  src={adminImages.adminRoom1}
+                  width={112}
+                  height={64}
+                  alt="image"
+                  className="rounded object-cover"
+                />
+
                 <div className="flex flex-col gap-2">
                   <p className="text-md">{room.name}</p>
                   <p className="text-sm">{room.time}</p>
@@ -349,25 +241,29 @@ export default function Dashboard() {
             ))}
           </div>
 
-          <div className="lg:w-[37.7rem]    rounded-2 border py-[18px] px-6 flex flex-col gap-6 bg-neutral-50">
-            <div className="lg:w-[34.7rem]    flex flex-col gap-1">
-              <p className="text-md">Recent Customers</p>
-              <p className="text-xs">Lorem ipsum dolor sit ametis</p>
+          <div className="    rounded-2 border py-5 px-6 flex flex-col gap-6 bg-neutral-50">
+            <div className="    flex flex-col gap-1">
+              <p className="text-md">
+                {strings.adminDashboard.dashboard.recentCustomers}
+              </p>
+              <p className="text-xs">
+                {strings.adminDashboard.dashboard.recentCustomersText}
+              </p>
             </div>
-            {customers?.map((customer, index) => (
+            {adminCustomers?.map((customer, index) => (
               <div
-                className="  gap-32  flex flex-row lg:gap-72 md:gap-96 text-xs"
+                className="  gap-32  flex flex-row justify-between   text-xs"
                 key={index}
               >
                 <div className="flex flex-row gap-2 text-xs">
-                  <div className="relative w-9 h-9 ">
-                    <Image
-                      src={adminImages.adminCustomer1}
-                      fill={true}
-                      alt="image"
-                      className=" rounded-full"
-                    />
-                  </div>
+                  <Image
+                    src={adminImages.adminCustomer1}
+                    width={36}
+                    height={36}
+                    alt="image"
+                    className=" rounded-full"
+                  />
+
                   <div className="flex flex-col gap-1 ">
                     <p>{customer.name}</p>
                     <p>{customer.email}</p>
@@ -380,16 +276,15 @@ export default function Dashboard() {
               </div>
             ))}
             <div className=" flex flex-row gap-3 text-xs items-center">
-              <p>SEE ALL CUSTOMERS</p>
+              <p>{strings.adminDashboard.dashboard.seeAllCustomers}</p>
 
-              <div className="relative w-2 h-3 ">
-                <Image
-                  src={adminSvgIcons.adminRightArrow}
-                  alt="employee image"
-                  fill={true}
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src={svgs.adminRightArrow}
+                alt="employee image"
+                width={8}
+                height={12}
+                className="object-contain"
+              />
             </div>
           </div>
         </div>
