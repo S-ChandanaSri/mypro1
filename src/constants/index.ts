@@ -90,6 +90,8 @@ export const PATHS = {
   signUp: "/signup",
   forgotPassword: "/forgot-password",
   testimonials: "/testimonials",
+  Steps: "/components/Steps",
+  Imagesstep: "/components/Imagesstep",
 };
 
 export const LINKS = {

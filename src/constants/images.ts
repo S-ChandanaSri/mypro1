@@ -102,6 +102,35 @@ import mdibed from "../../public/res/icons/mdibed.png";
 import mdigraphbox from "../../public/res/icons/mdigraphbox.png";
 import mdigraphline from "../../public/res/icons/mdigraphline.png";
 
+import wifi from "../../public/res/images/infoCards/wifi.svg";
+import washer from "../../public/res/images/infoCards/washer.svg";
+import park from "../../public/res/images/infoCards/park.svg";
+import free from "../../public/res/images/infoCards/free.svg";
+import kitchen from "../../public/res/images/infoCards/kitchen.svg";
+import workplace from "../../public/res/images/infoCards/workplace.svg";
+import tv from "../../public/res/images/infoCards/tv.svg";
+import ac from "../../public/res/images/infoCards/ac.svg";
+import pool from "../../public/res/images/infoCards/pool.svg";
+import patio from "../../public/res/images/infoCards/patio.svg";
+import tub from "../../public/res/images/infoCards/tub.svg";
+import piano from "../../public/res/images/infoCards/piano.svg";
+import table from "../../public/res/images/infoCards/table.svg";
+import exercise from "../../public/res/images/infoCards/exercise.svg";
+import beach from "../../public/res/images/infoCards/beach.svg";
+import indoor from "../../public/res/images/infoCards/indoor.svg";
+import outdoor from "../../public/res/images/infoCards/outdoor.svg";
+import room from "../../public/res/images/infoCards/room.svg";
+import cilroom from "../../public/res/images/infoCards/cilroom.svg";
+import house from "../../public/res/images/infoCards/house.svg";
+import People from "../../public/res/images/infoCards/people.svg";
+import peopleline from "../../public/res/images/infoCards/peopleline.svg";
+import peoplesharp from "../../public/res/images/infoCards/peoplesharp.svg";
+import plus1 from "../../public/res/images/infoCards/plus1.png";
+import subt1 from "../../public/res/images/infoCards/subt1.png";
+import peace from "../../public/res/images/infoCards/peace.png";
+import mattress1 from "../../public/res/images/infoCards/mattress1.svg";
+import mattress2 from "../../public/res/images/infoCards/mattress2.svg";
+import mattress3 from "../../public/res/images/infoCards/mattress3.svg";
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
@@ -213,7 +242,37 @@ export const cardproperty = {
   mdigraphbox,
   mdigraphline,
 };
-
+export const InfoImages = {
+  mattress1,
+  mattress2,
+  mattress3,
+  peace,
+  plus1,
+  subt1,
+  peoplesharp,
+  peopleline,
+  People,
+  beach,
+  outdoor,
+  wifi,
+  washer,
+  park,
+  free,
+  tv,
+  kitchen,
+  workplace,
+  ac,
+  pool,
+  patio,
+  tub,
+  piano,
+  table,
+  exercise,
+  indoor,
+  cilroom,
+  room,
+  house,
+};
 export const roomViewSvgIcons = {
   roomAc,
   roomBar,

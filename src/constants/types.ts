@@ -161,3 +161,23 @@ export interface CardProps {
   ratepointstyle?: string;
   multiImage?: boolean;
 }
+
+export interface CardInfo {
+  icon: StaticImport;
+  label: string;
+  body?: string;
+}
+
+export interface CardInfo1 {
+  icon: StaticImport;
+  label: string;
+  sublabel: string;
+  body?: string;
+}
+
+export interface CardInfo2 {
+  icon: StaticImport;
+  icon2: StaticImport;
+  label: string;
+  body?: string;
+}
