@@ -1,6 +1,15 @@
 import { PATHS, VIDEOS } from ".";
-import { INFO_IMAGES, svgs, TEAM_IMAGES } from "./images";
+
+import {
+  INFO_IMAGES,
+  roomViewImages,
+  svgs,
+  TEAM_IMAGES,
+  testimonialimages,
+} from "./images";
+
 import { strings } from "./strings";
+import { cardproperty } from "./images";
 import {
   ICardInfo,
   IFAQ,
@@ -11,7 +20,9 @@ import {
   IStat,
   IVideoTestimonial,
   SocialPlatforms,
+  Itestimonial,
 } from "./types";
+import roomViewinterior1 from "../../public/res/images/roomViewinterior1.png";
 
 export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
@@ -397,3 +408,209 @@ export const FooterLinks: ILinkOption[][] = [
     },
   ],
 ];
+
+export const testimonial: Itestimonial[] = [
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+  {
+    icon1: testimonialimages.sam,
+    label: "Samantha Payne",
+    sublabel: "@Sam.Payne90",
+    icon2: testimonialimages.star,
+    label1:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,",
+    sublabel1: "23 Nov 2021",
+  },
+];
+
+export const Propertcardinfo: propertyinfo[] = [
+  {
+    icon: cardproperty.view1,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view2,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view3,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view4,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view5,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view6,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view7,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+  {
+    icon: cardproperty.view8,
+    icon1: cardproperty.mingcute,
+    icon2: cardproperty.mdibed,
+    icon3: cardproperty.mdigraphbox,
+    icon4: cardproperty.mdigraphline,
+    label: "Banaras Island, Lagos",
+    sublabel: "4 Bed",
+    sublabel1: "Book Now",
+  },
+];
+
+{
+  /*export const Propertcardimages: propertyinfo[] = [
+
+  {
+    image1: roomViewImages.roomViewImages,
+    image2: roomViewImages.roomViewinterior1,
+    image3: roomViewImages.roomViewinterior2,
+    image4: roomViewImages.roomViewinterior3,
+  }
+]*/
+}

@@ -67,6 +67,43 @@ import propertyInterior2 from "../../public/res/images/propertyDetails/interior2
 import propertyInterior3 from "../../public/res/images/propertyDetails/interior3.png";
 import { SocialPlatforms } from "./types";
 
+import icons from "../../public/res/images/teams/icons.svg";
+import check from "../../public/res/images/teams/check.svg";
+import sam from "../../public/res/images/teams/samantha.svg";
+import star from "../../public/res/images/teams/Vstar.svg";
+
+import roomViewExterior from "../../public/res/images/roomViewexterior.png";
+import roomViewinterior1 from "../../public/res/images/roomViewinterior1.png";
+import roomViewinterior2 from "../../public/res/images/roomViewinterior2.png";
+import roomViewinterior3 from "../../public/res/images/roomViewinterior3.png";
+
+import roomAc from "../../public/res/icons/ac.svg";
+import roomBar from "../../public/res/icons/bar.svg";
+import roomClearAll from "../../public/res/icons/clearAll.svg";
+import roomDownArrow from "../../public/res/icons/downArrow.svg";
+import roomGraph from "../../public/res/icons/graph.svg";
+import roomMapButton from "../../public/res/icons/Map Button.svg";
+import roomTv from "../../public/res/icons/tv.svg";
+import roomLocation from "../../public/res/icons/Vectorlocation.svg";
+import roomRightArrow from "../../public/res/icons/VectorrightArrow.svg";
+import roomStart from "../../public/res/icons/Vectorstart.svg";
+import roomWifi from "../../public/res/icons/Vectorwifi.svg";
+import roomHamburger from "../../public/res/icons/Vectorhamburger.svg";
+import roomCloud from "../../public/res/icons/Vectorcloud.svg";
+
+import view1 from "../../public/res/images/view1.jpg";
+import view2 from "../../public/res/images/view2.jpg";
+import view3 from "../../public/res/images/view3.jpg";
+import view4 from "../../public/res/images/view4.jpg";
+import view5 from "../../public/res/images/view5.jpg";
+import view6 from "../../public/res/images/view6.jpg";
+import view7 from "../../public/res/images/view7.jpg";
+import view8 from "../../public/res/images/view8.jpg";
+import mingcute from "../../public/res/icons/mingcute.png";
+import mdibed from "../../public/res/icons/mdibed.png";
+import mdigraphbox from "../../public/res/icons/mdigraphbox.png";
+import mdigraphline from "../../public/res/icons/mdigraphline.png";
+
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
@@ -157,4 +194,49 @@ export const svgs = {
   propertyTv,
   propertyWideScreenTv,
   propertyRightArrow,
+};
+
+export const testimonialimages = {
+  icons,
+  check,
+  sam,
+  star,
+};
+
+export const cardproperty = {
+  view1,
+  view2,
+  view3,
+  view4,
+  view5,
+  view6,
+  view7,
+  view8,
+  mingcute,
+  mdibed,
+  mdigraphbox,
+  mdigraphline,
+};
+
+export const roomViewSvgIcons = {
+  roomAc,
+  roomBar,
+  roomClearAll,
+  roomDownArrow,
+  roomGraph,
+  roomLocation,
+  roomMapButton,
+  roomRightArrow,
+  roomStart,
+  roomTv,
+  roomWifi,
+  roomHamburger,
+  roomCloud,
+};
+
+export const roomViewImages = {
+  roomViewExterior,
+  roomViewinterior1,
+  roomViewinterior2,
+  roomViewinterior3,
 };
