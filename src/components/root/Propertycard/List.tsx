@@ -81,6 +81,7 @@ const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
             <React.Fragment key={index}>
               <Card
                 image={card.icon}
+                locate={card.icon1}
                 location={card.label}
                 icons={[card.icon2, card.icon3, card.icon4]}
                 sublabels={[card.sublabel, card.sublabel, card.sublabel]}
@@ -90,6 +91,8 @@ const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
                 buttonstyle={
                   "pr-[140px] pb-[1rem] relative left-[1rem] flex justify-end"
                 }
+                locationstyle={"text-[#3D52A0]"}
+                placestyle={"flex"}
               />
             </React.Fragment>
           ))}
