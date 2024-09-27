@@ -10,10 +10,111 @@ import InfoCards from "@/components/root/InfoCards";
 import Hero from "@/components/root/Hero";
 import VideoTestimonials from "@/components/root/VideoTestimonials";
 import FAQs from "@/components/root/FAQs";
+import {
+  OTPModal,
+  PhoneNumberModal,
+} from "@/components/popup/PhoneNumberModal";
+import { useState } from "react";
+import ZendenWelcomeModal from "@/components/popup/WelcomeModal";
+import ImageUploadModal from "@/components/popup/ImageModal";
+import { postPhoneNumber, postOTP, postImage } from "@/api";
 
 function Home() {
+  const [WelcomeModal, setWelcomeModal] = useState<boolean>(true);
+  const [ImageModal, setImageModal] = useState<boolean>(false);
+  const [PhoneModal, setPhoneModal] = useState<boolean>(false);
+  const [OtpModal, setOtpModal] = useState<boolean>(false);
+
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const welcomeModalContinue = (): void => {
+    setWelcomeModal(false);
+    setPhoneModal(true);
+  };
+  const PhoneNumberContinue = async (phoneNumber: string) => {
+    setIsLoading(true);
+    try {
+      await postPhoneNumber({ phoneNumber });
+      setPhoneModal(false);
+      setOtpModal(true);
+      setError(null);
+    } catch (e) {
+      setError("Failed to verify phone number. Please try again.");
+      console.error(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const OTPContinue = async (otp: string) => {
+    setIsLoading(true);
+    try {
+      await postOTP({ otp });
+      setOtpModal(false);
+      setImageModal(true); // Open Image Upload modal
+      setError(null);
+    } catch (e) {
+      setError("Invalid OTP. Please try again.");
+      console.error(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const ImageContinue = async (image: File) => {
+    setIsLoading(true);
+    try {
+      await postImage({ image });
+      setImageModal(false);
+      setError(null);
+    } catch (e) {
+      setError("Failed to upload image. Please try again.");
+      console.error(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const WelcomeClose = () => {
+    // Simply close the OTP modal
+    setWelcomeModal(false);
+  };
+  const PhoneClose = () => {
+    // Simply close the OTP modal
+    setPhoneModal(false);
+  };
+  const OtpClose = () => {
+    // Simply close the OTP modal
+    setOtpModal(false);
+  };
+  const ImageClose = () => {
+    // Simply close the OTP modal
+    setImageModal(false);
+  };
+
   return (
     <div className="space-y-32 overflow-hidden px-6 sm:px-16">
+      <ZendenWelcomeModal
+        open={WelcomeModal}
+        handleClose={WelcomeClose}
+        handleContinue={welcomeModalContinue}
+      />
+      <PhoneNumberModal
+        open={PhoneModal}
+        handleClose={PhoneClose}
+        handlePhoneNumberContinue={PhoneNumberContinue}
+      />
+      <OTPModal
+        open={OtpModal}
+        handleClose={OtpClose}
+        handleOTPContinue={OTPContinue}
+      />
+      <ImageUploadModal
+        open={ImageModal}
+        handleClose={ImageClose}
+        handleContinue={ImageContinue}
+      />
       <Hero />
       {/* <div className="flex h-[157px] items-center gap-[105px] border-[1px] border-[#0000004D] bg-[#FFFFFF] px-[47px] py-[15px] sm:gap-2 lg:gap-10">
         <div className="w-fill h-fill h-[127px] w-[1066.33px] gap-[82px]">
