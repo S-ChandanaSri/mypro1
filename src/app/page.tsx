@@ -73,7 +73,7 @@ function Home() {
           cards={GetInTouchInfo}
         />
       </div>
-      <VideoTestimonials />
+      {/* <VideoTestimonials /> */}
       <FAQs />
     </div>
   );

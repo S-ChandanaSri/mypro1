@@ -3,11 +3,9 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 
 //import { useNavigate } from 'react-router-dom';
 import Image from "next/image";
-import mattress2 from "../../_assets/images/mattress2.png";
-import mattress1 from "../../_assets/images/mattress1.png";
-import mattress3 from "../../_assets/images/mattress3.png";
+
 import Footer from "../Footer/page.js";
-import d from "../../_assets/images/d.png";
+import d from "../../../public/res/images/components/d.png";
 //import Select from 'react-select';
 import countryList from "react-select-country-list";
 import Amenities1 from "../Amenities1/page.js";
@@ -19,7 +17,7 @@ import Address from "../Address/page.js";
 import Peopletype from "../Peopletype/page.js";
 import Display from "../Display/page.js";
 import Navbar from "../Navbar/page.js";
-import Options from "..//Options/page.js";
+import Options from "../Options/page.js";
 import { useRouter } from "next/navigation";
 import { useListing } from "@/app/context/ListingContext";
 import { v4 as uuidv4 } from "uuid";

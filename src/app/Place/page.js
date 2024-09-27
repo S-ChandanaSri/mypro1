@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import phhouse from "../../_assets/images/phhouse.png";
-import phbuild from "../../_assets/images/phbuild.png";
+import phhouse from "../../../public/res/images/components/phhouse.png";
+import phbuild from "../../../public/res/images/components/phbuild.png";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Place({

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import rectangle from "../../_assets/images/rectangle.png";
+import rectangle from "../../../public/res/images/components/rectangle.png";
 //import { Link,useNavigate } from 'react-router-dom';
 import Navbar from "../Navbar/page.js";
 import { ThreeDots } from "react-loader-spinner";

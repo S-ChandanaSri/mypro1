@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import outline from "../../_assets/images/outline.png";
-import arrowd from "../../_assets/images/arrowd.png";
-import Vector from "../../_assets/images/Vector.png";
-import plus from "../../_assets/images/plus.png";
+import outline from "../../../public/res/images/components/outline.png";
+import arrowd from "../../../public/res/images/components/arrowd.png";
+import Vector from "../../../public/res/images/components/Vector.png";
+import plus from "../../../public/res/images/components/plus.png";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 

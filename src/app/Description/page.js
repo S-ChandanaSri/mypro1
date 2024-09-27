@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import peace from "../../_assets/images/peace.png";
+
 import Describehome from "@/components/root/InfoCards/infoCards/Describehome";
 import { strings } from "@/constants/strings";
 import { Describeinfo } from "@/constants/arrays";

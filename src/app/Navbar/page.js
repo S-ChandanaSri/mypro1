@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import img1 from "../../_assets/images/Logo1.png";
-import materialblack from "../../_assets/images/materialblack.png";
-import userblack from "../../_assets/images/userblack.png";
-import quillblack from "../../_assets/images/quillblack.png";
+import img1 from "../../../public/res/images/components/Logo1.png";
+import materialblack from "../../../public/res/images/components/materialblack.png";
+import userblack from "../../../public/res/images/components/userblack.png";
+import quillblack from "../../../public/res/images/components/quillblack.png";
 
 const Navbar = () => {
   return (

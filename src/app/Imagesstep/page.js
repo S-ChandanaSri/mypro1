@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/page.js";
 import Image from "next/image";
-import jhome from "../../_assets/images/jhome.png";
+
 import { useRouter } from "next/navigation";
 
 import Footerimages from "../Footerimages/page.js";

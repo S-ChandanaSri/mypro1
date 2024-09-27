@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
 import pica from "pica";
-import frame from "../../_assets/images//frame.png";
-import { useListing } from "../../context/ListingContext";
+import frame from "../../../public/res/images/components/frame.png";
+import { useListing } from "../context/ListingContext";
 import { useRouter } from "next/navigation";
 
 export default function Imageslist({ listingid }) {
