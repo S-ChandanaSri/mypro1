@@ -11,7 +11,7 @@ export const strings = {
     [PATHS.aboutUs]: "About Us",
     [PATHS.login]: "Login",
     [PATHS.signUp]: "Sign Up",
-    [PATHS.testimonials]: "Testimonials",
+    // [PATHS.testimonials]: "Testimonials",
   },
   navbar: {
     services: "Services",
@@ -27,16 +27,6 @@ export const strings = {
     download: "Download our app",
   },
   //Landing
-  landing: {
-  footer: {
-    description:
-      "We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    newsletter: "Newsletter",
-    newsletterPromo:
-      "Be the first one to know about discounts, offers and events",
-    enterMail: "Enter your email",
-    allRightsReserved: "© 2000-2021, All Rights Reserved",
-  },
 
   //Landing
   landing: {
@@ -77,6 +67,16 @@ export const strings = {
         "Can't find the answer you're looking for? Please chat to our friendly team.",
       getInTouch: "Get in touch",
     },
+  },
+
+  footer: {
+    description:
+      "We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    newsletter: "Newsletter",
+    newsletterPromo:
+      "Be the first one to know about discounts, offers and events",
+    enterMail: "Enter your email",
+    allRightsReserved: "© 2000-2021, All Rights Reserved",
   },
 
   //About Us
@@ -190,6 +190,7 @@ export const strings = {
   },
 
 
+
   //Property
   propertyDetails: {
     reservation: {
@@ -206,7 +207,7 @@ export const strings = {
     openingHours: "Opening hours",
     ammenities: "Ammenities",
     roomServices: "Additional In-room Services",
-     viewOnMap: "View on Map",
+    viewOnMap: "View on Map",
     ratings: "Ratings",
   },
 
@@ -254,21 +255,19 @@ export const strings = {
   },
 
   Amenities1: {
-    heading: "Let’s start with basics ",
+    heading: "Let's start with basics ",
     subheading: "How many people can stay here?",
   },
 
   Describehome: {
-    heading: "Next, Let’s describe your property",
+    heading: "Next, Let's describe your property",
     subheading:
-      "Choose up to 2 highlights. We’ll use this to get your description ready.",
+      "Choose up to 2 highlights. We'll use this to get your description ready.",
   },
 
   options: {
     heading: "You,re just three steps to setup your zenden",
   },
-
-
 
   filterOptionFlow: {
     filters: "Filters",
@@ -302,6 +301,5 @@ export const strings = {
       sendMessage: "Send message",
     },
   },
-    
 
 };
