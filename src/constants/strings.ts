@@ -129,6 +129,59 @@ export const strings = {
   },
 
 
+  adminDashboard: {
+    sidebar: {
+      dashboard: "Dashboard",
+      rooms: "Rooms",
+      bookings: "Bookings",
+      concierge: "Concierge",
+    },
+    dashboard: {
+      dashboard: "Dashboard",
+      checkIn: "CHECK IN",
+      checkOut: "CHECK OUT",
+      totalCustomers: "TOTAL CUSTOMERS",
+      cash: "CASH",
+      reservation: {
+        reservationStats: "Reservation stats",
+        reservationDescription: "Your current reservation summary and activity",
+        bitcoin: "Bitcoin",
+        credit: "Credit",
+        cash: "Cash",
+      },
+      recentCustomers: "Recent Customers",
+      recentCustomersText: "Lorem ipsum dolor sit ametis amhde",
+      seeAllCustomers: "SEE ALL CUSTOMERS",
+    },
+
+    roomList: {
+      roomList: "Room List",
+      allRooms: "All Rooms",
+      activeEmployee: "Active Employee",
+      inactiveEmployee: "Inactive Employee",
+      roomName: "Room Name",
+      bedType: "Bed Type",
+      roomFloor: "Room FLoor",
+      facilities: "Facilities",
+      rate: "Rate",
+      status: "Status",
+      newRoom: "New Room",
+    },
+    conciergeList: {
+      conciergeList: "Concierge List",
+      allRooms: "All Rooms",
+      activeEmployee: "Active Employee",
+      inactiveEmployee: "Inactive Employee",
+      EmployeeName: "Employee Name",
+      jobDetails: "Job Details",
+      schedule: "Schedule",
+      contact: "Contact",
+      status: "Status",
+      newRoom: "New Room",
+    },
+  },
+
+
   //Property
   propertyDetails: {
     reservation: {
@@ -242,4 +295,5 @@ export const strings = {
     },
   },
     
+
 };

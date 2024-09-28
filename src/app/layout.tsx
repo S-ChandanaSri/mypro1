@@ -38,9 +38,11 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
 
+
         <Navbar />
         <ListingProvider>{children}</ListingProvider>
         <Footer />
+
       </body>
     </html>
   );

@@ -61,6 +61,7 @@ export const COLORS = {
   },
 };
 
+
 export const VIDEOS = {
   TestVideo1: "/res/videos/video1.mp4",
   TestVideo2: "/res/videos/video2.mp4",
@@ -90,7 +91,6 @@ export const PATHS = {
   login: "/login",
   signUp: "/signup",
   forgotPassword: "/forgot-password",
-
 };
 
 export const Dimens = {
@@ -108,4 +108,6 @@ export const LINKS = {
 
 export const Duration = {
   apiTimeout: 60000,
+
 };
+

@@ -1,4 +1,5 @@
 
+
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import {
   StaticImageData,
@@ -7,12 +8,15 @@ import {
 
 export interface IInputValue {
 
+
   value?: string;
   error?: string;
 }
 
 
+
 export interface ILinkOption {
+
 
   label: string;
   page: string;
@@ -25,6 +29,7 @@ export interface IFAQ {
   question: string;
   answer: string;
 }
+
 
 
 export interface ICardInfo {
@@ -171,11 +176,13 @@ export interface CardProps {
   multiImage?: boolean;
 }
 
+
 export interface CardInfo {
   icon: StaticImport;
   label: string;
   body?: string;
 }
+
 
 export interface CardInfo1 {
   icon: StaticImport;
@@ -190,3 +197,4 @@ export interface CardInfo2 {
   label: string;
   body?: string;
 }
+
