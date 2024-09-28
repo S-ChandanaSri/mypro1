@@ -1,4 +1,4 @@
-import { roomViewImages, roomViewSvgIcons } from "./images";
+import { roomViewImages, svgs } from "./images";
 export const RoomFiltersCategories = [
   "Less than $25",
   "$150-$250",
@@ -30,15 +30,15 @@ export const RoomViewRooms = [
     price: "Rs 10,000",
     ammenities: [
       {
-        icon: roomViewSvgIcons.roomWifi,
+        icon: svgs.roomWifi,
         name: "Free Wifi",
       },
       {
-        icon: roomViewSvgIcons.roomTv,
+        icon: svgs.roomTv,
         name: "Tv",
       },
       {
-        icon: roomViewSvgIcons.roomCloud,
+        icon: svgs.roomCloud,
         name: "Ac",
       },
     ],
@@ -57,15 +57,15 @@ export const RoomViewRooms = [
     price: "Rs 10,000",
     ammenities: [
       {
-        icon: roomViewSvgIcons.roomWifi,
+        icon: svgs.roomWifi,
         name: "Free Wifi",
       },
       {
-        icon: roomViewSvgIcons.roomTv,
+        icon: svgs.roomTv,
         name: "Tv",
       },
       {
-        icon: roomViewSvgIcons.roomCloud,
+        icon: svgs.roomCloud,
         name: "Ac",
       },
     ],
@@ -84,15 +84,15 @@ export const RoomViewRooms = [
     price: "Rs 10,000",
     ammenities: [
       {
-        icon: roomViewSvgIcons.roomWifi,
+        icon: svgs.roomWifi,
         name: "Free Wifi",
       },
       {
-        icon: roomViewSvgIcons.roomTv,
+        icon: svgs.roomTv,
         name: "Tv",
       },
       {
-        icon: roomViewSvgIcons.roomCloud,
+        icon: svgs.roomCloud,
         name: "Ac",
       },
     ],
@@ -111,15 +111,15 @@ export const RoomViewRooms = [
     price: "Rs 10,000",
     ammenities: [
       {
-        icon: roomViewSvgIcons.roomWifi,
+        icon: svgs.roomWifi,
         name: "Free Wifi",
       },
       {
-        icon: roomViewSvgIcons.roomTv,
+        icon: svgs.roomTv,
         name: "Tv",
       },
       {
-        icon: roomViewSvgIcons.roomCloud,
+        icon: svgs.roomCloud,
         name: "Ac",
       },
     ],
@@ -138,15 +138,15 @@ export const RoomViewRooms = [
     price: "Rs 10,000",
     ammenities: [
       {
-        icon: roomViewSvgIcons.roomWifi,
+        icon: svgs.roomWifi,
         name: "Free Wifi",
       },
       {
-        icon: roomViewSvgIcons.roomTv,
+        icon: svgs.roomTv,
         name: "Tv",
       },
       {
-        icon: roomViewSvgIcons.roomCloud,
+        icon: svgs.roomCloud,
         name: "Ac",
       },
     ],

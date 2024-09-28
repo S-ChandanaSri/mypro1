@@ -9,70 +9,70 @@ import {
 } from "@/constants/roomViewArrays";
 
 export function Checkbox() {
-  return <input className="w-[23.3px] h-[23.3px] relative " type="checkbox" />;
+  return <input className="relative h-[23.3px] w-[23.3px]" type="checkbox" />;
 }
 
 export function ScaleOption() {
-  return <input type="radio" className="w-5 h-5" />;
+  return <input type="radio" className="h-5 w-5" />;
 }
 
 const FilterSection = ({ className = "" }) => {
   return (
-    <div className="hidden md:block  p-4   border-r-[1px] bg-neutral-50 ">
+    <div className="hidden border-r-[1px] bg-neutral-50 p-4 sm:block">
       {/*top part filter price range */}
       <div className="flex flex-col gap-14">
-        <div className="flex flex-row justify-between ">
-          <div className="flex flex-col  items-start">
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-col items-start">
             <p>{strings.roomView.filterSection.filters}</p>
             <p>{strings.roomView.filterSection.priceRange}</p>
           </div>
-          <div className="relative w-24 h-6">
+          <div className="relative h-6 w-24">
             <Image
               src={svgs.roomClearAll}
               alt="clear all"
               fill={true}
-              className=" object-cover "
+              className="object-cover"
             />
           </div>
         </div>
 
         <div>
-          <div className="relative lg:w-[17rem] w-64 h-32   ">
+          <div className="relative h-32 w-64 lg:w-[17rem]">
             <Image
               src="assests/vector-1.svg"
               alt="vector image"
               fill={true}
-              className=" object-cover"
+              className="object-cover"
             />
           </div>
-          <div className="relative lg:w-[17rem] w-64 h-4">
+          <div className="relative h-4 w-64 lg:w-[17rem]">
             <Image
               src="assests/bar.svg"
               alt="vector image"
               fill={true}
-              className=" object-cover "
+              className="object-cover"
             />
           </div>
-          <div className=" flex flex-row  justify-between    text-neutral-50">
-            <p className="w-16 h-8 rounded-md bg-neutral-950 flex justify-center items-center">
+          <div className="flex flex-row justify-between text-neutral-50">
+            <p className="flex h-8 w-16 items-center justify-center rounded-md bg-neutral-950">
               10000
             </p>
-            <p className="w-16 h-8 rounded-md bg-neutral-950  flex justify-center items-center">
+            <p className="flex h-8 w-16 items-center justify-center rounded-md bg-neutral-950">
               100000
             </p>
           </div>
         </div>
       </div>
 
-      <hr className=" border-[1px] border-neutral-500 mt-2 mb-6" />
+      <hr className="mb-6 mt-2 border-[1px] border-neutral-500" />
 
-      <div className="flex flex-col   rounded-md p- gap-8">
-        <div className="gap-6  flex flex-col ">
-          <div className="flex justify-between items-center">
+      <div className="p- flex flex-col gap-8 rounded-md">
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center justify-between">
             <p>{strings.roomView.filterSection.collections}</p>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
@@ -84,9 +84,9 @@ const FilterSection = ({ className = "" }) => {
               <Checkbox /> {collection}
             </div>
           ))}
-          <div className="flex gap-[10px] items-center">
+          <div className="flex items-center gap-[10px]">
             <div>{strings.roomView.filterSection.showMore}</div>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
                 src={svgs.roomDownArrow}
                 alt="downArrow"
@@ -97,12 +97,12 @@ const FilterSection = ({ className = "" }) => {
           </div>
         </div>
 
-        <div className="gap-6 flex flex-col">
+        <div className="flex flex-col gap-6">
           <div className="flex justify-between">
             <div>{strings.roomView.filterSection.categories}</div>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
@@ -114,11 +114,11 @@ const FilterSection = ({ className = "" }) => {
               <Checkbox /> {category}
             </div>
           ))}
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <div>{strings.roomView.filterSection.showMore}</div>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
@@ -127,12 +127,12 @@ const FilterSection = ({ className = "" }) => {
           </div>
         </div>
 
-        <div className=" gap-6 flex flex-col">
-          <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center justify-between">
             <div>{strings.roomView.filterSection.rating}</div>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
-                src={roomViewSvgIcons.roomDownArrow}
+                src={svgs.roomDownArrow}
                 alt="downArrow"
                 fill={true}
                 className="object-cover"
@@ -140,13 +140,13 @@ const FilterSection = ({ className = "" }) => {
             </div>
           </div>
           {RoomFiltersRating?.map((rating, index) => (
-            <div className="flex gap-4 items-center" key={index}>
+            <div className="flex items-center gap-4" key={index}>
               <ScaleOption /> {rating}
             </div>
           ))}
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <div>{strings.roomView.filterSection.showMore}</div>
-            <div className="relative w-3 h-2">
+            <div className="relative h-2 w-3">
               <Image
                 src={svgs.roomDownArrow}
                 alt="downArrow"
