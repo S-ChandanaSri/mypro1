@@ -17,6 +17,14 @@ export const strings = {
     services: "Services",
     features: "Features",
     aboutUs: "About Us",
+    listYourProperty: "List your property",
+    notifcations: "Notifications",
+    trips: "Trips",
+    wishlist: "Wishlist",
+    account: "Account",
+    help: "Help",
+    logout: "Log Out",
+    download: "Download our app",
   },
   //Landing
   landing: {
