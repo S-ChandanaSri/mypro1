@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, SetStateAction } from "react";
+import React, { useRef, useEffect, SetStateAction, useCallback } from "react";
 import Button from "../../common/Button";
 import { svgs } from "@/constants/images";
 import { IVideoTestimonial } from "@/constants/types";
@@ -18,14 +18,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const handleVideoState = () => {
+  const handleVideoState = useCallback(() => {
     if (videoRef.current?.paused) {
       videoRef.current?.play();
     } else {
       videoRef.current?.pause();
     }
     togglePlaying();
-  };
+  }, [videoRef, togglePlaying]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -56,4 +56,4 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   );
 };
 
-export default VideoPlayer;
+export default React.memo(VideoPlayer);

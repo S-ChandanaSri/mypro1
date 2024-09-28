@@ -1,9 +1,13 @@
+
+
 import { IInputValue } from "@/constants/types";
+
 import { z, ZodSchema } from "zod";
 
 interface HandleInputChangeProps {
   schema: ZodSchema<any>;
   setState: React.Dispatch<React.SetStateAction<IInputValue | undefined>>;
+
 }
 
 export const handleInputChange =
@@ -18,4 +22,6 @@ export const handleInputChange =
         setState({ value: newValue, error: error.errors[0].message });
       }
     }
+
   };
+
