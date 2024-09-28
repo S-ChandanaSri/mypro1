@@ -67,6 +67,7 @@ export const VIDEOS = {
   TestVideo3: "/res/videos/video3.mp4",
 };
 
+
 export const FONT_SIZES = {
   xs: "12px",
   sm: "14px",
@@ -89,7 +90,14 @@ export const PATHS = {
   login: "/login",
   signUp: "/signup",
   forgotPassword: "/forgot-password",
+
+};
+
+export const Dimens = {
+  loginForm: 480,
   testimonials: "/testimonials",
+  Steps: "/Steps",
+  Imagesstep: "/Imagesstep",
 };
 
 export const LINKS = {

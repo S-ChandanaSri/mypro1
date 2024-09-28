@@ -128,6 +128,7 @@ export const strings = {
     },
   },
 
+
   //Property
   propertyDetails: {
     reservation: {
@@ -146,6 +147,64 @@ export const strings = {
     roomServices: "Additional In-room Services",
      viewOnMap: "View on Map",
     ratings: "Ratings",
+  },
+
+  roomView: {
+    filterSection: {
+      collections: "Collections",
+      categories: "Categories",
+      showMore: "Show more",
+      rating: "Rating",
+      filters: "Filters",
+      priceRange: "Price Range",
+    },
+    sideSection: {
+      mapView: "Map View",
+      sortBy: "Sort By",
+      viewDetails: "View Details",
+      bookNow: "Book Now",
+    },
+    viewOnMap: "View on Map",
+  },
+
+  testimonial: {
+    heading: "Testimonials",
+    subHeading: "Review from our satisfied coustomers",
+  },
+
+  Amenity: {
+    guestamenities: {
+      heading: "Tell the guest what your place has to offer",
+      subHeading: "You can add more amenities after you publish your listings",
+    },
+    guestamenities1: {
+      heading: "Do you have any standout amenities?",
+    },
+  },
+  Placetype: {
+    place1: {
+      heading: "What type of place will guest have?",
+    },
+  },
+  peopletype: {
+    heading: " Who else might be there ? ",
+    subheading:
+      "Guest need to know whether they will encounter with other people there",
+  },
+
+  Amenities1: {
+    heading: "Let’s start with basics ",
+    subheading: "How many people can stay here?",
+  },
+
+  Describehome: {
+    heading: "Next, Let’s describe your property",
+    subheading:
+      "Choose up to 2 highlights. We’ll use this to get your description ready.",
+  },
+
+  options: {
+    heading: "You,re just three steps to setup your zenden",
   },
 
 
