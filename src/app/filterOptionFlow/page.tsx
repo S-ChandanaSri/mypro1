@@ -4,12 +4,23 @@ import Image from "next/image";
 import { svgs } from "@/constants/images";
 import { strings } from "@/constants/strings";
 import {
+  filterData,
   FilterOptionAmenitiesEssentials,
   FilterOptionBathroomsList,
   FilterOptionBedsList,
   FilterOptionHostLanguages,
   FilterOptionPropertyTypes,
 } from "@/constants/filterOptionFlowArrays";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 export default function FilterOptionFlow({ setPopup }: any) {
   const [beds, setBeds] = useState<string[]>([]);
   const [bathrooms, setBathrooms] = useState<string[]>([]);
@@ -96,22 +107,22 @@ export default function FilterOptionFlow({ setPopup }: any) {
     );
   };
   return (
-    <div className="w-[26.25rem] md:w-[45rem] lg:w-[55.5rem] max-h-[40rem]  rounded-2xl bg-neutral-50 popup font-serif">
-      <div className=" h-11 flex flex-row justify-start p-2">
-        <div className="w-full flex flex-row  items-center ">
-          <div className="relative w-9 h-9" onClick={() => setPopup(false)}>
+    <div className="popup max-h-[40rem] w-[26.25rem] rounded-2xl bg-neutral-50 font-serif md:w-[45rem] lg:w-[55.5rem]">
+      <div className="flex h-11 flex-row justify-start p-2">
+        <div className="flex w-full flex-row items-center">
+          <div className="relative h-9 w-9" onClick={() => setPopup(false)}>
             <Image src={svgs.filterXcross} alt="xcross icon" fill={true} />
           </div>
-          <div className="text-lg text-center  w-full">
+          <div className="w-full text-center text-lg">
             {strings.filterOptionFlow.filters}
           </div>
         </div>
       </div>
-      <hr className="bg-neutral-500 border" />
+      <hr className="border bg-neutral-500" />
 
       {/* filters section*/}
-      <div className="flex flex-col gap-9 h-[31rem] overflow-y-auto scrollbar-thin">
-        <div className="pl-10 flex flex-col gap-10">
+      <div className="scrollbar-thin flex h-[31rem] flex-col gap-9 overflow-y-auto">
+        <div className="flex flex-col gap-10 pl-10">
           <div className="flex flex-col gap-1">
             <p className="text-xl">{strings.filterOptionFlow.priceRange}</p>
             <p className="text-lg">
@@ -119,9 +130,29 @@ export default function FilterOptionFlow({ setPopup }: any) {
             </p>
           </div>
           <div className="flex flex-col gap-5">
-            <div className=" h-24  pe-4">Graph with slide bar</div>
-            <div className=" flex flex-col gap-y-2 md:flex-row pe-4 justify-between">
-              <div className="lg:w-80 h-16 rounded-lg border flex flex-col border-neutral-500 p-1">
+            <div className="h-24 pe-4">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={filterData}
+                  margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis fontSize={12} />
+                  <Tooltip />
+                  <Legend
+                    verticalAlign="top"
+                    align="center"
+                    layout="horizontal"
+                    iconType="circle"
+                    iconSize={10}
+                  />
+                  <Bar dataKey="checkIn" stackId="a" fill="#002855" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="flex flex-col justify-between gap-y-2 pe-4 md:flex-row">
+              <div className="flex h-16 flex-col rounded-lg border border-neutral-500 p-1 lg:w-80">
                 <label className="text-sm">
                   {strings.filterOptionFlow.minimum}
                 </label>
@@ -132,7 +163,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
                   className="text-lg"
                 />
               </div>
-              <div className="lg:w-80 h-16 rounded-lg border flex flex-col border-neutral-500 p-1">
+              <div className="flex h-16 flex-col rounded-lg border border-neutral-500 p-1 lg:w-80">
                 <label className="text-sm">
                   {strings.filterOptionFlow.maximum}
                 </label>
@@ -146,22 +177,22 @@ export default function FilterOptionFlow({ setPopup }: any) {
             </div>
           </div>
         </div>
-        <hr className="bg-neutral-500 border" />
-        <div className=" flex flex-col gap-9 pl-10">
+        <hr className="border bg-neutral-500" />
+        <div className="flex flex-col gap-9 pl-10">
           <div className="text-xl">
             {strings.filterOptionFlow.bedsAndBathrooms}
           </div>
           <p className="text-lg">{strings.filterOptionFlow.beds}</p>
-          <div className="flex flex-wrap flex-row gap-3 text-sm">
+          <div className="flex flex-row flex-wrap gap-3 text-sm">
             <p
-              className={`rounded-3xl p-1  flex justify-center items-center px-4 ${beds.length == 0 ? "bg-secondary-900 text-neutral-50" : "bg-neutral-50 text-neutral-950 border border-neutral-500 "} `}
+              className={`flex items-center justify-center rounded-3xl p-1 px-4 ${beds.length == 0 ? "bg-secondary-900 text-neutral-50" : "border border-neutral-500 bg-neutral-50 text-neutral-950"} `}
               onClick={() => setBeds([])}
             >
               {strings.filterOptionFlow.any}
             </p>
             {FilterOptionBedsList?.map((bed, index) => (
               <p
-                className={`rounded-3xl flex justify-center items-center py-1 px-6 border border-neutral-500 ${
+                className={`flex items-center justify-center rounded-3xl border border-neutral-500 px-6 py-1 ${
                   beds.includes(bed) ? "bg-secondary-50" : ""
                 }`}
                 key={index}
@@ -172,16 +203,16 @@ export default function FilterOptionFlow({ setPopup }: any) {
             ))}
           </div>
           <p className="text-lg">{strings.filterOptionFlow.bathrooms}</p>
-          <div className=" flex flex-wrap flex-row gap-3 text-sm">
+          <div className="flex flex-row flex-wrap gap-3 text-sm">
             <p
               onClick={() => setBathrooms([])}
-              className={`rounded-3xl p-1 px-4 flex  items-center  ${bathrooms.length == 0 ? "bg-secondary-900 text-neutral-50" : "bg-neutral-50 text-neutral-950 border border-neutral-500 "} `}
+              className={`flex items-center rounded-3xl p-1 px-4 ${bathrooms.length == 0 ? "bg-secondary-900 text-neutral-50" : "border border-neutral-500 bg-neutral-50 text-neutral-950"} `}
             >
               {strings.filterOptionFlow.any}
             </p>
             {FilterOptionBathroomsList?.map((bathroom, index) => (
               <p
-                className={`py-1 px-6 rounded-3xl border flex justify-center items-center border-neutral-500 ${
+                className={`flex items-center justify-center rounded-3xl border border-neutral-500 px-6 py-1 ${
                   bathrooms.includes(bathroom) ? "bg-secondary-50" : ""
                 }`}
                 key={index}
@@ -192,19 +223,19 @@ export default function FilterOptionFlow({ setPopup }: any) {
             ))}
           </div>
         </div>
-        <hr className="bg-neutral-500 border" />
-        <div className="pl-10 flex flex-col gap-5 text-xl">
+        <hr className="border bg-neutral-500" />
+        <div className="flex flex-col gap-5 pl-10 text-xl">
           <div>{strings.filterOptionFlow.propertyTypes}</div>
-          <div className="flex flex-col md:flex-row gap-7">
+          <div className="flex flex-col gap-7 md:flex-row">
             {FilterOptionPropertyTypes.map((property, index) => (
               <div
                 key={index}
-                className={`w-44 rounded-md border py-4 px-3 flex flex-col gap-12 border-neutral-500 ${
+                className={`flex w-44 flex-col gap-12 rounded-md border border-neutral-500 px-3 py-4 ${
                   propertyType.includes(property.name) ? "bg-secondary-50" : ""
                 }`}
                 onClick={() => handlePropertyTypeClick(property.name)}
               >
-                <div className="relative w-9 h-9">
+                <div className="relative h-9 w-9">
                   {" "}
                   <Image src={property.icon} alt="xcross icon" fill={true} />
                 </div>
@@ -213,12 +244,12 @@ export default function FilterOptionFlow({ setPopup }: any) {
             ))}
           </div>
         </div>
-        <hr className="bg-neutral-500 border" />
-        <div className="flex flex-col  pl-10  gap-9 text-xl">
+        <hr className="border bg-neutral-500" />
+        <div className="flex flex-col gap-9 pl-10 text-xl">
           <div>{strings.filterOptionFlow.amenities}</div>
           <div className="flex flex-col gap-2">
             <div>{strings.filterOptionFlow.essentials}</div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-lg">
+            <div className="grid grid-cols-1 gap-5 text-lg md:grid-cols-2">
               {FilterOptionAmenitiesEssentials.map((amenity, index) => (
                 <div className="flex gap-2" key={index}>
                   <input
@@ -230,16 +261,16 @@ export default function FilterOptionFlow({ setPopup }: any) {
                 </div>
               ))}
             </div>
-            <p className=" underline text-secondary-600 text-lg">
+            <p className="text-lg text-secondary-600 underline">
               {strings.filterOptionFlow.showMore}
             </p>
           </div>
         </div>
-        <hr className="bg-neutral-500 border" />
-        <div className="pl-10 flex flex-col gap-5">
+        <hr className="border bg-neutral-500" />
+        <div className="flex flex-col gap-5 pl-10">
           <div className="text-xl">{strings.filterOptionFlow.hostLanguage}</div>
           <div className="flex flex-col gap-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-lg">
+            <div className="grid grid-cols-1 gap-5 text-lg md:grid-cols-2">
               {FilterOptionHostLanguages.map((language, index) => (
                 <div className="flex gap-2" key={index}>
                   <input
@@ -251,17 +282,17 @@ export default function FilterOptionFlow({ setPopup }: any) {
                 </div>
               ))}
             </div>
-            <p className=" underline text-lg text-secondary-600">
+            <p className="text-lg text-secondary-600 underline">
               {strings.filterOptionFlow.showMore}
             </p>
           </div>
         </div>
-        <hr className="bg-neutral-500 border" />
+        <hr className="border bg-neutral-500" />
       </div>
 
-      <div className=" flex flex-row justify-between  p-4">
+      <div className="flex flex-row justify-between p-4">
         <button
-          className="underline text-secondary-600 text-xl"
+          className="text-xl text-secondary-600 underline"
           onClick={() => {
             setBeds([]);
             setBathrooms([]);
@@ -274,7 +305,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
         >
           {strings.filterOptionFlow.clearAll}
         </button>
-        <button className=" text-lg rounded-lg text-neutral-50 py-3 px-12 bg-secondary-900">
+        <button className="rounded-lg bg-secondary-900 px-12 py-3 text-lg text-neutral-50">
           Show 100+ places
         </button>
       </div>

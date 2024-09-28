@@ -44,3 +44,13 @@ export const FilterOptionHostLanguages = [
   "Marathi",
   "Sanskrit",
 ];
+
+export const filterData = [
+  { name: "Jan", cash: 4000, checkOut: 200, checkIn: 3000 },
+  { name: "Feb", cash: 3000, checkOut: 1000, checkIn: 1500 },
+  { name: "Mar", cash: 3500, checkOut: 2400, checkIn: 2000 },
+  { name: "Apr", cash: 5000, checkOut: 2200, checkIn: 3200 },
+  { name: "May", cash: 2200, checkOut: 2400, checkIn: 2100 },
+  { name: "Jun", cash: 2000, checkOut: 2000, checkIn: 2300 },
+  { name: "Jul", cash: 2000, checkOut: 2400, checkIn: 3000 },
+];
