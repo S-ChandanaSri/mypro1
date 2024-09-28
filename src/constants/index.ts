@@ -96,6 +96,8 @@ export const PATHS = {
 export const Dimens = {
   loginForm: 480,
   testimonials: "/testimonials",
+  Steps: "/Steps",
+  Imagesstep: "/Imagesstep",
 };
 
 export const LINKS = {

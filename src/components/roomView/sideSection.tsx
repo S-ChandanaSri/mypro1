@@ -62,7 +62,6 @@ const SideSection = ({ className = "" }) => {
             />
           </div>
         </div>
-
         <div className="flex flex-row gap-5  text-xl w-full lg:w-auto mb-2 justify-between  md:gap-6  lg:gap-4">
           <div className="flex gap-1  items-center">
             <div>{strings.roomView.sideSection.mapView}</div>

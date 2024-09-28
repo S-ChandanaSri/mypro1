@@ -109,3 +109,83 @@ export interface IPropertyDetails {
   openingHours: IOpeningHours[];
   ammenities: IAmenity[];
 }
+
+export interface Itestimonial {
+  icon1: string;
+  label: string;
+  icon2: string;
+  sublabel: string;
+  label1: string;
+  sublabel1: string;
+}
+
+export interface propertyinfo {
+  icon: StaticImport;
+  icon1: StaticImport;
+  icon2: StaticImport;
+  icon3: StaticImport;
+  icon4: StaticImport;
+  label: string;
+  sublabel: string;
+  sublabel1: string;
+}
+
+export interface propertyinfoimages {
+  image: StaticImport;
+  image1: StaticImport;
+  image2: StaticImport;
+  image3: StaticImport;
+}
+
+export interface CardProps {
+  title?: string;
+  content?: string;
+  leftButtonLabel?: string;
+  image?: { src: string } | null;
+  images?: { src: string }[] | null;
+  locate?: string;
+  km?: string;
+  location?: string;
+  placestyle?: string;
+  icons?: string[];
+  sublabels?: string[];
+  buttonLabel?: string;
+  buttonVariant?: string;
+  imageStyles?: string[];
+  fullStyles?: string;
+  detailsstyle?: string;
+  titlestyle?: string;
+  locationstyle?: string;
+  amenitystyle?: string;
+  buttonstyle?: string;
+  butonstyle?: string;
+  price?: string;
+  pricestyle?: string;
+  star?: string;
+  rating?: string;
+  rate?: string;
+  ratepoint?: string;
+  wrapstyle?: string;
+  ratepointstyle?: string;
+  multiImage?: boolean;
+}
+
+export interface CardInfo {
+  icon: StaticImport;
+  label: string;
+  body?: string;
+}
+
+export interface CardInfo1 {
+  icon: StaticImport;
+  label: string;
+  sublabel: string;
+  body?: string;
+}
+
+export interface CardInfo2 {
+  icon: StaticImport;
+  icon2: StaticImport;
+  label: string;
+  body?: string;
+}
