@@ -108,6 +108,7 @@ export interface IPropertyDetails {
   accomodates: IAccommodate[];
   openingHours: IOpeningHours[];
   ammenities: IAmenity[];
+
 }
 
 export interface Itestimonial {

@@ -1,4 +1,9 @@
 
+
+import filterHouse from "../../public/res/icons/Vectorhouse.svg";
+import filterGuestHouse from "../../public/res/icons/Vectorguesthouse.svg";
+import filterApartment from "../../public/res/icons/Vectorappartment.svg";
+import filterXcross from "../../public/res/icons/Vectorxcross.svg";
 import roomViewExterior from "../../public/res/images/roomViewexterior.png";
 import roomViewinterior1 from "../../public/res/images/roomViewinterior1.png";
 import roomViewinterior2 from "../../public/res/images/roomViewinterior2.png";
@@ -89,11 +94,6 @@ import check from "../../public/res/images/teams/check.svg";
 import sam from "../../public/res/images/teams/samantha.svg";
 import star from "../../public/res/images/teams/Vstar.svg";
 
-import roomViewExterior from "../../public/res/images/roomViewexterior.png";
-import roomViewinterior1 from "../../public/res/images/roomViewinterior1.png";
-import roomViewinterior2 from "../../public/res/images/roomViewinterior2.png";
-import roomViewinterior3 from "../../public/res/images/roomViewinterior3.png";
-
 import roomAc from "../../public/res/icons/ac.svg";
 import roomBar from "../../public/res/icons/bar.svg";
 import roomClearAll from "../../public/res/icons/clearAll.svg";
@@ -153,6 +153,7 @@ import mattress3 from "../../public/res/images/infoCards/mattress3.svg";
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
+  CONTACTUS_IMAGE: "/res/images/backgrounds/contactUs.jpg",
 };
 
 export const INFO_IMAGES = {
@@ -238,6 +239,10 @@ export const svgs = {
   propertyTv,
   propertyWideScreenTv,
   propertyRightArrow,
+ filterHouse,
+  filterApartment,
+  filterXcross,
+  filterGuestHouse,
    roomAc,
   roomBar,
   roomClearAll,

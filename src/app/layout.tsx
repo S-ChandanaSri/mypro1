@@ -37,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
+
         <Navbar />
         <ListingProvider>{children}</ListingProvider>
         <Footer />

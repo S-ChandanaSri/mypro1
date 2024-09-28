@@ -7,7 +7,10 @@ const formVariants = cva(
   {
     variants: {
       variant: {
+
         auth: `sm:w-[480px] w-[95vw] bg-white text-neutral-950 space-y-6 px-7 pt-8 pb-12`,
+        contactUs: `md:w-[30rem] px-1 md:px-2 py-2 md:py-0 space-y-3`,
+
       },
     },
   },
