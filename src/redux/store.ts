@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import exampleReducer from "./features/exampleSlice";
-import authReducer from "./features/authSlice";
+import propertiesReducer from "./features/propertiesSlice";
 export const store = configureStore({
   reducer: {
     exampleFeature: exampleReducer,
+    propertiesFeature: propertiesReducer,
     authFeature: authReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),

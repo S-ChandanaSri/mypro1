@@ -113,6 +113,7 @@ export interface IPropertyDetails {
   accomodates: IAccommodate[];
   openingHours: IOpeningHours[];
   ammenities: IAmenity[];
+  propertyId: String;
 
 }
 
