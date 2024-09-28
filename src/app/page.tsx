@@ -76,6 +76,7 @@ function Home() {
       {/* <VideoTestimonials /> */}
       <FAQs />
     </div>
+
   );
 }
 

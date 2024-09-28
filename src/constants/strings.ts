@@ -18,6 +18,8 @@ export const strings = {
     features: "Features",
     aboutUs: "About Us",
   },
+  //Landing
+  landing: {
   footer: {
     description:
       "We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
@@ -125,6 +127,7 @@ export const strings = {
     },
   },
 
+
   //Property
   propertyDetails: {
     reservation: {
@@ -141,8 +144,24 @@ export const strings = {
     openingHours: "Opening hours",
     ammenities: "Ammenities",
     roomServices: "Additional In-room Services",
+  },
+
+  roomView: {
+    filterSection: {
+      collections: "Collections",
+      categories: "Categories",
+      showMore: "Show more",
+      rating: "Rating",
+      filters: "Filters",
+      priceRange: "Price Range",
+    },
+    sideSection: {
+      mapView: "Map View",
+      sortBy: "Sort By",
+      viewDetails: "View Details",
+      bookNow: "Book Now",
+    },
     viewOnMap: "View on Map",
-    ratings: "Ratings",
   },
 
   testimonial: {
