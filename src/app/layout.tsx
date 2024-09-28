@@ -38,12 +38,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${helveticaWorld.variable} font-serif`}
       >
-       
         <Navbar />
         <ListingProvider>
           <Providers>{children}</Providers>
         </ListingProvider>
         <Footer />
+
       </body>
     </html>
   );
