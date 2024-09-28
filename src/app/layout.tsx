@@ -6,6 +6,7 @@ import { ListingProvider } from "./context/ListingContext";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Providers } from "@/redux/provider";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
