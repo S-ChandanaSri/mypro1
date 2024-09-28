@@ -13,7 +13,12 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   const pathname = usePathname();
 
-  if (pathname === PATHS.login || pathname === PATHS.signUp) {
+  if (
+    pathname === PATHS.login ||
+    pathname === PATHS.signUp ||
+    pathname === PATHS.Steps ||
+    pathname === PATHS.Imagesstep
+  ) {
     return;
   }
 

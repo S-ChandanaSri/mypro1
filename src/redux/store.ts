@@ -5,6 +5,7 @@ export const store = configureStore({
   reducer: {
     exampleFeature: exampleReducer,
     propertiesFeature: propertiesReducer,
+    authFeature: authReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
 });
