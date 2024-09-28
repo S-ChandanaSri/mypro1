@@ -51,12 +51,12 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+
 .popup {
   position: fixed;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 10001;
 }

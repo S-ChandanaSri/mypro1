@@ -1,3 +1,26 @@
+
+
+import adminEmail from "../../public/res/icons/adminDashboard/Iconemail.svg";
+import adminHouse from "../../public/res/icons/adminDashboard/IconhouseDashboard.svg";
+import adminLogout from "../../public/res/icons/adminDashboard/Iconlogout.svg";
+import adminNotifications from "../../public/res/icons/adminDashboard/Iconnotifications.svg";
+import adminRightArrow from "../../public/res/icons/adminDashboard/IconrightArrow.svg";
+import adminSearch from "../../public/res/icons/adminDashboard/Iconsearch.svg";
+import adminSettings from "../../public/res/icons/adminDashboard/Iconsettings.svg";
+import adminUpArrow from "../../public/res/icons/adminDashboard/IconupArrow.svg";
+import adminLogo from "../../public/res/icons/adminDashboard/Logologo.svg";
+import adminBookings from "../../public/res/icons/adminDashboard/VectorbookingsIcon.svg";
+import adminHalfMenu from "../../public/res/icons/adminDashboard/VectorhalfMenu.svg";
+import adminPhone from "../../public/res/icons/adminDashboard/Vectorphone.svg";
+import adminPlus from "../../public/res/icons/adminDashboard/Vectorplus.svg";
+import adminRooms from "../../public/res/icons/adminDashboard/VectorroomsIcon.svg";
+import adminHamburger from "../../public/res/icons/adminDashboard/Vectorhamburger.svg";
+
+import adminCustomer1 from "../../public/res/images/adminDashboard/Imagecustomer1.png";
+import adminRoom1 from "../../public/res/images/adminDashboard/Imageroom1.png";
+import adminEmployee1 from "../../public/res/images/adminDashboard/employee1.png";
+import adminInterior from "../../public/res/images/adminDashboard/interior.jpeg";
+
 import filterHouse from "../../public/res/icons/Vectorhouse.svg";
 import filterGuestHouse from "../../public/res/icons/Vectorguesthouse.svg";
 import filterApartment from "../../public/res/icons/Vectorappartment.svg";
@@ -28,6 +51,7 @@ import smsIcon from "../../public/res/icons/sms.svg";
 import plusCircleIcon from "../../public/res/icons/plus-circle.svg";
 import minusCircleIcon from "../../public/res/icons/minus-circle.svg";
 import twitterIcon from "../../public/res/icons/twitter-icon.svg";
+import downloadIcon from "../../public/res/icons/Groupdownload.svg";
 // import facebookIcon from "";
 import linkedInIcon from "../../public/res/icons/linkedin-icon.svg";
 import instagramIcon from "../../public/res/icons/instagram-icon.svg";
@@ -52,6 +76,8 @@ import propertySkyLight from "../../public/res/icons/propertyDetails/VectorskyLi
 import propertyWhiteBoards from "../../public/res/icons/propertyDetails/VectorwhiteBoardsIcon.svg";
 import propertyEnsuiteKitchen from "../../public/res/icons/propertyDetails/VectorensuiteKitchenIcon.svg";
 import propertyRightArrow from "../../public/res/icons/propertyDetails/VectorRightArrow.svg";
+import propertyFilterXcross from "../../public/res/icons/propertyDetails/VectorxCross.svg";
+import propertyLiked from "../../public/res/icons/propertyDetails/Vectorliked.svg";
 
 import services1 from "../../public/res/images/infoCards/services1.svg";
 import services2 from "../../public/res/images/infoCards/services2.svg";
@@ -175,6 +201,14 @@ export const TEAM_IMAGES = {
   NAME8: "/res/images/teams/name8.png",
 };
 
+export const adminImages = {
+  adminCustomer1,
+  adminEmployee1,
+  adminRoom1,
+  adminInterior,
+};
+
+
 export const SOCIAL_ICONS = {
   [SocialPlatforms.TWITTER]: twitterIcon,
   // [SocialPlatforms.FACEBOOK]: ,
@@ -224,7 +258,10 @@ export const svgs = {
   propertyTv,
   propertyWideScreenTv,
   propertyRightArrow,
-  filterHouse,
+  downloadIcon,
+  propertyFilterXcross,
+  propertyLiked,
+ filterHouse,
   filterApartment,
   filterXcross,
   filterGuestHouse,
@@ -241,6 +278,21 @@ export const svgs = {
   roomWifi,
   roomHamburger,
   roomCloud,
+   adminBookings,
+  adminEmail,
+  adminHalfMenu,
+  adminHouse,
+  adminLogo,
+  adminLogout,
+  adminNotifications,
+  adminPhone,
+  adminPlus,
+  adminRightArrow,
+  adminRooms,
+  adminSearch,
+  adminSettings,
+  adminUpArrow,
+  adminHamburger,
 };
 
 export const testimonialimages = {

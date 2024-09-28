@@ -30,6 +30,19 @@ export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.features, page: PATHS.root, comp: "features" },
   { label: strings.navbar.aboutUs, page: PATHS.aboutUs },
 ];
+export const menuOptions: ILinkOption[] = [
+  {
+    label: strings.navbar.listYourProperty,
+    page: "",
+    comp: "list your property",
+  },
+  { label: strings.navbar.notifcations, page: "", comp: "notifications" },
+  { label: strings.navbar.trips, page: "" },
+  { label: strings.navbar.wishlist, page: "" },
+  { label: strings.navbar.account, page: "" },
+  { label: strings.navbar.help, page: "" },
+  { label: strings.navbar.logout, page: "" },
+];
 
 export const countries = [
   { name: "Singapore", latLng: [1.3521, 103.8198] },

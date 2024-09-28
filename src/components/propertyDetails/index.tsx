@@ -1,5 +1,7 @@
+"use client";
 import { svgs } from "@/constants/images";
 import Image from "next/image";
+import { useState } from "react";
 import { strings } from "@/constants/strings";
 import { IPropertyDetails } from "@/constants/types";
 import AddressIndex from "./AddressIndex";
@@ -7,6 +9,9 @@ import Button from "../common/Button";
 import Accomodates from "./Service/Accomodates";
 import OpenHours from "./Service/OpenHours";
 import Amenity from "./Service/Amenity";
+import Wishlist from "./Wishtlist";
+import { useAppSelector } from "@/redux/hooks";
+import { RootState } from "@/redux/store";
 
 const PropertyDetail: React.FC<IPropertyDetails> = ({
   location,
@@ -17,16 +22,37 @@ const PropertyDetail: React.FC<IPropertyDetails> = ({
   accomodates,
   openingHours,
   ammenities,
+  propertyId,
 }) => {
+  const [popup, setPopup] = useState(false);
+  const favouriteArray = useAppSelector(
+    (state: RootState) => state.propertiesFeature.favouriteProperties,
+  );
+  const isInFavourite = favouriteArray.find(
+    (propertyItem) => propertyItem.id === propertyId,
+  );
   return (
     <div className="relative flex flex-col gap-7 p-2 sm:p-6 lg:mt-5">
-      <Image
-        width={36}
-        height={36}
-        src={svgs.propertyLike}
-        alt="stars"
-        className="absolute right-0 cursor-pointer transition-transform duration-100 hover:scale-105"
-      />
+      {isInFavourite ? (
+        <Image
+          width={36}
+          height={36}
+          src={svgs.propertyLiked}
+          onClick={() => setPopup(true)}
+          alt="stars"
+          className="absolute right-0 cursor-pointer transition-transform duration-100 hover:scale-105"
+        />
+      ) : (
+        <Image
+          width={36}
+          height={36}
+          src={svgs.propertyLike}
+          onClick={() => setPopup(true)}
+          alt="stars"
+          className="absolute right-0 cursor-pointer transition-transform duration-100 hover:scale-105"
+        />
+      )}
+      {popup && <Wishlist setPopup={setPopup} />}
       <div className="flex flex-col gap-3">
         <ul className="flex">
           {location.map((location: string, idx: number) => (
