@@ -82,6 +82,8 @@ export async function postImage(payload: ImageSchemaType) {
   } catch (error) {
     console.error("Error uploading image:", error);
     throw error;
+  }
+}
 
 export async function refreshToken<T>() {
   const refreshToken = localStorage.getItem("refreshToken");
