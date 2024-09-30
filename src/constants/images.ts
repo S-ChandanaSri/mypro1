@@ -31,6 +31,7 @@ import roomViewinterior2 from "../../public/res/images/roomViewinterior2.png";
 import roomViewinterior3 from "../../public/res/images/roomViewinterior3.png";
 
 import logoIcon from "../../public/res/icons/logo.svg";
+import logoblueIcon from "../../public/res/icons/logoblue.svg";
 import googleIcon from "../../public/res/icons/google-icon.svg";
 import chevronRightInIcon from "../../public/res/icons/chevron-right-in.svg";
 import chevronRightUpIcon from "../../public/res/icons/chevron-right-up.svg";
@@ -45,6 +46,7 @@ import pauseIcon from "../../public/res/icons/pause.svg";
 import faxIcon from "../../public/res/icons/fax.svg";
 import addressIcon from "../../public/res/icons/address.svg";
 import callIcon from "../../public/res/icons/call.svg";
+import closeIcon from "../../public/res/icons/close.svg";
 import logoFooterIcon from "../../public/res/icons/logo-footer.svg";
 import mailIcon from "../../public/res/icons/mail.svg";
 import smsIcon from "../../public/res/icons/sms.svg";
@@ -218,6 +220,7 @@ export const SOCIAL_ICONS = {
 
 export const svgs = {
   logo: logoIcon,
+  logoblue: logoblueIcon,
   google: googleIcon,
   chevronRightIn: chevronRightInIcon,
   chevronRightUp: chevronRightUpIcon,
@@ -232,6 +235,7 @@ export const svgs = {
   fax: faxIcon,
   address: addressIcon,
   call: callIcon,
+  close: closeIcon,
   logoFooter: logoFooterIcon,
   mail: mailIcon,
   sms: smsIcon,
