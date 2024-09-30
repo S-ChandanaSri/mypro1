@@ -25,7 +25,7 @@ const PropertyPage: NextPage<PropertyPageProps> = ({
     <div className="top-gradient grid grid-cols-1 place-items-center gap-6 px-6 pt-[92px] font-serif sm:px-16 md:items-stretch md:pt-[72px] lg:grid-cols-[75%_25%]">
       <ImageCarousel images={PropertyListImages} />
       <ReservePlace />
-      <PropertyDetail {...PropertyDetailsData} />
+      <PropertyDetail {...PropertyDetailsData} propertyId={id} />
       {/* <PropertiesList properties={PropertyList} /> */}
     </div>
   );

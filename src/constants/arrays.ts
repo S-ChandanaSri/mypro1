@@ -9,8 +9,9 @@ import {
 } from "./images";
 
 import { strings } from "./strings";
-import { cardproperty } from "./images";
+import { cardproperty, InfoImages } from "./images";
 import {
+  CardInfo,
   ICardInfo,
   IFAQ,
   IFooterConnectOption,
@@ -28,6 +29,19 @@ export const linkOptions: ILinkOption[] = [
   { label: strings.navbar.services, page: PATHS.root, comp: "services" },
   { label: strings.navbar.features, page: PATHS.root, comp: "features" },
   { label: strings.navbar.aboutUs, page: PATHS.aboutUs },
+];
+export const menuOptions: ILinkOption[] = [
+  {
+    label: strings.navbar.listYourProperty,
+    page: "",
+    comp: "list your property",
+  },
+  { label: strings.navbar.notifcations, page: "", comp: "notifications" },
+  { label: strings.navbar.trips, page: "" },
+  { label: strings.navbar.wishlist, page: "" },
+  { label: strings.navbar.account, page: "" },
+  { label: strings.navbar.help, page: "" },
+  { label: strings.navbar.logout, page: "" },
 ];
 
 export const countries = [
@@ -614,3 +628,93 @@ export const Propertcardinfo: propertyinfo[] = [
   }
 ]*/
 }
+
+export const OurAmenitiesnfo: CardInfo[] = [
+  { label: "WiFi", icon: InfoImages.wifi },
+  { label: "TV", icon: InfoImages.tv },
+  { label: "Kitchen", icon: InfoImages.kitchen },
+  { label: "Washer", icon: InfoImages.washer },
+  { label: "Free Parking", icon: InfoImages.free },
+  { label: "Paid parking", icon: InfoImages.park },
+  { label: "Air Conditioning", icon: InfoImages.ac },
+  { label: "Workplace", icon: InfoImages.workplace },
+];
+
+export const ouramenitiesinfo3: CardInfo[] = [
+  { label: "Fire kit", icon: InfoImages.wifi },
+  { label: "Smoke alarm", icon: InfoImages.tv },
+  { label: "Fire extinguisher", icon: InfoImages.kitchen },
+  { label: "Carbon monoxide alarm", icon: InfoImages.washer },
+];
+
+export const ouramenitiesinfo2: CardInfo[] = [
+  { label: "Pool", icon: InfoImages.pool },
+  { label: "Patio", icon: InfoImages.patio },
+  { label: "Hot tub", icon: InfoImages.tub },
+  { label: "Piano", icon: InfoImages.piano },
+  { label: "Pool table", icon: InfoImages.table },
+  { label: "Exercise equipment", icon: InfoImages.exercise },
+  { label: "Beach access", icon: InfoImages.beach },
+  { label: "Indoor fireplace", icon: InfoImages.indoor },
+  { label: "Outdoor dining area", icon: InfoImages.outdoor },
+];
+
+export const placetypeinfo: CardInfo1[] = [
+  {
+    label: "An entire place",
+    sublabel: "Guest will have whole place to live or enjoy",
+    icon: InfoImages.house,
+  },
+  {
+    label: "A room",
+    sublabel: "Guest will have only a small part of the house to live or enjoy",
+    icon: InfoImages.cilroom,
+  },
+  {
+    label: "A shared room",
+    sublabel: "Guest will have a shared place to live or enjoy",
+    icon: InfoImages.room,
+  },
+];
+
+export const peopletypeinfo: CardInfo[] = [
+  { label: "Me", icon: InfoImages.People },
+  { label: "My family", icon: InfoImages.peopleline },
+  { label: "Other guests", icon: InfoImages.peoplesharp },
+  { label: "Roomates", icon: InfoImages.peoplesharp },
+];
+
+export const amenitiesinfo: CardInfo2[] = [
+  { label: "Guests", icon: InfoImages.plus1, icon2: InfoImages.subt1 },
+  { label: "Bedrooms", icon: InfoImages.plus1, icon2: InfoImages.subt1 },
+  { label: "Beds", icon: InfoImages.plus1, icon2: InfoImages.subt1 },
+];
+
+export const Describeinfo: CardInfo[] = [
+  { label: "Peaceful", icon: InfoImages.peace },
+  { label: "Central", icon: InfoImages.peace },
+  { label: "Unique", icon: InfoImages.peace },
+  { label: "Family-friendly", icon: InfoImages.peace },
+  { label: "Spacious", icon: InfoImages.peace },
+  { label: "Stylish", icon: InfoImages.peace },
+];
+
+export const Optionsinfo: CardInfo1[] = [
+  {
+    label: "1.Tell us about your place",
+    sublabel:
+      "Share some basic info, like where it is and how many guest can stay",
+    icon: InfoImages.mattress1,
+  },
+  {
+    label: "2.Make it stand out",
+    sublabel: "Add 5 or more photos plus title and little description",
+    icon: InfoImages.mattress3,
+  },
+  {
+    label: "3.Finish up and publish",
+    sublabel:
+      "Choose if you like to start with an experienced guest ,set up starting price and publish your listing",
+    icon: InfoImages.mattress2,
+  },
+];

@@ -10,11 +10,14 @@ import { z } from "zod";
 const getAPIBaseUrl = (): string => {
   return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
 };
-
+const accessToken = localStorage?.getItem("accessToken");
 const client = axios.create({
   baseURL: getAPIBaseUrl(),
   responseType: "json",
-  headers: { "Content-Type": "application/json" },
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${accessToken}`,
+  },
   timeout: Duration.apiTimeout,
   validateStatus: () => true,
 });
@@ -26,6 +29,7 @@ export async function post_login<T>(payload: UserLoginSchemaType) {
 export async function post_register<T>(payload: UserRegisterSchemaType) {
   return await client.post("/auth/register", payload);
 }
+
 
 const PhoneNumberSchema = z.object({
   phoneNumber: z.string().min(10).max(15), // Adjust validation based on your requirements
@@ -78,5 +82,32 @@ export async function postImage(payload: ImageSchemaType) {
   } catch (error) {
     console.error("Error uploading image:", error);
     throw error;
+
+export async function refreshToken<T>() {
+  const refreshToken = localStorage.getItem("refreshToken");
+  try {
+    const response = await client.post("/auth/refresh-token", { refreshToken });
+    const newAccessToken = response?.data?.accessToken;
+    localStorage.setItem("accessToken", newAccessToken);
+    return newAccessToken;
+  } catch (error: any) {
+    if (error.response?.status === 401) {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      // redirection to login
+    }
+  }
+}
+
+//example for  every authorized requests
+export async function authorized(payload: any) {
+  try {
+    const response = await client.post("/url", payload);
+    return response;
+  } catch (error: any) {
+    if (error.response?.status === 401) {
+      await refreshToken();
+      await client.post("/url", payload);
+    }
   }
 }

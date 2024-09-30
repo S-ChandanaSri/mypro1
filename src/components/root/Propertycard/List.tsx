@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { propertyinfo } from "@/constants/types";
-import { roomViewImages, roomViewSvgIcons } from "@/constants/images";
+import { roomViewImages, svgs } from "@/constants/images";
 import Button from "@/components/common/Button";
 import Card from "./Card";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -37,17 +37,13 @@ const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
                 "lg:w-[9.3rem] lg:h-[5.3rem]",
                 "lg:w-[9.3rem] lg:h-[5.3rem]",
               ]}
-              locate={roomViewSvgIcons.roomLocation}
+              locate={svgs.roomLocation}
               km={"3.3Km"}
-              star={roomViewSvgIcons.roomStart}
+              star={svgs.roomStar}
               rating={"112 ratings"}
               rate={"Good"}
               ratepoint={"3.7"}
-              icons={[
-                roomViewSvgIcons.roomWifi,
-                roomViewSvgIcons.roomTv,
-                roomViewSvgIcons.roomCloud,
-              ]}
+              icons={[svgs.roomWifi, svgs.roomTv, svgs.roomCloud]}
               sublabels={["Free wifi", "Tv", "Ac", "+ 4 more"]}
               leftButtonLabel={"View Details"}
               buttonLabel="Book Now"
@@ -81,6 +77,7 @@ const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
             <React.Fragment key={index}>
               <Card
                 image={card.icon}
+                locate={card.icon1}
                 location={card.label}
                 icons={[card.icon2, card.icon3, card.icon4]}
                 sublabels={[card.sublabel, card.sublabel, card.sublabel]}
@@ -90,6 +87,8 @@ const List: React.FC<InfoCardsProps> = ({ cards = [], option }) => {
                 buttonstyle={
                   "pr-[140px] pb-[1rem] relative left-[1rem] flex justify-end"
                 }
+                locationstyle={"text-[#3D52A0]"}
+                placestyle={"flex"}
               />
             </React.Fragment>
           ))}

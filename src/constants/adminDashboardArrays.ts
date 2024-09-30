@@ -1,0 +1,181 @@
+import { adminImages } from "./images";
+export const adminRoomsList = [
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+  {
+    roomId: "#006548465",
+    roomName: "Deluxe-A",
+    roomImage: adminImages.adminRoom1,
+    bedType: "Double Bed",
+    roomFloor: "Floor A-1",
+    facilities: "Ac,Shower,Double Bed,Wifi Tv,Coffee Set",
+    rate: "$500.00/night",
+    status: "Available",
+  },
+];
+
+export const adminRooms = [
+  {
+    name: "The Business Project",
+    time: "56 minutes",
+    image: adminImages.adminRoom1,
+  },
+  {
+    name: "Living Color",
+    time: "40 minutes",
+    image: adminImages.adminRoom1,
+  },
+  {
+    name: "The Business Project",
+    time: "1hour 12 minutes",
+    image: adminImages.adminRoom1,
+  },
+];
+
+export const adminCustomers = [
+  {
+    name: "Jenny Wilson",
+    email: "w.lawson@example.com",
+    image: adminImages.adminInterior,
+  },
+  {
+    name: "Jenny Wilson",
+    email: "w.lawson@example.com",
+    image: adminImages.adminInterior,
+  },
+  {
+    name: "Jenny Wilson",
+    email: "w.lawson@example.com",
+    image: adminImages.adminInterior,
+  },
+  {
+    name: "Jenny Wilson",
+    email: "w.lawson@example.com",
+    image: adminImages.adminInterior,
+  },
+];
+
+export const adminData = [
+  { name: "Jan", cash: 4000, checkOut: 200, checkIn: 3000 },
+  { name: "Feb", cash: 3000, checkOut: 1000, checkIn: 1500 },
+  { name: "Mar", cash: 3500, checkOut: 2400, checkIn: 2000 },
+  { name: "Apr", cash: 5000, checkOut: 2200, checkIn: 3200 },
+  { name: "May", cash: 2200, checkOut: 2400, checkIn: 2100 },
+  { name: "Jun", cash: 2000, checkOut: 2000, checkIn: 2300 },
+  { name: "Jul", cash: 2000, checkOut: 2400, checkIn: 3000 },
+];
+
+export const adminEmployeeList = [
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+  {
+    employeeId: "#1234",
+    employeeName: "Julia",
+    employeeImage: adminImages.adminEmployee1,
+    jobDetails: "Cleaning , Maintainance , Gardenary",
+    schedule: "Mon-Fri",
+    contact: "+9142XXXX32",
+    status: "Available",
+  },
+];
