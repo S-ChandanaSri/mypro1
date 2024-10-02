@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import List from "@/components/root/Propertycard/List";
 import makiarrow from "../../public/res/icons/downArrow.svg";
+import Filter from "../components/root/Filter/index";
+import FilterOptionFlow from './filterOptionFlow/page';
 
 import {
   GetInTouchInfo,
@@ -98,6 +100,12 @@ function Home() {
     setImageModal(false);
   };
 
+  const [Openn, setOpen] = useState(false);
+
+  const handlefilter = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <div className="space-y-32 overflow-hidden px-6 sm:px-16">
       <ZendenWelcomeModal
@@ -121,6 +129,10 @@ function Home() {
         handleContinue={ImageContinue}
       />
       <Hero />
+
+
+      <Filter setOpen={handlefilter} />
+      {Openn && <FilterOptionFlow setPopup={setOpen} />}
 
       <div className="-[887px] h-[950px] gap-[32px] bg-[#C1C7DC] bg-opacity-10 px-[37px] py-[3px] sm:mx-auto sm:h-auto lg:relative lg:right-[2rem] lg:h-[900px] lg:w-[1450px]">
         <div className="flex items-center justify-between sm:relative sm:left-3 sm:mx-auto sm:flex sm:items-center sm:justify-around md:flex md:justify-between">
@@ -158,7 +170,7 @@ function Home() {
       </div>
 
       <div className="space-y-32">
-        <InfoCards
+          {/*<InfoCards
           title={strings.landing.ourServices.heading}
           subText={strings.landing.ourServices.subHeading}
           cards={OurServicesInfo}
@@ -172,7 +184,7 @@ function Home() {
           title={strings.landing.getInTouch.heading}
           subText={strings.landing.getInTouch.subHeading}
           cards={GetInTouchInfo}
-        />
+        />*/}
       </div>
       {/* <VideoTestimonials /> */}
       <FAQs />
