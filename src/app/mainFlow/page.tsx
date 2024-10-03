@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { svgs, propertyDetailsImages } from "@/constants/images";
 import { useState } from "react";
+import { strings } from "@/constants/strings";
 
 export default function ConfirmAndPay() {
   const [ready, setReady] = useState(false);
@@ -32,7 +33,7 @@ export default function ConfirmAndPay() {
                 height={10}
                 className="object-contain"
               />
-              <p className="text-xl">Confirm and pay</p>
+              <p className="text-xl">{strings.mainFlow.ConfirmAndPay}</p>
             </div>
             <div className="flex flex-row justify-between gap-x-5 rounded-md border border-secondary-800 p-3">
               <div className="flex flex-col">
@@ -47,25 +48,25 @@ export default function ConfirmAndPay() {
                 className="object-contain"
               />
             </div>
-            <p className="text-lg">Your Trip</p>
+            <p className="text-lg">{strings.mainFlow.yourTrip}</p>
             <div className="flex flex-row justify-between">
               <div>
-                <p className="text-lg">Dates</p>
+                <p className="text-lg">{strings.mainFlow.dates}</p>
                 <p className="text-md">Jul 11-14</p>
               </div>
-              <button className="text-lg">Edit</button>
+              <button className="text-lg">{strings.mainFlow.edit}</button>
             </div>
             <div className="flex flex-row justify-between">
               <div>
-                <p className="text-lg">Guests</p>
+                <p className="text-lg">{strings.mainFlow.guests}</p>
                 <p className="text-md">2 guests</p>
               </div>
-              <button className="text-lg">Edit</button>
+              <button className="text-lg">{strings.mainFlow.edit}</button>
             </div>
-            <p className="text-lg">Choose how to pay</p>
+            <p className="text-lg">{strings.mainFlow.chooseHowToPay}</p>
             <div className="flex flex-row justify-between gap-x-5 rounded-md border border-secondary-800 p-3">
               <div className="flex flex-col">
-                <p className="text-lg">Pay in Full</p>
+                <p className="text-lg">{strings.mainFlow.payInFull}</p>
                 <p className="text-md">Pay the total $125 for full rent</p>
               </div>
 
@@ -73,7 +74,9 @@ export default function ConfirmAndPay() {
             </div>
             <div className="flex flex-row justify-between gap-x-5 rounded-md border border-secondary-800 p-3">
               <div className="flex flex-col">
-                <p className="text-lg">Pay part now part later</p>
+                <p className="text-lg">
+                  {strings.mainFlow.payPartNowPartLater}
+                </p>
                 <p className="text-md">Pay $90 now rest will pay later</p>
               </div>
               <input type="radio" />
@@ -108,7 +111,7 @@ export default function ConfirmAndPay() {
             </div>
             <hr className="border border-neutral-400" />
             <div>
-              <p className="text-xl">Price Details</p>
+              <p className="text-xl">{strings.mainFlow.priceDetails}</p>
               <div className="flex flex-row justify-between text-lg text-neutral-500">
                 <p>$50 x 3 nights</p>
                 <p>$150</p>
@@ -127,9 +130,9 @@ export default function ConfirmAndPay() {
         </div>
 
         <div className="flex flex-col gap-y-3 rounded-2xl bg-neutral-100 p-5">
-          <p>Payment details</p>
+          <p>{strings.mainFlow.paymentDetails}</p>
           <div className="flex flex-col text-neutral-500">
-            <label>Credit card</label>
+            <label>{strings.mainFlow.creditCard}</label>
             <div className="flex justify-between rounded-md bg-neutral-200 p-2">
               <input
                 type="number"
@@ -146,7 +149,7 @@ export default function ConfirmAndPay() {
             </div>
           </div>
           <div className="flex flex-col text-neutral-500">
-            <label>Name</label>
+            <label>{strings.mainFlow.name}</label>
             <input
               type="text"
               className="rounded-md bg-neutral-200 p-2"
@@ -156,7 +159,7 @@ export default function ConfirmAndPay() {
 
           <div className="flex flex-col gap-x-5 gap-y-2 text-neutral-500 sm:flex-row sm:gap-y-0">
             <div className="flex flex-col">
-              <label>Expiration date</label>
+              <label>{strings.mainFlow.expirationDate}</label>
               <input
                 type="number"
                 className="rounded-md bg-neutral-200 p-2"
@@ -164,7 +167,7 @@ export default function ConfirmAndPay() {
               />
             </div>
             <div className="flex flex-col">
-              <label>Cvv</label>
+              <label>{strings.mainFlow.cvv}</label>
               <input
                 type="number"
                 className="rounded-md bg-neutral-200 p-2"
@@ -178,24 +181,24 @@ export default function ConfirmAndPay() {
               className="rounded-sm bg-secondary-800 p-2 text-neutral-50"
               onClick={handleConfrimOrder}
             >
-              Confirm order
+              {strings.mainFlow.confirmOrder}
             </button>
             <button className="rounded-sm bg-neutral-200 p-2 text-neutral-500">
-              Cancel and return
+              {strings.mainFlow.cancelAndReturn}
             </button>
           </div>
         </div>
 
         <div className="flex flex-col gap-y-8">
           <div>
-            <p className="text-lg">Cancellation policy</p>
+            <p className="text-lg">{strings.mainFlow.cancellationPolicy}</p>
             <p className="text-sm">
               Fee cancellation before Aug 25 Cancel before 11 jul to get partial
               refund <span>Learn more</span>
             </p>
           </div>
           <div>
-            <p className="text-lg">Ground rules</p>
+            <p className="text-lg">{strings.mainFlow.groundRules}</p>
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur. Mattis ornare odio nunc
               aliquet feugiat ut dignissim vel. Ornare arcu donec amet lectus eu

@@ -6,8 +6,8 @@ import { adminImages, svgs } from "@/constants/images";
 export default function Header() {
   const [search, setSearch] = useState("");
   return (
-    <div className="bg-secondaryWashed-800 flex  text-neutral-50 w-full  items-center justify-between p-2 md:p-5 h-[92px] md:h-[72px]">
-      <div className="flex  items-center gap-2 ">
+    <div className="flex h-[92px] w-full items-center justify-between bg-secondaryWashed-800 p-2 text-neutral-50 md:h-[72px] md:p-5">
+      <div className="flex items-center gap-2">
         <Image
           alt="profile image"
           width={36}
@@ -16,7 +16,7 @@ export default function Header() {
         />
         <p className="text-2xl">ZENDEN</p>
       </div>
-      <div className="hidden lg:flex   h-8 gap-2 bg-neutral-50 items-center rounded px-1 text-xs">
+      <div className="hidden h-8 items-center gap-2 rounded bg-neutral-50 px-1 text-xs lg:flex">
         <Image
           src={svgs.adminSearch}
           alt="search icon"
@@ -29,10 +29,10 @@ export default function Header() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Type to search"
-          className=" outline-none w-[20rem]  text-neutral-950"
+          className="w-[20rem] text-neutral-950 outline-none"
         />
       </div>
-      <div className="hidden lg:flex felx-row items-center gap-5">
+      <div className="felx-row hidden items-center gap-5 lg:flex">
         <Image
           src={svgs.adminEmail}
           alt="search icon"
@@ -54,7 +54,7 @@ export default function Header() {
           width={32}
           height={32}
           src={adminImages.adminEmployee1}
-          className="object-contain rounded-full"
+          className="rounded-full object-contain"
         />
       </div>
       <div className="p-2 lg:hidden">

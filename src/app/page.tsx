@@ -177,10 +177,7 @@ function Home() {
       {/* <VideoTestimonials /> */}
       <FAQs />
     </div>
-
   );
 }
 
-
 export default Home;
-
