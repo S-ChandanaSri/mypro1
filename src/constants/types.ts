@@ -1,5 +1,3 @@
-
-
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import {
   StaticImageData,
@@ -7,22 +5,15 @@ import {
 } from "next/dist/shared/lib/get-img-props";
 
 export interface IInputValue {
-
-
   value?: string;
   error?: string;
 }
 
-
-
 export interface ILinkOption {
-
-
   label: string;
   page: string;
   comp?: string;
 }
-
 
 export interface IFAQ {
   id: number;
@@ -30,14 +21,11 @@ export interface IFAQ {
   answer: string;
 }
 
-
-
 export interface ICardInfo {
   icon: StaticImport;
   label: string;
   body?: string;
 }
-
 
 export interface IVideoTestimonial {
   videoPath: string;
@@ -114,7 +102,6 @@ export interface IPropertyDetails {
   openingHours: IOpeningHours[];
   ammenities: IAmenity[];
   propertyId: String;
-
 }
 
 export interface Itestimonial {
@@ -177,13 +164,11 @@ export interface CardProps {
   multiImage?: boolean;
 }
 
-
 export interface CardInfo {
   icon: StaticImport;
   label: string;
   body?: string;
 }
-
 
 export interface CardInfo1 {
   icon: StaticImport;
@@ -198,4 +183,3 @@ export interface CardInfo2 {
   label: string;
   body?: string;
 }
-

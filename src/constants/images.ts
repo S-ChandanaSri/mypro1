@@ -1,5 +1,3 @@
-
-
 import adminEmail from "../../public/res/icons/adminDashboard/Iconemail.svg";
 import adminHouse from "../../public/res/icons/adminDashboard/IconhouseDashboard.svg";
 import adminLogout from "../../public/res/icons/adminDashboard/Iconlogout.svg";
@@ -163,6 +161,13 @@ import peace from "../../public/res/images/infoCards/peace.png";
 import mattress1 from "../../public/res/images/infoCards/mattress1.svg";
 import mattress2 from "../../public/res/images/infoCards/mattress2.svg";
 import mattress3 from "../../public/res/images/infoCards/mattress3.svg";
+
+import mainLeftArrow from "../../public/res/icons/mainFlow/VectorleftArrow.svg";
+import mainCreditCard from "../../public/res/icons/mainFlow/VectorcreditCard.svg";
+import mainRareFind from "../../public/res/icons/mainFlow/VectorrareFind.svg";
+import mainMoney from "../../public/res/icons/mainFlow/Vectormoney.svg";
+import mainCongratulations from "../../public/res/icons/mainFlow/congratulations.svg";
+
 export const BACKGROUNDS = {
   AUTH_IMAGE: "/res/images/backgrounds/auth.png",
   HERO_IMAGE: "/res/images/backgrounds/hero.jpg",
@@ -209,7 +214,6 @@ export const adminImages = {
   adminRoom1,
   adminInterior,
 };
-
 
 export const SOCIAL_ICONS = {
   [SocialPlatforms.TWITTER]: twitterIcon,
@@ -265,7 +269,7 @@ export const svgs = {
   downloadIcon,
   propertyFilterXcross,
   propertyLiked,
- filterHouse,
+  filterHouse,
   filterApartment,
   filterXcross,
   filterGuestHouse,
@@ -282,7 +286,7 @@ export const svgs = {
   roomWifi,
   roomHamburger,
   roomCloud,
-   adminBookings,
+  adminBookings,
   adminEmail,
   adminHalfMenu,
   adminHouse,
@@ -297,6 +301,11 @@ export const svgs = {
   adminSettings,
   adminUpArrow,
   adminHamburger,
+  mainCreditCard,
+  mainLeftArrow,
+  mainRareFind,
+  mainCongratulations,
+  mainMoney,
 };
 
 export const testimonialimages = {

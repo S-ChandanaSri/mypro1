@@ -1,3 +1,4 @@
+import ConfirmAndPay from "@/app/mainFlow/page";
 import { PATHS } from ".";
 
 export const strings = {
@@ -136,7 +137,6 @@ export const strings = {
     },
   },
 
-
   adminDashboard: {
     sidebar: {
       dashboard: "Dashboard",
@@ -188,8 +188,6 @@ export const strings = {
       newRoom: "New Room",
     },
   },
-
-
 
   //Property
   propertyDetails: {
@@ -302,4 +300,24 @@ export const strings = {
     },
   },
 
+  mainFlow: {
+    ConfirmAndPay: "Confirm and pay",
+    yourTrip: "Your Trip",
+    dates: "Dates",
+    edit: "Edit",
+    guests: "Guests",
+    chooseHowToPay: "Choose how to pay",
+    payInFull: "Pay in Full",
+    payPartNowPartLater: "Pay part now part later",
+    paymentDetails: "Payment details",
+    creditCard: "Credit card",
+    name: "Name",
+    expirationDate: "Expiration date",
+    cvv: "Cvv",
+    confirmOrder: "Confirm order",
+    cancelAndReturn: "cancel and return",
+    priceDetails: "Price Details",
+    cancellationPolicy: "Cancellation policy",
+    groundRules: "Ground rules",
+  },
 };

@@ -24,8 +24,8 @@ export default function Dashboard() {
   const [date, setDate] = useState(new Date());
 
   return (
-    <div className="bg-[#F6F8FF] px-1 w-full  ">
-      <div className=" flex flex-row items-center gap-2 px-5 h-10 md:h-16 text-xl">
+    <div className="w-full bg-[#F6F8FF] px-1">
+      <div className="flex h-10 flex-row items-center gap-2 px-5 text-xl md:h-16">
         <Image
           src={svgs.adminHalfMenu}
           alt="employee image"
@@ -36,13 +36,13 @@ export default function Dashboard() {
 
         <p>{strings.adminDashboard.dashboard.dashboard}</p>
       </div>
-      <div className="  flex flex-col gap-5 w-full ">
-        <div className="flex flex-col lg:flex lg:flex-row   md:grid md:grid-cols-2 gap-5 md:grid-rows-2 mx-5">
-          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+      <div className="flex w-full flex-col gap-5">
+        <div className="mx-5 flex flex-col gap-5 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
+          <div className="flex h-24 w-72 flex-col gap-3 rounded-md border bg-neutral-50 p-4 lg:w-full">
             <p className="text-xs">
               {strings.adminDashboard.dashboard.checkIn}
             </p>
-            <div className="flex flex-row  justify-between">
+            <div className="flex flex-row justify-between">
               <p className="text-xl">$12,426</p>
               <div className="flex flex-row items-center gap-x-1 text-xs">
                 +36%
@@ -56,11 +56,11 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+          <div className="flex h-24 w-72 flex-col gap-3 rounded-md border bg-neutral-50 p-4 lg:w-full">
             <p className="text-xs">
               {strings.adminDashboard.dashboard.checkOut}
             </p>
-            <div className="flex flex-row  justify-between">
+            <div className="flex flex-row justify-between">
               <p className="text-xl">84,382</p>
               <div className="flex flex-row items-center gap-x-1">
                 <p className="text-xs">+36%</p>
@@ -74,11 +74,11 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+          <div className="flex h-24 w-72 flex-col gap-3 rounded-md border bg-neutral-50 p-4 lg:w-full">
             <div className="text-xs">
               {strings.adminDashboard.dashboard.totalCustomers}
             </div>
-            <div className="flex flex-row   justify-between">
+            <div className="flex flex-row justify-between">
               <p className="text-xl">33,493</p>
               <div className="flex flex-row items-center gap-x-1">
                 <p className="text-xs">+36%</p>
@@ -92,9 +92,9 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className=" w-72 lg:w-full h-24 rounded-md border p-4 flex flex-col gap-3 bg-neutral-50">
+          <div className="flex h-24 w-72 flex-col gap-3 rounded-md border bg-neutral-50 p-4 lg:w-full">
             <p className="text-xs">{strings.adminDashboard.dashboard.cash}</p>
-            <div className="flex flex-row   justify-between">
+            <div className="flex flex-row justify-between">
               <p className="text-xl">33,493</p>
               <div className="flex flex-row items-center gap-x-1">
                 <p className="text-xs">+36%</p>
@@ -110,27 +110,27 @@ export default function Dashboard() {
           </div>
         </div>
         {/* blocks */}
-        <div className="lg:grid lg:grid-rows-2 lg:grid-cols-2 flex flex-col px-5 gap-5">
+        <div className="flex flex-col gap-5 px-5 lg:grid lg:grid-cols-2 lg:grid-rows-2">
           {/* Calendar Section */}
-          <div className=" w-full h-auto rounded p-4 bg-neutral-50">
+          <div className="h-auto w-full rounded bg-neutral-50 p-4">
             <Calendar
               onChange={setDate}
               value={date}
-              className="w-full h-full"
+              className="h-full w-full"
             />
           </div>
-          <div className="w-full lg:flex lg:flex-row gap-2">
+          <div className="w-full gap-2 lg:flex lg:flex-row">
             {/* Stats and Chart Section */}
-            <div className=" w-full h-auto rounded py-5 px-5 flex flex-col gap-4 bg-neutral-50">
+            <div className="flex h-auto w-full flex-col gap-4 rounded bg-neutral-50 px-5 py-5">
               {/* Reservation Stats */}
-              <div className="w-full  flex flex-col gap-1">
-                <p className="text-neutral-950 text-sm">
+              <div className="flex w-full flex-col gap-1">
+                <p className="text-sm text-neutral-950">
                   {
                     strings.adminDashboard.dashboard.reservation
                       .reservationStats
                   }
                 </p>
-                <p className="text-neutral-500 text-xs">
+                <p className="text-xs text-neutral-500">
                   {
                     strings.adminDashboard.dashboard.reservation
                       .reservationDescription
@@ -139,14 +139,14 @@ export default function Dashboard() {
               </div>
 
               {/* Payment Stats */}
-              <div className="p-1 flex flex-col lg:flex-row justify-between">
+              <div className="flex flex-col justify-between p-1 lg:flex-row">
                 <div className="flex gap-6">
                   <div className="flex flex-col">
                     <p className="text-xs text-neutral-500">
                       {strings.adminDashboard.dashboard.reservation.bitcoin}
                     </p>
                     <p className="text-sm text-neutral-950">
-                      62% <span className="text-xs ms-2">10.78%</span>
+                      62% <span className="ms-2 text-xs">10.78%</span>
                     </p>
                   </div>
                   <div className="flex flex-col">
@@ -154,7 +154,7 @@ export default function Dashboard() {
                       {strings.adminDashboard.dashboard.reservation.credit}
                     </p>
                     <p className="text-sm text-neutral-950">
-                      12% <span className="text-xs ms-2">10.78%</span>
+                      12% <span className="ms-2 text-xs">10.78%</span>
                     </p>
                   </div>
                   <div className="flex flex-col">
@@ -162,14 +162,14 @@ export default function Dashboard() {
                       {strings.adminDashboard.dashboard.reservation.cash}
                     </p>
                     <p className="text-sm text-neutral-950">
-                      30% <span className="text-xs ms-2">10.78%</span>
+                      30% <span className="ms-2 text-xs">10.78%</span>
                     </p>
                   </div>
                 </div>
 
                 {/* Search and Filter */}
-                <div className="lg:w-32 lg:h-14 w-full h-10 flex flex-row lg:flex-col gap-2 justify-between lg:justify-start">
-                  <div className="flex flex-row text-xs rounded-sm border border-neutral-400 gap-1 p-1 w-full">
+                <div className="flex h-10 w-full flex-row justify-between gap-2 lg:h-14 lg:w-32 lg:flex-col lg:justify-start">
+                  <div className="flex w-full flex-row gap-1 rounded-sm border border-neutral-400 p-1 text-xs">
                     <Image
                       src={svgs.adminSearch}
                       alt="search icon"
@@ -219,10 +219,10 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="lg:w-[37.6rem]     rounded py-8 px-4 flex flex-col lg:gap-4 gap-8 bg-neutral-50">
+          <div className="flex flex-col gap-8 rounded bg-neutral-50 px-4 py-8 lg:w-[37.6rem] lg:gap-4">
             {adminRooms?.map((room, index) => (
               <div
-                className="  rounded-lg p-2 gap-2 flex flex-row bg-neutral-50 "
+                className="flex flex-row gap-2 rounded-lg bg-neutral-50 p-2"
                 key={index}
               >
                 <Image
@@ -241,8 +241,8 @@ export default function Dashboard() {
             ))}
           </div>
 
-          <div className="    rounded-2 border py-5 px-6 flex flex-col gap-6 bg-neutral-50">
-            <div className="    flex flex-col gap-1">
+          <div className="rounded-2 flex flex-col gap-6 border bg-neutral-50 px-6 py-5">
+            <div className="flex flex-col gap-1">
               <p className="text-md">
                 {strings.adminDashboard.dashboard.recentCustomers}
               </p>
@@ -252,7 +252,7 @@ export default function Dashboard() {
             </div>
             {adminCustomers?.map((customer, index) => (
               <div
-                className="  gap-32  flex flex-row justify-between   text-xs"
+                className="flex flex-row justify-between gap-32 text-xs"
                 key={index}
               >
                 <div className="flex flex-row gap-2 text-xs">
@@ -261,21 +261,21 @@ export default function Dashboard() {
                     width={36}
                     height={36}
                     alt="image"
-                    className=" rounded-full"
+                    className="rounded-full"
                   />
 
-                  <div className="flex flex-col gap-1 ">
+                  <div className="flex flex-col gap-1">
                     <p>{customer.name}</p>
                     <p>{customer.email}</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 ">
+                <div className="flex flex-col gap-1">
                   <p>$11,234</p>
                   <p>Austin</p>
                 </div>
               </div>
             ))}
-            <div className=" flex flex-row gap-3 text-xs items-center">
+            <div className="flex flex-row items-center gap-3 text-xs">
               <p>{strings.adminDashboard.dashboard.seeAllCustomers}</p>
 
               <Image
