@@ -33,7 +33,7 @@ const Filter: React.FC<{ setOpen: () => void }> = ({ setOpen }) => {
             className="flex h-[126.82px] w-[1066.89px] gap-[77px] sm:mx-auto sm:w-[400px] md:relative md:right-5 md:mx-auto md:flex md:w-[500px] md:justify-between lg:mx-auto lg:w-auto">
 
                 {cities.map((city, index) => (
-                    <div key={index} className="flex flex-col items-center">
+                    <div key={index}  className={`flex flex-col items-center ${ index >= 3 && index < 4 ? 'hidden md:flex lg:hidden' : ''  } ${index >= 4 ? 'hidden lg:flex' : ''}`} >
                         <Image src={city.src} width={86} height={86} alt={city.name}/>
                         <p className="text-[20px] font-medium text-black">{city.name}</p>
                     </div>
@@ -42,13 +42,13 @@ const Filter: React.FC<{ setOpen: () => void }> = ({ setOpen }) => {
         </div>
     </div>
     <div
-        className="h-[36px] w-[36px] sm:mx-auto sm:block md:relative md:right-1 md:mx-auto lg:relative lg:left-[3rem] ">
+        className="h-[36px] w-[36px] sm:mx-auto sm:hidden  md:hidden lg:relative lg:left-[3rem] lg:block ">
         <button className="h-[36px] w-[36px] border-[1.04px] border-[#000000]">
             <Image width={36} height={36} src={Frame39907} alt=""/>
         </button>
     </div>
     <Link href="#" onClick={setOpen}
-          className="lg:mx-autolg:right-4 h-[50.16px] w-[101.67px] sm:relative sm:left-[3rem] sm:mx-auto md:relative md:right-5 md:mx-auto lg:relative lg:w-auto">
+          className="lg:block lg:right-4 h-[50.16px] sm:relative sm:left-[3rem] sm:hidden md:hidden lg:relative lg:w-auto">
         <button className="border-mixed h-[50.16px] w-[101.67px] border-[#000000]">
             <Image width={80} height={40} src={Frame39908} alt=""/>
         </button>
