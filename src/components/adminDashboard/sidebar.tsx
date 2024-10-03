@@ -34,11 +34,11 @@ export default function Sidebar() {
     },
   ];
   return (
-    <div className="bg-neutral-50    text-lg  hidden lg:h-[calc(100vh-72px)] lg:flex flex-col p-5 ps-0 border-b justify-between">
+    <div className="hidden flex-col justify-between border-b bg-neutral-50 p-5 ps-0 text-lg lg:flex lg:h-[calc(100vh-72px)]">
       <div className="flex flex-col gap-10">
         {sidebar?.map((item, index) => (
           <div
-            className={` ${pathname === `/adminDashboard/${item.id}` ? " border-l-4 border-secondaryWashed-800" : ""} flex  ps-4    gap-5 items-center`}
+            className={` ${pathname === `/adminDashboard/${item.id}` ? "border-l-4 border-secondaryWashed-800" : ""} flex items-center gap-5 ps-4`}
             key={index}
           >
             <Image
@@ -54,7 +54,7 @@ export default function Sidebar() {
         ))}
       </div>
       <div className="ps-4">
-        <div className="flex  gap-5 items-center">
+        <div className="flex items-center gap-5">
           <Image
             src={svgs.adminSettings}
             alt="icons"
@@ -65,7 +65,7 @@ export default function Sidebar() {
 
           <p>Settings</p>
         </div>
-        <div className="flex  gap-5 items-center ">
+        <div className="flex items-center gap-5">
           <Image
             src={svgs.adminLogout}
             alt="icons"

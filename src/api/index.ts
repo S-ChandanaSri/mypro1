@@ -30,7 +30,6 @@ export async function post_register<T>(payload: UserRegisterSchemaType) {
   return await client.post("/auth/register", payload);
 }
 
-
 const PhoneNumberSchema = z.object({
   phoneNumber: z.string().min(10).max(15), // Adjust validation based on your requirements
 });

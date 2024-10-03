@@ -1,4 +1,3 @@
-
 "use client";
 import { cn } from "@/utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
@@ -114,4 +113,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 export default Button;
-
