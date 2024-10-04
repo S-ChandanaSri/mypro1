@@ -8,7 +8,8 @@ import axios from "axios";
 import { z } from "zod";
 
 const getAPIBaseUrl = (): string => {
-  return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
+  // return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
+  return "https://3345-2409-40e4-200a-7516-a5c3-56ab-5f07-364.ngrok-free.app";
 };
 const accessToken = localStorage?.getItem("accessToken");
 const client = axios.create({
