@@ -89,7 +89,13 @@ export const PATHS = {
   login: "/login",
   signUp: "/signup",
   forgotPassword: "/forgot-password",
+};
+
+export const Dimens = {
+  loginForm: 480,
   testimonials: "/testimonials",
+  Steps: "/Steps",
+  Imagesstep: "/Imagesstep",
 };
 
 export const LINKS = {

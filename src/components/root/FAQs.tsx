@@ -47,7 +47,7 @@ const FAQs: React.FC = () => {
           </div>
         ))}
       </ul>
-      <div className="flex w-full flex-col items-center rounded-3xl bg-neutral-50 py-12 text-center">
+      <div className="flex flex-1 flex-col items-center rounded-3xl bg-neutral-50 py-12 text-center">
         <div className="flex h-[56px] w-[120px]">
           {/* <Image
               width={48}

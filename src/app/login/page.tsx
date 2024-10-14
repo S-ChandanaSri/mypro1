@@ -17,12 +17,18 @@ import { post_login } from "@/api";
 import { PATHS } from "@/constants";
 import { strings } from "@/constants/strings";
 import { setErrorsFromZodError } from "@/utils/auth";
+import { loginReducers } from "@/redux/features/authSlice";
+import { useAppDispatch } from "@/redux/hooks";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 
 const Login: NextPage = () => {
   const { formState, setFormState, handleInputChange } = useForm();
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
-
+  const dispatch = useAppDispatch();
+  const router = useRouter();
+  const { isauthenticate, user } = useAuth();
   useEffect(() => {
     const hasError = Object.values(formState).some((input) => input?.error);
     setDisabled(hasError);
@@ -39,7 +45,13 @@ const Login: NextPage = () => {
 
     try {
       const data = UserLoginSchema.parse(payload);
-      const res = await post_login(data);
+      const res: any = await post_login(data);
+      if (res?.status == 200) {
+        dispatch(loginReducers(res?.data?.data?.user));
+        localStorage.setItem("accessToken", res?.data?.data?.accessToken);
+        localStorage.setItem("refreshToken", res?.data?.data?.refreshToken);
+        router.push("/");
+      }
     } catch (err) {
       if (err instanceof z.ZodError) {
         setErrorsFromZodError(err, setFormState);

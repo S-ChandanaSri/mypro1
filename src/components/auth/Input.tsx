@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { InputHTMLAttributes, forwardRef } from "react";
 
 const inputVariants = cva(
-  `bg-transparent outline outline-neutral-300 outline-1 px-8 py-8 rounded-lg w-full`,
+  `bg-transparent outline outline-neutral-300 outline-1 px-5 py-6 rounded-lg w-full`,
   {
     variants: {
       variant: {

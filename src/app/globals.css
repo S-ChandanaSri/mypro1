@@ -10,6 +10,26 @@
   outline: none;
 }
 
+.top-gradient {
+  background: linear-gradient(
+    to bottom,
+    #394b8c 0%,
+    #394b8c 10%,
+    transparent 10%
+  );
+}
+
+@media (min-width: 1024px) {
+  .top-gradient {
+    background: linear-gradient(
+      to bottom,
+      #394b8c 0%,
+      #394b8c 25%,
+      transparent 25%
+    );
+  }
+}
+
 .slider-container {
   grid-area: slider;
 }
@@ -21,4 +41,21 @@
 .image-container {
   margin: 0;
   padding: 0;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10001;
 }

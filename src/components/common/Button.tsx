@@ -19,6 +19,7 @@ const buttonVariants = cva(
         base: "bg-transparent text-neutral-50 shadow-none outline outline-1 hover:bg-neutral-50/20",
         baseDark:
           "bg-neutral-50 text-neutral-950 shadow-none hover:bg-neutral-50/80",
+        card: "w-32 h-10 text-neutral-50 border-1 rounded-md bg-[#002855]",
       },
       size: {
         full: "w-full py-6 rounded-xl",
@@ -39,6 +40,7 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   ref?: React.Ref<HTMLButtonElement>;
+
   preIconNode?: StaticImport;
   postIconNode?: StaticImport;
   link?: string;
