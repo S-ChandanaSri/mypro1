@@ -1,4 +1,4 @@
-import { BACKEND_URLS, Duration } from "@/constants";
+import { Duration } from "@/constants";
 import {
   UserLoginSchemaType,
   UserRegisterSchemaType,
@@ -9,9 +9,14 @@ import { z } from "zod";
 
 const getAPIBaseUrl = (): string => {
   // return isLocal() ? BACKEND_URLS.LOCAL : BACKEND_URLS.PRODUCTION;
-  return "https://3345-2409-40e4-200a-7516-a5c3-56ab-5f07-364.ngrok-free.app";
+  return "https://8404-2409-40e4-3a-c696-1c7f-1eba-926d-e6ab.ngrok-free.app";
 };
-const accessToken = localStorage?.getItem("accessToken");
+let accessToken = "";
+
+if (typeof window !== "undefined") {
+  accessToken = localStorage?.getItem("accessToken") || "";
+}
+
 const client = axios.create({
   baseURL: getAPIBaseUrl(),
   responseType: "json",
