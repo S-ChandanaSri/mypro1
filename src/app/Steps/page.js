@@ -15,7 +15,6 @@ import Placetype from "../Placetype/page.js";
 import Location from "../Location/page.js";
 import Address from "../Address/page.js";
 import Peopletype from "../Peopletype/page.js";
-import Display from "../Display/page.js";
 import Navbar from "../Navbar/page.js";
 import Options from "../Options/page.js";
 import { useRouter } from "next/navigation";
