@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import rectangle from "../../../public/res/images/components/rectangle.png";
 //import { Link,useNavigate } from 'react-router-dom';
-import Navbar from "../Navbar/page.js";
+import Navbar from "@/components/Navbar";
 import { ThreeDots } from "react-loader-spinner";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

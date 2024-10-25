@@ -1,11 +1,10 @@
 "use client";
 import React, { useState, useEffect, useMemo } from "react";
-import Navbar from "../Navbar/page.js";
 import Footer from "../Footer/page.js";
-import mdi from "../_assets/images/mdi.png";
 import Slider from "../Slider/page.js";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import Navbar from "@/components/Navbar.jsx";
 
 export default function Edit() {
   const searchParams = useSearchParams();

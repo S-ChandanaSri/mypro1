@@ -1,18 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { strings } from "@/constants/strings";
 import {
   ouramenitiesinfo2,
   OurAmenitiesnfo,
   ouramenitiesinfo3,
 } from "@/constants/arrays";
-import { useRouter } from "next/navigation";
 import InfoCards from "@/components/root/InfoCards/infoCards/Amenities";
 
 export default function Amenities({ listingid }) {
   const [selectedoption, setSelectedOption] = useState([]);
-  const router = useRouter();
 
   const handleClick = (option) => {
     if (selectedoption.includes(option.label)) {

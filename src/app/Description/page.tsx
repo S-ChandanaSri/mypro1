@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
 
+import React, { useState } from "react";
 import Describehome from "@/components/root/InfoCards/infoCards/Describehome";
 import { strings } from "@/constants/strings";
 import { Describeinfo } from "@/constants/arrays";
 
-export default function Description({ listingid }) {
+export default function Description({ listingid }: { listingid: string }) {
   const [selectedopt, setSelectedOpt] = useState([]);
 
   const handlecolor = (option) => {

@@ -3,19 +3,11 @@ import React, { useState } from "react";
 import Amenitie1 from "@/components/root/InfoCards/infoCards/Amenitie1";
 import { strings } from "@/constants/strings";
 
-export default function Amenities1({ listingid }) {
+export default function Amenities1({ listingid }: { listingid: string }) {
   const [guests, setGuests] = useState(0);
   const [bedrooms, setBedrooms] = useState(0);
   const [beds, setBeds] = useState(0);
-  const [isClicked, setIsClicked] = useState(null);
-
-  const handleClick = (button) => {
-    setIsClicked(button);
-  };
-
-  if (listingid) {
-    console.log("sssssssssssssss:", listingid);
-  }
+  const [isClicked, setIsClicked] = useState(-1);
 
   fetch("http://localhost:3001/amenities1", {
     method: "POST",
@@ -56,6 +48,8 @@ export default function Amenities1({ listingid }) {
       bedrooms={bedrooms}
       beds={beds}
       isClicked={isClicked}
+      icon={""}
+      icon2={""}
     />
   );
 }

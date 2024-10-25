@@ -1,16 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
-export default function Describe({ listingid }) {
+export default function Describe({ listingid }: { listingid: string }) {
   const [text, setText] = useState("");
 
-  const handleTextChange = (event) => {
+  const handleTextChange = (event: any) => {
     if (event.target.value.length <= 36) {
       setText(event.target.value);
     }
   };
-
-  console.log(";;;;;", text);
 
   fetch("http://localhost:3001/descriptionn", {
     method: "POST",

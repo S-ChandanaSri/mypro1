@@ -1,17 +1,13 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
-//import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function Address({ listingid }) {
+export default function Address({ listingid }: { listingid: string }) {
   const iframeRef = useRef(null);
-  const [loadingg, setLoadingg] = useState(true);
   const options = useMemo(() => countryList().getData(), []);
-  const [error, setError] = useState(null);
-  const [valuee, setValue] = useState(null);
-  //const location = useLocation();
-  //console.log("llllllllllll",location.state)
-  //const { listingid } = location.state || {};
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [valuee, setValue] = useState({ value: "", label: "" });
 
   const [address, setAddress] = useState({
     road: "",
@@ -26,7 +22,7 @@ export default function Address({ listingid }) {
     district: "",
   });
 
-  const changeHandler = (selectedOption) => {
+  const changeHandler = (selectedOption: { value: string; label: string }) => {
     setValue(selectedOption);
     setAddress((prevAddress) => ({
       ...prevAddress,
@@ -62,13 +58,12 @@ export default function Address({ listingid }) {
     if (iframeRef.current) {
       const iframe = iframeRef.current;
       const url = iframe.getAttribute("src");
-      console.log("i got it", url);
 
       const params = new URLSearchParams(new URL(url).search);
       const embedParams = params.get("pb");
 
-      const latitudeMatch = embedParams.match(/!3d(-?\d+\.\d+)/);
-      const longitudeMatch = embedParams.match(/!2d(-?\d+\.\d+)/);
+      const latitudeMatch = embedParams?.match(/!3d(-?\d+\.\d+)/);
+      const longitudeMatch = embedParams?.match(/!2d(-?\d+\.\d+)/);
 
       const latitude = latitudeMatch ? latitudeMatch[1] : "Not found";
       const longitude = longitudeMatch ? longitudeMatch[1] : "Not found";
@@ -85,20 +80,13 @@ export default function Address({ listingid }) {
         fetch(url)
           .then((res) => res.json())
           .then((data) => {
-            console.log("yeeee", data);
             const country = data.address.country || "";
             const countryCode = data.address.country_code || "";
-
-            console.log("Fetched country:", country);
-            console.log("Fetched countryCode:", countryCode);
 
             const selectedOption = options.find(
               (option) =>
                 option.value.toUpperCase() === countryCode.toUpperCase(),
             );
-
-            console.log("options:", options);
-            console.log("Selected Option:", selectedOption);
 
             setAddress({
               road: data.address.road || data.address.street || "",
@@ -117,24 +105,24 @@ export default function Address({ listingid }) {
               village: data.address.suburb || "",
             });
 
-            setValue(selectedOption || null);
-            setLoadingg(false);
+            setValue(selectedOption);
+            setLoading(false);
           })
           .catch((err) => {
             console.error("Error fetching address:", err);
             setError("Unable to fetch address.");
-            setLoadingg(false);
+            setLoading(false);
           });
       },
       (err) => {
         console.error("Geolocation error:", err);
         setError("Unable to get location.");
-        setLoadingg(false);
+        setLoading(false);
       },
     );
   }, [options]);
 
-  if (loadingg) return <p>Loading...</p>;
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (

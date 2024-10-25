@@ -5,7 +5,7 @@ import arrowd from "../../../public/res/images/components/arrowd.png";
 import Vector from "../../../public/res/images/components/Vector.png";
 import plus from "../../../public/res/images/components/plus.png";
 import Link from "next/link";
-import Navbar from "../Navbar/page.js";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Propertylisting() {
