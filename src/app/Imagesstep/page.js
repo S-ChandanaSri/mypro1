@@ -15,7 +15,7 @@ import Imageslist from "../Imageslist/page.js";
 import Display from "../Display/page.tsx";
 import { useListing } from "@/app/context/ListingContext.tsx";
 import Introduction3 from "../Introduction3/page.js";
-import Amount from "../Amount/page.js";
+import Amount from "../Amount/page.tsx";
 import Pay from "../Pay/page.js";
 
 export default function Imagesstep() {
