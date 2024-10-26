@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect, useRef, useMemo } from "react";
 
+import React, { useState, useEffect, useRef, useMemo } from "react";
 //import { useNavigate } from 'react-router-dom';
 import Image from "next/image";
-
 import Footer from "../Footer/page.js";
 import d from "../../../public/res/images/components/d.png";
 //import Select from 'react-select';
