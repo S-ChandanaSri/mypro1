@@ -1,10 +1,14 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import React, {useState, useMemo, useEffect, useRef ,FC} from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-export default function Address({ listingid }: { listingid: string }) {
+interface AddressProps {
+  listingid: string;
+}
+
+const Address: FC<AddressProps> = ({ listingid }) => {
   const iframeRef = useRef(null);
   const options = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
@@ -223,3 +227,4 @@ export default function Address({ listingid }: { listingid: string }) {
     </>
   );
 }
+export default Address;
