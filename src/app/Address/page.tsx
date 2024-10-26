@@ -226,5 +226,5 @@ const Address = ({ listingid }: AddressProps) => {
       </div>
     </>
   );
-}
+};
 export default Address;
