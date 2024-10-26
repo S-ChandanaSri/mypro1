@@ -8,7 +8,7 @@ interface AddressProps {
   listingid: string;
 }
 
-const Address: React.FC<AddressProps> = ({ listingid }) => {
+const Address = ({ listingid }: AddressProps) => {
   const iframeRef = useRef(null);
   const options = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
