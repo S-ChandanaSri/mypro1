@@ -4,11 +4,7 @@ import {useState, useMemo, useEffect, useRef} from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-interface AddressProps {
-  listingid: string;
-}
-
-const Address = ({ listingid }: AddressProps) => {
+const Address = ({ listingid }) => {
   const iframeRef = useRef(null);
   const options = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
