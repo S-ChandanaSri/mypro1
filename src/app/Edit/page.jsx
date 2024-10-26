@@ -4,7 +4,7 @@ import Footer from "../Footer/page.js";
 import Slider from "../Slider/page.js";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import Navbar from "@/components/Navbar.jsx";
+import Navbar from "@/components/Navbar.tsx";
 
 export default function Edit() {
   const searchParams = useSearchParams();
