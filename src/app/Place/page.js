@@ -54,7 +54,7 @@ export default function Place({
         })
         .then((data) => {
           console.log("Response data:", data);
-          setListingid(data.id || id);
+          setListingid(String(data.id) || id);
           setIsLoading(false);
         })
         .catch((err) => {
