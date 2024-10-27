@@ -27,13 +27,13 @@ import ImageUploadModal from "@/components/popup/ImageModal";
 import { postPhoneNumber, postOTP, postImage } from "@/api";
 
 function Home() {
-  const [WelcomeModal, setWelcomeModal] = useState<boolean>(true);
-  const [ImageModal, setImageModal] = useState<boolean>(false);
-  const [PhoneModal, setPhoneModal] = useState<boolean>(false);
-  const [OtpModal, setOtpModal] = useState<boolean>(false);
+  const [WelcomeModal, setWelcomeModal] = useState(true);
+  const [ImageModal, setImageModal] = useState(false);
+  const [PhoneModal, setPhoneModal] = useState(false);
+  const [OtpModal, setOtpModal] = useState(false);
 
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const welcomeModalContinue = (): void => {
     setWelcomeModal(false);
