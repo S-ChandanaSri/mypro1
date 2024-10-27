@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import phhouse from "../../../public/res/images/components/phhouse.png";
 import phbuild from "../../../public/res/images/components/phbuild.png";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 export default function Place({
   selectedOption,
@@ -33,7 +33,8 @@ export default function Place({
     if (selectedOption) {
       setIsLoading(true);
 
-      const id = uuidv4();
+      // const id = uuidv4();
+      const id = "id2";
 
       console.log("kk", id);
 
