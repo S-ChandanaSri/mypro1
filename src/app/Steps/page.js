@@ -59,8 +59,8 @@ export default function Steps() {
   const [currentstep, setCurrentstep] = useState(0);
 
   useEffect(() => {
-    const id = uuidv4(); // Generate UUID
-    setListingid(id); // Update context
+    // const id = uuidv4(); // Generate UUID
+    setListingid("id"); // Update context
   }, [setListingid]);
 
   const handleClick = (button) => {
