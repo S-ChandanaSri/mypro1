@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-const Address = ({ listingid }) => {
+export default function Address({ listingid }: { listingid: string }) {
   const iframeRef = useRef(null);
   const options = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
@@ -223,4 +223,4 @@ const Address = ({ listingid }) => {
     </>
   );
 };
-export default Address;
+
