@@ -4,9 +4,6 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-interface AddressProps {
-  listingid: string; // Adjust if 'listingid' has a different type
-}
 interface AddressType {
   road: string;
   city: string;
@@ -24,7 +21,7 @@ interface CountryOption {
   label: string;
 }
 
-const Address: React.FC<AddressProps> = ({ listingid }) => {
+export default function Address({ listingid }: { listingid: string }) {
   const iframeRef = useRef(null);
   const options: CountryOption[] = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
@@ -242,5 +239,4 @@ const Address: React.FC<AddressProps> = ({ listingid }) => {
       </div>
     </>
   );
-};
-export default Address;
+}
