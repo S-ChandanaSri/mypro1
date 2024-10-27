@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -27,9 +27,9 @@ const PhoneNumberModal: React.FC<PhoneNumberModalProps> = ({
   handleClose,
   handlePhoneNumberContinue, // Pass the phone number to this function
 }) => {
-  const [phoneNumber, setPhoneNumber] = useState<string>("");
-  const [countryCode, setCountryCode] = useState<string>(countries[0].code);
-  const [agreeToAppLink, setAgreeToAppLink] = useState<boolean>(false);
+  const [phoneNumber, setPhoneNumber] = useState("" as string);
+  const [countryCode, setCountryCode] = useState(countries[0].code as string);
+  const [agreeToAppLink, setAgreeToAppLink] = useState(false as boolean);
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(event.target.value);
@@ -143,7 +143,7 @@ const OTPModal: React.FC<OTPModalProps> = ({
   handleClose,
   handleOTPContinue,
 }) => {
-  const [otp, setOtp] = useState<string>("");
+  const [otp, setOtp] = useState("" as string);
 
   const handleOtpChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setOtp(event.target.value);

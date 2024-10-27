@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Button, Modal, Typography, Avatar } from "@mui/material";
 
 interface ImageUploadModalProps {
@@ -12,10 +12,10 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
   handleClose,
   handleContinue,
 }) => {
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
-  const [imageFile, setImageFile] = useState<File | null>(null); // State to hold the uploaded file
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [uploadedImage, setUploadedImage] = useState(null as string | null);
+  const [imageFile, setImageFile] = useState(null as File | null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null as string | null);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
