@@ -4,9 +4,29 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-const Address = ({ listingid }) => {
+interface AddressProps {
+  listingid: string; // Adjust if 'listingid' has a different type
+}
+interface AddressType {
+  road: string;
+  city: string;
+  country: string;
+  zipcode: string;
+  street: string;
+  state: string;
+  country_code: string;
+  village: string;
+  mandal: string;
+  district: string;
+}
+interface CountryOption {
+  value: string;
+  label: string;
+}
+
+const Address: React.FC<AddressProps> = ({ listingid }) => {
   const iframeRef = useRef(null);
-  const options = useMemo(() => countryList().getData(), []);
+  const options: CountryOption[] = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [valuee, setValue] = useState({ value: "", label: "" });
@@ -26,7 +46,7 @@ const Address = ({ listingid }) => {
 
   const changeHandler = (selectedOption: { value: string; label: string }) => {
     setValue(selectedOption);
-    setAddress((prevAddress) => ({
+    setAddress((prevAddress: AddressType) => ({
       ...prevAddress,
       country: selectedOption.label,
       country_code: selectedOption.value,
@@ -86,7 +106,7 @@ const Address = ({ listingid }) => {
             const countryCode = data.address.country_code || "";
 
             const selectedOption = options.find(
-              (option) =>
+              (option: CountryOption) =>
                 option.value.toUpperCase() === countryCode.toUpperCase(),
             );
 
@@ -146,7 +166,7 @@ const Address = ({ listingid }) => {
             className="h-full w-full border-none outline-none"
             onChange={changeHandler}
             styles={{
-              control: (base) => ({
+              control: (base: any) => ({
                 ...base,
                 height: "100%",
                 border: "none",
