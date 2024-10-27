@@ -1,9 +1,11 @@
-// "use client";
+"use client";
 
 // import { useState, useMemo, useEffect, useRef } from "react";
 // import Select from "react-select";
 // import countryList from "react-select-country-list";
-
+export default function Address() {
+  return <div>Address Component</div>;
+}
 // export default function Address({ listingid }: { listingid: string }) {
 //   const iframeRef = useRef(null);
 //   const options = useMemo(() => countryList().getData(), []);
