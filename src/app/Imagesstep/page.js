@@ -131,7 +131,7 @@ export default function Imagesstep() {
       <div className="flex-grow">
         <div className="flex items-center">
           {step === 0 && <Display />}
-          {step === 1 && <Amenities listingid={listingid} />}
+          {/* {step === 1 && <Amenities listingid={listingid} />} */}
 
           {step === 2 && <Imageslist listingid={listingid} />}
 

@@ -315,7 +315,7 @@ export default function Steps() {
 
           {/* {step === 5 && <Address listingid={String(listingid)} />} */}
 
-          {step === 6 && <Amenities1 listingid={listingid} />}
+          {/* {step === 6 && <Amenities1 listingid={listingid} />} */}
 
           {step === 7 && (
             <>
