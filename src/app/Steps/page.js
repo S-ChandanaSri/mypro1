@@ -330,35 +330,35 @@ export default function Steps() {
                     What kind of bathrooms do guest have ?{" "}
                   </p>
                   <div className="relative top-[40px]">
-                    <Amenities2
+                    {/* <Amenities2
                       handleplus={() => setPrivate(privateroom + 1)}
                       handleminus={() => setPrivate(privateroom - 1)}
                       label1="Private and attached"
                       label2="Its connected to the guest room and just for them"
                       count={privateroom}
-                    />
+                    /> */}
                     <div className="relative left-[2px] top-[127px] w-[667px] border-[1px] border-[#8E98A8]"></div>
 
                     <div className="relative top-[45px]">
-                      <Amenities2
+                      {/* <Amenities2
                         handleplus={() => setPrivate1(privateroom1 + 1)}
                         handleminus={() => setPrivate1(privateroom1 - 1)}
                         label1="Dedicated"
                         label2="Its private but accessed via space like a halway"
                         count={privateroom1}
-                      />
+                      /> */}
                     </div>
 
                     <div className="relative left-[2px] top-[173px] w-[667px] border-[1px] border-[#8E98A8]"></div>
 
                     <div className="relative top-[85px]">
-                      <Amenities2
+                      {/* <Amenities2
                         handleplus={() => setPrivate2(privateroom2 + 1)}
                         handleminus={() => setPrivate2(privateroom2 - 1)}
                         label1="Shared"
                         label2="Its shared with other people"
                         count={privateroom2}
-                      />
+                      /> */}
                     </div>
 
                     <div className="relative left-[2px] top-[210px] w-[667px] border-[1px] border-[#8E98A8]"></div>
