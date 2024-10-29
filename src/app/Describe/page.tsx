@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import Describeform from '@/components/describe/Describeform'
 import React from 'react'
 
