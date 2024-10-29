@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 //import { useNavigate } from 'react-router-dom';
 import Image from "next/image";
-import Footer from "../Footer/page.js";
+import Footer from "../Footer/page.tsx";
 import d from "../../../public/res/images/components/d.png";
 //import Select from 'react-select';
 import countryList from "react-select-country-list";
