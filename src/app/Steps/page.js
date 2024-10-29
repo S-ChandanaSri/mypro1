@@ -13,7 +13,7 @@ import Place from "../Place/page.js";
 import Placetype from "../Placetype/page.js";
 import Location from "../Location/page.js";
 import Address from "../Address/page.tsx";
-import Peopletype from "../Peopletype/page.js";
+import Peopletype from "../../components/Peopletype/page.tsx";
 import Navbar from "@/components/Navbar";
 import Options from "../Options/page.js";
 import { useRouter } from "next/navigation";

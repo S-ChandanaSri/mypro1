@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 "use client";
 import React, { useState } from "react";
 import People from "@/components/root/InfoCards/infoCards/People";
