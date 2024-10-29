@@ -16,7 +16,7 @@ import Display from "../Display/page.tsx";
 import { useListing } from "@/app/context/ListingContext.tsx";
 import Introduction3 from "../Introduction3/page.js";
 import Amount from "../Amount/page.tsx";
-import Pay from "../Pay/page.js";
+import Pay from "../Pay/page.tsx";
 
 export default function Imagesstep() {
   const router = useRouter();
