@@ -1,4 +1,4 @@
-{/*"use client";
+"use client";
 export const missingCountries = [
   { name: "Singapore", latLng: [1.3521, 103.8198] },
   { name: "BouvetIsland", latLng: [54.4208, 3.3464] },
@@ -20,4 +20,4 @@ export const countries = {
   VE: 90,
 };
 
-export const colorScale = ["#E2AEFF", "#5E32CA"];*/}
+export const colorScale = ["#E2AEFF", "#5E32CA"];
