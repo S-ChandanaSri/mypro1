@@ -7,7 +7,7 @@ import Describehome from "@/components/root/InfoCards/infoCards/Describehome";
 import { strings } from "@/constants/strings";
 import { Describeinfo } from "@/constants/arrays";
 
-export default function Descriptions({ listingid }: { listingid: string }) {
+export default function Description({ listingid }: { listingid: string }) {
   const [selectedopt, setSelectedOpt] = useState([]);
 
   const handlecolor = (option) => {

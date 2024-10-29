@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import Image from "next/image";
-import imageimage from "../../../public/res/images/components/imageimage.png";
-import Group from "../../../public/res/images/components/Group.png";
+import imageimage from "../../../../public/res/images/components/imageimage.png";
+import Group from "../../../../public/res/images/components/Group.png";
 
-export default function Amountss({ listingid, salary, setSalary }) {
+export default function Amount({ listingid, salary, setSalary }) {
   const [edit, setEdit] = useState(false);
   const decimalDigits = 0;
 

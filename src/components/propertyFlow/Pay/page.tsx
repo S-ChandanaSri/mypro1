@@ -3,7 +3,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import imageimage from "../../../public/res/images/components/imageimage.png";
+import imageimage from "../../../../public/res/images/components/imageimage.png";
 
 export default function Pays({ listingid, salary }) {
   const [num, setNum] = useState(0);

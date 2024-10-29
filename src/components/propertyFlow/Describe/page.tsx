@@ -3,7 +3,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function Describeform({ listingid }) {
+export default function Describe({ listingid }) {
   const [text, setText] = useState("");
 
   const handleTextChange = (event: any) => {

@@ -5,18 +5,18 @@ import Image from "next/image";
 
 import { useRouter } from "next/navigation";
 
-import Footerimages from "../Footerimages/page.js";
+import Footerimages from "../../components/propertyFlow/Footerimages/page.js";
 import Amenities from "../Amenities/page.js";
 import { ImageList } from "@mui/material";
 import Title from "../../components/Title/page.tsx";
-import Description from "../Description/page.tsx";
-import Describe from "../Describe/page.tsx";
-import Imageslist from "../Imageslist/page.js";
-import Display from "../Display/page.tsx";
+import Description from '../../components/propertyFlow/Description/page.tsx';
+import Describe from "../../components/propertyFlow/Describe/page.tsx";
+import Imageslist from "@/components/propertyFlow/Imageslist/page.tsx";
+import Display from "../../components/propertyFlow/Display/page.tsx";
 import { useListing } from "@/app/context/ListingContext.tsx";
-import Introduction3 from "../Introduction3/page.js";
-import Amount from "../Amount/page.tsx";
-import Pay from "../Pay/page.tsx";
+import Introduction3 from "../../components/propertyFlow/Introduction3/page.js";
+import Amount from "../../components/propertyFlow/Amount/page.tsx";
+import Pay from "../../components/propertyFlow/Pay/page.tsx";
 
 export default function Imagesstep() {
   const router = useRouter();
