@@ -10,7 +10,7 @@ import countryList from "react-select-country-list";
 import Amenities1 from "../Amenities1/page.tsx";
 import Amenities2 from "../Amenities2/page.tsx";
 import Place from "../../components/Place/page.tsx";
-import Placetype from "../Placetype/page.js";
+import Placetype from "../../components/Placetype/page.tsx";
 import Location from "../Location/page.js";
 import Address from "../Address/page.tsx";
 import Peopletype from "../../components/Peopletype/page.tsx";
