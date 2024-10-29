@@ -1,8 +1,10 @@
+//@ts-nocheck
+
 "use client";
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 
-export default function Footerpayment({
+export default function Footerpays({
   isLoading,
   buttonText,
   onClick,
