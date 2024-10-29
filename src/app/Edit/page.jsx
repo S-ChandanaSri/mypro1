@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useMemo } from "react";
 import Footer from "../../components/propertyFlow/Footer/page.tsx";
-import Slider from "@/components/Slider/page.jsx";
+import Slider from "@/components/Slider/page.tsx";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Navbar from "@/components/Navbar.tsx";
