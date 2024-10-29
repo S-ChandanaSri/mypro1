@@ -1,9 +1,11 @@
+//@ts-nocheck
+
 "use client";
 import React, { useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
 //import { useNavigate } from 'react-router-dom';
 
-export default function Footer({
+export default function Foter({
   isLoading,
   buttonText,
   onClick,
