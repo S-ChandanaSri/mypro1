@@ -5,9 +5,7 @@ import React from "react";
 //import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Locate({ listingid }) {
-  //const location = useLocation();
-  //console.log("llllllllllll",location.state)
-  //const { listingid } = location.state || {};
+
   return (
     <>
       <div className="relative left-[350px] flex h-[670px] flex-col items-center">
@@ -28,4 +26,6 @@ export default function Locate({ listingid }) {
           ></iframe>
         </div>
       </div>
-    <
+    </>
+  );
+}
