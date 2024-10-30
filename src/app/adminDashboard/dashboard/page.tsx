@@ -201,7 +201,7 @@ export default function Dashboard() {
                   margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
                 >
                   <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
+                  {/*<XAxis dataKey="name" />
                   <YAxis fontSize={12} />
                   <Tooltip />
                   <Legend
@@ -213,7 +213,7 @@ export default function Dashboard() {
                   />
                   <Bar dataKey="checkIn" stackId="a" fill="#002855" />
                   <Bar dataKey="checkOut" stackId="a" fill="#3D52A0" />
-                  <Bar dataKey="cash" stackId="a" fill="#B5B2FF" />
+                  <Bar dataKey="cash" stackId="a" fill="#B5B2FF" />*/}
                 </BarChart>
               </ResponsiveContainer>
             </div>
