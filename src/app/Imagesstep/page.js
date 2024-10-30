@@ -9,7 +9,7 @@ import Footerimages from "../../components/propertyFlow/Footerimages/page.js";
 import Amenities from "../Amenities/page.js";
 import { ImageList } from "@mui/material";
 import Title from "../../components/Title/page.tsx";
-import Description from '../../components/propertyFlow/Description/page.tsx';
+import Description from "../../components/propertyFlow/Description/page.tsx";
 import Describe from "../../components/propertyFlow/Describe/page.tsx";
 import Imageslist from "@/components/propertyFlow/Imageslist/page.tsx";
 import Display from "../../components/propertyFlow/Display/page.tsx";

@@ -20,130 +20,129 @@
 //   value: string;
 //   label: string;
 // }
-export default function Address(){
+export default function Address() {
+  // export default function Address({ listingid }: { listingid: string }) {
+  //   const iframeRef = useRef(null);
+  //   const options: CountryOption[] = useMemo(() => countryList().getData(), []);
+  //   const [loading, setLoading] = useState(true);
+  //   const [error, setError] = useState("");
+  //   const [valuee, setValue] = useState({ value: "", label: "" });
 
-// export default function Address({ listingid }: { listingid: string }) {
-//   const iframeRef = useRef(null);
-//   const options: CountryOption[] = useMemo(() => countryList().getData(), []);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState("");
-//   const [valuee, setValue] = useState({ value: "", label: "" });
+  //   const [address, setAddress] = useState({
+  //     road: "",
+  //     city: "",
+  //     country: "",
+  //     zipcode: "",
+  //     street: "",
+  //     state: "",
+  //     country_code: "",
+  //     village: "",
+  //     mandal: "",
+  //     district: "",
+  //   });
 
-//   const [address, setAddress] = useState({
-//     road: "",
-//     city: "",
-//     country: "",
-//     zipcode: "",
-//     street: "",
-//     state: "",
-//     country_code: "",
-//     village: "",
-//     mandal: "",
-//     district: "",
-//   });
+  //   const changeHandler = (selectedOption: { value: string; label: string }) => {
+  //     setValue(selectedOption);
+  //     setAddress((prevAddress: AddressType) => ({
+  //       ...prevAddress,
+  //       country: selectedOption.label,
+  //       country_code: selectedOption.value,
+  //     }));
+  //   };
 
-//   const changeHandler = (selectedOption: { value: string; label: string }) => {
-//     setValue(selectedOption);
-//     setAddress((prevAddress: AddressType) => ({
-//       ...prevAddress,
-//       country: selectedOption.label,
-//       country_code: selectedOption.value,
-//     }));
-//   };
+  //   useEffect(() => {
+  //     fetch("http://localhost:3001/address", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ address, id: listingid }),
+  //     })
+  //       .then((response) => {
+  //         if (response.ok) {
+  //           return response.json();
+  //         }
+  //         return response.text().then((text) => {
+  //           throw new Error(text);
+  //         });
+  //       })
+  //       .then((data) => {
+  //         console.log("Response data:", data);
+  //         console.log("success");
+  //       })
+  //       .catch((err) => console.error("Error:", err));
+  //   }, [address, listingid]);
 
-//   useEffect(() => {
-//     fetch("http://localhost:3001/address", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({ address, id: listingid }),
-//     })
-//       .then((response) => {
-//         if (response.ok) {
-//           return response.json();
-//         }
-//         return response.text().then((text) => {
-//           throw new Error(text);
-//         });
-//       })
-//       .then((data) => {
-//         console.log("Response data:", data);
-//         console.log("success");
-//       })
-//       .catch((err) => console.error("Error:", err));
-//   }, [address, listingid]);
+  //   useEffect(() => {
+  //     if (iframeRef.current) {
+  //       const iframe = iframeRef.current;
+  //       const url = iframe.getAttribute("src");
 
-//   useEffect(() => {
-//     if (iframeRef.current) {
-//       const iframe = iframeRef.current;
-//       const url = iframe.getAttribute("src");
+  //       const params = new URLSearchParams(new URL(url).search);
+  //       const embedParams = params.get("pb");
 
-//       const params = new URLSearchParams(new URL(url).search);
-//       const embedParams = params.get("pb");
+  //       const latitudeMatch = embedParams?.match(/!3d(-?\d+\.\d+)/);
+  //       const longitudeMatch = embedParams?.match(/!2d(-?\d+\.\d+)/);
 
-//       const latitudeMatch = embedParams?.match(/!3d(-?\d+\.\d+)/);
-//       const longitudeMatch = embedParams?.match(/!2d(-?\d+\.\d+)/);
+  //       const latitude = latitudeMatch ? latitudeMatch[1] : "Not found";
+  //       const longitude = longitudeMatch ? longitudeMatch[1] : "Not found";
 
-//       const latitude = latitudeMatch ? latitudeMatch[1] : "Not found";
-//       const longitude = longitudeMatch ? longitudeMatch[1] : "Not found";
+  //       console.log(`Latitude: ${latitude}`);
+  //       console.log(`Longitude: ${longitude}`);
+  //     }
 
-//       console.log(`Latitude: ${latitude}`);
-//       console.log(`Longitude: ${longitude}`);
-//     }
+  //     navigator.geolocation.getCurrentPosition(
+  //       (pos) => {
+  //         const { latitude, longitude } = pos.coords;
+  //         const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
 
-//     navigator.geolocation.getCurrentPosition(
-//       (pos) => {
-//         const { latitude, longitude } = pos.coords;
-//         const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+  //         fetch(url)
+  //           .then((res) => res.json())
+  //           .then((data) => {
+  //             const country = data.address.country || "";
+  //             const countryCode = data.address.country_code || "";
 
-//         fetch(url)
-//           .then((res) => res.json())
-//           .then((data) => {
-//             const country = data.address.country || "";
-//             const countryCode = data.address.country_code || "";
+  //             const selectedOption = options.find(
+  //               (option: CountryOption) =>
+  //                 option.value.toUpperCase() === countryCode.toUpperCase(),
+  //             );
 
-//             const selectedOption = options.find(
-//               (option: CountryOption) =>
-//                 option.value.toUpperCase() === countryCode.toUpperCase(),
-//             );
+  //             setAddress({
+  //               road: data.address.road || data.address.street || "",
+  //               city:
+  //                 data.address.city ||
+  //                 data.address.town ||
+  //                 data.address.city_district ||
+  //                 "",
+  //               country: country,
+  //               zipcode: data.address.zipcode || data.address.postcode || "",
+  //               street: data.address.street || data.address.colony || "",
+  //               state: data.address.state || "",
+  //               country_code: countryCode,
+  //               district: data.address.state_district || "",
+  //               mandal: data.address.county || "",
+  //               village: data.address.suburb || "",
+  //             });
 
-//             setAddress({
-//               road: data.address.road || data.address.street || "",
-//               city:
-//                 data.address.city ||
-//                 data.address.town ||
-//                 data.address.city_district ||
-//                 "",
-//               country: country,
-//               zipcode: data.address.zipcode || data.address.postcode || "",
-//               street: data.address.street || data.address.colony || "",
-//               state: data.address.state || "",
-//               country_code: countryCode,
-//               district: data.address.state_district || "",
-//               mandal: data.address.county || "",
-//               village: data.address.suburb || "",
-//             });
+  //             setValue(selectedOption);
+  //             setLoading(false);
+  //           })
+  //           .catch((err) => {
+  //             console.error("Error fetching address:", err);
+  //             setError("Unable to fetch address.");
+  //             setLoading(false);
+  //           });
+  //       },
+  //       (err) => {
+  //         console.error("Geolocation error:", err);
+  //         setError("Unable to get location.");
+  //         setLoading(false);
+  //       },
+  //     );
+  //   }, [options]);
 
-//             setValue(selectedOption);
-//             setLoading(false);
-//           })
-//           .catch((err) => {
-//             console.error("Error fetching address:", err);
-//             setError("Unable to fetch address.");
-//             setLoading(false);
-//           });
-//       },
-//       (err) => {
-//         console.error("Geolocation error:", err);
-//         setError("Unable to get location.");
-//         setLoading(false);
-//       },
-//     );
-//   }, [options]);
-
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>{error}</p>;
+  //   if (loading) return <p>Loading...</p>;
+  //   if (error) return <p>{error}</p>;
 
   return (
     <>

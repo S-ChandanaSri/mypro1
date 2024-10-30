@@ -5,14 +5,14 @@
 // import plus1 from "../../../public/res/images/infoCards/plus1.png";
 // import subt1 from "../../../public/res/images/infoCards/subt1.png";
 
-export default function Amenities2(){
-// export default function Amenities2({
-//   label1,
-//   label2,
-//   handleminus,
-//   handleplus,
-//   count,
-// }) {
+export default function Amenities2() {
+  // export default function Amenities2({
+  //   label1,
+  //   label2,
+  //   handleminus,
+  //   handleplus,
+  //   count,
+  // }) {
   return (
     <></>
     // <div>

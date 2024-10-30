@@ -5,7 +5,6 @@ import React from "react";
 //import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Locate({ listingid }) {
-
   return (
     <>
       <div className="relative left-[350px] flex h-[670px] flex-col items-center">

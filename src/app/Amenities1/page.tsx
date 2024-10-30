@@ -3,55 +3,55 @@
 // import Amenitie1 from "@/components/root/InfoCards/infoCards/Amenitie1";
 // import { strings } from "@/constants/strings";
 
-export default function Amenitie1(){
-// export default function Amenities1({ listingid }: { listingid: string }) {
-//   const [guests, setGuests] = useState(0);
-//   const [bedrooms, setBedrooms] = useState(0);
-//   const [beds, setBeds] = useState(0);
-//   const [isClicked, setIsClicked] = useState(-1);
+export default function Amenitie1() {
+  // export default function Amenities1({ listingid }: { listingid: string }) {
+  //   const [guests, setGuests] = useState(0);
+  //   const [bedrooms, setBedrooms] = useState(0);
+  //   const [beds, setBeds] = useState(0);
+  //   const [isClicked, setIsClicked] = useState(-1);
 
-//   fetch("http://localhost:3001/amenities1", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       countguests: guests,
-//       countBedrooms: bedrooms,
-//       countBeds: beds,
-//       isClicked,
-//       idd: listingid,
-//     }),
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         return response.json();
-//       }
-//       return response.text().then((text) => {
-//         throw new Error(text);
-//       });
-//     })
-//     .then((data) => {
-//       console.log("Response data:", data);
-//       console.log("success");
-//     })
-//     .catch((err) => console.error("Error:", err));
+  //   fetch("http://localhost:3001/amenities1", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       countguests: guests,
+  //       countBedrooms: bedrooms,
+  //       countBeds: beds,
+  //       isClicked,
+  //       idd: listingid,
+  //     }),
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       }
+  //       return response.text().then((text) => {
+  //         throw new Error(text);
+  //       });
+  //     })
+  //     .then((data) => {
+  //       console.log("Response data:", data);
+  //       console.log("success");
+  //     })
+  //     .catch((err) => console.error("Error:", err));
 
   return (
-    <>  </>
-//     <Amenitie1
-//       title={strings.Amenities1.heading}
-//       subtitle={strings.Amenities1.subheading}
-//       setGuests={setGuests}
-//       setBedrooms={setBedrooms}
-//       setBeds={setBeds}
-//       setIsClicked={setIsClicked}
-//       guests={guests}
-//       bedrooms={bedrooms}
-//       beds={beds}
-//       isClicked={isClicked}
-//       icon={""}
-//       icon2={""}
-//     />
+    <> </>
+    //     <Amenitie1
+    //       title={strings.Amenities1.heading}
+    //       subtitle={strings.Amenities1.subheading}
+    //       setGuests={setGuests}
+    //       setBedrooms={setBedrooms}
+    //       setBeds={setBeds}
+    //       setIsClicked={setIsClicked}
+    //       guests={guests}
+    //       bedrooms={bedrooms}
+    //       beds={beds}
+    //       isClicked={isClicked}
+    //       icon={""}
+    //       icon2={""}
+    //     />
   );
 }
