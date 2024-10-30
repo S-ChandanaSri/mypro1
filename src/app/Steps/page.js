@@ -17,7 +17,7 @@ import Peopletype from "../../components/propertyFlow/Peopletype/page.tsx";
 import Navbar from "@/components/Navbar";
 import Options from "../Options/page.js";
 import { useRouter } from "next/navigation";
-import { useListing } from "@/app/context/ListingContext";
+import { useListing } from "../../components/propertyFlow/context/ListingContext";
 import { v4 as uuidv4 } from "uuid";
 export default function Steps() {
   const router = useRouter();
