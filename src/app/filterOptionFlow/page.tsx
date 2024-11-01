@@ -22,11 +22,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 export default function FilterOptionFlow({ setPopup }: any) {
-  const [beds, setBeds] = useState<string[]>([]);
-  const [bathrooms, setBathrooms] = useState<string[]>([]);
-  const [propertyType, setPropertyType] = useState<string[]>([]);
-  const [minPrice, setMinPrice] = useState<string>("15");
-  const [maxPrice, setMaxPrice] = useState<string>("105");
+  const [beds, setBeds] = useState([]);
+  const [bathrooms, setBathrooms] = useState([]);
+  const [propertyType, setPropertyType] = useState([]);
+  const [minPrice, setMinPrice] = useState("15");
+  const [maxPrice, setMaxPrice] = useState("105");
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [selectedLanguages, setSelectedLanguages] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -72,13 +72,13 @@ export default function FilterOptionFlow({ setPopup }: any) {
   ]);
 
   const handleBedClick = (bed: string) => {
-    setBeds((prev) =>
+    setBeds((prev: string[]) =>
       prev.includes(bed) ? prev.filter((b) => b !== bed) : [...prev, bed],
     );
   };
 
   const handleBathroomClick = (bathroom: string) => {
-    setBathrooms((prev) =>
+    setBathrooms((prev: string[]) =>
       prev.includes(bathroom)
         ? prev.filter((b) => b !== bathroom)
         : [...prev, bathroom],
@@ -86,7 +86,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
   };
 
   const handlePropertyTypeClick = (type: string) => {
-    setPropertyType((prev) =>
+    setPropertyType((prev: string[]) =>
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
   };
@@ -138,7 +138,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
                     margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
+                    {/*<XAxis dataKey="name" />
                     <YAxis fontSize={12} />
                     <Tooltip />
                     <Legend
@@ -148,7 +148,7 @@ export default function FilterOptionFlow({ setPopup }: any) {
                       iconType="circle"
                       iconSize={10}
                     />
-                    <Bar dataKey="checkIn" stackId="a" fill="#002855" />
+                    <Bar dataKey="checkIn" stackId="a" fill="#002855" />*/}
                   </BarChart>
                 </ResponsiveContainer>
               </div>
